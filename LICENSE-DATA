@@ -1,0 +1,26 @@
+HSGraph v0.1.0 data licensing
+
+Original project annotations, public documentation and project-authored
+measurement references are offered under Creative Commons Attribution 4.0
+International, only to the extent the project holds the necessary rights:
+https://creativecommons.org/licenses/by/4.0/
+Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+This is not a blanket licence for all package content. Imported material
+retains its applicable source terms and obligations. See each record's rights
+and release_decision_ids, candidate/source-use-decisions.json, and these notices:
+NOTICE-USLCI, NOTICE-OGL-CANADA, NOTICE-CC0, NOTICE-FEDEFL and
+NOTICE-REFERENCE-STANDARDS, all under candidate/ in the dataset package.
+The entire retained NOTICE-USLCI must accompany distributions to which it
+applies. Modifications and exclusions are recorded in that package.
+
+USITC and EPA source-use decisions retain their stated territorial limitations
+and residual uncertainty. Owner interpretations are not third-party permission
+or independent legal clearance. Model-output ownership does not clear others'
+rights. No source institution endorses HSGraph.
+
+Original software and explicitly synthetic software-test fixtures are licensed
+under Apache-2.0; see LICENSE. Synthetic fixtures are not research observations.
+Attribute original project material to Rizwan Bedekar / HSGraph and retain
+upstream credits: DOE / NREL / Alliance for Sustainable Energy, USLCI
+contributors, USITC, U.S. EPA / FEDEFL, NIST and BIPM as applicable.
