@@ -1,0 +1,174 @@
+{
+  "sample_version": "discussion-sample-2-guided",
+  "source_release_doi": "https://doi.org/10.5281/zenodo.22857372",
+  "source_zip_sha256": "f73a7d457ef69be4848e0d169bafc157d0faa3b15b3b56eac43d6fdc17a38803",
+  "frozen_inner_sha256": "78b9a1f0afbad1ae0b7ef81e63af5d03c49cc79eb99a09ac853840e23bdca710",
+  "row_count": 10,
+  "distinct_instances": 10,
+  "distinct_definitions": 10,
+  "mechanical_outcomes": {
+    "ambiguous": 3,
+    "applicable": 3,
+    "insufficient_information": 2,
+    "conflicting": 2
+  },
+  "owner_accepted_exact_instances": 1,
+  "specialist_validations": 0,
+  "not_representative": true,
+  "new_model_runs": 0,
+  "selection": {
+    "smoke1_cases_in_order": [
+      "stainless-steel-coil",
+      "cement",
+      "lldpe",
+      "quicklime",
+      "ethylene-glycol-proxy"
+    ],
+    "additional_revision_ids": [
+      "pilot-aluminium-r3",
+      "pilot-abs-r3",
+      "pilot-fertilizer_mix-r2",
+      "pilot-concrete-r2",
+      "pilot-caustic-r2"
+    ],
+    "additional_instance_rule": "lexicographically first exchange ID per revision"
+  },
+  "files": {
+    ".nojekyll": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "LICENSE-DATA": {
+      "sha256": "a7be88d37a8ecbe19ad7b1d73959ae3a62ff62d2b03162d5979f380047467958",
+      "bytes": 1534
+    },
+    "README.md": {
+      "sha256": "034fc4345a369509c5e0cedba7ca3a2f962535f128dd0e8457e05f14c173e559",
+      "bytes": 6440
+    },
+    "START_HERE.html": {
+      "sha256": "d1829201b116c44d0ee97d9aa0031807e5e82207e0966c6a8cb6e309e771aea7",
+      "bytes": 39680
+    },
+    "candidate/DATA-LICENSE.txt": {
+      "sha256": "0711a53463d02f59dbdb656f85676f96d2a7fd81f482fe56650a05c09a2b8da7",
+      "bytes": 155
+    },
+    "candidate/EXCLUSIONS.json": {
+      "sha256": "7e7638fa7c6c9f05988f1e3498d146044c87f8991179e719a701da19c4dfffb2",
+      "bytes": 1650
+    },
+    "candidate/EXCLUSIONS.md": {
+      "sha256": "e47f1b8a09fa229bc64460b08f482de87bb42381b7a160c682268c25375d42ea",
+      "bytes": 569
+    },
+    "candidate/MODIFICATIONS.md": {
+      "sha256": "bf406144409b6c7954b6a8dde58ff7c847a0cfefb46da887708a5da7145b2077",
+      "bytes": 1197
+    },
+    "candidate/NOTICE-CC0": {
+      "sha256": "21a113287395357fcf1281e698d5f63a4ee0354f1057f50fea57003f2a1d0871",
+      "bytes": 191
+    },
+    "candidate/NOTICE-FEDEFL": {
+      "sha256": "4cd8f5efad9641e354bd674b87bd6f93495e155c7f565032991f3b9762fea0b4",
+      "bytes": 323
+    },
+    "candidate/NOTICE-OGL-CANADA": {
+      "sha256": "a2918fc9b0413c8e9c9d4e1eca0eb099c6f47d882fe279bee520f368ed44885f",
+      "bytes": 229
+    },
+    "candidate/NOTICE-REFERENCE-STANDARDS": {
+      "sha256": "ffa89c9061fd2b667e84ac42eccb3e3b2bb0d924c8b7e307e60bf7e59a591865",
+      "bytes": 1044
+    },
+    "candidate/NOTICE-USLCI": {
+      "sha256": "f90421dbaa1cbfaf407cc3f804c345f267e64a47f3d97652a261bc05c7804a95",
+      "bytes": 2650
+    },
+    "candidate/manifest.json": {
+      "sha256": "bb52ee984ae7974167a7d5b45218358acefdc023098a8feb58c3c5d6419e4f02",
+      "bytes": 10741
+    },
+    "candidate/source-use-decisions.json": {
+      "sha256": "7b9a121b7708d258b09d3bdf62ecac6deb0640f4d29731873c7e81675c3f6ef2",
+      "bytes": 6424
+    },
+    "candidate/usitc-legal-excerpts.jsonl": {
+      "sha256": "8a85063f1fff1c33a18d8568e2bcc0fac2f1018425ba7946249fcf887179e074",
+      "bytes": 43200
+    },
+    "evidence/R01.json": {
+      "sha256": "2f143c37f66788df4fda77f828fae4f294aeb0dbab859a1a992ca65f93449388",
+      "bytes": 124289
+    },
+    "evidence/R02.json": {
+      "sha256": "f49e3e059e14473349a8a1b3627751ad8e7d8459e42eecd3703a4352a84606a6",
+      "bytes": 99045
+    },
+    "evidence/R03.json": {
+      "sha256": "0c030fc495ff49b8a956ed8317062491462c325c03a1e84c5386af45be6fde0e",
+      "bytes": 163396
+    },
+    "evidence/R04.json": {
+      "sha256": "6dad653ed470c134f4bc02429b0783cded52f76c9fdaf5a012c58f2a64101882",
+      "bytes": 111385
+    },
+    "evidence/R05.json": {
+      "sha256": "27c20aa5ab4addb0601a5c33f2bb15480f87e4093526068d4d8a4f65ece768b5",
+      "bytes": 297896
+    },
+    "evidence/R06.json": {
+      "sha256": "6100a3f5a6eadd2975aa40fb3d18e421b380a6b06709eca5fcf0ec585f3b647a",
+      "bytes": 20085
+    },
+    "evidence/R07.json": {
+      "sha256": "5f415527de00274845f70a069d80c3a6fd625ac300a47d2ee36c135efae79ca8",
+      "bytes": 22570
+    },
+    "evidence/R08.json": {
+      "sha256": "105a0c949489e3aca128f7be765dec4d36135eae5b9c0256bbd63e283d2462ab",
+      "bytes": 20163
+    },
+    "evidence/R09.json": {
+      "sha256": "b7e1fa620fef19e91264907d398b306cd79b4b75d3bbcb63ae915df235f944e5",
+      "bytes": 30331
+    },
+    "evidence/R10.json": {
+      "sha256": "2c100be48cd304484e3ce59dfe1b17f0fac57637faf4e23f25c30e978ae4eb9a",
+      "bytes": 19594
+    },
+    "index.html": {
+      "sha256": "d1829201b116c44d0ee97d9aa0031807e5e82207e0966c6a8cb6e309e771aea7",
+      "bytes": 39680
+    },
+    "samples.csv": {
+      "sha256": "c407e05fefd700f52b11afd6e9b8cc327b5a3b401a82454cebff6224bb5b2ee4",
+      "bytes": 9707
+    },
+    "samples.json": {
+      "sha256": "39c51aab37ccef201b59e3c73dd5ba90418374bfc5863ab25615aa70493c8a91",
+      "bytes": 14628
+    },
+    "source-release-CITATION.cff": {
+      "sha256": "00aff3bc8c0915c1248ff9c74d2ccdb329785b00b9624e38f9cd8661c2a54fa5",
+      "bytes": 977
+    },
+    "source-release-DATA_CARD.md": {
+      "sha256": "d2946320fbaeb35542adc03aa6ef54b66fec64d3790b1c6998036f50b0022e63",
+      "bytes": 8385
+    },
+    "tools/build_review_sample.py": {
+      "sha256": "d5ac936ba9598e077206d0d3f1616d917fb8d7313374e1e5b5ca5372dbaf6cd8",
+      "bytes": 31219
+    },
+    "tools/verify_review_sample.py": {
+      "sha256": "1b3e99231238ab8b5e3d4b55e9b1ea499e7844e62b3dd670c9c9b62dfc41b016",
+      "bytes": 4656
+    }
+  }
+}

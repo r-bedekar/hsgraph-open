@@ -1,0 +1,270 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HSGraph — a five-minute evidence walkthrough</title>
+<style>
+body{font:17px/1.6 system-ui,sans-serif;color:#182638;max-width:1120px;margin:32px auto;padding:0 22px;background:#f6f8fa}h1,h2,h3{line-height:1.2}h1{font-size:clamp(2rem,4vw,3rem);max-width:850px}a{color:#125a89}a:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid #b15b00;outline-offset:4px}nav{display:flex;flex-wrap:wrap;gap:18px;margin:22px 0}.button{display:inline-block;background:#135d65;color:white;padding:10px 18px;border-radius:6px;text-decoration:none}.notice{border-left:5px solid #b15b00;background:#fff3de;padding:14px 18px}.panel,section.case{margin:24px 0;padding:24px;border:1px solid #cbd5df;border-radius:8px;background:white;overflow-wrap:anywhere}section.case:target{border:2px solid #135d65}section{scroll-margin-top:18px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.cards>div{padding:16px;background:#edf3f5;border-radius:6px}.cards h3{margin-top:0}table{border-collapse:collapse;width:100%;font-size:15px}caption{text-align:left;margin-bottom:12px}th,td{border:1px solid #cbd5df;padding:12px;text-align:left;vertical-align:top}th{background:#e7eef4}.scroll{overflow-x:auto}details{margin:16px 0;border-top:1px solid #d6dfe6;padding-top:12px}summary{font-weight:650;cursor:pointer}dt{font-weight:650;margin-top:12px}dd{margin-left:0;white-space:pre-wrap}small,.muted{color:#455568}.badge{display:inline-block;background:#edf3f5;border:1px solid #cbd5df;padding:3px 9px;border-radius:5px}.trail{display:grid;grid-template-columns:2fr 1fr 2fr 1fr 2fr;gap:8px;align-items:center}.node{border:2px solid #658391;border-radius:6px;padding:15px;background:#f1f6f7}.proposal{border-style:dashed;background:#fff9ef}.edge{text-align:center;font-size:14px}.edge span{display:block;font-size:26px}textarea{box-sizing:border-box;width:100%;min-height:215px;padding:14px;font:15px/1.6 system-ui;border:1px solid #879baa;border-radius:6px;background:#f8fafb}.facts li{margin-bottom:12px}footer{padding:22px 0;font-size:14px}@media(max-width:720px){.cards{grid-template-columns:1fr}.trail{grid-template-columns:1fr}.edge span{transform:rotate(90deg)}.panel,section.case{padding:18px}body{padding:0 14px}table{min-width:680px}}
+</style></head><body><header><p class="muted">HSGraph · Guided sample 2 · Based on the published v0.1.0 dataset</p>
+<h1>Can you see the evidence behind a proposed HS code?</h1>
+<p>This sample lets you inspect ten product records, the codes proposed for them, and the information still missing.</p>
+<p><strong>What we need from you:</strong> spend five minutes on one example and tell us whether this would help with a real task. You are not being asked to certify a classification or review all ten rows.</p>
+<nav aria-label="Page navigation"><a class="button" href="#guide">Start the guide</a><a href="#examples">Browse ten examples</a><a href="#graph">See the evidence diagram</a><a href="#feedback">Give feedback</a></nav>
+<p class="notice"><strong>Zero specialist validations.</strong> This is a discussion sample, not a customs ruling, verified supply chain or complete life-cycle assessment. It is not representative of all products. One original owner decision is retained with its limited scope.</p></header><main>
+<section class="panel" id="guide"><h2>A five-minute guide</h2>
+<div class="cards"><div><h3>1. Open the steel case</h3><p>Start with <a href="#R01">R01: steel coil</a>. Notice that two HS headings remain possible.</p></div><div><h3>2. Look for the gap</h3><p>Read “What is missing?” The saved assessor says coil width is missing. We do not invent it or choose a heading.</p></div><div><h3>3. Tell us if this helps</h3><p>Could you identify the next information to request? Use the <a href="#feedback">short reply template</a>; no specialist credentials are needed to comment on clarity.</p></div></div>
+<p>Have another five minutes? Compare <a href="#R02">R02: a limited owner decision</a> and <a href="#R05">R05: why model agreement can still be wrong</a>. Full evidence and technical fields are optional expandable sections.</p></section>
+<section class="panel" id="key"><h2>How to read this page</h2>
+<p><strong>HS</strong> is the Harmonized System of product classification. <strong>USLCI</strong> is the U.S. Life Cycle Inventory source used here. A row is one recorded product exchange in a documented process—not every product with that name.</p>
+<p>A <strong>candidate code</strong> is a saved proposal, not a recommendation. A <strong>mechanical check</strong> applies recorded rules; a <strong>model assessment</strong> is a saved AI finding; an <strong>owner decision</strong> records this project owner’s limited acceptance. None substitutes for specialist review.</p><dl>
+<dt>More than one candidate</dt><dd>The saved rules leave competing candidates; no single code is established.</dd>
+<dt>Recorded conditions pass</dt><dd>The saved mechanical checks pass for this proposal. This is not specialist validation.</dd>
+<dt>Information missing</dt><dd>The saved checks lack information needed to settle the proposal.</dd>
+<dt>Recorded conflict</dt><dd>The saved checks flag a conflict. Do not treat the proposed code as settled.</dd>
+</dl></section>
+<section class="panel" id="graph"><h2>A small graph demo: follow the evidence</h2>
+<p>This is an <strong>evidence relationship diagram</strong> for R01, not a material-flow or supplier network. Read the connection labels; a proposed relationship is not established identity.</p>
+<div class="trail" role="group" aria-label="R01 record linked to a saved proposal and its unresolved alternatives">
+<a class="node" href="evidence/R01.json"><strong>Source record</strong><br>Steel; stainless 304; flat rolled coil<br><small>Open the retained evidence</small></a>
+<div class="edge">is the subject of<span aria-hidden="true">→</span></div>
+<a class="node" href="#R01"><strong>Saved proposal</strong><br>pilot-steel_coil-r2<br>More than one candidate</a>
+<div class="edge">lists alternatives<span aria-hidden="true">⇢</span></div>
+<div class="node proposal"><strong>HS candidates, not an accepted code</strong><br>7219; 7220</div></div>
+<p><strong>Why no final connection?</strong> The saved assessor lists missing width and measured composition information. See <a href="#R01">the exact saved findings</a>. Dashed styling marks the unresolved proposal, not a physical dependency.</p>
+<p class="muted">The ten sampled records do not form a complete connected production graph. A broader explorer would require a separate, source-backed selection of actual process/exchange relationships.</p></section>
+<section class="panel" id="examples"><h2>Choose an example</h2><p>Start with one row. Codes below are saved candidates only; “conditions pass” does not mean validated.</p><div class="scroll" tabindex="0" role="region" aria-label="Ten examples; scroll horizontally on small screens"><table><caption>Ten distinct records — no specialist-validated classifications</caption><thead><tr><th scope="col">Example</th><th scope="col">Candidate code(s)</th><th scope="col">What the saved check says</th><th scope="col">Owner decision</th></tr></thead><tbody>
+<tr><td><a href="#R01">R01 · Steel; stainless 304; flat rolled coil</a></td><td>No single target; alternatives: 7219; 7220</td><td>More than one candidate</td><td>None for this instance</td></tr>
+<tr><td><a href="#R02">R02 · Portland cement; at plant</a></td><td>Proposed: 2523</td><td>Recorded conditions pass</td><td>Original revision only; not the displayed later projection</td></tr>
+<tr><td><a href="#R03">R03 · Linear low-density polyethylene, LLDPE; virgin resin; at plant</a></td><td>Proposed: 3901</td><td>Recorded conditions pass</td><td>None for this instance</td></tr>
+<tr><td><a href="#R04">R04 · Quicklime; at plant</a></td><td>Proposed: 2522</td><td>Information missing</td><td>None for this instance</td></tr>
+<tr><td><a href="#R05">R05 · Ethylene glycol; at plant</a></td><td>Proposed: 290531</td><td>Recorded conflict</td><td>None for this instance</td></tr>
+<tr><td><a href="#R06">R06 · Aluminum ingot; production mix; at plant</a></td><td>Proposed: 7601</td><td>Recorded conflict</td><td>None for this instance</td></tr>
+<tr><td><a href="#R07">R07 · Acrylonitrile-butadiene-styrene, ABS; copolymer resin; at plant</a></td><td>Proposed: 3903</td><td>Information missing</td><td>None for this instance</td></tr>
+<tr><td><a href="#R08">R08 · Phosphorous fertilizer; production mix; at plant</a></td><td>No single target; alternatives: 3103; 3105</td><td>More than one candidate</td><td>None for this instance</td></tr>
+<tr><td><a href="#R09">R09 · Concrete; at plant</a></td><td>No single target; alternatives: 3824; 6810; 3816</td><td>More than one candidate</td><td>None for this instance</td></tr>
+<tr><td><a href="#R10">R10 · Sodium hydroxide; at plant</a></td><td>Proposed: 2815</td><td>Recorded conditions pass</td><td>None for this instance</td></tr>
+</tbody></table></div></section>
+<section class="case" id="R01"><p class="muted">Start here: what is missing?</p><h2>R01 · Steel; stainless 304; flat rolled coil</h2><p><span class="badge">More than one candidate</span> · No specialist validation</p><p>The saved steel case retains 7219 and 7220 as alternatives. Its assessor lists missing coil width and measured carbon/chromium information. We have not filled those gaps.</p><p><strong>Your question:</strong> Can you tell what information the reviewer would need next?</p>
+<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">
+<li>smoke1/stainless-steel-coil assessor: The coil width is not supplied. Effect: This directly prevents choosing between 7219 (600 mm or more) and 7220 (less than 600 mm).</li>
+<li>smoke1/stainless-steel-coil assessor: Measured carbon and chromium percentages are not supplied. Effect: The legal stainless-steel definition cannot be independently checked, although the exact product is expressly identified as stainless 304 throughout the native evidence.</li>
+</ul></details>
+<details><summary>Warnings and disagreements retained in the record</summary><p>None recorded here; not proof of correctness</p></details>
+<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>
+<dt>instance id</dt><dd>uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2</dd>
+<dt>source locator</dt><dd>processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json#/exchanges/0</dd>
+<dt>mapping revision id</dt><dd>pilot-steel_coil-r2</dd>
+<dt>saved projection target</dt><dd>none</dd>
+<dt>saved revision alternatives</dt><dd>7219; 7220</dd>
+<dt>mechanical outcome</dt><dd>ambiguous</dd>
+<dt>product identity outcome NOT HS</dt><dd>automated_supported</dd>
+<dt>saved HS case outcomes NOT validation</dt><dd>smoke1/stainless-steel-coil: assessor=competing_targets; challenger=competing_targets<br><br>smoke2/S2-09: assessor=competing_targets; challenger=competing_targets<br><br>smoke2/S2-05: assessor=competing_targets; challenger=competing_targets</dd>
+<dt>owner review</dt><dd>no_owner_acceptance</dd>
+<dt>displayed projection owner review</dt><dd>no_owner_acceptance</dd>
+<dt>specialist validation</dt><dd>none</dd>
+<dt>recorded missing facts</dt><dd>smoke1/stainless-steel-coil assessor: The coil width is not supplied. Effect: This directly prevents choosing between 7219 (600 mm or more) and 7220 (less than 600 mm).<br><br>smoke1/stainless-steel-coil assessor: Measured carbon and chromium percentages are not supplied. Effect: The legal stainless-steel definition cannot be independently checked, although the exact product is expressly identified as stainless 304 throughout the native evidence.</dd>
+<dt>post run concerns</dt><dd>None recorded here; not proof of correctness</dd>
+<dt>use limit</dt><dd>Evidence inspection only; not a verified classification, customs ruling or complete LCA</dd>
+</dl></details><p><a href="evidence/R01.json">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on R01</a> · <a href="#examples">Back to examples</a></p></section>
+<section class="case" id="R02"><p class="muted">Compare: what did the owner accept?</p><h2>R02 · Portland cement; at plant</h2><p><span class="badge">Recorded conditions pass</span> · No specialist validation</p><p>One owner decision applies to the original cement revision r3 and exact instance. It does not approve the later r4 projection shown here, and it is not specialist validation.</p><p><strong>Your question:</strong> Is that limited acceptance clearly distinguished from a validated classification?</p>
+<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">
+<li>smoke1/cement assessor: No HS6-level cement subtype or presentation facts are supplied. Effect: Prevents classification more specifically than HS4; it does not undermine heading 2523.</li>
+</ul></details>
+<details><summary>Warnings and disagreements retained in the record</summary><p>None recorded here; not proof of correctness</p></details>
+<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>
+<dt>instance id</dt><dd>uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66</dd>
+<dt>source locator</dt><dd>processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json#/exchanges/0</dd>
+<dt>mapping revision id</dt><dd>pilot-cement-r4</dd>
+<dt>saved projection target</dt><dd>2523</dd>
+<dt>saved revision alternatives</dt><dd>none listed</dd>
+<dt>mechanical outcome</dt><dd>applicable</dd>
+<dt>product identity outcome NOT HS</dt><dd>automated_supported</dd>
+<dt>saved HS case outcomes NOT validation</dt><dd>smoke1/cement: assessor=supported; challenger=supported<br><br>smoke2/S2-01: assessor=supported; challenger=supported<br><br>smoke2/S2-12: assessor=insufficient_information; challenger=insufficient_information<br><br>smoke2/S2-11: assessor=insufficient_information; challenger=insufficient_information</dd>
+<dt>owner review</dt><dd>owner_accepted_original_revision_only: pilot-cement-r3; not acceptance of rebased identities, smoke views or chains</dd>
+<dt>displayed projection owner review</dt><dd>no_owner_acceptance</dd>
+<dt>specialist validation</dt><dd>none</dd>
+<dt>recorded missing facts</dt><dd>smoke1/cement assessor: No HS6-level cement subtype or presentation facts are supplied. Effect: Prevents classification more specifically than HS4; it does not undermine heading 2523.</dd>
+<dt>post run concerns</dt><dd>None recorded here; not proof of correctness</dd>
+<dt>use limit</dt><dd>Evidence inspection only; not a verified classification, customs ruling or complete LCA</dd>
+</dl></details><p><a href="evidence/R02.json">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on R02</a> · <a href="#examples">Back to examples</a></p></section>
+<section class="case" id="R03"><p class="muted">Inspect another source record</p><h2>R03 · Linear low-density polyethylene, LLDPE; virgin resin; at plant</h2><p><span class="badge">Recorded conditions pass</span> · No specialist validation</p><p>The saved mechanical checks pass for this proposal. This is not specialist validation.</p><p><strong>Your question:</strong> Would this evidence help your task, and what additional information would you need?</p>
+<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">
+<li>smoke1/lldpe assessor: The exact physical presentation—such as granules, powder, liquid, or other bulk primary form—is not stated. Effect: Leaves the primary-form condition dependent on the ordinary inventory meaning of virgin resin; contrary evidence that it is a shaped article would undermine heading 3901.</li>
+<li>smoke1/lldpe assessor: Density, comonomer identity, monomer proportions, and chemical-modification details are absent. Effect: Prevents a defensible HS6 classification but does not prevent HS4 classification as a polymer of ethylene.</li>
+</ul></details>
+<details><summary>Warnings and disagreements retained in the record</summary><p>None recorded here; not proof of correctness</p></details>
+<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>
+<dt>instance id</dt><dd>uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108</dd>
+<dt>source locator</dt><dd>processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json#/exchanges/0</dd>
+<dt>mapping revision id</dt><dd>pilot-lldpe-r3</dd>
+<dt>saved projection target</dt><dd>3901</dd>
+<dt>saved revision alternatives</dt><dd>none listed</dd>
+<dt>mechanical outcome</dt><dd>applicable</dd>
+<dt>product identity outcome NOT HS</dt><dd>automated_supported</dd>
+<dt>saved HS case outcomes NOT validation</dt><dd>smoke1/lldpe: assessor=supported; challenger=supported<br><br>smoke2/S2-06: assessor=insufficient_information; challenger=insufficient_information<br><br>smoke2/S2-02: assessor=conditional; challenger=conditional<br><br>smoke2/S2-10: assessor=insufficient_information; challenger=insufficient_information</dd>
+<dt>owner review</dt><dd>no_owner_acceptance</dd>
+<dt>displayed projection owner review</dt><dd>no_owner_acceptance</dd>
+<dt>specialist validation</dt><dd>none</dd>
+<dt>recorded missing facts</dt><dd>smoke1/lldpe assessor: The exact physical presentation—such as granules, powder, liquid, or other bulk primary form—is not stated. Effect: Leaves the primary-form condition dependent on the ordinary inventory meaning of virgin resin; contrary evidence that it is a shaped article would undermine heading 3901.<br><br>smoke1/lldpe assessor: Density, comonomer identity, monomer proportions, and chemical-modification details are absent. Effect: Prevents a defensible HS6 classification but does not prevent HS4 classification as a polymer of ethylene.</dd>
+<dt>post run concerns</dt><dd>None recorded here; not proof of correctness</dd>
+<dt>use limit</dt><dd>Evidence inspection only; not a verified classification, customs ruling or complete LCA</dd>
+</dl></details><p><a href="evidence/R03.json">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on R03</a> · <a href="#examples">Back to examples</a></p></section>
+<section class="case" id="R04"><p class="muted">Inspect another source record</p><h2>R04 · Quicklime; at plant</h2><p><span class="badge">Information missing</span> · No specialist validation</p><p>The saved checks lack information needed to settle the proposal.</p><p><strong>Your question:</strong> Would this evidence help your task, and what additional information would you need?</p>
+<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">
+<li>smoke1/quicklime assessor: The product&#x27;s chemical composition, purity, impurities, and any additions are not stated. Effect: Prevents conclusively distinguishing commercial quicklime of 2522 from separately chemically defined calcium oxide potentially covered by 2825.</li>
+<li>smoke1/quicklime assessor: No evidence states whether the product is calcium hydroxide rather than unslaked lime. Effect: The name and calcination process favor quicklime, but definitive chemical characterization would confirm the applicable side of the 2522 exclusion.</li>
+</ul></details>
+<details><summary>Warnings and disagreements retained in the record</summary><p>None recorded here; not proof of correctness</p></details>
+<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>
+<dt>instance id</dt><dd>uslci-1.2026-06.0:processes:9c0c2415-126f-3162-8479-f002f315a8c7:exchange:1</dd>
+<dt>source locator</dt><dd>processes/9c0c2415-126f-3162-8479-f002f315a8c7.json#/exchanges/0</dd>
+<dt>mapping revision id</dt><dd>pilot-lime-r3</dd>
+<dt>saved projection target</dt><dd>2522</dd>
+<dt>saved revision alternatives</dt><dd>none listed</dd>
+<dt>mechanical outcome</dt><dd>insufficient_information</dd>
+<dt>product identity outcome NOT HS</dt><dd>automated_supported</dd>
+<dt>saved HS case outcomes NOT validation</dt><dd>smoke1/quicklime: assessor=conditional; challenger=supported<br><br>smoke2/S2-07: assessor=competing_targets; challenger=competing_targets<br><br>smoke2/S2-08: assessor=competing_targets; challenger=competing_targets</dd>
+<dt>owner review</dt><dd>no_owner_acceptance</dd>
+<dt>displayed projection owner review</dt><dd>no_owner_acceptance</dd>
+<dt>specialist validation</dt><dd>none</dd>
+<dt>recorded missing facts</dt><dd>smoke1/quicklime assessor: The product&#x27;s chemical composition, purity, impurities, and any additions are not stated. Effect: Prevents conclusively distinguishing commercial quicklime of 2522 from separately chemically defined calcium oxide potentially covered by 2825.<br><br>smoke1/quicklime assessor: No evidence states whether the product is calcium hydroxide rather than unslaked lime. Effect: The name and calcination process favor quicklime, but definitive chemical characterization would confirm the applicable side of the 2522 exclusion.</dd>
+<dt>post run concerns</dt><dd>None recorded here; not proof of correctness</dd>
+<dt>use limit</dt><dd>Evidence inspection only; not a verified classification, customs ruling or complete LCA</dd>
+</dl></details><p><a href="evidence/R04.json">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on R04</a> · <a href="#examples">Back to examples</a></p></section>
+<section class="case" id="R05"><p class="muted">Compare: why keep a failure?</p><h2>R05 · Ethylene glycol; at plant</h2><p><span class="badge">Recorded conflict</span> · No specialist validation</p><p>The saved glycol case includes a proxy/product mismatch concern. Model agreement is retained alongside that concern, not presented as proof of correctness.</p><p><strong>Your question:</strong> Does preserving this concern help you avoid trusting an inappropriate proposal?</p>
+<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">
+<li>smoke1/ethylene-glycol-proxy assessor: Purity, solution status, impurities, and additions are not stated. Effect: Could matter if contrary evidence showed the flow was not a Chapter 29 separate chemically defined compound in a permitted presentation; nothing supplied suggests that result.</li>
+<li>smoke1/ethylene-glycol-proxy assessor: The proxy note does not state that the exchanged flow identity was formally replaced with propylene glycol. Effect: The represented product remains ethylene glycol; the note alone cannot support 290532.</li>
+</ul></details>
+<details><summary>Warnings and disagreements retained in the record</summary><p>smoke1/ethylene-glycol-proxy: Both passes classified the inventory proxy, not the represented product; raw support is not established support for that product.<br><br>smoke2/S2-03: Unresolved composition concern: source-declared identity was treated as composition eligibility; agreement is not correctness.</p></details>
+<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>
+<dt>instance id</dt><dd>uslci-1.2026-06.0:processes:a3e150d0-770e-4e2a-9b19-f7daa8cda38b:exchange:38</dd>
+<dt>source locator</dt><dd>processes/a3e150d0-770e-4e2a-9b19-f7daa8cda38b.json#/exchanges/62</dd>
+<dt>mapping revision id</dt><dd>pilot-glycol-r2</dd>
+<dt>saved projection target</dt><dd>290531</dd>
+<dt>saved revision alternatives</dt><dd>none listed</dd>
+<dt>mechanical outcome</dt><dd>conflicting</dd>
+<dt>product identity outcome NOT HS</dt><dd>disputed</dd>
+<dt>saved HS case outcomes NOT validation</dt><dd>smoke1/ethylene-glycol-proxy: assessor=supported; challenger=supported<br><br>smoke2/S2-03: assessor=supported; challenger=supported<br><br>smoke2/S2-04: assessor=conditional; challenger=conditional</dd>
+<dt>owner review</dt><dd>no_owner_acceptance</dd>
+<dt>displayed projection owner review</dt><dd>no_owner_acceptance</dd>
+<dt>specialist validation</dt><dd>none</dd>
+<dt>recorded missing facts</dt><dd>smoke1/ethylene-glycol-proxy assessor: Purity, solution status, impurities, and additions are not stated. Effect: Could matter if contrary evidence showed the flow was not a Chapter 29 separate chemically defined compound in a permitted presentation; nothing supplied suggests that result.<br><br>smoke1/ethylene-glycol-proxy assessor: The proxy note does not state that the exchanged flow identity was formally replaced with propylene glycol. Effect: The represented product remains ethylene glycol; the note alone cannot support 290532.</dd>
+<dt>post run concerns</dt><dd>smoke1/ethylene-glycol-proxy: Both passes classified the inventory proxy, not the represented product; raw support is not established support for that product.<br><br>smoke2/S2-03: Unresolved composition concern: source-declared identity was treated as composition eligibility; agreement is not correctness.</dd>
+<dt>use limit</dt><dd>Evidence inspection only; not a verified classification, customs ruling or complete LCA</dd>
+</dl></details><p><a href="evidence/R05.json">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on R05</a> · <a href="#examples">Back to examples</a></p></section>
+<section class="case" id="R06"><p class="muted">Inspect another source record</p><h2>R06 · Aluminum ingot; production mix; at plant</h2><p><span class="badge">Recorded conflict</span> · No specialist validation</p><p>The saved checks flag a conflict. Do not treat the proposed code as settled.</p><p><strong>Your question:</strong> Would this evidence help your task, and what additional information would you need?</p>
+<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">
+<li>Public pre-Smoke condition/rationale text withheld; no missing-fact explanation reconstructed. See retained identity assumptions and withheld-material fields.</li>
+</ul></details>
+<details><summary>Warnings and disagreements retained in the record</summary><p>None recorded here; not proof of correctness</p></details>
+<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>
+<dt>instance id</dt><dd>uslci-1.2026-06.0:processes:0f02f4bf-055b-35ff-ac40-1a21be06165f:exchange:4</dd>
+<dt>source locator</dt><dd>processes/0f02f4bf-055b-35ff-ac40-1a21be06165f.json#/exchanges/1</dd>
+<dt>mapping revision id</dt><dd>pilot-aluminium-r3</dd>
+<dt>saved projection target</dt><dd>7601</dd>
+<dt>saved revision alternatives</dt><dd>none listed</dd>
+<dt>mechanical outcome</dt><dd>conflicting</dd>
+<dt>product identity outcome NOT HS</dt><dd>automated_supported</dd>
+<dt>saved HS case outcomes NOT validation</dt><dd>No saved Smoke HS assessment for this instance</dd>
+<dt>owner review</dt><dd>no_owner_acceptance</dd>
+<dt>displayed projection owner review</dt><dd>no_owner_acceptance</dd>
+<dt>specialist validation</dt><dd>none</dd>
+<dt>recorded missing facts</dt><dd>Public pre-Smoke condition/rationale text withheld; no missing-fact explanation reconstructed. See retained identity assumptions and withheld-material fields.</dd>
+<dt>post run concerns</dt><dd>None recorded here; not proof of correctness</dd>
+<dt>use limit</dt><dd>Evidence inspection only; not a verified classification, customs ruling or complete LCA</dd>
+</dl></details><p><a href="evidence/R06.json">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on R06</a> · <a href="#examples">Back to examples</a></p></section>
+<section class="case" id="R07"><p class="muted">Inspect another source record</p><h2>R07 · Acrylonitrile-butadiene-styrene, ABS; copolymer resin; at plant</h2><p><span class="badge">Information missing</span> · No specialist validation</p><p>The saved checks lack information needed to settle the proposal.</p><p><strong>Your question:</strong> Would this evidence help your task, and what additional information would you need?</p>
+<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">
+<li>Public pre-Smoke condition/rationale text withheld; no missing-fact explanation reconstructed. See retained identity assumptions and withheld-material fields.</li>
+</ul></details>
+<details><summary>Warnings and disagreements retained in the record</summary><p>None recorded here; not proof of correctness</p></details>
+<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>
+<dt>instance id</dt><dd>uslci-1.2026-06.0:processes:0d95cc8b-a9a0-3630-a760-1ab4d88257d8:exchange:84</dd>
+<dt>source locator</dt><dd>processes/0d95cc8b-a9a0-3630-a760-1ab4d88257d8.json#/exchanges/67</dd>
+<dt>mapping revision id</dt><dd>pilot-abs-r3</dd>
+<dt>saved projection target</dt><dd>3903</dd>
+<dt>saved revision alternatives</dt><dd>none listed</dd>
+<dt>mechanical outcome</dt><dd>insufficient_information</dd>
+<dt>product identity outcome NOT HS</dt><dd>automated_supported</dd>
+<dt>saved HS case outcomes NOT validation</dt><dd>No saved Smoke HS assessment for this instance</dd>
+<dt>owner review</dt><dd>no_owner_acceptance</dd>
+<dt>displayed projection owner review</dt><dd>no_owner_acceptance</dd>
+<dt>specialist validation</dt><dd>none</dd>
+<dt>recorded missing facts</dt><dd>Public pre-Smoke condition/rationale text withheld; no missing-fact explanation reconstructed. See retained identity assumptions and withheld-material fields.</dd>
+<dt>post run concerns</dt><dd>None recorded here; not proof of correctness</dd>
+<dt>use limit</dt><dd>Evidence inspection only; not a verified classification, customs ruling or complete LCA</dd>
+</dl></details><p><a href="evidence/R07.json">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on R07</a> · <a href="#examples">Back to examples</a></p></section>
+<section class="case" id="R08"><p class="muted">Inspect another source record</p><h2>R08 · Phosphorous fertilizer; production mix; at plant</h2><p><span class="badge">More than one candidate</span> · No specialist validation</p><p>The saved rules leave competing candidates; no single code is established.</p><p><strong>Your question:</strong> Would this evidence help your task, and what additional information would you need?</p>
+<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">
+<li>Public pre-Smoke condition/rationale text withheld; no missing-fact explanation reconstructed. See retained identity assumptions and withheld-material fields.</li>
+</ul></details>
+<details><summary>Warnings and disagreements retained in the record</summary><p>None recorded here; not proof of correctness</p></details>
+<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>
+<dt>instance id</dt><dd>uslci-1.2026-06.0:processes:0879167f-989b-3e3b-b9c5-3c07ea0a3f8e:exchange:20</dd>
+<dt>source locator</dt><dd>processes/0879167f-989b-3e3b-b9c5-3c07ea0a3f8e.json#/exchanges/25</dd>
+<dt>mapping revision id</dt><dd>pilot-fertilizer_mix-r2</dd>
+<dt>saved projection target</dt><dd>none</dd>
+<dt>saved revision alternatives</dt><dd>3103; 3105</dd>
+<dt>mechanical outcome</dt><dd>ambiguous</dd>
+<dt>product identity outcome NOT HS</dt><dd>automated_conditional</dd>
+<dt>saved HS case outcomes NOT validation</dt><dd>No saved Smoke HS assessment for this instance</dd>
+<dt>owner review</dt><dd>no_owner_acceptance</dd>
+<dt>displayed projection owner review</dt><dd>no_owner_acceptance</dd>
+<dt>specialist validation</dt><dd>none</dd>
+<dt>recorded missing facts</dt><dd>Public pre-Smoke condition/rationale text withheld; no missing-fact explanation reconstructed. See retained identity assumptions and withheld-material fields.</dd>
+<dt>post run concerns</dt><dd>None recorded here; not proof of correctness</dd>
+<dt>use limit</dt><dd>Evidence inspection only; not a verified classification, customs ruling or complete LCA</dd>
+</dl></details><p><a href="evidence/R08.json">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on R08</a> · <a href="#examples">Back to examples</a></p></section>
+<section class="case" id="R09"><p class="muted">Inspect another source record</p><h2>R09 · Concrete; at plant</h2><p><span class="badge">More than one candidate</span> · No specialist validation</p><p>The saved rules leave competing candidates; no single code is established.</p><p><strong>Your question:</strong> Would this evidence help your task, and what additional information would you need?</p>
+<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">
+<li>Public pre-Smoke condition/rationale text withheld; no missing-fact explanation reconstructed. See retained identity assumptions and withheld-material fields.</li>
+</ul></details>
+<details><summary>Warnings and disagreements retained in the record</summary><p>None recorded here; not proof of correctness</p></details>
+<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>
+<dt>instance id</dt><dd>uslci-1.2026-06.0:processes:0381ede3-9567-44c0-9200-cbbef872097e:exchange:5</dd>
+<dt>source locator</dt><dd>processes/0381ede3-9567-44c0-9200-cbbef872097e.json#/exchanges/17</dd>
+<dt>mapping revision id</dt><dd>pilot-concrete-r2</dd>
+<dt>saved projection target</dt><dd>none</dd>
+<dt>saved revision alternatives</dt><dd>3824; 6810; 3816</dd>
+<dt>mechanical outcome</dt><dd>ambiguous</dd>
+<dt>product identity outcome NOT HS</dt><dd>automated_supported</dd>
+<dt>saved HS case outcomes NOT validation</dt><dd>No saved Smoke HS assessment for this instance</dd>
+<dt>owner review</dt><dd>no_owner_acceptance</dd>
+<dt>displayed projection owner review</dt><dd>no_owner_acceptance</dd>
+<dt>specialist validation</dt><dd>none</dd>
+<dt>recorded missing facts</dt><dd>Public pre-Smoke condition/rationale text withheld; no missing-fact explanation reconstructed. See retained identity assumptions and withheld-material fields.</dd>
+<dt>post run concerns</dt><dd>None recorded here; not proof of correctness</dd>
+<dt>use limit</dt><dd>Evidence inspection only; not a verified classification, customs ruling or complete LCA</dd>
+</dl></details><p><a href="evidence/R09.json">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on R09</a> · <a href="#examples">Back to examples</a></p></section>
+<section class="case" id="R10"><p class="muted">Inspect another source record</p><h2>R10 · Sodium hydroxide; at plant</h2><p><span class="badge">Recorded conditions pass</span> · No specialist validation</p><p>The saved mechanical checks pass for this proposal. This is not specialist validation.</p><p><strong>Your question:</strong> Would this evidence help your task, and what additional information would you need?</p>
+<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">
+<li>Public pre-Smoke condition/rationale text withheld; no missing-fact explanation reconstructed. See retained identity assumptions and withheld-material fields.</li>
+</ul></details>
+<details><summary>Warnings and disagreements retained in the record</summary><p>None recorded here; not proof of correctness</p></details>
+<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>
+<dt>instance id</dt><dd>uslci-1.2026-06.0:processes:076898a5-e1ce-3c50-9df4-6445fc0bb6aa:exchange:85</dd>
+<dt>source locator</dt><dd>processes/076898a5-e1ce-3c50-9df4-6445fc0bb6aa.json#/exchanges/55</dd>
+<dt>mapping revision id</dt><dd>pilot-caustic-r2</dd>
+<dt>saved projection target</dt><dd>2815</dd>
+<dt>saved revision alternatives</dt><dd>none listed</dd>
+<dt>mechanical outcome</dt><dd>applicable</dd>
+<dt>product identity outcome NOT HS</dt><dd>automated_supported</dd>
+<dt>saved HS case outcomes NOT validation</dt><dd>No saved Smoke HS assessment for this instance</dd>
+<dt>owner review</dt><dd>no_owner_acceptance</dd>
+<dt>displayed projection owner review</dt><dd>no_owner_acceptance</dd>
+<dt>specialist validation</dt><dd>none</dd>
+<dt>recorded missing facts</dt><dd>Public pre-Smoke condition/rationale text withheld; no missing-fact explanation reconstructed. See retained identity assumptions and withheld-material fields.</dd>
+<dt>post run concerns</dt><dd>None recorded here; not proof of correctness</dd>
+<dt>use limit</dt><dd>Evidence inspection only; not a verified classification, customs ruling or complete LCA</dd>
+</dl></details><p><a href="evidence/R10.json">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on R10</a> · <a href="#examples">Back to examples</a></p></section>
+<section class="panel" id="feedback"><h2>What we need back from you</h2><p>One short reply is enough. “I cannot see a use for this” is useful feedback too. You do not need to classify the product, validate all ten rows, or endorse the project.</p>
+<label for="reply"><strong>Copy this into your reply and fill in whichever lines you can:</strong></label>
+<textarea id="reply" readonly>Example I looked at: R__
+My role / task:
+This would help me to… / would not help because…
+I would otherwise look up…
+The missing or confusing part is…
+The next piece of evidence I would need is…</textarea>
+<p>Reply to the person who sent you this sample, or email <a href="mailto:rbedekar@zeroinsec.com?subject=HSGraph%20sample%20feedback">rbedekar@zeroinsec.com</a>. The email link opens your own mail app; this page does not submit or store a response. Please do not send confidential product data.</p>
+<p>We will use feedback to decide whether evidence inspection is useful and what to improve. We will not treat it as specialist acceptance of a code.</p></section>
+<section class="panel" id="downloads"><h2>Data, source and terms</h2><p><a href="samples.csv">Spreadsheet CSV</a> · <a href="samples.json">Summary JSON</a> · <a href="README.md">Selection and verification guide</a> · <a href="LICENSE-DATA">Component-specific terms</a> · <a href="https://doi.org/10.5281/zenodo.22857372">Published full dataset</a></p><p>The same ten rows and saved findings are retained; only this guide and presentation changed. Share the complete package with its source notices. No new models were run.</p></section></main>
+<footer>Credit: Rizwan Bedekar / HSGraph; DOE / NREL / Alliance for Sustainable Energy; USLCI contributors and other credited sources. No endorsement. See the included notices for component-specific terms.</footer></body></html>

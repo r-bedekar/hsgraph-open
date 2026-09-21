@@ -1,0 +1,2823 @@
+{
+  "row_id": "R03",
+  "source_release": "https://doi.org/10.5281/zenodo.22857372",
+  "source_records": [
+    {
+      "source_artifact": "exchanges.jsonl",
+      "source_line": 9590,
+      "source_line_sha256": "5992566741fed9411a2bea3bf276e4798492146d907df42dcecd8986bdd4e4e0",
+      "record": {
+        "denominator": "process quantitative-reference exchange(s); no rescaling",
+        "derivation_method": "uslci-jsonld-1",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "87153005f845cf03d74310b5e6849e6ab5dbbb5549875e29539612169691664a",
+        "id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+        "interpretation": "unit_inventory_output",
+        "locator": "processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json#/exchanges/0",
+        "native": {
+          "@type": "Exchange",
+          "amount": 1.0,
+          "flow": {
+            "@id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "@type": "Flow",
+            "category": "Technosphere flows/31-33: Manufacturing/3252: Resin, Synthetic Rubber, and Artificial and Synthetic Fibers and Filaments Manufacturing",
+            "flowType": "PRODUCT_FLOW",
+            "name": "Linear low-density polyethylene, LLDPE; virgin resin; at plant",
+            "refUnit": "kg"
+          },
+          "flowProperty": {
+            "omitted": "excluded_source_reference"
+          },
+          "internalId": 108,
+          "isAvoidedProduct": false,
+          "isInput": false,
+          "isQuantitativeReference": true,
+          "unit": {
+            "@id": "20aadc24-a391-41cf-b340-3e4529f44bde",
+            "@type": "Unit",
+            "name": "kg"
+          }
+        },
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "0b01e62bb33494a9fc09ffbd064e985a203d78beb08a1cca1f8eb2ca20d83ece",
+        "process_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9",
+        "quantity_status": "native_amount",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "decision_id": "release-20260919-D1"
+        },
+        "source_id": "uslci-1.2026-06.0",
+        "technical_validity": "unreviewed"
+      }
+    },
+    {
+      "source_artifact": "processes.jsonl",
+      "source_line": 174,
+      "source_line_sha256": "eb0ceb49c292dfaa8d5e58a37cec1da8accfc9f488d1f663b9aee1556928f8d4",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "2bafc3760ede399dd8ccc27b700e6e6b3b450367f99f28abe7bee270a2c6c415",
+        "id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9",
+        "native": {
+          "@id": "1dbafde2-2bc3-405c-9726-4d92fe7d29f9",
+          "@type": "Process",
+          "allocationFactors": [],
+          "category": "31-33: Manufacturing/3252: Resin, Synthetic Rubber, and Artificial and Synthetic Fibers and Filaments Manufacturing",
+          "defaultAllocationMethod": "NO_ALLOCATION",
+          "description": "Includes material and energy requirements and environmental emissions for one kilogram of Linear Low-density polyethylene (LLDPE) virgin resin production at the plant only (gate to gate). The LLDPE resin is commonly polymerized in low pressure reactors.  LLDPE is most commonly manufactued by either a solution process or a gas phase process but may also be produced using the slurry loop process. All three types of reactors were used by data providers.  A Phillips, Ziegler-Natta and/or metallocene catalyst are required during these technologies; however these have not been included after reviewing a sensitivity analysis, in which the results were all less than 1 percent changed. ",
+          "dqEntry": "(4;1)",
+          "isInfrastructureProcess": false,
+          "lastChange": "2026-06-24T15:53:01Z",
+          "lastInternalId": 149,
+          "location": {
+            "@id": "b320e7db-c758-3ba6-8839-81eb83c9d7d7",
+            "@type": "Location",
+            "category": "Global/Custom",
+            "name": "Northern America"
+          },
+          "name": "Linear low-density polyethylene, LLDPE; virgin resin; at plant",
+          "parameters": [],
+          "processDocumentation": {
+            "completenessDescription": "Data evaluation procedures and criteria were applied consistently to all primary data provided by the participating producers for all data collected. All primary data obtained specifically for this study were considered the most representative available for the systems studied. Data sets were reviewed for completeness and material balances, and follow-up was conducted as needed to resolve any questions about the input and output flows, process technology, etc. The aggregated averaged datasets were also reviewed by the providing companies as compared to the provided dataset. Companies were requested to review whether their data were complete and to comment about their or the average dataset. ",
+            "creationDate": "2019-02-19T19:19:58.709Z",
+            "dataCollectionDescription": "All primary data were collected from 2015-2016",
+            "dataSelectionDescription": "All LLDPE production data was sourced from primary producers.",
+            "dataTreatmentDescription": "A weighted average was calculated from the data collected and used to develop the LCA model. Small amounts (less than 1 percent of total output) of off-spec/scrap resin and isomers are produced as coproducts during this process and sold. A mass basis was used to allocate out the credit for the coproduct off-spec/scrap resin; thus, this inventory represents only the primary (i.e., virgin resin) produced. The average LLDPE datasets were reviewed and accepted respectively by each LLDPE data provider.",
+            "geographyDescription": "For the LLDPE resin primary data, companies were requested to provide data for the year 2015, the most recent full year of LLDPE resin production prior to the project initiation date. Companies providing data were given the option to collect data from the year preceding or following 2015 if either year would reflect more typical production conditions. Three companies provided data for the year 2015, and one company provided data for the year 2016. After reviewing individual company data in comparison to the average, each manufacturer verified data from 2015-2016 was representative of an average year for LLDPE resin production at their company.  \r\n\r\nThe geographic scope of the analysis is the manufacture of LLDPE resin in North America.  All LLDPE resin data collected were from plants in the United States and Canada and incoming materials were modeled using North American databases such as the U.S. LCI database and Franklin Associates’ private database or ecoinvent (adapted to US conditions). ",
+            "intendedApplication": "\"Accounting, with system-external interactions\" - The intended application is a purely descriptive accounting / documentation of the analysed system including existing interactions with other systems in the LCI model. These data are an update to a previously published dataset which is a generic unit process data.",
+            "inventoryMethodDescription": "Attributional; Compatible with TRACI",
+            "isCopyrightProtected": false,
+            "modelingConstantsDescription": "LCI data for the production of LLDPE resin were collected from four producers (six plants) in North America. Three companies provided data for the year 2015, and one company provided data for the year 2016. After reviewing individual company data in comparison to the average, each manufacturer verified data from 2015-2016 was representative of an average year for LLDPE resin production at their company. Mass allocation was used to allocate all inputs and outputs to each product and co-products. For steam used in other processes, this was treated as an avoided fuel product and were given credits based on the fuel required to create the steam that it would replace.",
+            "projectDescription": "These data are an update to a previously published dataset which is a generic unit process data.; Cradle-to-Resin Life Cycle Analysis of Linear Low-Density Polyethylene Resin. Submitted to the American Chemistry Council (ACC). 2020 (currently draft form)",
+            "restrictionsDescription": "These U.S. LCI Database Project data (\"Data\") are provided by the National Renewable Energy Laboratory (\"NREL\"), operated by the Alliance for Sustainable Energy, LLC (\"Alliance\") for the US Department of Energy (\"DOE\") under Contract No. DE-AC36-08GO28308. The United States Government (the \"Government\") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.\r\n\r\nAccess to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NREL/Alliance in any publication that results from the use of these Data. The names DOE/NREL/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NREL/Alliance. The user also understands that DOE/NREL/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.\r\n\r\nYOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NREL/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NREL/ALLIANCE \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NREL/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA.",
+            "samplingDescription": "BOUNDARY CONDITIONS: The unit process boundary includes the manufacturing of LLDPE resin at the plant, including incoming transportation for each material.\r\nDATA COLLECTION: The primary data for the life cycle inventory of the production of LLDPE, were collected from four producers (six plants) located in the United States and Canada in 2015-2016. A weighted average was calculated from the data collected and used to develop the LCA model. For this process the data sets are based on actual plant data reported by plant personnel. Supporting background data were drawn from credible, widely used databases including the US LCI database, GREET, and Ecoinvent.\r\nUNCERTAINTY ESTIMATION: Primary data collected from actual facilities are considered the best available data for representing industry operations. In this study, primary data were used to model the LLDPE production. All data received were carefully evaluated before compiling the production-weighted average data sets used to generate results. No uncertainty analysis was carried out due to the lack of uncertainty data or probability distributions for key parameters, which are often only available as single point estimates from the producers.\r\n\r\n",
+            "sources": [
+              {
+                "@id": "c3f4a631-76b4-4c58-a305-99c8613689b1",
+                "@type": "Source",
+                "name": "Franklin Associates (2020) Cradle-to-Gate LCA of LLDPE"
+              }
+            ],
+            "technologyDescription": "All data providers used the low pressure technology and either the gas-phase, solution, or slurry loop reactors.",
+            "timeDescription": "All primary data were collected from 2015-2016",
+            "validFrom": "2014-12-30",
+            "validUntil": "2016-12-29"
+          },
+          "processType": "UNIT_PROCESS",
+          "version": "00.01.010"
+        },
+        "native_locator": "processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "762ee5ceb8b0bd7a1981e0d9f66d5f20a4bb411e220e673d481a267ba8d71ed5",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "attribution": "USLCI; DOE / NREL / Alliance; native contributor terms retained",
+          "decision_id": "release-20260919-D1",
+          "native_restrictionsDescription": "These U.S. LCI Database Project data (\"Data\") are provided by the National Renewable Energy Laboratory (\"NREL\"), operated by the Alliance for Sustainable Energy, LLC (\"Alliance\") for the US Department of Energy (\"DOE\") under Contract No. DE-AC36-08GO28308. The United States Government (the \"Government\") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.\r\n\r\nAccess to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NREL/Alliance in any publication that results from the use of these Data. The names DOE/NREL/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NREL/Alliance. The user also understands that DOE/NREL/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.\r\n\r\nYOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NREL/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NREL/ALLIANCE \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NREL/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA."
+        },
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "mapping-projections.jsonl",
+      "source_line": 633,
+      "source_line_sha256": "2527a47aebc01cae9d7d75b81e51602bd827eded9eaa792a71d7fce8b6177c63",
+      "record": {
+        "condition_text_status": "Private WCO-derived conditions omitted; mechanical outcome unchanged, not recomputed",
+        "context_sha256": "967df09fc1e14037012e4a11d16fbea18062b02f31e198637ee1317a0e9e1108",
+        "definition": {
+          "native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "b84f2391df96a837fde7b607c81584111b85f9ee941c35001594c2e5964583aa",
+        "exchange_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+        "id": "f1dacf0b66c168fb162b7d9bbc75a54859ac4169b6af9a946fe3d2e6a621d452",
+        "mapping_id": "pilot-lldpe-r3",
+        "mechanical_check_results": [
+          {
+            "operator": "same",
+            "result": "applicable"
+          },
+          {
+            "operator": "equals",
+            "result": "applicable"
+          },
+          {
+            "operator": "present",
+            "result": "applicable"
+          },
+          {
+            "operator": "evidence_assessment",
+            "result": "applicable"
+          }
+        ],
+        "mechanical_outcome": "applicable",
+        "policy": "flow-projection-2",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "001e53c415e0105709e68c9550774ced814d4f40ab535ea96a34a2ab0ccbdfbf",
+        "process_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4"
+        ],
+        "review_status": "proposed",
+        "source_id": "uslci-1.2026-06.0",
+        "status": "applicable",
+        "subject_kind": "definition",
+        "target": {
+          "code": "3901",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:3901",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:3901"
+        }
+      }
+    },
+    {
+      "source_artifact": "mapping-revisions.jsonl",
+      "source_line": 56,
+      "source_line_sha256": "1bf42b14964e8c165b9a15320b0ae5cd21a3786e3af00e331730be42c74bb396",
+      "record": {
+        "alternatives": [],
+        "definition": {
+          "native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "e3a41a4111a10bd71ebdf4e8d8f7b09aeba14c175f6c82237716a8f38b63c9e4",
+        "evidence_citations": [
+          {
+            "locator": "flows/1ca3b8d5-a002-41c1-bdce-8db63ea6291e.json",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json#/description",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json#/exchanges/0",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "/results/2517/text",
+            "source_id": "unsd-h6-e266823e1299"
+          }
+        ],
+        "id": "pilot-lldpe-r3",
+        "legal_reasoning_status": "Private WCO-derived rationale/specifications/conditions omitted; no replacement reasoning generated",
+        "method": "automated-bounded-owner-review-preparation-1",
+        "outcome": "classified",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "e9a42e20a9ce60ff56a61bd2d4054aefc7262408a72f27fec0d5893316a1aeb9",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D3",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "review": {
+          "date": "2026-09-13",
+          "decision": null,
+          "kind": "automated",
+          "mapping_revision_id": "pilot-lldpe-r3",
+          "reviewer": "assistant-session-2026-09-13",
+          "reviewer_role": "automated",
+          "status": "proposed"
+        },
+        "revision": 3,
+        "series_id": "pilot-lldpe",
+        "subject": {
+          "kind": "definition"
+        },
+        "supersedes": "pilot-lldpe-r2",
+        "target": {
+          "code": "3901",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:3901",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:3901"
+        }
+      }
+    },
+    {
+      "source_artifact": "identity-assessments.jsonl",
+      "source_line": 479,
+      "source_line_sha256": "e8a6e79901782df51699337e4780b4a13225cd30f73ca96487306774a3fd316d",
+      "record": {
+        "alternatives": [],
+        "assessment_id": "assessment-b22a93997a76159f05ca0af6f3b60b9222b06bde9c695e329b7ccc83e7fe6fd4-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "finding": {
+            "alternatives": [],
+            "assumptions": [],
+            "automated_outcome": "automated_supported",
+            "claim_id": "claim-cfa90fb525637c9cae8e56e698c2a735857f31e862b43f8c8961e1329f29e719",
+            "evidence_binding_ids": [
+              "evidence-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+              "evidence-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c"
+            ],
+            "rationale": "The instance is the source process output for LLDPE and exactly matches the definition by native ID and name."
+          },
+          "response_ref": {
+            "sha256": "1528ddcd61eeac45ebc59bb921edf629fed71f8f014d943c3043714b7b358971"
+          }
+        },
+        "assumptions": [],
+        "automated_outcome": "automated_supported",
+        "challenger": {
+          "agreement_is_proof": false,
+          "finding": {
+            "claim_id": "claim-cfa90fb525637c9cae8e56e698c2a735857f31e862b43f8c8961e1329f29e719",
+            "issues": [
+              {
+                "evidence_binding_ids": [
+                  "evidence-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+                  "evidence-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c"
+                ],
+                "explanation": "The output role, ID, name, and production description are mutually compatible.",
+                "severity": "none",
+                "type": "no_material_concern"
+              }
+            ],
+            "rationale": "The instance is the source-process output for the exact LLDPE flow.",
+            "recommended_outcome": "automated_supported"
+          },
+          "independent_expert_validation": false,
+          "response_ref": {
+            "sha256": "a9784ccfdec573991278bc9df5c25b88fc469b20df69e91f85de0aae8fc7999a"
+          }
+        },
+        "claim": {
+          "candidate_targets": [],
+          "statement": "The exact source-scoped instance is consistent with the named product or material definition in the transmitted source evidence."
+        },
+        "claim_id": "claim-cfa90fb525637c9cae8e56e698c2a735857f31e862b43f8c8961e1329f29e719",
+        "claim_type": "product_identity",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "237ed788df4e3f67acbde5765dc6f91dda622b66b6ff851dab32bfd6401c7716",
+        "evidence_bindings": [
+          {
+            "content_sha256": "b39fe02d048c712b12043956654947417a089f392ff3aa2289bc6ec0a617dc31",
+            "context_sha256": null,
+            "id": "evidence-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+            "locators": [
+              "flows/1ca3b8d5-a002-41c1-bdce-8db63ea6291e.json"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          },
+          {
+            "content_sha256": "6267266ef41b1649ee718cf6c0d1758bdd270f32536d80103998d2874cd10647",
+            "context_sha256": "967df09fc1e14037012e4a11d16fbea18062b02f31e198637ee1317a0e9e1108",
+            "id": "evidence-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+            "locators": [
+              "processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json",
+              "processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json#/exchanges/0"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_review_state": "automated_proposal",
+        "mechanical_outcome": "applicable",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "366a2575d27cf3fe2d637ce4ef9f8fc70d930f38313f10392a4407641bbe5047",
+        "provenance": {
+          "assessor_payload_sha256": "23dee88c6d240fe245584ee6e869c053cf95a85db3c3ba886a64475f70809fd4",
+          "assessor_prompt_version": "automated-evidence-assessor-1",
+          "challenger_payload_sha256": "ba2558cfd50553071ca3cb3a0053d1cec66fea8592344d4d7b6998fcc07bb0ca",
+          "challenger_prompt_version": "automated-evidence-challenger-1",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "model_configuration": {
+            "max_concurrency": 1,
+            "max_retries": 1,
+            "reasoning_effort": "medium"
+          },
+          "policy_version": "automated-evidence-assessment-1",
+          "provider": "OpenAI"
+        },
+        "rationale": "The instance is the source process output for LLDPE and exactly matches the definition by native ID and name.",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D4"
+        ],
+        "schema_version": "automated-assessment-1",
+        "scope": {
+          "definition": {
+            "native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0"
+          },
+          "exchange_ids": [
+            "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108"
+          ],
+          "kind": "instance",
+          "mapping_revision_id": "pilot-lldpe-r3",
+          "process_ids": [
+            "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9"
+          ]
+        },
+        "target": null,
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "citation_support_judgment": "model_assessment_only",
+          "claim_scope": "passed",
+          "schema": "passed",
+          "target_and_edition": "not_applicable_claim_type",
+          "uncertainty_preserved": "passed"
+        },
+        "withheld_material": [
+          {
+            "locators": [],
+            "reason": "Owner transmission authorization is recorded, but upstream catalogue source-use decisions remain unresolved; no target identity or catalogue metadata was transmitted.",
+            "source_group": "catalogue_identity_only"
+          },
+          {
+            "locators": [],
+            "reason": "Classification provisions, wording and derived legal paraphrases were not transmitted.",
+            "source_group": "wco_hs2022_legal_provisions"
+          }
+        ]
+      }
+    },
+    {
+      "source_artifact": "supporting-records.jsonl",
+      "source_line": 488,
+      "source_line_sha256": "98151d2ab19ea78508c9d5bfefe8890b2efe389e98b4b954e8d17a55272cc6a9",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "afb9bca8626870e3a2d9482952f40293477a3268857c1a13f64a642f1db4e474",
+        "id": "uslci-1.2026-06.0:flows:1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+        "kind": "flows",
+        "native": {
+          "@id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+          "@type": "Flow",
+          "category": "Technosphere flows/31-33: Manufacturing/3252: Resin, Synthetic Rubber, and Artificial and Synthetic Fibers and Filaments Manufacturing",
+          "description": "",
+          "flowProperties": [
+            {
+              "@type": "FlowPropertyFactor",
+              "conversionFactor": 1.0,
+              "flowProperty": {
+                "omitted": "excluded_source_reference"
+              },
+              "isRefFlowProperty": true
+            }
+          ],
+          "flowType": "PRODUCT_FLOW",
+          "isInfrastructureFlow": false,
+          "lastChange": "2026-03-10T01:22:54Z",
+          "name": "Linear low-density polyethylene, LLDPE; virgin resin; at plant",
+          "version": "00.00.011"
+        },
+        "native_locator": "flows/1ca3b8d5-a002-41c1-bdce-8db63ea6291e.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "3939303397a7febb630255ca8ea5fbf517f74fffbfd39d867cbd47e5bc833864",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "smoke1.jsonl",
+      "source_line": 2,
+      "source_line_sha256": "cddd476002e5dc7271f796e3d7d4db50a76a4e331deb4d483c319a79c0d7710a",
+      "record": {
+        "assessment_id": "assessment-71626e58f928417c197466c2cd592d85aef24d2890e45717c34ae3c90666de56-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "alternatives": [],
+          "assumptions": [
+            "“Virgin resin; at plant” denotes unconverted resin supplied in a primary bulk form covered by Chapter 39 Note 6.",
+            "The LLDPE product name describes the assessed own output, not another inventory proxy."
+          ],
+          "case_id": "lldpe",
+          "identity_conflict_explanation": "No identity conflict appears: the flow definition, quantitative-reference output, and process all consistently identify virgin LLDPE resin.",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "justified_specificity": "HS4. The own-output identity supports polymers of ethylene in primary forms, while absent density, comonomer, and composition details prevent a justified HS6 determination but do not block the supplied HS4 target.",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Directs use of the heading terms and applicable notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-heading-3901",
+              "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+              "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Heading 3901 covers polymers of ethylene in primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-3",
+              "locator": "PDF page 4, Chapter 39 Note 3",
+              "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Establishes the synthetic-polymer categories eligible for headings 3901–3911; the native evidence identifies synthetic polyethylene resin."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-6",
+              "locator": "PDF page 4, Chapter 39 Note 6",
+              "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines primary forms to include liquids, pastes, irregular blocks, lumps, powders, granules, flakes, and similar bulk forms."
+            },
+            {
+              "evidence_id": "usitc-legal-gir-rule-6",
+              "locator": "PDF page 1, General Rule of Interpretation 6",
+              "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Makes subheading selection depend on subheading terms and related notes; it does not require unresolved HS6 facts to defeat an otherwise supported HS4 result."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-subheading-note-1",
+              "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+              "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Shows that monomer proportions and related composition facts govern classification within a Chapter 39 heading."
+            }
+          ],
+          "missing_facts": [
+            {
+              "effect": "Leaves the primary-form condition dependent on the ordinary inventory meaning of virgin resin; contrary evidence that it is a shaped article would undermine heading 3901.",
+              "fact": "The exact physical presentation—such as granules, powder, liquid, or other bulk primary form—is not stated."
+            },
+            {
+              "effect": "Prevents a defensible HS6 classification but does not prevent HS4 classification as a polymer of ethylene.",
+              "fact": "Density, comonomer identity, monomer proportions, and chemical-modification details are absent."
+            }
+          ],
+          "native_evidence_ids": [
+            "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+            "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c"
+          ],
+          "outcome": "supported",
+          "proposed_target": {
+            "amendment": "unsd-h6-e266823e1299",
+            "code": "3901",
+            "edition": "2022",
+            "id": "hs:2022:unsd-h6-e266823e1299:3901",
+            "level": 4
+          },
+          "rationale": "The exact own-output exchange is virgin linear low-density polyethylene resin. Polyethylene is a polymer of ethylene, and its identification as virgin resin at the plant supports treatment as a primary-form synthetic polymer. GIR 1, Chapter 39 Notes 3 and 6, and heading 3901 therefore support HS4 classification. GIR 6 and the subheading note show why additional compositional facts would be needed only for subheading selection."
+        },
+        "assessor_challenger_disagreement": false,
+        "automated_outcome": "supported",
+        "case_id": "lldpe",
+        "challenger": {
+          "case_id": "lldpe",
+          "checks": [
+            {
+              "evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c"
+              ],
+              "finding": "The definition, exchange, and process consistently identify virgin LLDPE resin, with no proxy statement or competing product identity.",
+              "severity": "none",
+              "type": "conflicting_identity_form_or_proxy"
+            },
+            {
+              "evidence_ids": [
+                "usitc-legal-ch39-note-4",
+                "usitc-legal-ch39-note-6",
+                "usitc-legal-ch39-heading-3901"
+              ],
+              "finding": "Chapter 39 primary-form and copolymer rules are legally material. Exact presentation and monomer proportions are not supplied, although the express LLDPE virgin-resin identity supports 3901 at HS4.",
+              "severity": "limitation",
+              "type": "alternative_heading_or_exception"
+            },
+            {
+              "evidence_ids": [
+                "usitc-legal-gir-rule-6",
+                "usitc-legal-ch39-subheading-note-1"
+              ],
+              "finding": "Density and detailed comonomer facts needed for subheading selection are not improperly required for the proposed HS4 mapping.",
+              "severity": "none",
+              "type": "hs6_requirement_applied_to_hs4"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c"
+              ],
+              "finding": "The exchange is an own quantitative-reference output of the matching LLDPE production process.",
+              "severity": "none",
+              "type": "unsupported_role_sequence_or_compatibility"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+                "usitc-legal-ch39-heading-3901"
+              ],
+              "finding": "The process is dated 2014–2016 and the classification target is HS 2022, but no supplied evidence indicates a relevant identity or heading change.",
+              "severity": "limitation",
+              "type": "historical_mismatch"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c"
+              ],
+              "finding": "The conclusion relies on the own-output identity and not on a default-provider record.",
+              "severity": "none",
+              "type": "default_provider_not_actual_supplier"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+                "usitc-legal-ch39-note-6"
+              ],
+              "finding": "The assessor treats missing presentation and composition details as limitations rather than affirmative evidence that the resin is shaped, converted, or belongs outside heading 3901.",
+              "severity": "none",
+              "type": "missing_metadata_as_absence"
+            }
+          ],
+          "disagrees_with_assessor": false,
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Directs classification according to heading terms and applicable notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-heading-3901",
+              "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+              "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Heading 3901 covers polymers of ethylene in primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-6",
+              "locator": "PDF page 4, Chapter 39 Note 6",
+              "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines the bulk presentations that qualify as primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-subheading-note-1",
+              "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+              "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Shows why detailed monomer and modification facts principally affect classification within the heading."
+            }
+          ],
+          "rationale": "The quantitative-reference output is expressly virgin LLDPE resin. That identity supports a polymer of ethylene, and the resin-at-plant description reasonably supports an unconverted primary form. Exact form and composition metadata would be required for stronger verification or HS6 selection, but their omission does not defeat the proposed HS4 result.",
+          "recommended_outcome": "supported"
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-c69c5afbe6eaa7271759517df3e3cab2af3f7c40748590bcd7ac260a9f9e6ee9",
+        "claim_type": "hs_mapping",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "f00fa50abe36913d9487204b0ad9fa83b44381f92887d0a8ac0c85f330ec85c0",
+        "evidence_bindings": [
+          {
+            "content_sha256": "0dfbeb22bab092b2f8159f3ade545c9c2a2cd19bd45f6e27c82fa0ed32867294",
+            "id": "evidence-catalogue-identity-0dfbeb22bab092b2f8159f3ade545c9c2a2cd19bd45f6e27c82fa0ed32867294",
+            "locator": "hs:2022:unsd-h6-e266823e1299:3901",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "28e22c7c6557dac14a4a1ac60fa47d0cfd2835c781a1fceab93b7695fd750efc",
+            "id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+            "locator": "flows/1ca3b8d5-a002-41c1-bdce-8db63ea6291e.json",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "content_sha256": "ef525d119ad5ced8ebf25923adffe8f03f7388cdad32a96bbe15a507a2cf62ab",
+            "id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+            "locator": "processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json#/exchanges/0 and processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-heading-3901",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+            "provision_class": "international_heading",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-3",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 3",
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-4",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 4",
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "2f65cf44acacf0cb2081b6837255c2e1eb1089c9da416a876106cb51ab828b58",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-6",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 6",
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-subheading-note-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+            "provision_class": "international_subheading_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 1",
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-6",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 6",
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state_preserved_separately": "preserved_existing_state",
+        "mechanical_outcome": "applicable",
+        "outcome_disagreement": false,
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "71626e58f928417c197466c2cd592d85aef24d2890e45717c34ae3c90666de56",
+        "provenance": {
+          "assessor_payload_sha256": "eb245df9e3e58a41ae3430247ddf40d456a166fc32e822121ee76f8cb4fd10ed",
+          "assessor_prompt_version": "hs-mapping-smoke-assessor-2",
+          "challenger_payload_sha256": "75d66575530757baf3e6ebec33d60dc76b850ba8f000b2632b3ec95b924f94bc",
+          "challenger_prompt_version": "hs-mapping-smoke-challenger-2",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "policy_version": "hs-mapping-smoke-policy-1",
+          "provider": "OpenAI",
+          "response_refs": {
+            "assessor": {
+              "sha256": "f847c0d60445cd530242dac4b5c957b3f4230bab6815b6453cca7593edf4b290"
+            },
+            "challenger": {
+              "sha256": "fc43c0173870c1ea739da47d639d36f3381354d3bb3f4d24174ae3924d43009a"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "schema_version": "hs-mapping-smoke-assessment-1",
+        "scope": {
+          "case_id": "lldpe",
+          "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "process_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9",
+          "scope_note": "Classify the resin represented by this own-output instance; do not let missing HS6 facts block a justified HS4 result."
+        },
+        "validation": {
+          "citation_exists_and_matches_supplied_text": "passed",
+          "citation_semantically_supports_reasoning": "automated_judgment_only",
+          "schema_scope_target": "passed"
+        }
+      }
+    },
+    {
+      "source_artifact": "smoke2.jsonl",
+      "source_line": 2,
+      "source_line_sha256": "d5d8a1c795c26da7c0b13077141d5bd940f48df9c3e8ade3ced4ab6b4ce50733",
+      "record": {
+        "assessment_id": "assessment-00a5a3aae0a9530c7a5240f7ac88740b22015be883d0068df85084362bbb8941-v1",
+        "assessor": {
+          "additional_missing_facts": [],
+          "alternatives": [
+            {
+              "rationale": "Heading 3901 is a lower-level possibility based on the LLDPE identity, but it is not the requested HS6 classification and primary-form presentation remains unestablished.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "3901",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:3901",
+                "level": 4
+              }
+            }
+          ],
+          "assessed_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "assumptions": [],
+          "case_id": "S2-06",
+          "hs_resolution": "insufficient_information",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires heading classification from heading terms and relevant notes."
+            },
+            {
+              "evidence_id": "usitc-legal-gir-rule-6",
+              "locator": "PDF page 1, General Rule of Interpretation 6",
+              "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires HS6 classification from comparable subheading terms and related notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-3",
+              "locator": "PDF page 4, Chapter 39 Note 3",
+              "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines the synthesized-polymer categories eligible for headings 3901–3911."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-4",
+              "locator": "PDF page 4, Chapter 39 Note 4",
+              "passage_sha256": "2f65cf44acacf0cb2081b6837255c2e1eb1089c9da416a876106cb51ab828b58",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Provides heading rules for copolymers and polymer blends."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-6",
+              "locator": "PDF page 4, Chapter 39 Note 6",
+              "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines the primary forms required by heading 3901."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-subheading-note-1",
+              "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+              "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Supplies polymer-composition rules relevant to subheading selection but does not supply the missing candidate subheading terms."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-heading-3901",
+              "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+              "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Heading 3901 covers polymers of ethylene in primary forms."
+            }
+          ],
+          "native_evidence_ids": [
+            "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+            "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+          ],
+          "object_relationship": {
+            "explanation": "The definition and quantitative-reference output share the same flow UUID and LLDPE identity, linking the represented product to the unit-inventory output.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+              "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+            ],
+            "status": "same_object"
+          },
+          "proposed_target": null,
+          "rationale": "The request is for HS6, but the only supplied candidate is the HS4 heading 3901. Full HS6 candidate terms are absent, the finer-classification control lacks complete rule evidence, and the actual primary-form presentation is not stated. An HS6 target therefore cannot be selected.",
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "source_declared",
+              "fact_status": "established",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-3",
+                "usitc-legal-ch39-note-4"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+              ],
+              "observed_value": "Linear low-density polyethylene (LLDPE), virgin resin",
+              "rationale": "The source declares the product to be LLDPE, supporting ethylene-polymer identity at heading level.",
+              "rule_id": "polymer_identity"
+            },
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-6"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+              ],
+              "observed_value": null,
+              "rationale": "The label “virgin resin” does not state whether the exact product is presented as a liquid, paste, irregular block, lump, powder, granule, flake, or other qualifying bulk form.",
+              "rule_id": "primary_form"
+            },
+            {
+              "applicability": "unresolved",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-gir-rule-6",
+                "usitc-legal-ch39-subheading-note-1"
+              ],
+              "native_evidence_ids": [],
+              "observed_value": null,
+              "rationale": "The full HS6 candidate subheading text and subheading-specific composition facts are absent; the configured missing-rule-evidence flag independently requires unresolved applicability.",
+              "rule_id": "finer_polymer"
+            }
+          ],
+          "scope_rationale": "The assessed object exactly matches the requested represented-product object.",
+          "scope_verdict": "matched"
+        },
+        "case_id": "S2-06",
+        "challenger": {
+          "additional_missing_facts": [],
+          "alternatives": [
+            {
+              "rationale": "Heading 3901 is only a lower-level possibility based on LLDPE identity; it is not an HS6 candidate, and qualifying primary-form presentation remains unestablished.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "3901",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:3901",
+                "level": 4
+              }
+            }
+          ],
+          "assumptions": [],
+          "case_id": "S2-06",
+          "claim_object": {
+            "evidence_ids": [
+              "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+              "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor evaluated the exact represented-product object identified in the claim."
+          },
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires heading classification from heading terms and relevant notes."
+            },
+            {
+              "evidence_id": "usitc-legal-gir-rule-6",
+              "locator": "PDF page 1, General Rule of Interpretation 6",
+              "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires subheading classification from comparable subheading terms and applicable notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-3",
+              "locator": "PDF page 4, Chapter 39 Note 3",
+              "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines synthesized-polymer categories eligible for headings 3901 through 3911."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-4",
+              "locator": "PDF page 4, Chapter 39 Note 4",
+              "passage_sha256": "2f65cf44acacf0cb2081b6837255c2e1eb1089c9da416a876106cb51ab828b58",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Provides heading rules for copolymers and polymer blends."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-6",
+              "locator": "PDF page 4, Chapter 39 Note 6",
+              "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines the primary forms required by heading 3901."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-subheading-note-1",
+              "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+              "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Provides polymer-composition rules relevant to subheading selection, but does not supply the missing candidate subheading terms or product composition facts."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-heading-3901",
+              "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+              "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Heading 3901 covers polymers of ethylene only when presented in primary forms."
+            }
+          ],
+          "legal_reasoning": {
+            "evidence_ids": [
+              "usitc-legal-gir-rule-1",
+              "usitc-legal-gir-rule-6",
+              "usitc-legal-ch39-note-6",
+              "usitc-legal-ch39-subheading-note-1",
+              "usitc-legal-ch39-heading-3901"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor correctly declines to turn the supplied HS4 possibility into an HS6 conclusion. The absent requested-level candidates, missing HS6 rule evidence, and unknown primary-form prerequisite preclude a supported target."
+          },
+          "native_evidence_ids": [
+            "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+            "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+          ],
+          "object_relationship": {
+            "explanation": "The definition and quantitative-reference output share the same flow UUID and source-declared LLDPE identity.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+              "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+            ],
+            "status": "same_object"
+          },
+          "rationale": "The source supports an ethylene-polymer identity potentially within heading 3901, but it does not establish presentation in a Chapter 39 primary form. More decisively, the requested level is HS6 while the only candidate is HS4, and the configured HS6 discriminator has missing rule evidence. No exact requested-level target can therefore be selected.",
+          "recommended_assessed_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "recommended_hs_resolution": "insufficient_information",
+          "recommended_scope_verdict": "matched",
+          "recommended_target": null,
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "source_declared",
+              "fact_status": "established",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-3",
+                "usitc-legal-ch39-note-4"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+              ],
+              "observed_value": "Linear low-density polyethylene, LLDPE; virgin resin",
+              "rationale": "The source expressly identifies the product as LLDPE, supporting ethylene-polymer identity at heading level.",
+              "rule_id": "polymer_identity"
+            },
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-6"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+              ],
+              "observed_value": null,
+              "rationale": "The phrase “virgin resin” does not establish that this exact product is presented as a liquid, paste, irregular block, lump, powder, granule, flake, or similar bulk form.",
+              "rule_id": "primary_form"
+            },
+            {
+              "applicability": "unresolved",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-gir-rule-6",
+                "usitc-legal-ch39-subheading-note-1"
+              ],
+              "native_evidence_ids": [],
+              "observed_value": null,
+              "rationale": "The configured control has missing_rule_evidence=true, requiring unresolved applicability. Full HS6 candidate terms and the product facts necessary to apply them are also absent.",
+              "rule_id": "finer_polymer"
+            }
+          ],
+          "scope_rationale": "The classified object exactly matches the supplied claim_object at every identifying field."
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-ae5ef961c3545dff7f4fdf103dd906c4863cbf2c65c3173644ddae81a4e42d07",
+        "claim_object": {
+          "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "kind": "represented_product",
+          "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+        },
+        "claim_type": "hs_mapping",
+        "controls": {
+          "assessed_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "assessor_challenger_disagreement": false,
+          "citation_semantic_support": "automated_judgment_only",
+          "disagreement_axes": {
+            "claim_object_disagreement": false,
+            "hs_resolution_disagreement": false,
+            "legal_reasoning_disagreement": false,
+            "object_disagreement": false,
+            "scope_disagreement": false,
+            "target_disagreement": false
+          },
+          "display_resolution": "insufficient_information",
+          "hs_resolution": "insufficient_information",
+          "proposed_target": null,
+          "requested_claim_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "rule_controls_status": "assistant_authored_testing_hypotheses",
+          "scope_verdict": "matched",
+          "source_scoped_automated_support": false
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "3017f508219ec8dce4a90638dc0b14eb3a7f002c13b39820934763ecd57cc539",
+        "evidence_bindings": [
+          {
+            "content_sha256": "0dfbeb22bab092b2f8159f3ade545c9c2a2cd19bd45f6e27c82fa0ed32867294",
+            "id": "evidence-catalogue-identity-0dfbeb22bab092b2f8159f3ade545c9c2a2cd19bd45f6e27c82fa0ed32867294",
+            "locator": "hs:2022:unsd-h6-e266823e1299:3901",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "28e22c7c6557dac14a4a1ac60fa47d0cfd2835c781a1fceab93b7695fd750efc",
+            "evidence_view": "full",
+            "id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+            "locator": "flows/1ca3b8d5-a002-41c1-bdce-8db63ea6291e.json",
+            "source_evidence_id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "content_sha256": "ef525d119ad5ced8ebf25923adffe8f03f7388cdad32a96bbe15a507a2cf62ab",
+            "evidence_view": "full",
+            "id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45",
+            "locator": "processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json#/exchanges/0 and processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json",
+            "minimisation": [
+              "Unrelated exchanges, providers, attachments and prior assessment conclusions omitted."
+            ],
+            "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-heading-3901",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+            "provision_class": "international_heading",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-3",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 3",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-4",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 4",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "2f65cf44acacf0cb2081b6837255c2e1eb1089c9da416a876106cb51ab828b58",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-6",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 6",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-subheading-note-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+            "provision_class": "international_subheading_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1
+              ],
+              "status": "completed",
+              "warnings": [
+                "Rule hierarchy and wrapping were visually checked. Only GIR 1 and 6 on page 1 are selected; unrelated General Notes are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-6",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 6",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1
+              ],
+              "status": "completed",
+              "warnings": [
+                "Rule hierarchy and wrapping were visually checked. Only GIR 1 and 6 on page 1 are selected; unrelated General Notes are excluded."
+              ]
+            }
+          }
+        ],
+        "evidence_omissions": {
+          "legal": [],
+          "native": []
+        },
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state": "Existing exact-instance decisions unchanged; this view is not accepted",
+        "mechanical_outcome": "applicable",
+        "mechanical_scope": "Original complete instance; not recomputed on experimental view",
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "00a5a3aae0a9530c7a5240f7ac88740b22015be883d0068df85084362bbb8941",
+        "provenance": {
+          "execution_route": "codex-cli-0.154.0",
+          "policy_version": "smoke2-contract-1",
+          "prompt_versions": [
+            "smoke2-assessor-1",
+            "smoke2-challenger-1"
+          ],
+          "provider": "OpenAI",
+          "requested_model": "gpt-5.6-sol",
+          "responses": {
+            "assessor": {
+              "exact_payload_sha256": "a6e7082e7fa4a9372055be155b6513b94f3af2b3337a46e980cf10e612f37ba1",
+              "sha256": "321a66bbd21eb18f938118e51908cfa3102acb797fa4755bb5a98df2872a85ed"
+            },
+            "challenger": {
+              "exact_payload_sha256": "59eaae492de458bb552467c1d53cdd9bd1ddb87e6e541fbfef68159d7a9515d1",
+              "sha256": "ad5368eb978dc53c6044a71bc018c5a78ff77899cb0202703c9edae31eb74f2d"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "requested_claim": "hs_subheading_of_represented_product",
+        "requested_level": 6,
+        "rule_controls": [
+          {
+            "id": "polymer_identity",
+            "kind": "eligibility",
+            "legal_evidence_ids": [
+              "usitc-legal-ch39-heading-3901",
+              "usitc-legal-ch39-note-3",
+              "usitc-legal-ch39-note-4"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Polymer identity and composition relevant to heading eligibility",
+            "target_codes": [
+              "3901"
+            ]
+          },
+          {
+            "id": "primary_form",
+            "kind": "eligibility",
+            "legal_evidence_ids": [
+              "usitc-legal-ch39-heading-3901",
+              "usitc-legal-ch39-note-6"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Actual product presentation: primary form versus article",
+            "target_codes": [
+              "3901"
+            ]
+          },
+          {
+            "id": "finer_polymer",
+            "kind": "discriminator",
+            "legal_evidence_ids": [
+              "usitc-legal-gir-rule-6",
+              "usitc-legal-ch39-subheading-note-1"
+            ],
+            "level": 6,
+            "missing_fact_effect": "prevents_finer_classification",
+            "missing_rule_evidence": true,
+            "property": "Subheading-specific facts and full candidate subheading text",
+            "target_codes": [
+              "3901"
+            ]
+          }
+        ],
+        "schema_version": "smoke2-assessment-1",
+        "scope": {
+          "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "process_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9"
+        },
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "schema_scope_target": "passed",
+          "semantic_support": "automated_judgment_not_verified_truth"
+        }
+      }
+    },
+    {
+      "source_artifact": "smoke2.jsonl",
+      "source_line": 4,
+      "source_line_sha256": "3ce3bdeb1f5f861ee3827e74ba3b3adfc8fba3add152c04212f3c49c0e01af24",
+      "record": {
+        "assessment_id": "assessment-0db3d91f46ad7c0edc53c9ce4b4c38afbf5bbcf5dfc40166d72e2083fa91f52b-v1",
+        "assessor": {
+          "additional_missing_facts": [],
+          "alternatives": [],
+          "assessed_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "assumptions": [
+            {
+              "assumption": "The represented LLDPE resin is presented in a primary form enumerated by Chapter 39 Note 6.",
+              "fact_id": "primary_form",
+              "if_false": "Heading 3901 is not supported for the represented product."
+            }
+          ],
+          "case_id": "S2-02",
+          "hs_resolution": "conditional",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Directs classification by heading terms and relevant notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-heading-3901",
+              "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+              "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines heading 3901 as polymers of ethylene in primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-3",
+              "locator": "PDF page 4, Chapter 39 Note 3",
+              "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Provides the synthetic-polymer eligibility conditions for headings 3901–3911."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-4",
+              "locator": "PDF page 4, Chapter 39 Note 4",
+              "passage_sha256": "2f65cf44acacf0cb2081b6837255c2e1eb1089c9da416a876106cb51ab828b58",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Provides the chapter rule for copolymers and polymer blends relevant to polymer composition."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-6",
+              "locator": "PDF page 4, Chapter 39 Note 6",
+              "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Enumerates the presentations treated as primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-gir-rule-6",
+              "locator": "PDF page 1, General Rule of Interpretation 6",
+              "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Governs classification among subheadings at the same level."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-subheading-note-1",
+              "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+              "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Shows that finer polymer classification depends on composition-specific subheading rules."
+            }
+          ],
+          "native_evidence_ids": [
+            "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+            "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+          ],
+          "object_relationship": {
+            "explanation": "The evidence identifies a quantitative-reference output with the same LLDPE flow identity but contains no proxy declaration or other evidence resolving whether any distinct proxy relationship exists.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+              "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+            ],
+            "status": "unresolved"
+          },
+          "proposed_target": {
+            "amendment": "unsd-h6-e266823e1299",
+            "code": "3901",
+            "edition": "2022",
+            "id": "hs:2022:unsd-h6-e266823e1299:3901",
+            "level": 4
+          },
+          "rationale": "The source declares linear low-density polyethylene and virgin resin, supporting an ethylene-polymer identity. Heading 3901 additionally requires presentation in primary forms; the evidence does not state a form enumerated by Chapter 39 Note 6. Classification in 3901 is therefore conditional on that unresolved heading-level fact. The unresolved HS6 control does not block this HS4 result.",
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "source_declared",
+              "fact_status": "established",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-3",
+                "usitc-legal-ch39-note-4"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+              ],
+              "observed_value": "Linear low-density polyethylene (LLDPE), virgin resin",
+              "rationale": "The native name expressly declares LLDPE, an ethylene polymer; no contrary composition is supplied.",
+              "rule_id": "polymer_identity"
+            },
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-6"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+              ],
+              "observed_value": null,
+              "rationale": "“Virgin resin” does not specify liquid, paste, irregular block, lump, powder, granule, flake, or another enumerated bulk form.",
+              "rule_id": "primary_form"
+            },
+            {
+              "applicability": "unresolved",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-gir-rule-6",
+                "usitc-legal-ch39-subheading-note-1"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6"
+              ],
+              "observed_value": null,
+              "rationale": "The control is marked as missing rule evidence, and no complete candidate-subheading text or required composition measurements are supplied. It concerns HS6 and does not block the requested HS4 classification.",
+              "rule_id": "finer_polymer"
+            }
+          ],
+          "scope_rationale": "The assessed object exactly matches the requested represented-product slot.",
+          "scope_verdict": "matched"
+        },
+        "case_id": "S2-02",
+        "challenger": {
+          "additional_missing_facts": [],
+          "alternatives": [],
+          "assumptions": [
+            {
+              "assumption": "The represented LLDPE resin is presented in a primary form enumerated by Chapter 39 Note 6.",
+              "fact_id": "primary_form",
+              "if_false": "The represented product does not qualify for heading 3901."
+            }
+          ],
+          "case_id": "S2-02",
+          "claim_object": {
+            "evidence_ids": [
+              "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+              "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor classified the exact supplied represented-product object requested by the claim."
+          },
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires classification according to heading terms and relevant section or chapter notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-heading-3901",
+              "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+              "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines heading 3901 as polymers of ethylene in primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-3",
+              "locator": "PDF page 4, Chapter 39 Note 3",
+              "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Sets the synthetic-product eligibility conditions for headings 3901 through 3911."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-4",
+              "locator": "PDF page 4, Chapter 39 Note 4",
+              "passage_sha256": "2f65cf44acacf0cb2081b6837255c2e1eb1089c9da416a876106cb51ab828b58",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Provides the heading-level treatment of copolymers and polymer blends."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-6",
+              "locator": "PDF page 4, Chapter 39 Note 6",
+              "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Exhaustively identifies the presentations treated as primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-gir-rule-6",
+              "locator": "PDF page 1, General Rule of Interpretation 6",
+              "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Governs classification among subheadings at the same level."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-subheading-note-1",
+              "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+              "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Shows that finer polymer classification depends on composition-specific rules."
+            }
+          ],
+          "legal_reasoning": {
+            "evidence_ids": [
+              "usitc-legal-gir-rule-1",
+              "usitc-legal-ch39-heading-3901",
+              "usitc-legal-ch39-note-3",
+              "usitc-legal-ch39-note-4",
+              "usitc-legal-ch39-note-6",
+              "usitc-legal-gir-rule-6",
+              "usitc-legal-ch39-subheading-note-1"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor correctly treats primary form as an unresolved material prerequisite, covers it with an explicit assumption, and does not allow the HS6-only control to block an HS4 result."
+          },
+          "native_evidence_ids": [
+            "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+            "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+          ],
+          "object_relationship": {
+            "explanation": "The native evidence consistently identifies an LLDPE output, but it contains no proxy declaration or other evidence proving whether the represented product, inventory proxy, and flow identity are substantively the same or different objects.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+              "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+            ],
+            "status": "unresolved"
+          },
+          "rationale": "The source-declared name establishes an LLDPE resin identity, supporting an ethylene-polymer classification. Heading 3901 also requires the product to be in a primary form. Neither “virgin resin” nor the process record establishes a form enumerated in Chapter 39 Note 6, so heading 3901 is supported only conditionally. The unresolved HS6 control does not prevent an HS4 determination.",
+          "recommended_assessed_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "recommended_hs_resolution": "conditional",
+          "recommended_scope_verdict": "matched",
+          "recommended_target": {
+            "amendment": "unsd-h6-e266823e1299",
+            "code": "3901",
+            "edition": "2022",
+            "id": "hs:2022:unsd-h6-e266823e1299:3901",
+            "level": 4
+          },
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "source_declared",
+              "fact_status": "established",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-3",
+                "usitc-legal-ch39-note-4"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+              ],
+              "observed_value": "Linear low-density polyethylene, LLDPE; virgin resin",
+              "rationale": "The native flow and process names expressly identify the material as LLDPE, supporting its identity as an ethylene polymer; no contrary identity is supplied.",
+              "rule_id": "polymer_identity"
+            },
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-6"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45"
+              ],
+              "observed_value": null,
+              "rationale": "The evidence does not identify the actual presentation as a liquid, paste, irregular block, lump, powder, granule, flake, or similar bulk form. “Virgin resin” alone does not resolve this requirement.",
+              "rule_id": "primary_form"
+            },
+            {
+              "applicability": "unresolved",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-gir-rule-6",
+                "usitc-legal-ch39-subheading-note-1"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6"
+              ],
+              "observed_value": null,
+              "rationale": "The control is expressly marked as missing rule evidence, requiring unresolved applicability. In any event, it concerns HS6 facts and does not block the requested HS4 classification.",
+              "rule_id": "finer_polymer"
+            }
+          ],
+          "scope_rationale": "The recommended assessed object exactly matches the requested represented-product object, including kind, object_id, instance_id, and definition_native_id."
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-c23099a2ac3e85c1162180dd70898e0b1612f879be0b2c20baf29daab1481d36",
+        "claim_object": {
+          "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "kind": "represented_product",
+          "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+        },
+        "claim_type": "hs_mapping",
+        "controls": {
+          "assessed_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "assessor_challenger_disagreement": false,
+          "citation_semantic_support": "automated_judgment_only",
+          "disagreement_axes": {
+            "claim_object_disagreement": false,
+            "hs_resolution_disagreement": false,
+            "legal_reasoning_disagreement": false,
+            "object_disagreement": false,
+            "scope_disagreement": false,
+            "target_disagreement": false
+          },
+          "display_resolution": "conditional",
+          "hs_resolution": "conditional",
+          "proposed_target": {
+            "amendment": "unsd-h6-e266823e1299",
+            "code": "3901",
+            "edition": "2022",
+            "id": "hs:2022:unsd-h6-e266823e1299:3901",
+            "level": 4
+          },
+          "requested_claim_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "rule_controls_status": "assistant_authored_testing_hypotheses",
+          "scope_verdict": "matched",
+          "source_scoped_automated_support": false
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "d9ee839599ee140eedb8b7aa2033b791d7fb64eb3c4551317a69cf13732dddda",
+        "evidence_bindings": [
+          {
+            "content_sha256": "0dfbeb22bab092b2f8159f3ade545c9c2a2cd19bd45f6e27c82fa0ed32867294",
+            "id": "evidence-catalogue-identity-0dfbeb22bab092b2f8159f3ade545c9c2a2cd19bd45f6e27c82fa0ed32867294",
+            "locator": "hs:2022:unsd-h6-e266823e1299:3901",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "28e22c7c6557dac14a4a1ac60fa47d0cfd2835c781a1fceab93b7695fd750efc",
+            "evidence_view": "full",
+            "id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-45e95577a868eaa6",
+            "locator": "flows/1ca3b8d5-a002-41c1-bdce-8db63ea6291e.json",
+            "source_evidence_id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "content_sha256": "ef525d119ad5ced8ebf25923adffe8f03f7388cdad32a96bbe15a507a2cf62ab",
+            "evidence_view": "full",
+            "id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-a44f196695906e45",
+            "locator": "processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json#/exchanges/0 and processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json",
+            "minimisation": [
+              "Unrelated exchanges, providers, attachments and prior assessment conclusions omitted."
+            ],
+            "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-heading-3901",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+            "provision_class": "international_heading",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-3",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 3",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-4",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 4",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "2f65cf44acacf0cb2081b6837255c2e1eb1089c9da416a876106cb51ab828b58",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-6",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 6",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-subheading-note-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+            "provision_class": "international_subheading_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1
+              ],
+              "status": "completed",
+              "warnings": [
+                "Rule hierarchy and wrapping were visually checked. Only GIR 1 and 6 on page 1 are selected; unrelated General Notes are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-6",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 6",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1
+              ],
+              "status": "completed",
+              "warnings": [
+                "Rule hierarchy and wrapping were visually checked. Only GIR 1 and 6 on page 1 are selected; unrelated General Notes are excluded."
+              ]
+            }
+          }
+        ],
+        "evidence_omissions": {
+          "legal": [],
+          "native": []
+        },
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state": "Existing exact-instance decisions unchanged; this view is not accepted",
+        "mechanical_outcome": "applicable",
+        "mechanical_scope": "Original complete instance; not recomputed on experimental view",
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "0db3d91f46ad7c0edc53c9ce4b4c38afbf5bbcf5dfc40166d72e2083fa91f52b",
+        "provenance": {
+          "execution_route": "codex-cli-0.154.0",
+          "policy_version": "smoke2-contract-1",
+          "prompt_versions": [
+            "smoke2-assessor-1",
+            "smoke2-challenger-1"
+          ],
+          "provider": "OpenAI",
+          "requested_model": "gpt-5.6-sol",
+          "responses": {
+            "assessor": {
+              "exact_payload_sha256": "0d343c3a10b902c1cba798dea9f68a20f3b3936c15cc4e59c8502f511ba68155",
+              "sha256": "d554d6866e0311dadd4a650a28ebe955f850b2d4397e4c1deeede45f8deefac5"
+            },
+            "challenger": {
+              "exact_payload_sha256": "324fe798e0e56a0e9e2ab3c01507fbfb2f2063fffb00cd009bb3f74a27e1c3af",
+              "sha256": "d358b7c26b394964f975c0f7bb7a4adab73c9dd1cd26f85bc9d475ea24145420"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "requested_claim": "hs_heading_of_represented_product",
+        "requested_level": 4,
+        "rule_controls": [
+          {
+            "id": "polymer_identity",
+            "kind": "eligibility",
+            "legal_evidence_ids": [
+              "usitc-legal-ch39-heading-3901",
+              "usitc-legal-ch39-note-3",
+              "usitc-legal-ch39-note-4"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Polymer identity and composition relevant to heading eligibility",
+            "target_codes": [
+              "3901"
+            ]
+          },
+          {
+            "id": "primary_form",
+            "kind": "eligibility",
+            "legal_evidence_ids": [
+              "usitc-legal-ch39-heading-3901",
+              "usitc-legal-ch39-note-6"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Actual product presentation: primary form versus article",
+            "target_codes": [
+              "3901"
+            ]
+          },
+          {
+            "id": "finer_polymer",
+            "kind": "discriminator",
+            "legal_evidence_ids": [
+              "usitc-legal-gir-rule-6",
+              "usitc-legal-ch39-subheading-note-1"
+            ],
+            "level": 6,
+            "missing_fact_effect": "prevents_finer_classification",
+            "missing_rule_evidence": true,
+            "property": "Subheading-specific facts and full candidate subheading text",
+            "target_codes": [
+              "3901"
+            ]
+          }
+        ],
+        "schema_version": "smoke2-assessment-1",
+        "scope": {
+          "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "process_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9"
+        },
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "schema_scope_target": "passed",
+          "semantic_support": "automated_judgment_not_verified_truth"
+        }
+      }
+    },
+    {
+      "source_artifact": "smoke2.jsonl",
+      "source_line": 10,
+      "source_line_sha256": "126e55ff5bd0e239c611e8f4944c487a0058604a428beea98f94ca98ffd7136f",
+      "record": {
+        "assessment_id": "assessment-83867d91f964206bf8ba40524a92df272a9b652ea3bf2c468a75099768769fed-v1",
+        "assessor": {
+          "additional_missing_facts": [],
+          "alternatives": [],
+          "assessed_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "assumptions": [],
+          "case_id": "S2-10",
+          "hs_resolution": "insufficient_information",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires classification under the heading terms and relevant notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-heading-3901",
+              "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+              "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Limits heading 3901 to polymers of ethylene in primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-3",
+              "locator": "PDF page 4, Chapter 39 Note 3",
+              "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines categories of chemically synthesized goods eligible for headings 3901 through 3911."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-4",
+              "locator": "PDF page 4, Chapter 39 Note 4",
+              "passage_sha256": "2f65cf44acacf0cb2081b6837255c2e1eb1089c9da416a876106cb51ab828b58",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Provides composition-based classification rules for copolymers and polymer blends."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-6",
+              "locator": "PDF page 4, Chapter 39 Note 6",
+              "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines the presentations qualifying as primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-gir-rule-6",
+              "locator": "PDF page 1, General Rule of Interpretation 6",
+              "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Governs comparison of subheadings at the same level."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-subheading-note-1",
+              "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+              "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Provides composition rules relevant to finer classification within a Chapter 39 heading."
+            }
+          ],
+          "native_evidence_ids": [
+            "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+            "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+          ],
+          "object_relationship": {
+            "explanation": "The native evidence shows only an unidentified product flow used as the quantitative reference output; it does not establish identity with or difference from the inventory proxy.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+              "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+            ],
+            "status": "unresolved"
+          },
+          "proposed_target": null,
+          "rationale": "The product name, description, category, process context, and unit name are withheld. The remaining evidence establishes neither an ethylene-polymer identity and composition nor presentation in a qualifying primary form, both of which are material to heading 3901.",
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-3",
+                "usitc-legal-ch39-note-4"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+              ],
+              "observed_value": null,
+              "rationale": "Polymer identity and composition are material under heading 3901 and the Chapter 39 notes, but all identifying native fields are withheld.",
+              "rule_id": "polymer_identity"
+            },
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-6"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+              ],
+              "observed_value": null,
+              "rationale": "Heading 3901 requires a primary-form presentation, while the disclosed records provide no product-form description.",
+              "rule_id": "primary_form"
+            },
+            {
+              "applicability": "unresolved",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-gir-rule-6",
+                "usitc-legal-ch39-subheading-note-1"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+              ],
+              "observed_value": null,
+              "rationale": "Subheading composition facts and the complete candidate subheading text are unavailable. This HS6 uncertainty would not independently block an otherwise supported HS4 result, but the HS4 prerequisites are also unknown.",
+              "rule_id": "finer_polymer"
+            }
+          ],
+          "scope_rationale": "The assessment [contact withheld]es the exact represented-product slot identified by the claim, although its descriptive identity is withheld.",
+          "scope_verdict": "matched"
+        },
+        "case_id": "S2-10",
+        "challenger": {
+          "additional_missing_facts": [],
+          "alternatives": [],
+          "assumptions": [],
+          "case_id": "S2-10",
+          "claim_object": {
+            "evidence_ids": [
+              "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+              "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+            ],
+            "judgment": "agrees",
+            "rationale": "The disclosed identifiers match the requested represented-product slot, so the scope is matched even though the descriptive identity needed for HS classification is withheld."
+          },
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires classification according to heading terms and applicable notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-heading-3901",
+              "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+              "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Limits heading 3901 to polymers of ethylene in primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-3",
+              "locator": "PDF page 4, Chapter 39 Note 3",
+              "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines the chemically synthesized product categories eligible for headings 3901 through 3911."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-4",
+              "locator": "PDF page 4, Chapter 39 Note 4",
+              "passage_sha256": "2f65cf44acacf0cb2081b6837255c2e1eb1089c9da416a876106cb51ab828b58",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Provides composition-based heading rules for copolymers and polymer blends."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-note-6",
+              "locator": "PDF page 4, Chapter 39 Note 6",
+              "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Defines the product presentations that constitute primary forms."
+            },
+            {
+              "evidence_id": "usitc-legal-gir-rule-6",
+              "locator": "PDF page 1, General Rule of Interpretation 6",
+              "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Governs classification among subheadings at the same level."
+            },
+            {
+              "evidence_id": "usitc-legal-ch39-subheading-note-1",
+              "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+              "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+              "source_id": "usitc-2022-basic-chapter-39",
+              "support_explanation": "Provides composition rules relevant to finer classification of polymers within a heading."
+            }
+          ],
+          "legal_reasoning": {
+            "evidence_ids": [
+              "usitc-legal-gir-rule-1",
+              "usitc-legal-ch39-heading-3901",
+              "usitc-legal-ch39-note-3",
+              "usitc-legal-ch39-note-4",
+              "usitc-legal-ch39-note-6",
+              "usitc-legal-gir-rule-6",
+              "usitc-legal-ch39-subheading-note-1"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor correctly concludes that unknown HS4 prerequisites—ethylene-polymer identity and qualifying primary form—prevent selection of heading 3901. It also correctly avoids allowing the HS6-only uncertainty to become the independent reason for the HS4 outcome."
+          },
+          "native_evidence_ids": [
+            "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+            "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+          ],
+          "object_relationship": {
+            "explanation": "The records identify an output flow slot but provide no evidence establishing whether the separately modeled inventory proxy represents the same object or a different one.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+              "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+            ],
+            "status": "unresolved"
+          },
+          "rationale": "The disclosed evidence establishes only an unidentified product-flow output measured by mass. With the product name, description, category, process context, unit name, polymer composition, and presentation withheld, it cannot establish either an ethylene-polymer identity or a qualifying primary form under heading 3901.",
+          "recommended_assessed_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "recommended_hs_resolution": "insufficient_information",
+          "recommended_scope_verdict": "matched",
+          "recommended_target": null,
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-3",
+                "usitc-legal-ch39-note-4"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+              ],
+              "observed_value": null,
+              "rationale": "Polymer identity and composition are material to heading 3901, but the identifying and compositional native fields are withheld.",
+              "rule_id": "polymer_identity"
+            },
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch39-heading-3901",
+                "usitc-legal-ch39-note-6"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+              ],
+              "observed_value": null,
+              "rationale": "Heading 3901 requires presentation in a primary form, but no disclosed field identifies the product's actual presentation.",
+              "rule_id": "primary_form"
+            },
+            {
+              "applicability": "unresolved",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-gir-rule-6",
+                "usitc-legal-ch39-subheading-note-1"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+                "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389"
+              ],
+              "observed_value": null,
+              "rationale": "The control is HS6-specific and its configured rule evidence is incomplete. Its uncertainty would not independently defeat an established HS4 classification, but the separate HS4 identity and primary-form prerequisites are also unknown.",
+              "rule_id": "finer_polymer"
+            }
+          ],
+          "scope_rationale": "The identifiers in the disclosed records match the fixed represented-product slot, although the fields required to identify and classify that product are withheld."
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-8cc7913292741ea8a48f0f8d704864944e62cd23be7f07d2f21031b6add3e558",
+        "claim_object": {
+          "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "kind": "represented_product",
+          "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+        },
+        "claim_type": "hs_mapping",
+        "controls": {
+          "assessed_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "assessor_challenger_disagreement": false,
+          "citation_semantic_support": "automated_judgment_only",
+          "disagreement_axes": {
+            "claim_object_disagreement": false,
+            "hs_resolution_disagreement": false,
+            "legal_reasoning_disagreement": false,
+            "object_disagreement": false,
+            "scope_disagreement": false,
+            "target_disagreement": false
+          },
+          "display_resolution": "insufficient_information",
+          "hs_resolution": "insufficient_information",
+          "proposed_target": null,
+          "requested_claim_object": {
+            "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+            "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+            "kind": "represented_product",
+            "object_id": "object-9cdd387fbb525395d4e78d3ac32444209cfd3c61021e938e7059be092838640a"
+          },
+          "rule_controls_status": "assistant_authored_testing_hypotheses",
+          "scope_verdict": "matched",
+          "source_scoped_automated_support": false
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "ba271f4628e5e9cfe219071986e247531a33d1dc8edef5173fa0bd6865ecdbb3",
+        "evidence_bindings": [
+          {
+            "content_sha256": "0dfbeb22bab092b2f8159f3ade545c9c2a2cd19bd45f6e27c82fa0ed32867294",
+            "id": "evidence-catalogue-identity-0dfbeb22bab092b2f8159f3ade545c9c2a2cd19bd45f6e27c82fa0ed32867294",
+            "locator": "hs:2022:unsd-h6-e266823e1299:3901",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "9d30fde5645f64f13e1f47bb72accef73525317aa3d02e1efecc83600355c9e1",
+            "evidence_view": "identity_withheld",
+            "id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170-view-b282f1271b25aa34",
+            "locator": "flows/1ca3b8d5-a002-41c1-bdce-8db63ea6291e.json",
+            "source_evidence_id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "content_sha256": "292108e7f197094d9ec7f5467d930a821f652552d8c788e64be1eaa29a61ff18",
+            "evidence_view": "identity_withheld",
+            "id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c-view-81c96bd7bb1bc389",
+            "locator": "processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json#/exchanges/0 and processes/1dbafde2-2bc3-405c-9726-4d92fe7d29f9.json",
+            "minimisation": [
+              "Unrelated exchanges, providers, attachments and prior assessment conclusions omitted."
+            ],
+            "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-heading-3901",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, International heading 3901; national LLDPE statistical annotation and columns excluded",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "adfd76fdfe2246487f47a111a50b27df16291492fd7ed13c15312a5318c4e0b0",
+            "provision_class": "international_heading",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-3",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 3",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "66a5429dacc567b109f1b98389af093ac1dfc00ffca6a6515303b29dfc4457e9",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-4",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 4",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "2f65cf44acacf0cb2081b6837255c2e1eb1089c9da416a876106cb51ab828b58",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-note-6",
+            "jurisdiction": "United States",
+            "locator": "PDF page 4, Chapter 39 Note 6",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "cc103330a2d568037b7b98aca0af544ad070027a9bab731085c460dd8982d43a",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "d0a60c80123eaf84986b5c69d59ecf5b10160188e829ac578ddaac1051d5b801",
+            "extraction_receipt_sha256": "c897a191c69fde2b773756a96dc0b84cdc1811eee514d1434e4fc96dcfb38e35",
+            "id": "usitc-legal-ch39-subheading-note-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 5, Chapter 39 Subheading Note 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "e84fb082641eeb3990aeb997b885b8aa9f94e834eab026a378b7273761dcbf46",
+            "passage_sha256": "077c94f6fecf650973a204003fcd1023ae0e3ea9a8c4bc03328a2f7d47ba666d",
+            "provision_class": "international_subheading_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-39",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                4,
+                5,
+                7
+              ],
+              "status": "completed",
+              "warnings": [
+                "Symbols, note hierarchy and heading columns were visually checked. Additional U.S. Notes, the LLDPE statistical annotation, statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1
+              ],
+              "status": "completed",
+              "warnings": [
+                "Rule hierarchy and wrapping were visually checked. Only GIR 1 and 6 on page 1 are selected; unrelated General Notes are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-6",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 6",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "28620f1add21fe4246c1b1f2af65c6de0c73a4e1eca5a779d69ce2d17cb097a8",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1
+              ],
+              "status": "completed",
+              "warnings": [
+                "Rule hierarchy and wrapping were visually checked. Only GIR 1 and 6 on page 1 are selected; unrelated General Notes are excluded."
+              ]
+            }
+          }
+        ],
+        "evidence_omissions": {
+          "legal": [],
+          "native": [
+            {
+              "source_evidence_id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+              "value_sha256": "83188d996dd203d82bff3110dd83aba22104baffc333c6d0c53543de0a3fa0cf"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+              "value_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+              "value_sha256": "684847c7d3c9c1a4bf5377dd63bbbd319d059ff0fd74e9721a2b2a633f48c01f"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+              "value_sha256": "ad4358aa8e3e1675bda32f5b4ce13a11917daa258c878b6cf2c9a2ce269615e5"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-definition-86aeb0511ae86eaaaa01b9cf488c2fa7e3d0fa798a199345fb0cdf70114c4170",
+              "value_sha256": "9afa2fe9ee92025404f715788b5d8366228c38c11aa12524437638379f8271fb"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+              "value_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+              "value_sha256": "684847c7d3c9c1a4bf5377dd63bbbd319d059ff0fd74e9721a2b2a633f48c01f"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+              "value_sha256": "83188d996dd203d82bff3110dd83aba22104baffc333c6d0c53543de0a3fa0cf"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+              "value_sha256": "a93e80888dd3be62668ae46aaac2b7953860979e2a229e9dcead5d7ab73d0345"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+              "value_sha256": "83188d996dd203d82bff3110dd83aba22104baffc333c6d0c53543de0a3fa0cf"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+              "value_sha256": "25d7e8943219acdf3df568f377e13fb92ebfbccdf854abf88f0b767fcabe9c76"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+              "value_sha256": "2c3f9128e83d043e9c13aaf1d2cbb9659abab50eea03a5b78a00b83b01824716"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+              "value_sha256": "8d4e9a8396d025d3ac1e86e16800db8771b518c543eb41704a3c9cc77413d19b"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-af426018da810d00897926382997d2ccc9c920932268ff17270330563c89b99c",
+              "value_sha256": "0d0564f26fb2c04f35b88a017740cbbe44c3ff04e8e515600c2ee4b3ed777cf5"
+            }
+          ]
+        },
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state": "Existing exact-instance decisions unchanged; this view is not accepted",
+        "mechanical_outcome": "applicable",
+        "mechanical_scope": "Original complete instance; not recomputed on experimental view",
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "83867d91f964206bf8ba40524a92df272a9b652ea3bf2c468a75099768769fed",
+        "provenance": {
+          "execution_route": "codex-cli-0.154.0",
+          "policy_version": "smoke2-contract-1",
+          "prompt_versions": [
+            "smoke2-assessor-1",
+            "smoke2-challenger-1"
+          ],
+          "provider": "OpenAI",
+          "requested_model": "gpt-5.6-sol",
+          "responses": {
+            "assessor": {
+              "exact_payload_sha256": "eef56ce0dd7f08a5a3e13266ebb9ebb1794ad8cecb3d6e28528bf73d9528ce8b",
+              "sha256": "9eb6c16d4e8ada1c2e50d9a9d92ecb7a8f2145ee1f153f2c99c36ecdf4874126"
+            },
+            "challenger": {
+              "exact_payload_sha256": "678578286663521dbe52d472456075cd9d9d6a83f2dd84837651a7168cff8674",
+              "sha256": "7da1664ebd27e02f32c3c340901b3f6fd8b194762fd696b748c03086e7ab4f7d"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "requested_claim": "hs_heading_of_represented_product",
+        "requested_level": 4,
+        "rule_controls": [
+          {
+            "id": "polymer_identity",
+            "kind": "eligibility",
+            "legal_evidence_ids": [
+              "usitc-legal-ch39-heading-3901",
+              "usitc-legal-ch39-note-3",
+              "usitc-legal-ch39-note-4"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Polymer identity and composition relevant to heading eligibility",
+            "target_codes": [
+              "3901"
+            ]
+          },
+          {
+            "id": "primary_form",
+            "kind": "eligibility",
+            "legal_evidence_ids": [
+              "usitc-legal-ch39-heading-3901",
+              "usitc-legal-ch39-note-6"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Actual product presentation: primary form versus article",
+            "target_codes": [
+              "3901"
+            ]
+          },
+          {
+            "id": "finer_polymer",
+            "kind": "discriminator",
+            "legal_evidence_ids": [
+              "usitc-legal-gir-rule-6",
+              "usitc-legal-ch39-subheading-note-1"
+            ],
+            "level": 6,
+            "missing_fact_effect": "prevents_finer_classification",
+            "missing_rule_evidence": true,
+            "property": "Subheading-specific facts and full candidate subheading text",
+            "target_codes": [
+              "3901"
+            ]
+          }
+        ],
+        "schema_version": "smoke2-assessment-1",
+        "scope": {
+          "definition_native_id": "1ca3b8d5-a002-41c1-bdce-8db63ea6291e",
+          "instance_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9:exchange:108",
+          "process_id": "uslci-1.2026-06.0:processes:1dbafde2-2bc3-405c-9726-4d92fe7d29f9"
+        },
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "schema_scope_target": "passed",
+          "semantic_support": "automated_judgment_not_verified_truth"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,434 @@
+{
+  "row_id": "R07",
+  "source_release": "https://doi.org/10.5281/zenodo.22857372",
+  "source_records": [
+    {
+      "source_artifact": "exchanges.jsonl",
+      "source_line": 2949,
+      "source_line_sha256": "eaa65754896eda40cccb593fc7d5fc9b46fee125670fca32bac59ce7bea91669",
+      "record": {
+        "denominator": "process quantitative-reference exchange(s); no rescaling",
+        "derivation_method": "uslci-jsonld-1",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "363d12c81dd048af807e0e480290bcc3d3f2f908fdfbfa06864bf980ac4ca3f5",
+        "id": "uslci-1.2026-06.0:processes:0d95cc8b-a9a0-3630-a760-1ab4d88257d8:exchange:84",
+        "interpretation": "unit_inventory_input",
+        "locator": "processes/0d95cc8b-a9a0-3630-a760-1ab4d88257d8.json#/exchanges/67",
+        "native": {
+          "@type": "Exchange",
+          "amount": 0.027987,
+          "flow": {
+            "@id": "c32cdfef-1136-4af8-945b-32dd954c7278",
+            "@type": "Flow",
+            "category": "Technosphere flows/31-33: Manufacturing/3252: Resin, Synthetic Rubber, and Artificial and Synthetic Fibers and Filaments Manufacturing",
+            "flowType": "PRODUCT_FLOW",
+            "name": "Acrylonitrile-butadiene-styrene, ABS; copolymer resin; at plant",
+            "refUnit": "kg"
+          },
+          "flowProperty": {
+            "omitted": "excluded_source_reference"
+          },
+          "internalId": 84,
+          "isAvoidedProduct": false,
+          "isInput": true,
+          "unit": {
+            "@id": "20aadc24-a391-41cf-b340-3e4529f44bde",
+            "@type": "Unit",
+            "name": "kg"
+          }
+        },
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "58bb17badd5831f974b05c61b0a6242ecfd4721d1d1bdb667bdedc9377fed212",
+        "process_id": "uslci-1.2026-06.0:processes:0d95cc8b-a9a0-3630-a760-1ab4d88257d8",
+        "quantity_status": "native_amount",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "decision_id": "release-20260919-D1"
+        },
+        "source_id": "uslci-1.2026-06.0",
+        "technical_validity": "unreviewed"
+      }
+    },
+    {
+      "source_artifact": "processes.jsonl",
+      "source_line": 85,
+      "source_line_sha256": "1e1444b21826297ff9be59ac51c0586f9a60f16e2db5f9044890d0c92ab0a3c2",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "331700503e7b621c2ebe8f952e6789b2719de4e696e54e167e054fb46f02c04b",
+        "id": "uslci-1.2026-06.0:processes:0d95cc8b-a9a0-3630-a760-1ab4d88257d8",
+        "native": {
+          "@id": "0d95cc8b-a9a0-3630-a760-1ab4d88257d8",
+          "@type": "Process",
+          "allocationFactors": [],
+          "category": "21: Mining, Quarrying, and Oil and Gas Extraction/2123: Nonmetallic Mineral Mining and Quarrying",
+          "defaultAllocationMethod": "NO_ALLOCATION",
+          "description": "The monohydrate process is the dominant process to produce soda ash but a weighted average of all natural soda ash production is accounted for. The collected datasets were weighted based on total annual production.  Complete inventory data and metadata are available in full in the final report and appendices, IMA-NA Soda Ash Life Cycle Assessment. This report has been extensively reviewed within Sustainable Solutions Corporation by Tad Radzinski, Jim Mellentine and [contact withheld], as well as IMA-NA soda ash producers. This report has undergone a full critical review by Dennis S. Kostick, Lyle Nehls and Andrew Swanson. Quantities may vary slightly between the reference to main source and this module due to rounding. Important note: although most of the data in the US LCI database has undergone some sort of review, the database as a whole has not yet undergone a formal validation process.  Please email comments to [contact withheld].\n\nIncludes material and energy requirements and environmental emissions for one tonne of soda ash production from trona extracted from dry and solution mining. Soda ash is produced using either of two processes - the monohydrate process or the sesquicarbonate process. The monohydrate process is the dominant process The mined ore is screened and crushed, then the crushed ore is calcined to decompose the sodium sesquicarbonate in the trona ore, releasing carbon dioxide and water and leaving anhydrous sodium carbonate and insoluble impurities.  The calcined trona is dissolved in water where the insoluble material settles out, leaving a sodium carbonate solution which is filtered and sent to multistage evaporative crystallizers.  The settled and filtered insolubles are sent to tailings waste ponds.  The crystallizers produce soda ash as monohydrate crystals which are recovered in centrifuges and then dried to remove the water, producing granular dense soda ash. The sesquicarbonate process dissolves trona in water and that solution is settled to remove insolubles and filtered to a clean solution.  That solution is then sent to multistage crystallizers where sesquicarbonate crystals are formed.  The sesquicarbonate crystals are recovered in centrifuges and sent to a calciner, where water and carbon dioxide are driven off by heat to form medium density granular soda ash. Several of the US soda ash producers make a portion of their soda ash by dissolving trona in water below the surface, bringing the solution to the surface through wells, and then recovering the sodium carbonate on the surface.  One facility recovers trona from a shallow mixed salt deposits by injecting lake water into the formation and recovering via wells as a saturated brine. ",
+          "isInfrastructureProcess": false,
+          "lastChange": "2026-06-24T15:53:01Z",
+          "lastInternalId": 88,
+          "location": {
+            "omitted": "excluded_source_reference"
+          },
+          "name": "Natural soda ash, sodium carbonate; at plant",
+          "parameters": [],
+          "processDocumentation": {
+            "creationDate": "2017-07-07T15:43:44.242Z",
+            "geographyDescription": "US",
+            "isCopyrightProtected": false,
+            "restrictionsDescription": "All information can be accessed by everybody.",
+            "samplingDescription": "Data are from primary sources. The data collected for this module represent all 5 producers and 5 plants in the U.S. ",
+            "sources": [
+              {
+                "@id": "e047a2fd-64f4-3165-8c62-4a4d4ee17c75",
+                "@type": "Source",
+                "name": "Sustainable Solutions Corporation. (2015). IMA-NA Soda Ash Life Cycle Assessment "
+              }
+            ],
+            "technologyDescription": "There are multiple processes for the prodcution of soda ash: (1) the monohydrate process, (2) the sesquicarbonate process, (3) ELDM process, and (4) solution process. These  technologies are represented in this average mix.",
+            "validFrom": "2012-12-30",
+            "validUntil": "2012-12-30"
+          },
+          "processType": "UNIT_PROCESS",
+          "version": "00.01.013"
+        },
+        "native_locator": "processes/0d95cc8b-a9a0-3630-a760-1ab4d88257d8.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "f5fea3d0a3ff8b1153ea853654470393a45668c6790f3d6116e8c38e3388261c",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "attribution": "USLCI; DOE / NREL / Alliance; native contributor terms retained",
+          "decision_id": "release-20260919-D1",
+          "native_restrictionsDescription": "All information can be accessed by everybody."
+        },
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "mapping-projections.jsonl",
+      "source_line": 123,
+      "source_line_sha256": "9d25a3860a4965fcfcd4beb2c934c7ffa68bb92e9c8e47120e0b35537bf1ee2b",
+      "record": {
+        "condition_text_status": "Private WCO-derived conditions omitted; mechanical outcome unchanged, not recomputed",
+        "context_sha256": "199c56eb85f23ac8f5d4046c4c91cadf4f8576d48a337efb289c35701fd2c6c3",
+        "definition": {
+          "native_id": "c32cdfef-1136-4af8-945b-32dd954c7278",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "145d4e19b9d3fd9eaa48ff7f375aee496905484fc0fb21c04c9567cd933701f3",
+        "exchange_id": "uslci-1.2026-06.0:processes:0d95cc8b-a9a0-3630-a760-1ab4d88257d8:exchange:84",
+        "id": "2fb3fecf000decba6aa5a4aa3031367a4505b94fb34cdf371320d55687a1ab10",
+        "mapping_id": "pilot-abs-r3",
+        "mechanical_check_results": [
+          {
+            "operator": "same",
+            "result": "applicable"
+          },
+          {
+            "operator": "equals",
+            "result": "applicable"
+          },
+          {
+            "operator": "present",
+            "result": "applicable"
+          },
+          {
+            "operator": "evidence_assessment",
+            "result": "insufficient_information"
+          }
+        ],
+        "mechanical_outcome": "insufficient_information",
+        "policy": "flow-projection-2",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "ac316a096aae3948cd21e14f494896a5121693db924bdd8d109bcd11d742f160",
+        "process_id": "uslci-1.2026-06.0:processes:0d95cc8b-a9a0-3630-a760-1ab4d88257d8",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4"
+        ],
+        "review_status": "proposed",
+        "source_id": "uslci-1.2026-06.0",
+        "status": "insufficient_information",
+        "subject_kind": "definition",
+        "target": {
+          "code": "3903",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:3903",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:3903"
+        }
+      }
+    },
+    {
+      "source_artifact": "mapping-revisions.jsonl",
+      "source_line": 3,
+      "source_line_sha256": "db5e409c8475d6218d72b23bc595e97962751f197e36d681f229010d6724613a",
+      "record": {
+        "alternatives": [],
+        "definition": {
+          "native_id": "c32cdfef-1136-4af8-945b-32dd954c7278",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "4a9467f3eed4229c508ac0ddd018df94e369300954c1a763cc905b741e1f06e0",
+        "evidence_citations": [
+          {
+            "locator": "flows/c32cdfef-1136-4af8-945b-32dd954c7278.json",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/0e42a306-ee2d-362e-8bc3-580000096459.json#/description",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/0e42a306-ee2d-362e-8bc3-580000096459.json#/exchanges/0",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "/results/2528/text",
+            "source_id": "unsd-h6-e266823e1299"
+          }
+        ],
+        "id": "pilot-abs-r3",
+        "legal_reasoning_status": "Private WCO-derived rationale/specifications/conditions omitted; no replacement reasoning generated",
+        "method": "automated-bounded-owner-review-preparation-1",
+        "outcome": "classified",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "aa037160bec1bf19804f5e5657bba2246810f92a13b68cb5c37ab70a98728452",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D3",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "review": {
+          "date": "2026-09-13",
+          "decision": null,
+          "kind": "automated",
+          "mapping_revision_id": "pilot-abs-r3",
+          "reviewer": "assistant-session-2026-09-13",
+          "reviewer_role": "automated",
+          "status": "proposed"
+        },
+        "revision": 3,
+        "series_id": "pilot-abs",
+        "subject": {
+          "kind": "definition"
+        },
+        "supersedes": "pilot-abs-r2",
+        "target": {
+          "code": "3903",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:3903",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:3903"
+        }
+      }
+    },
+    {
+      "source_artifact": "identity-assessments.jsonl",
+      "source_line": 652,
+      "source_line_sha256": "2b988b9683916f6ef608ecb2bef41ae28d33379db01899005a6e99293f4f32c3",
+      "record": {
+        "alternatives": [],
+        "assessment_id": "assessment-f47d640f3c784bba6368829815e57858ef2c6475974ecd8ceb79545c73a5d637-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "finding": {
+            "alternatives": [],
+            "assumptions": [],
+            "automated_outcome": "automated_supported",
+            "claim_id": "claim-ea95ab85c6c0262d15c11fb3dfdd75ebfa5b1476fc4b37d98953b374d89d97a8",
+            "evidence_binding_ids": [
+              "evidence-definition-cf446c289968a023e6bbcc25b911d4fced766994464bd23aa118b94b5e9f3720",
+              "evidence-instance-efc139ebc3e07823a86aebc5ee0e658a3056b17d32d142320bd33fcd30cee92d"
+            ],
+            "rationale": "The instance flow reference exactly matches the definition’s source-scoped ID, name, and PRODUCT_FLOW type."
+          },
+          "response_ref": {
+            "sha256": "e0a6caa483fbbe10cbc978d3efeb999f3bb31b7763d011fb1f537846be3ef2b2"
+          }
+        },
+        "assumptions": [],
+        "automated_outcome": "automated_supported",
+        "challenger": {
+          "agreement_is_proof": false,
+          "finding": {
+            "claim_id": "claim-ea95ab85c6c0262d15c11fb3dfdd75ebfa5b1476fc4b37d98953b374d89d97a8",
+            "issues": [
+              {
+                "evidence_binding_ids": [
+                  "evidence-definition-cf446c289968a023e6bbcc25b911d4fced766994464bd23aa118b94b5e9f3720",
+                  "evidence-instance-efc139ebc3e07823a86aebc5ee0e658a3056b17d32d142320bd33fcd30cee92d"
+                ],
+                "explanation": "No challenge affects the narrow product-identity claim.",
+                "severity": "none",
+                "type": "no_material_concern"
+              }
+            ],
+            "rationale": "The cited definition and instance have the same source-scoped flow ID, name, and PRODUCT_FLOW type.",
+            "recommended_outcome": "automated_supported"
+          },
+          "independent_expert_validation": false,
+          "response_ref": {
+            "sha256": "438eb251fa4d78ca57f6f4fc44be2ff3411f80e2b949d0a7aa863c5af801df4a"
+          }
+        },
+        "claim": {
+          "candidate_targets": [],
+          "statement": "The exact source-scoped instance is consistent with the named product or material definition in the transmitted source evidence."
+        },
+        "claim_id": "claim-ea95ab85c6c0262d15c11fb3dfdd75ebfa5b1476fc4b37d98953b374d89d97a8",
+        "claim_type": "product_identity",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "c5ab13ea255d60538d2664403610470f00f796e71b72d84987338ef8b547889c",
+        "evidence_bindings": [
+          {
+            "content_sha256": "7c32f702b3249ccdb8d62a9d0fdbcb93dd490b9f30cccb42278ec2e6a15d40d3",
+            "context_sha256": null,
+            "id": "evidence-definition-cf446c289968a023e6bbcc25b911d4fced766994464bd23aa118b94b5e9f3720",
+            "locators": [
+              "flows/c32cdfef-1136-4af8-945b-32dd954c7278.json"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          },
+          {
+            "content_sha256": "37cb2a0c3440ab3f1e5536291d7cbe3119e05b287207e73662252091032b3ce4",
+            "context_sha256": "199c56eb85f23ac8f5d4046c4c91cadf4f8576d48a337efb289c35701fd2c6c3",
+            "id": "evidence-instance-efc139ebc3e07823a86aebc5ee0e658a3056b17d32d142320bd33fcd30cee92d",
+            "locators": [
+              "processes/0d95cc8b-a9a0-3630-a760-1ab4d88257d8.json",
+              "processes/0d95cc8b-a9a0-3630-a760-1ab4d88257d8.json#/exchanges/67",
+              "processes/0d95cc8b-a9a0-3630-a760-1ab4d88257d8.json#/exchanges/67/defaultProvider"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_review_state": "automated_proposal",
+        "mechanical_outcome": "insufficient_information",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "9d6359ee4281f037ebec148b7bbd9d2a64790ffad58b5ad82e87bf224577047b",
+        "provenance": {
+          "assessor_payload_sha256": "93ce9ce3667c522cad7bcdad66c391a243f0be945150f3f2d3b39742b6204c8c",
+          "assessor_prompt_version": "automated-evidence-assessor-1",
+          "challenger_payload_sha256": "f857018010a408898284207e3d8da4f0a5db98881601699c65054c1d43f162c6",
+          "challenger_prompt_version": "automated-evidence-challenger-1",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "model_configuration": {
+            "max_concurrency": 1,
+            "max_retries": 1,
+            "reasoning_effort": "medium"
+          },
+          "policy_version": "automated-evidence-assessment-1",
+          "provider": "OpenAI"
+        },
+        "rationale": "The instance flow reference exactly matches the definition’s source-scoped ID, name, and PRODUCT_FLOW type.",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D4"
+        ],
+        "schema_version": "automated-assessment-1",
+        "scope": {
+          "definition": {
+            "native_id": "c32cdfef-1136-4af8-945b-32dd954c7278",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0"
+          },
+          "exchange_ids": [
+            "uslci-1.2026-06.0:processes:0d95cc8b-a9a0-3630-a760-1ab4d88257d8:exchange:84"
+          ],
+          "kind": "instance",
+          "mapping_revision_id": "pilot-abs-r3",
+          "process_ids": [
+            "uslci-1.2026-06.0:processes:0d95cc8b-a9a0-3630-a760-1ab4d88257d8"
+          ]
+        },
+        "target": null,
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "citation_support_judgment": "model_assessment_only",
+          "claim_scope": "passed",
+          "schema": "passed",
+          "target_and_edition": "not_applicable_claim_type",
+          "uncertainty_preserved": "passed"
+        },
+        "withheld_material": [
+          {
+            "locators": [],
+            "reason": "Owner transmission authorization is recorded, but upstream catalogue source-use decisions remain unresolved; no target identity or catalogue metadata was transmitted.",
+            "source_group": "catalogue_identity_only"
+          },
+          {
+            "locators": [],
+            "reason": "Classification provisions, wording and derived legal paraphrases were not transmitted.",
+            "source_group": "wco_hs2022_legal_provisions"
+          }
+        ]
+      }
+    },
+    {
+      "source_artifact": "supporting-records.jsonl",
+      "source_line": 3392,
+      "source_line_sha256": "b7aaeb847b0a04baf4127846fa0663f763088d305826aeb0ab6abd5b415111bd",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "e05f95b96c96ebefc742c28916d0f1cd93a0d39c7948cba8207240faf753b5fc",
+        "id": "uslci-1.2026-06.0:flows:c32cdfef-1136-4af8-945b-32dd954c7278",
+        "kind": "flows",
+        "native": {
+          "@id": "c32cdfef-1136-4af8-945b-32dd954c7278",
+          "@type": "Flow",
+          "category": "Technosphere flows/31-33: Manufacturing/3252: Resin, Synthetic Rubber, and Artificial and Synthetic Fibers and Filaments Manufacturing",
+          "flowProperties": [
+            {
+              "@type": "FlowPropertyFactor",
+              "conversionFactor": 1.0,
+              "flowProperty": {
+                "omitted": "excluded_source_reference"
+              },
+              "isRefFlowProperty": true
+            }
+          ],
+          "flowType": "PRODUCT_FLOW",
+          "isInfrastructureFlow": false,
+          "lastChange": "2026-03-10T01:22:54Z",
+          "name": "Acrylonitrile-butadiene-styrene, ABS; copolymer resin; at plant",
+          "version": "00.00.008"
+        },
+        "native_locator": "flows/c32cdfef-1136-4af8-945b-32dd954c7278.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "9767e4dae364b1774af469d750bcfbb0fb57fe1986ec919b7c1903c6d8580c56",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "source_id": "uslci-1.2026-06.0"
+      }
+    }
+  ]
+}

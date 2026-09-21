@@ -1,0 +1,467 @@
+{
+  "row_id": "R09",
+  "source_release": "https://doi.org/10.5281/zenodo.22857372",
+  "source_records": [
+    {
+      "source_artifact": "exchanges.jsonl",
+      "source_line": 294,
+      "source_line_sha256": "6861121baf65d00b86afb97406dc38d351685b9bfcb4a3fe4270fda16a5defad",
+      "record": {
+        "denominator": "process quantitative-reference exchange(s); no rescaling",
+        "derivation_method": "uslci-jsonld-1",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "855581956e58073bfe1fa94e47752fccb07dd6ecf2c1800a74764268af2d23e3",
+        "id": "uslci-1.2026-06.0:processes:0381ede3-9567-44c0-9200-cbbef872097e:exchange:5",
+        "interpretation": "unit_inventory_input",
+        "locator": "processes/0381ede3-9567-44c0-9200-cbbef872097e.json#/exchanges/17",
+        "native": {
+          "@type": "Exchange",
+          "amount": 4267.5,
+          "flow": {
+            "@id": "76b18b27-d602-4ae2-a959-d12738c429c2",
+            "@type": "Flow",
+            "category": "Technosphere flows/31-33: Manufacturing/3273: Cement and Concrete Product Manufacturing",
+            "flowType": "PRODUCT_FLOW",
+            "name": "Concrete; at plant",
+            "refUnit": "m3"
+          },
+          "flowProperty": {
+            "omitted": "excluded_source_reference"
+          },
+          "internalId": 5,
+          "isAvoidedProduct": false,
+          "isInput": true,
+          "unit": {
+            "@id": "1c3a9695-398d-4b1f-b07e-a8715b610f70",
+            "@type": "Unit",
+            "name": "m3"
+          }
+        },
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "74fb4ae0e9b28fe674aaab4fa5b160a7a930c45b2fadf4d614faaad428478ca3",
+        "process_id": "uslci-1.2026-06.0:processes:0381ede3-9567-44c0-9200-cbbef872097e",
+        "quantity_status": "native_amount",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "decision_id": "release-20260919-D1"
+        },
+        "source_id": "uslci-1.2026-06.0",
+        "technical_validity": "unreviewed"
+      }
+    },
+    {
+      "source_artifact": "processes.jsonl",
+      "source_line": 15,
+      "source_line_sha256": "57b782e7d00ba50c6d5746e564e6917a49847b9c426eafa8ee959bb9314b1878",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "d7191d19296eb45cc6ac64946813adaa6179f9c27791e1621b03ea20efb5c272",
+        "id": "uslci-1.2026-06.0:processes:0381ede3-9567-44c0-9200-cbbef872097e",
+        "native": {
+          "@id": "0381ede3-9567-44c0-9200-cbbef872097e",
+          "@type": "Process",
+          "allocationFactors": [],
+          "category": "23: Construction/2362: Nonresidential Building Construction",
+          "defaultAllocationMethod": "NO_ALLOCATION",
+          "description": "This cradle to gate unit process is for the construction of one small-scale steam methane reforming plant. This model is based on European data but has been adapted to represent US conditions. Data were originally collected by Schreiber et al., 2020 and have been adapted by the National Renewable Energy Laboratory (NREL). Details for this dataset are restricted due to confidentiality. The system boundary of this dataset includes the main incoming materials with transportation and air emissions but excludes periphery materials such as cables and motors. It is important to note that this model is a rough estimation of the materials and emissions associated with constructing a small-scale steam methane reforming plant. This data should not be used for the construction of a large-scale plant due to different designs.",
+          "dqEntry": "(4;5)",
+          "isInfrastructureProcess": false,
+          "lastChange": "2026-03-10T01:31:04Z",
+          "lastInternalId": 21,
+          "location": {
+            "omitted": "excluded_source_reference"
+          },
+          "name": "Steam methane reforming plant; small-scale; construction",
+          "parameters": [],
+          "processDocumentation": {
+            "completenessDescription": "TREATMENT OF MISSING ENVIRONMENTAL DATA: It is unknown whether a cutoff for elementary flows was used in the original study.\r\n\r\nTREATMENT OF MISSING TECHNOSPHERE FLOWS: It is unknown whether a cutoff for elementary flows was used in the original study. Missing technosphere flows are unknown.\r\n\r\nMASS BALANCE: The mass imbalance for this unit process is unknown.",
+            "creationDate": "2023-02-22T21:25:39.482Z",
+            "dataCollectionDescription": "Data were collected from Schreiber et al., 2020. The data for this paper was obtained from confidential modeling data and estimations and industry process designs.",
+            "dataSelectionDescription": "Data for the construction of a small-scale steam methane reforming plant was collected and adapted from the original study, Schreiber et al., 2020. The data in the original study was collected from design and material estimations.",
+            "dataTreatmentDescription": "The original model used European incoming datasets, which have been switched to US based incoming datasets in this model. Flows have been adapted and emissions have been calculated for this dataset. ",
+            "geographyDescription": "This process is representative of the construction a small-scale steam methane reforming plant under US conditions. This study was originally conducted under European conditions. The construction process is similar in Europe and the US.",
+            "intendedApplication": "The intended application for this process is for accounting purposes as described in Goal Situation C1 from the ILCD Handbook's Detailed Guidance. LCA studies with this intended application offer \"purely descriptive documentation of the system under analysis (e.g., a product, sector or country), without being interested in any potential consequences on other parts of the economy.” The studies categorized under Goal Situation C1 do NOT consider existing benefits outside the analyzed system such as recycling. The target audience of this dataset is LCA practitioners, industry, the general public, and policymakers. This model was originally built for an LCA and was originally developed and analyzed with the ReCiPe and CML2001 impact assessment methods. The completeness of elementary flows is unknown and it is not an update to a previous USLCI dataset.",
+            "inventoryMethodDescription": "An attributional LCI method was used to develop the dataset.",
+            "isCopyrightProtected": false,
+            "modelingConstantsDescription": "This process was adapted from the Schreiber et al., 2020. ",
+            "projectDescription": "This project was funded by NREL.",
+            "restrictionsDescription": "These U.S. LCI Database Project data (\"Data\") are provided by the National Renewable Energy Laboratory (\"NREL\"), operated by the Alliance for Sustainable Energy, LLC (\"Alliance\") for the US Department of Energy (\"DOE\") under Contract No. DE-AC36-08GO28308. The United States Government (the \"Government\") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.\r\n\r\nAccess to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NREL/Alliance in any publication that results from the use of these Data. The names DOE/NREL/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NREL/Alliance. The user also understands that DOE/NREL/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.\r\n\r\nYOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NREL/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NREL/ALLIANCE \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NREL/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA.",
+            "samplingDescription": "BOUNDARY CONDITIONS: The system boundary includes upstream burdens from incoming materials. Periphery materials such as cables and motors are excluded from the system boundary.\r\n\r\nDATA COLLECTION: Data were collected from Schreiber et al., 2020.\r\n\r\nUNCERTAINTY ESTIMATION: It is unknown whether an uncertainty estimation was performed.",
+            "sources": [
+              {
+                "@id": "cb140124-3b71-4764-9c16-1378edd3ddf0",
+                "@type": "Source",
+                "name": "Schreiber, A"
+              }
+            ],
+            "technologyDescription": "This process represents the construction of a small-scale steam methane reforming plant. Construction details are limited due to confidentiality.",
+            "timeDescription": "This unit process is representative of data collected from a study that was published in 2020. The data is based on industry process designs and simulations so specific details are confidential. This dataset has been adapted recently to reflect US conditions and to allocate flows as needed.",
+            "validFrom": "2015-01-01",
+            "validUntil": "2022-12-31"
+          },
+          "processType": "UNIT_PROCESS",
+          "version": "00.01.004"
+        },
+        "native_locator": "processes/0381ede3-9567-44c0-9200-cbbef872097e.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "f888e1d5fec0fa4c5beb1779688d79518a471b87cbc6a32d3b66333440299f01",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "attribution": "USLCI; DOE / NREL / Alliance; native contributor terms retained",
+          "decision_id": "release-20260919-D1",
+          "native_restrictionsDescription": "These U.S. LCI Database Project data (\"Data\") are provided by the National Renewable Energy Laboratory (\"NREL\"), operated by the Alliance for Sustainable Energy, LLC (\"Alliance\") for the US Department of Energy (\"DOE\") under Contract No. DE-AC36-08GO28308. The United States Government (the \"Government\") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.\r\n\r\nAccess to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NREL/Alliance in any publication that results from the use of these Data. The names DOE/NREL/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NREL/Alliance. The user also understands that DOE/NREL/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.\r\n\r\nYOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NREL/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NREL/ALLIANCE \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NREL/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA."
+        },
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "mapping-projections.jsonl",
+      "source_line": 287,
+      "source_line_sha256": "f393dfcbe39191a911fae5a3f2e3e68a15e189fe82bf805da52a6d872c571f63",
+      "record": {
+        "condition_text_status": "Private WCO-derived conditions omitted; mechanical outcome unchanged, not recomputed",
+        "context_sha256": "48d7804d2bb4ea3661fedf903321a01bd3b3553d9fb9db3c8167b634e08ab371",
+        "definition": {
+          "native_id": "76b18b27-d602-4ae2-a959-d12738c429c2",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "2322bde8eefd546e4f3922b1c4d0b9c644a41191cce90e0e944b095f5376a46d",
+        "exchange_id": "uslci-1.2026-06.0:processes:0381ede3-9567-44c0-9200-cbbef872097e:exchange:5",
+        "id": "72cd2f581558461ff66c003b2f165d04a5e12952a32ee29ae0ab706737bfb4cf",
+        "mapping_id": "pilot-concrete-r2",
+        "mechanical_check_results": [
+          {
+            "operator": "same",
+            "result": "applicable"
+          },
+          {
+            "operator": "equals",
+            "result": "applicable"
+          },
+          {
+            "operator": "present",
+            "result": "applicable"
+          },
+          {
+            "operator": "evidence_assessment",
+            "result": "insufficient_information"
+          }
+        ],
+        "mechanical_outcome": "ambiguous",
+        "policy": "flow-projection-2",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "d92a4bc1150a03c3bfe58d5bf2bae167d91f76d6ca1417e4afef8a9fd6a27c9a",
+        "process_id": "uslci-1.2026-06.0:processes:0381ede3-9567-44c0-9200-cbbef872097e",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4"
+        ],
+        "review_status": "proposed",
+        "source_id": "uslci-1.2026-06.0",
+        "status": "ambiguous",
+        "subject_kind": "definition",
+        "target": null
+      }
+    },
+    {
+      "source_artifact": "mapping-revisions.jsonl",
+      "source_line": 22,
+      "source_line_sha256": "c7f1c269ddfc6ad888c4a4226e97aa3c736063503ec31df93605d8e95a80e86a",
+      "record": {
+        "alternatives": [
+          {
+            "code": "3824",
+            "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+            "edition": "2022",
+            "level": 4,
+            "original_amendment": "unsd-h6-e266823e1299",
+            "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:3824",
+            "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:3824"
+          },
+          {
+            "code": "6810",
+            "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+            "edition": "2022",
+            "level": 4,
+            "original_amendment": "unsd-h6-e266823e1299",
+            "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:6810",
+            "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:6810"
+          },
+          {
+            "code": "3816",
+            "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+            "edition": "2022",
+            "level": 4,
+            "original_amendment": "unsd-h6-e266823e1299",
+            "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:3816",
+            "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:3816"
+          }
+        ],
+        "definition": {
+          "native_id": "76b18b27-d602-4ae2-a959-d12738c429c2",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "38abfbb2a39bfb5af47e5006a6d7a0603ef9b42d425aa72771d6667c44622e7a",
+        "evidence_citations": [
+          {
+            "locator": "flows/76b18b27-d602-4ae2-a959-d12738c429c2.json",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/caa2304b-be86-4977-97e7-781898344b4c.json#/description",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/caa2304b-be86-4977-97e7-781898344b4c.json#/exchanges/0",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "/results/2466/text",
+            "source_id": "unsd-h6-e266823e1299"
+          },
+          {
+            "locator": "/results/4293/text",
+            "source_id": "unsd-h6-e266823e1299"
+          }
+        ],
+        "id": "pilot-concrete-r2",
+        "legal_reasoning_status": "Private WCO-derived rationale/specifications/conditions omitted; no replacement reasoning generated",
+        "method": "assistant-native-and-official-HS2022-condition-audit-2",
+        "outcome": "ambiguous",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "3ad0a99575cc354d9762f3eca1cd1666891d4fe587345a7fd9e8bf5c7dd67e28",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D3",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "review": {
+          "date": "2026-09-13",
+          "decision": null,
+          "kind": "automated",
+          "mapping_revision_id": "pilot-concrete-r2",
+          "reviewer": "assistant-session-2026-09-13",
+          "reviewer_role": "automated",
+          "status": "proposed"
+        },
+        "revision": 2,
+        "series_id": "pilot-concrete",
+        "subject": {
+          "kind": "definition"
+        },
+        "supersedes": "pilot-concrete-r1",
+        "target": null
+      }
+    },
+    {
+      "source_artifact": "identity-assessments.jsonl",
+      "source_line": 237,
+      "source_line_sha256": "e7325db680e529fa038419da7c57a065111daf3f16b4a058de36a59d657ab7e0",
+      "record": {
+        "alternatives": [],
+        "assessment_id": "assessment-5abca2bee47f2bcae77e0dbfd1af7c430a2b684f47a6187f8be2aea25bf9f07f-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "finding": {
+            "alternatives": [],
+            "assumptions": [
+              "The claim concerns exchange-flow identity rather than whether the process documentation fully specifies the concrete composition, grade, supplier, or HS classification.",
+              "The surrounding construction process is contextual evidence and is not treated as the product definition itself."
+            ],
+            "automated_outcome": "automated_supported",
+            "claim_id": "claim-b858d08861dbf8ad4d620eadaec7d19aa24c47a805242a56d7d8abcb30b52158",
+            "evidence_binding_ids": [
+              "evidence-definition-830243ee3f1924acd7e6dba34cd5bacc69fbd009c5892b01cdd6fc5817d0e7b7",
+              "evidence-instance-ea5bd4cf8efaf438b0aa7872a60a9b5645ad569717d4a2fb565a8aa829cd34fa"
+            ],
+            "rationale": "The instance’s flow reference has the same source-scoped identifier and name, “Concrete; at plant,” as the cited product-flow definition. The exchange is recorded in cubic metres as an input to construction of a steam-methane-reforming plant, which is contextually consistent with concrete and contains no transmitted identity contradiction."
+          },
+          "response_ref": {
+            "sha256": "b5a2f123fdaa5db726c8e8289f01a3a0c70412c67249f803d5dfb5b95edea293"
+          }
+        },
+        "assumptions": [
+          "The claim concerns exchange-flow identity rather than whether the process documentation fully specifies the concrete composition, grade, supplier, or HS classification.",
+          "The surrounding construction process is contextual evidence and is not treated as the product definition itself."
+        ],
+        "automated_outcome": "automated_supported",
+        "challenger": {
+          "agreement_is_proof": false,
+          "finding": {
+            "claim_id": "claim-b858d08861dbf8ad4d620eadaec7d19aa24c47a805242a56d7d8abcb30b52158",
+            "issues": [
+              {
+                "evidence_binding_ids": [
+                  "evidence-definition-830243ee3f1924acd7e6dba34cd5bacc69fbd009c5892b01cdd6fc5817d0e7b7",
+                  "evidence-instance-ea5bd4cf8efaf438b0aa7872a60a9b5645ad569717d4a2fb565a8aa829cd34fa"
+                ],
+                "explanation": "No material challenge to the assessor’s source-scoped identity conclusion was found; the ambiguous mechanical HS context remains separate from product identity.",
+                "severity": "none",
+                "type": "no_material_concern"
+              }
+            ],
+            "rationale": "The instance exactly matches the definition’s source-scoped identifier and name for concrete, uses a concrete-compatible unit, and contains no contradictory exchange description. Missing construction details and withheld HS or catalogue evidence do not negate this narrowly scoped identity match.",
+            "recommended_outcome": "automated_supported"
+          },
+          "independent_expert_validation": false,
+          "response_ref": {
+            "sha256": "b3921b1c52a1be415b69c8d1e43d68153b76126898f9367f5cbe20a94540f580"
+          }
+        },
+        "claim": {
+          "candidate_targets": [],
+          "statement": "The exact source-scoped instance is consistent with the named product or material definition in the transmitted source evidence."
+        },
+        "claim_id": "claim-b858d08861dbf8ad4d620eadaec7d19aa24c47a805242a56d7d8abcb30b52158",
+        "claim_type": "product_identity",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "5107b1d32a04e4637dd8aa494eb77d40463c820065f76ecd13be92ddc84030f8",
+        "evidence_bindings": [
+          {
+            "content_sha256": "2330e2238c772b0ba71e25ffbceb8ae5606bff0ac8fc3cac58e97b4a8d67afe7",
+            "context_sha256": null,
+            "id": "evidence-definition-830243ee3f1924acd7e6dba34cd5bacc69fbd009c5892b01cdd6fc5817d0e7b7",
+            "locators": [
+              "flows/76b18b27-d602-4ae2-a959-d12738c429c2.json"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          },
+          {
+            "content_sha256": "3af267f5ee1c945dbe810c96e2807c4a401d27787706962d8de344d8716fa357",
+            "context_sha256": "48d7804d2bb4ea3661fedf903321a01bd3b3553d9fb9db3c8167b634e08ab371",
+            "id": "evidence-instance-ea5bd4cf8efaf438b0aa7872a60a9b5645ad569717d4a2fb565a8aa829cd34fa",
+            "locators": [
+              "processes/0381ede3-9567-44c0-9200-cbbef872097e.json",
+              "processes/0381ede3-9567-44c0-9200-cbbef872097e.json#/exchanges/17",
+              "processes/0381ede3-9567-44c0-9200-cbbef872097e.json#/exchanges/17/defaultProvider"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_review_state": "automated_proposal",
+        "mechanical_outcome": "ambiguous",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "cc184d55f056cb7c27d0a7e66d130a0a8d1cc8411e3721fe6c08411866944f75",
+        "provenance": {
+          "assessor_payload_sha256": "9bb7be0928ef591d519390b256aa839dbc94c0e2dfb850116ccd40dac38e6e01",
+          "assessor_prompt_version": "automated-evidence-assessor-1",
+          "challenger_payload_sha256": "7aa25dbd36d2937a30665924e044a5017b3c6a6ab40a3a8ca541f488683f0d65",
+          "challenger_prompt_version": "automated-evidence-challenger-1",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "model_configuration": {
+            "max_concurrency": 1,
+            "max_retries": 1,
+            "reasoning_effort": "medium"
+          },
+          "policy_version": "automated-evidence-assessment-1",
+          "provider": "OpenAI"
+        },
+        "rationale": "The instance’s flow reference has the same source-scoped identifier and name, “Concrete; at plant,” as the cited product-flow definition. The exchange is recorded in cubic metres as an input to construction of a steam-methane-reforming plant, which is contextually consistent with concrete and contains no transmitted identity contradiction.",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D4"
+        ],
+        "schema_version": "automated-assessment-1",
+        "scope": {
+          "definition": {
+            "native_id": "76b18b27-d602-4ae2-a959-d12738c429c2",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0"
+          },
+          "exchange_ids": [
+            "uslci-1.2026-06.0:processes:0381ede3-9567-44c0-9200-cbbef872097e:exchange:5"
+          ],
+          "kind": "instance",
+          "mapping_revision_id": "pilot-concrete-r2",
+          "process_ids": [
+            "uslci-1.2026-06.0:processes:0381ede3-9567-44c0-9200-cbbef872097e"
+          ]
+        },
+        "target": null,
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "citation_support_judgment": "model_assessment_only",
+          "claim_scope": "passed",
+          "schema": "passed",
+          "target_and_edition": "not_applicable_claim_type",
+          "uncertainty_preserved": "passed"
+        },
+        "withheld_material": [
+          {
+            "locators": [],
+            "reason": "Owner transmission authorization is recorded, but upstream catalogue source-use decisions remain unresolved; no target identity or catalogue metadata was transmitted.",
+            "source_group": "catalogue_identity_only"
+          },
+          {
+            "locators": [],
+            "reason": "Classification provisions, wording and derived legal paraphrases were not transmitted.",
+            "source_group": "wco_hs2022_legal_provisions"
+          }
+        ]
+      }
+    },
+    {
+      "source_artifact": "supporting-records.jsonl",
+      "source_line": 2082,
+      "source_line_sha256": "be6ad1204e44747fc58c66ce154dcdda62dc0799b72baa04b6df51b4437f9eaf",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "ad743d9e19144c282fcc07caabeb7ce18b6641288f9f70f9118c390d97e5daf1",
+        "id": "uslci-1.2026-06.0:flows:76b18b27-d602-4ae2-a959-d12738c429c2",
+        "kind": "flows",
+        "native": {
+          "@id": "76b18b27-d602-4ae2-a959-d12738c429c2",
+          "@type": "Flow",
+          "category": "Technosphere flows/31-33: Manufacturing/3273: Cement and Concrete Product Manufacturing",
+          "description": "",
+          "flowProperties": [
+            {
+              "@type": "FlowPropertyFactor",
+              "conversionFactor": 1.0,
+              "flowProperty": {
+                "omitted": "excluded_source_reference"
+              },
+              "isRefFlowProperty": true
+            }
+          ],
+          "flowType": "PRODUCT_FLOW",
+          "isInfrastructureFlow": false,
+          "lastChange": "2026-03-10T01:22:55Z",
+          "name": "Concrete; at plant",
+          "version": "00.00.003"
+        },
+        "native_locator": "flows/76b18b27-d602-4ae2-a959-d12738c429c2.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "85a530b99a2dad5dfd3b60abf2cdd3405a7dcb21e22526e7b9c72d27e253e400",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "source_id": "uslci-1.2026-06.0"
+      }
+    }
+  ]
+}

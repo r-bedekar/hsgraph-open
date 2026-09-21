@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Cite HSGraph v0.1.0 using this dataset DOI and identify the package SHA-256 where exact content matters. DOI reserved before publication; availability is determined by the Zenodo record."
+title: "HSGraph: evidence-bound HS mappings and source-scoped production inventory"
+type: dataset
+version: "0.1.0"
+doi: "10.5281/zenodo.22857372"
+url: "https://doi.org/10.5281/zenodo.22857372"
+repository-code: "https://github.com/r-bedekar/hsgraph-open"
+authors:
+  - family-names: Bedekar
+    given-names: Rizwan
+    email: "rbedekar@zeroinsec.com"
+abstract: "Offline access to retained source records, mechanical outcomes, automated findings and separately scoped human decisions. Not a complete computable LCA inventory or an accuracy benchmark."
+# DOI reservation and draft saving were reported by the owner.
+# No date-released is invented before actual publication.
+# Original annotations: CC BY 4.0 only to extent rights held; third-party terms separate.

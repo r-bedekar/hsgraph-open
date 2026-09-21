@@ -1,0 +1,2272 @@
+{
+  "row_id": "R01",
+  "source_release": "https://doi.org/10.5281/zenodo.22857372",
+  "source_records": [
+    {
+      "source_artifact": "exchanges.jsonl",
+      "source_line": 22245,
+      "source_line_sha256": "4ea1f112c5f1857d190870272a6682fcf3d9fd2ae73cb541e62a25f9a12bca98",
+      "record": {
+        "denominator": "process quantitative-reference exchange(s); no rescaling",
+        "derivation_method": "uslci-jsonld-1",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "4a2c485ce0240921cba50d82e0aeb0e6aac9fc1666dfb46aeedb0e0cf271c716",
+        "id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+        "interpretation": "unit_inventory_output",
+        "locator": "processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json#/exchanges/0",
+        "native": {
+          "@type": "Exchange",
+          "amount": 1.0,
+          "flow": {
+            "@id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+            "@type": "Flow",
+            "category": "Technosphere flows/31-33: Manufacturing/3311: Iron and Steel Mills and Ferroalloy Manufacturing",
+            "flowType": "PRODUCT_FLOW",
+            "name": "Steel; stainless 304; flat rolled coil",
+            "refUnit": "kg"
+          },
+          "flowProperty": {
+            "omitted": "excluded_source_reference"
+          },
+          "internalId": 2,
+          "isAvoidedProduct": false,
+          "isInput": false,
+          "isQuantitativeReference": true,
+          "unit": {
+            "@id": "20aadc24-a391-41cf-b340-3e4529f44bde",
+            "@type": "Unit",
+            "name": "kg"
+          }
+        },
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "fc92f06962ae2021b16eb7ab9027babd49b4d0e32829facac4173e2a67178420",
+        "process_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd",
+        "quantity_status": "native_amount",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "decision_id": "release-20260919-D1"
+        },
+        "source_id": "uslci-1.2026-06.0",
+        "technical_validity": "unreviewed"
+      }
+    },
+    {
+      "source_artifact": "processes.jsonl",
+      "source_line": 412,
+      "source_line_sha256": "0ac823c4687549baef3f3743ad489828a86b097430caf36e0b45d42b5b89fa85",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "97f19e350ac279c78218c8c93a67d70cc8ee80870e9a02242b8e49fb5e0391d0",
+        "id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd",
+        "native": {
+          "@id": "49f5324b-fc33-36e9-b5af-3c80d73492bd",
+          "@type": "Process",
+          "allocationFactors": [],
+          "category": "31-33: Manufacturing/3311: Iron and Steel Mills and Ferroalloy Manufacturing",
+          "defaultAllocationMethod": "NO_ALLOCATION",
+          "description": "The data set covers all relevant process steps / european technologies of the represented cradle-to-gate inventory with a high overall data quality. \nData was collected on site by stainless steel industry experts in accordance with the EUROFER (as well as worldsteel) methodology. \nA detailed internal quality check was carried out by PE International. \nIn addition an independent external review carried out in accordance with the ISO 14040 series to ensure the correct and consistent application of the methodology for Life Cycle Assessment. \nNOTE: this dataset considers American upstreams condition and applies assumption that European and American technology on stainless steel production are similar",
+          "isInfrastructureProcess": false,
+          "lastChange": "2026-06-26T01:46:01.748Z",
+          "lastInternalId": 644,
+          "location": {
+            "@id": "b320e7db-c758-3ba6-8839-81eb83c9d7d7",
+            "@type": "Location",
+            "category": "Global/Custom",
+            "name": "Northern America"
+          },
+          "name": "Steel; stainless 304; flat rolled coil",
+          "parameters": [],
+          "processDocumentation": {
+            "creationDate": "2015-08-06T13:46:15.766Z",
+            "geographyDescription": "The data set represents cradle-to-gate data based on average site-specific data (gate-to-gate) of European stainless steel producers.  \nThe electricity grid mix is American average.  \nOther upstream data (e.g. chromium, nickel or molybdenum) are based on global averages from the specific industrial associations. \nNOTE: this dataset considers American upstreams condition and applies assumption that European and American technology on stainless steel production are similar",
+            "isCopyrightProtected": false,
+            "restrictionsDescription": "All information can be accessed by everybody.",
+            "samplingDescription": "For details contact Eurofer (European data): www.eurofer.org.",
+            "sources": [
+              {
+                "@id": "52b0f19c-e7ef-31fc-846f-840a9ac8b13f",
+                "@type": "Source",
+                "name": "PE INTERNATIONAL AG "
+              },
+              {
+                "@id": "b09446dc-177e-3ab0-9bbe-f0d19ead3b83",
+                "@type": "Source",
+                "name": "PE INTERNATIONAL AG "
+              },
+              {
+                "@id": "d626158b-6442-3e82-bf8d-c7a32b380649",
+                "@type": "Source",
+                "name": "PE INTERNATIONAL AG "
+              }
+            ],
+            "technologyDescription": "Stainless steels are manufactured from mixtures of stainless scrap, carbon steel scrap and ferro-alloys of Cr, Ni and Mo. The proportions of these raw materials can vary greatly, depending upon the steel grade and other factors. \nInitially, the raw materials are melted in an electric arc furnace (EAF); the liquid metal is then transferred to a decarburising vessel (usually \"argon oxygen decarburising\", AOD) where it is refined by blowing with various mixes of argon, oxygen, nitrogen. The liquid steel is then finished in a ladle furnace (LF), where the chemistry is fine-tuned and the temperature is optimised for subsequent processing. \nThe liquid steel is transformed into a solid product by continuous casting. For flat product production the section is rectangular, known as \"slab\". \nSlabs are converted into rectangular (quarto) plates or long coils by reheating and hot-rolling. Subsequent heat treatment (annealing), acid cleaning (pickling) and flattening produces finished quarto plate or white hot rolled coil products. \nAlternatively, the white hot rolled coil is used as the feedstock for producing thinner coil products, by cold rolling. The white hot rolled coil is cold rolled; then it is softened & acid pickled or bright annealed, and flattened (skinpass rolled) to form the Cold Rolled Coil product. \n \nNOTE: this dataset considers American upstreams condition and applies assumption that European and American technology on stainless steel production are similar",
+            "timeDescription": "Annual average, site-specific data for one year.",
+            "validFrom": "2007-12-31",
+            "validUntil": "2011-12-31"
+          },
+          "processType": "UNIT_PROCESS",
+          "version": "00.01.014"
+        },
+        "native_locator": "processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "8662c92f13d8f62aae36f8ee1a76e70d69001c100ebcaffad88917b3455e6e6e",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "attribution": "USLCI; DOE / NREL / Alliance; native contributor terms retained",
+          "decision_id": "release-20260919-D1",
+          "native_restrictionsDescription": "All information can be accessed by everybody."
+        },
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "mapping-projections.jsonl",
+      "source_line": 327,
+      "source_line_sha256": "651c2674c358e46616908c7d505f1764db94203c2b971de61bd684141ab1af4c",
+      "record": {
+        "condition_text_status": "Private WCO-derived conditions omitted; mechanical outcome unchanged, not recomputed",
+        "context_sha256": "a7b2c14a70dc6730005be1f6c7a24005357b0cf732286054a294547581d5f814",
+        "definition": {
+          "native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "1bb34c9e0bd4a5ff9c889a0323b34977613c315ffae9ff87f4957cfd4535ccf0",
+        "exchange_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+        "id": "81f906b7915562e7e43205ff776568da56915675e1b7cd14d1123713a1979eb8",
+        "mapping_id": "pilot-steel_coil-r2",
+        "mechanical_check_results": [
+          {
+            "operator": "same",
+            "result": "applicable"
+          },
+          {
+            "operator": "equals",
+            "result": "applicable"
+          },
+          {
+            "operator": "present",
+            "result": "applicable"
+          },
+          {
+            "operator": "evidence_assessment",
+            "result": "insufficient_information"
+          }
+        ],
+        "mechanical_outcome": "ambiguous",
+        "policy": "flow-projection-2",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "81207c443e427dbc1c66604b74af1e9936a20a09395efe6fa2f98ec459675ea1",
+        "process_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4"
+        ],
+        "review_status": "proposed",
+        "source_id": "uslci-1.2026-06.0",
+        "status": "ambiguous",
+        "subject_kind": "definition",
+        "target": null
+      }
+    },
+    {
+      "source_artifact": "mapping-revisions.jsonl",
+      "source_line": 84,
+      "source_line_sha256": "040e265c0b233aba5f11c42e09a28430a374c6d283e5309a55a9193ae4bbda95",
+      "record": {
+        "alternatives": [
+          {
+            "code": "7219",
+            "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+            "edition": "2022",
+            "level": 4,
+            "original_amendment": "unsd-h6-e266823e1299",
+            "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:7219",
+            "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:7219"
+          },
+          {
+            "code": "7220",
+            "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+            "edition": "2022",
+            "level": 4,
+            "original_amendment": "unsd-h6-e266823e1299",
+            "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:7220",
+            "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:7220"
+          }
+        ],
+        "definition": {
+          "native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "f781db62652cee00a127d0bd1b64ab2791c6e41ccd35e94fc97e905340f04b12",
+        "evidence_citations": [
+          {
+            "locator": "flows/3f2fed05-f530-32e9-b0f9-0dcb5280aa9d.json",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json#/description",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json#/exchanges/0",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "/results/4663/text",
+            "source_id": "unsd-h6-e266823e1299"
+          },
+          {
+            "locator": "/results/4678/text",
+            "source_id": "unsd-h6-e266823e1299"
+          }
+        ],
+        "id": "pilot-steel_coil-r2",
+        "legal_reasoning_status": "Private WCO-derived rationale/specifications/conditions omitted; no replacement reasoning generated",
+        "method": "assistant-native-and-official-HS2022-condition-audit-2",
+        "outcome": "ambiguous",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "a67a3415869d5bca90b82527d12fca29de1e4955f0ae071562c1ba67ebd1ac9a",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D3",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "review": {
+          "date": "2026-09-13",
+          "decision": null,
+          "kind": "automated",
+          "mapping_revision_id": "pilot-steel_coil-r2",
+          "reviewer": "assistant-session-2026-09-13",
+          "reviewer_role": "automated",
+          "status": "proposed"
+        },
+        "revision": 2,
+        "series_id": "pilot-steel_coil",
+        "subject": {
+          "kind": "definition"
+        },
+        "supersedes": "pilot-steel_coil-r1",
+        "target": null
+      }
+    },
+    {
+      "source_artifact": "identity-assessments.jsonl",
+      "source_line": 293,
+      "source_line_sha256": "bbf2eaa22c3ddd852a6533a7293c9e0778ce26b1d45c5891d60203963cfb50f0",
+      "record": {
+        "alternatives": [],
+        "assessment_id": "assessment-6d33de3cb89f82e91569b63e752175f46ea60757f56eb25cbdb96b31294340c0-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "finding": {
+            "alternatives": [],
+            "assumptions": [],
+            "automated_outcome": "automated_supported",
+            "claim_id": "claim-1755e07559070ce08307b5caab1327430f454bfb06fee305fcca467f17453927",
+            "evidence_binding_ids": [
+              "evidence-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+              "evidence-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857"
+            ],
+            "rationale": "The instance flow reference has the same source-scoped ID and name as the cited definition."
+          },
+          "response_ref": {
+            "sha256": "bd5b1f5105d3c5abf72e5e731f63446269cde5842b0ae9dc0757075d08cada74"
+          }
+        },
+        "assumptions": [],
+        "automated_outcome": "automated_supported",
+        "challenger": {
+          "agreement_is_proof": false,
+          "finding": {
+            "claim_id": "claim-1755e07559070ce08307b5caab1327430f454bfb06fee305fcca467f17453927",
+            "issues": [
+              {
+                "evidence_binding_ids": [
+                  "evidence-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+                  "evidence-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857"
+                ],
+                "explanation": "No material challenge to the source-scoped product identity finding.",
+                "severity": "none",
+                "type": "no_material_concern"
+              }
+            ],
+            "rationale": "The reference flow and process output exactly match the cited stainless-steel definition; historical scope and absent provider metadata do not contradict identity.",
+            "recommended_outcome": "automated_supported"
+          },
+          "independent_expert_validation": false,
+          "response_ref": {
+            "sha256": "6a8ab1add6118d51f54c46742f04307e9c085ffe7e7e12b1b40b5c163afe1b7c"
+          }
+        },
+        "claim": {
+          "candidate_targets": [],
+          "statement": "The exact source-scoped instance is consistent with the named product or material definition in the transmitted source evidence."
+        },
+        "claim_id": "claim-1755e07559070ce08307b5caab1327430f454bfb06fee305fcca467f17453927",
+        "claim_type": "product_identity",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "b4ce03e83a337b3ae913ec7cc28e76228b681e66cb30a8ef088c9a5e71e9c659",
+        "evidence_bindings": [
+          {
+            "content_sha256": "fefb44e754d2e930dc6a5e068a20bd5eaa20a9ca6b3dbda5d2892c0cf0c89486",
+            "context_sha256": null,
+            "id": "evidence-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+            "locators": [
+              "flows/3f2fed05-f530-32e9-b0f9-0dcb5280aa9d.json"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          },
+          {
+            "content_sha256": "eb24df1e6b9a2cc6b61128e8aa32f73c6af4096aef14c27f9b7117249bf68605",
+            "context_sha256": "a7b2c14a70dc6730005be1f6c7a24005357b0cf732286054a294547581d5f814",
+            "id": "evidence-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+            "locators": [
+              "processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json",
+              "processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json#/exchanges/0"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_review_state": "automated_proposal",
+        "mechanical_outcome": "ambiguous",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "f0adaa1024c36efb3d216b7cb3294f46d5e3c71a2e2ece73d80fdaaa9e3a5eb2",
+        "provenance": {
+          "assessor_payload_sha256": "ebdd5cca264b49c3812042e295745c4c6f67c9e4b015cf2e47ed3e68546817a2",
+          "assessor_prompt_version": "automated-evidence-assessor-1",
+          "challenger_payload_sha256": "21be5ebab56b0724e108a22668a7fda3dc89fb25b4f0c91fb70d946578693e58",
+          "challenger_prompt_version": "automated-evidence-challenger-1",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "model_configuration": {
+            "max_concurrency": 1,
+            "max_retries": 1,
+            "reasoning_effort": "medium"
+          },
+          "policy_version": "automated-evidence-assessment-1",
+          "provider": "OpenAI"
+        },
+        "rationale": "The instance flow reference has the same source-scoped ID and name as the cited definition.",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D4"
+        ],
+        "schema_version": "automated-assessment-1",
+        "scope": {
+          "definition": {
+            "native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0"
+          },
+          "exchange_ids": [
+            "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2"
+          ],
+          "kind": "instance",
+          "mapping_revision_id": "pilot-steel_coil-r2",
+          "process_ids": [
+            "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd"
+          ]
+        },
+        "target": null,
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "citation_support_judgment": "model_assessment_only",
+          "claim_scope": "passed",
+          "schema": "passed",
+          "target_and_edition": "not_applicable_claim_type",
+          "uncertainty_preserved": "passed"
+        },
+        "withheld_material": [
+          {
+            "locators": [],
+            "reason": "Owner transmission authorization is recorded, but upstream catalogue source-use decisions remain unresolved; no target identity or catalogue metadata was transmitted.",
+            "source_group": "catalogue_identity_only"
+          },
+          {
+            "locators": [],
+            "reason": "Classification provisions, wording and derived legal paraphrases were not transmitted.",
+            "source_group": "wco_hs2022_legal_provisions"
+          }
+        ]
+      }
+    },
+    {
+      "source_artifact": "supporting-records.jsonl",
+      "source_line": 1113,
+      "source_line_sha256": "67bcb40c7ab304b9026859715d1f4207a9ebe5e12de52bbdc84b7f62972f3e9a",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "8b60ff096a1a5fc6960c61f181481992e78f0478c851ccf6c19df1e86c15bfc2",
+        "id": "uslci-1.2026-06.0:flows:3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+        "kind": "flows",
+        "native": {
+          "@id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+          "@type": "Flow",
+          "category": "Technosphere flows/31-33: Manufacturing/3311: Iron and Steel Mills and Ferroalloy Manufacturing",
+          "flowProperties": [
+            {
+              "@type": "FlowPropertyFactor",
+              "conversionFactor": 1.0,
+              "flowProperty": {
+                "omitted": "excluded_source_reference"
+              },
+              "isRefFlowProperty": true
+            }
+          ],
+          "flowType": "PRODUCT_FLOW",
+          "isInfrastructureFlow": false,
+          "lastChange": "2026-03-10T01:22:55Z",
+          "name": "Steel; stainless 304; flat rolled coil",
+          "version": "00.00.005"
+        },
+        "native_locator": "flows/3f2fed05-f530-32e9-b0f9-0dcb5280aa9d.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "e16d8a7437f5e31df97db7275bfae597390af7677628a7b5e8128db47728b38c",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "smoke1.jsonl",
+      "source_line": 3,
+      "source_line_sha256": "385ea6f072897ea9d10b88ac8b525ea30a057ed78ac11cdc5be33f27837fa939",
+      "record": {
+        "assessment_id": "assessment-81ce0dbe18ae4275b99f3abcac29585c72b08c7f13404a851378a9a974dd9d0e-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "alternatives": [
+            {
+              "rationale": "Applies if the documented coil is 600 mm or more in width.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "7219",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:7219",
+                "level": 4
+              }
+            },
+            {
+              "rationale": "Applies if the documented coil is less than 600 mm in width.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "7220",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:7220",
+                "level": 4
+              }
+            }
+          ],
+          "assumptions": [
+            "The designation “stainless 304” accurately characterizes an alloy meeting Chapter 72 Note 1(e).",
+            "The coil has the solid rectangular cross-section implicit in the documented flat-rolled coil description; no evidence indicates a nonrectangular product or a finished article."
+          ],
+          "case_id": "stainless-steel-coil",
+          "identity_conflict_explanation": "There is no conflict among the supplied definition, exchange, and process. The unresolved issue is a missing dimension for this exact coil instance; dimensions from other coil instances cannot be imported.",
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "justified_specificity": "No unique HS4 target is justified. The evidence supports stainless-steel flat-rolled coil, but the missing width leaves headings 7219 and 7220 mutually exclusive and unresolved.",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires applying the competing heading terms and relevant Chapter 72 definitions."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-d-e",
+              "locator": "PDF page 5, Chapter 72 Note 1(d) steel and 1(e) stainless steel",
+              "passage_sha256": "d970f5ccf97b3c2a5b2db84ee3420300bd4beb3bfb37f11e5afca026a1126087",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Provides the legal definition of stainless steel relevant to both candidate headings."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-k-part-1",
+              "locator": "PDF page 7, Chapter 72 Note 1(k), definition through included surface forms",
+              "passage_sha256": "0b2c5ad0d441de271cda5836b215a170f4a11e20d80d4350f9d4814a93c20a1b",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Defines flat-rolled products and expressly includes coils of successively superimposed layers."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7219",
+              "locator": "PDF page 31, International heading 7219; national columns excluded",
+              "passage_sha256": "c17307a68f6a02916cfad826c181c32f5383bc22904a3ddb75e067ed51d32719",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Covers flat-rolled stainless-steel products having a width of 600 mm or more."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7220",
+              "locator": "PDF page 37, International heading 7220; national columns excluded",
+              "passage_sha256": "22493daa23c0982939034a2a7d2aaf05b3942a7a5ee31ff01b191898699617de",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Covers flat-rolled stainless-steel products having a width below 600 mm."
+            }
+          ],
+          "missing_facts": [
+            {
+              "effect": "This directly prevents choosing between 7219 (600 mm or more) and 7220 (less than 600 mm).",
+              "fact": "The coil width is not supplied."
+            },
+            {
+              "effect": "The legal stainless-steel definition cannot be independently checked, although the exact product is expressly identified as stainless 304 throughout the native evidence.",
+              "fact": "Measured carbon and chromium percentages are not supplied."
+            }
+          ],
+          "native_evidence_ids": [
+            "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+            "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857"
+          ],
+          "outcome": "competing_targets",
+          "proposed_target": null,
+          "rationale": "The exact instance consistently identifies stainless 304 flat-rolled coil, and Chapter 72 Note 1(k) expressly recognizes coils as flat-rolled products. The two candidate headings divide these goods at 600 mm: heading 7219 applies at 600 mm or more, while 7220 applies below 600 mm. The instance contains no width, so neither candidate can be selected without inventing a material fact."
+        },
+        "assessor_challenger_disagreement": false,
+        "automated_outcome": "competing_targets",
+        "case_id": "stainless-steel-coil",
+        "challenger": {
+          "case_id": "stainless-steel-coil",
+          "checks": [
+            {
+              "evidence_ids": [
+                "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857"
+              ],
+              "finding": "The definition and exchange consistently identify stainless 304 flat-rolled coil, with no competing proxy identity.",
+              "severity": "none",
+              "type": "conflicting_identity_form_or_proxy"
+            },
+            {
+              "evidence_ids": [
+                "usitc-legal-ch72-heading-7219",
+                "usitc-legal-ch72-heading-7220"
+              ],
+              "finding": "Headings 7219 and 7220 are mutually exclusive candidates divided by width, and the exact instance lacks that discriminator.",
+              "severity": "concern",
+              "type": "alternative_heading_or_exception"
+            },
+            {
+              "evidence_ids": [
+                "usitc-legal-ch72-heading-7219",
+                "usitc-legal-ch72-heading-7220"
+              ],
+              "finding": "The unresolved fact is an HS4 heading discriminator, not an improperly demanded HS6 detail.",
+              "severity": "none",
+              "type": "hs6_requirement_applied_to_hs4"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857"
+              ],
+              "finding": "The product is the matching process's quantitative-reference output, and the process describes production of rolled coils.",
+              "severity": "none",
+              "type": "unsupported_role_sequence_or_compatibility"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+                "usitc-legal-ch72-heading-7219",
+                "usitc-legal-ch72-heading-7220"
+              ],
+              "finding": "The process is dated 2007–2011 while the candidate headings are from HS 2022. No evidence resolves the current mapping differently, but the temporal gap remains a provenance limitation.",
+              "severity": "limitation",
+              "type": "historical_mismatch"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857"
+              ],
+              "finding": "No provider is used to infer width, composition, or product identity.",
+              "severity": "none",
+              "type": "default_provider_not_actual_supplier"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+                "usitc-legal-ch72-heading-7219",
+                "usitc-legal-ch72-heading-7220"
+              ],
+              "finding": "Missing width is properly treated as unresolved information rather than as proof that the width falls on either side of 600 mm.",
+              "severity": "none",
+              "type": "missing_metadata_as_absence"
+            }
+          ],
+          "disagrees_with_assessor": false,
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires comparison of the competing heading terms and applicable definitions."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-k-part-1",
+              "locator": "PDF page 7, Chapter 72 Note 1(k), definition through included surface forms",
+              "passage_sha256": "0b2c5ad0d441de271cda5836b215a170f4a11e20d80d4350f9d4814a93c20a1b",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Defines flat-rolled products and expressly encompasses coils of superimposed layers."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7219",
+              "locator": "PDF page 31, International heading 7219; national columns excluded",
+              "passage_sha256": "c17307a68f6a02916cfad826c181c32f5383bc22904a3ddb75e067ed51d32719",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Applies to flat-rolled stainless-steel products at least 600 mm wide."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7220",
+              "locator": "PDF page 37, International heading 7220; national columns excluded",
+              "passage_sha256": "22493daa23c0982939034a2a7d2aaf05b3942a7a5ee31ff01b191898699617de",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Applies to flat-rolled stainless-steel products less than 600 mm wide."
+            }
+          ],
+          "rationale": "The exact instance supports stainless-steel flat-rolled coil, but the competing headings are separated by a 600 mm width threshold and this instance supplies no width. Selecting either heading would therefore invent a material fact. The historical process dates and unverified alloy percentages are limitations but do not resolve the competition.",
+          "recommended_outcome": "competing_targets"
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-255c88c5b984393af949ade000be10abc4b07083a1960ed47e14ca0b3fd22595",
+        "claim_type": "hs_mapping",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "dc66e9244926ce9f8a6337fa50ae9dd37bfea4428860d9d69e6c630eafbbbc28",
+        "evidence_bindings": [
+          {
+            "content_sha256": "40899936bca23bb53b1125646bffcc9772f646cee3576dd4f31153d2f1c85062",
+            "id": "evidence-catalogue-identity-40899936bca23bb53b1125646bffcc9772f646cee3576dd4f31153d2f1c85062",
+            "locator": "hs:2022:unsd-h6-e266823e1299:7219",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "f47a7001b927cd79e45c2ce784581edaee5fe718a30206f836b4723105c3c6d7",
+            "id": "evidence-catalogue-identity-f47a7001b927cd79e45c2ce784581edaee5fe718a30206f836b4723105c3c6d7",
+            "locator": "hs:2022:unsd-h6-e266823e1299:7220",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "056052ebc67530f8d3fa68b3c67fdf83ccb92ce5626a6cbd2f1ab0528b2512ac",
+            "id": "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+            "locator": "flows/3f2fed05-f530-32e9-b0f9-0dcb5280aa9d.json",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "content_sha256": "a44a9cff884c7bba3d43820d02efcd237f0eb2824eb9b8d416045b64184a978a",
+            "id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+            "locator": "processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json#/exchanges/0 and processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-heading-7219",
+            "jurisdiction": "United States",
+            "locator": "PDF page 31, International heading 7219; national columns excluded",
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "c17307a68f6a02916cfad826c181c32f5383bc22904a3ddb75e067ed51d32719",
+            "provision_class": "international_heading",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-heading-7220",
+            "jurisdiction": "United States",
+            "locator": "PDF page 37, International heading 7220; national columns excluded",
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "22493daa23c0982939034a2a7d2aaf05b3942a7a5ee31ff01b191898699617de",
+            "provision_class": "international_heading",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-note-1-d-e",
+            "jurisdiction": "United States",
+            "locator": "PDF page 5, Chapter 72 Note 1(d) steel and 1(e) stainless steel",
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "d970f5ccf97b3c2a5b2db84ee3420300bd4beb3bfb37f11e5afca026a1126087",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-note-1-k-part-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, Chapter 72 Note 1(k), definition through included surface forms",
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "0b2c5ad0d441de271cda5836b215a170f4a11e20d80d4350f9d4814a93c20a1b",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-note-1-k-part-2",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, Chapter 72 Note 1(k), nonrectangular width rule",
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "8f10d4c1417b08b8e2c5b88fdfd530ed0f82878d13ff290c62f429200528b6d0",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 1",
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-section-xv-note-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, Section XV Note 1",
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "0df51e7e4bec5dfcc9cdcb46bfbb148fcf73d03d9b59a8f56fe4213c15fe786b",
+            "provision_class": "international_section_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-section-xv-note-3",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, Section XV Note 3",
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "c1f6f8723f67332270faf4f14f9490bf3687ead2c3adc5827838c343ff75a4ba",
+            "provision_class": "international_section_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state_preserved_separately": "preserved_existing_state",
+        "mechanical_outcome": "ambiguous",
+        "outcome_disagreement": false,
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "81ce0dbe18ae4275b99f3abcac29585c72b08c7f13404a851378a9a974dd9d0e",
+        "provenance": {
+          "assessor_payload_sha256": "eb245df9e3e58a41ae3430247ddf40d456a166fc32e822121ee76f8cb4fd10ed",
+          "assessor_prompt_version": "hs-mapping-smoke-assessor-2",
+          "challenger_payload_sha256": "75d66575530757baf3e6ebec33d60dc76b850ba8f000b2632b3ec95b924f94bc",
+          "challenger_prompt_version": "hs-mapping-smoke-challenger-2",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "policy_version": "hs-mapping-smoke-policy-1",
+          "provider": "OpenAI",
+          "response_refs": {
+            "assessor": {
+              "sha256": "f847c0d60445cd530242dac4b5c957b3f4230bab6815b6453cca7593edf4b290"
+            },
+            "challenger": {
+              "sha256": "fc43c0173870c1ea739da47d639d36f3381354d3bb3f4d24174ae3924d43009a"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "schema_version": "hs-mapping-smoke-assessment-1",
+        "scope": {
+          "case_id": "stainless-steel-coil",
+          "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "process_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd",
+          "scope_note": "Do not merge differently documented coil instances; width is a material discriminator for the competing headings."
+        },
+        "validation": {
+          "citation_exists_and_matches_supplied_text": "passed",
+          "citation_semantically_supports_reasoning": "automated_judgment_only",
+          "schema_scope_target": "passed"
+        }
+      }
+    },
+    {
+      "source_artifact": "smoke2.jsonl",
+      "source_line": 3,
+      "source_line_sha256": "a643d0fdaeb1096efa47069b92fbff3122bd9a3cdfd043ad05339bd9fdfcc708",
+      "record": {
+        "assessment_id": "assessment-ef7d8dcb26d1d39aa7f52c32b2ab7984fa71ab2274cba7982bea770bdff36331-v1",
+        "assessor": {
+          "additional_missing_facts": [],
+          "alternatives": [
+            {
+              "rationale": "Possible only if the product satisfies the stainless-steel and flat-rolled definitions and is at least 600 mm wide, or falls under the nonrectangular-width rule.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "7219",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:7219",
+                "level": 4
+              }
+            },
+            {
+              "rationale": "Possible only if the product satisfies the stainless-steel and flat-rolled definitions and is less than 600 mm wide.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "7220",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:7220",
+                "level": 4
+              }
+            }
+          ],
+          "assessed_object": {
+            "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+            "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+            "kind": "represented_product",
+            "object_id": "object-5e14b34f54ec9a39366c31a4606c00530501cf09607f591cbb0f45f01c6929de"
+          },
+          "assumptions": [],
+          "case_id": "S2-09",
+          "hs_resolution": "competing_targets",
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires classification according to heading terms and relevant notes."
+            },
+            {
+              "evidence_id": "usitc-legal-section-xv-note-1",
+              "locator": "PDF page 1, Section XV Note 1",
+              "passage_sha256": "0df51e7e4bec5dfcc9cdcb46bfbb148fcf73d03d9b59a8f56fe4213c15fe786b",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Lists exclusions potentially relevant to base-metal goods, but the withheld identity cannot resolve them."
+            },
+            {
+              "evidence_id": "usitc-legal-section-xv-note-3",
+              "locator": "PDF page 1, Section XV Note 3",
+              "passage_sha256": "c1f6f8723f67332270faf4f14f9490bf3687ead2c3adc5827838c343ff75a4ba",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Defines iron and steel as base metals."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-d-e",
+              "locator": "PDF page 5, Chapter 72 Note 1(d) steel and 1(e) stainless steel",
+              "passage_sha256": "d970f5ccf97b3c2a5b2db84ee3420300bd4beb3bfb37f11e5afca026a1126087",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Defines steel and the composition thresholds for stainless steel."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-k-part-1",
+              "locator": "PDF page 7, Chapter 72 Note 1(k), definition through included surface forms",
+              "passage_sha256": "0b2c5ad0d441de271cda5836b215a170f4a11e20d80d4350f9d4814a93c20a1b",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Defines flat-rolled products and qualifying forms and dimensions."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-k-part-2",
+              "locator": "PDF page 7, Chapter 72 Note 1(k), nonrectangular width rule",
+              "passage_sha256": "8f10d4c1417b08b8e2c5b88fdfd530ed0f82878d13ff290c62f429200528b6d0",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Provides the special width treatment for nonrectangular flat-rolled products."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7219",
+              "locator": "PDF page 31, International heading 7219; national columns excluded",
+              "passage_sha256": "c17307a68f6a02916cfad826c181c32f5383bc22904a3ddb75e067ed51d32719",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Heading 7219 covers flat-rolled stainless-steel products at least 600 mm wide."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7220",
+              "locator": "PDF page 37, International heading 7220; national columns excluded",
+              "passage_sha256": "22493daa23c0982939034a2a7d2aaf05b3942a7a5ee31ff01b191898699617de",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Heading 7220 covers flat-rolled stainless-steel products less than 600 mm wide."
+            }
+          ],
+          "native_evidence_ids": [
+            "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-c8b9ac4e0d5156fe",
+            "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-c45e96b94eab8049"
+          ],
+          "object_relationship": {
+            "explanation": "The definition and quantitative-reference unit-inventory output share the exact flow UUID, although descriptive identity fields are withheld.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-c8b9ac4e0d5156fe",
+              "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-c45e96b94eab8049"
+            ],
+            "status": "same_object"
+          },
+          "proposed_target": null,
+          "rationale": "The two supplied headings are separated by stainless-steel flat-rolled identity and the 600 mm width threshold. The evidence view withholds product identity and supplies no width, so neither candidate can be preferred.",
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch72-note-1-d-e",
+                "usitc-legal-ch72-note-1-k-part-1",
+                "usitc-legal-ch72-note-1-k-part-2"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-c8b9ac4e0d5156fe",
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-c45e96b94eab8049"
+              ],
+              "observed_value": null,
+              "rationale": "The applicable provisions require stainless-steel composition and flat-rolled form, but the fields that could establish those facts are withheld.",
+              "rule_id": "steel_identity"
+            },
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch72-heading-7219",
+                "usitc-legal-ch72-heading-7220"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-c8b9ac4e0d5156fe",
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-c45e96b94eab8049"
+              ],
+              "observed_value": null,
+              "rationale": "No width measurement or source-declared width is present, so the 600 mm discriminator cannot be resolved.",
+              "rule_id": "coil_width"
+            }
+          ],
+          "scope_rationale": "The assessed object exactly matches the requested represented-product object; withholding descriptive fields does not alter its supplied identifiers.",
+          "scope_verdict": "matched"
+        },
+        "case_id": "S2-09",
+        "challenger": {
+          "additional_missing_facts": [],
+          "alternatives": [
+            {
+              "rationale": "Possible if the exact product satisfies the stainless-steel and flat-rolled definitions and is at least 600 mm wide, or qualifies under the nonrectangular-width rule.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "7219",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:7219",
+                "level": 4
+              }
+            },
+            {
+              "rationale": "Possible if the exact product satisfies the stainless-steel and flat-rolled definitions and is less than 600 mm wide.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "7220",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:7220",
+                "level": 4
+              }
+            }
+          ],
+          "assumptions": [],
+          "case_id": "S2-09",
+          "claim_object": {
+            "evidence_ids": [
+              "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-c8b9ac4e0d5156fe",
+              "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-c45e96b94eab8049"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor classified the exact represented-product object requested. The identity-withheld view limits classification facts but does not create an object mismatch."
+          },
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires classification according to heading terms and relevant notes."
+            },
+            {
+              "evidence_id": "usitc-legal-section-xv-note-1",
+              "locator": "PDF page 1, Section XV Note 1",
+              "passage_sha256": "0df51e7e4bec5dfcc9cdcb46bfbb148fcf73d03d9b59a8f56fe4213c15fe786b",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Lists exclusions that cannot be resolved from the identity-withheld evidence."
+            },
+            {
+              "evidence_id": "usitc-legal-section-xv-note-3",
+              "locator": "PDF page 1, Section XV Note 3",
+              "passage_sha256": "c1f6f8723f67332270faf4f14f9490bf3687ead2c3adc5827838c343ff75a4ba",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Includes iron and steel within the schedule's definition of base metals."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-d-e",
+              "locator": "PDF page 5, Chapter 72 Note 1(d) steel and 1(e) stainless steel",
+              "passage_sha256": "d970f5ccf97b3c2a5b2db84ee3420300bd4beb3bfb37f11e5afca026a1126087",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Defines steel and the composition thresholds for stainless steel."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-k-part-1",
+              "locator": "PDF page 7, Chapter 72 Note 1(k), definition through included surface forms",
+              "passage_sha256": "0b2c5ad0d441de271cda5836b215a170f4a11e20d80d4350f9d4814a93c20a1b",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Defines flat-rolled products, including qualifying forms and dimensional relationships."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-k-part-2",
+              "locator": "PDF page 7, Chapter 72 Note 1(k), nonrectangular width rule",
+              "passage_sha256": "8f10d4c1417b08b8e2c5b88fdfd530ed0f82878d13ff290c62f429200528b6d0",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Treats qualifying nonrectangular flat-rolled products as having a width of at least 600 mm."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7219",
+              "locator": "PDF page 31, International heading 7219; national columns excluded",
+              "passage_sha256": "c17307a68f6a02916cfad826c181c32f5383bc22904a3ddb75e067ed51d32719",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Heading 7219 covers flat-rolled stainless-steel products at least 600 mm wide."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7220",
+              "locator": "PDF page 37, International heading 7220; national columns excluded",
+              "passage_sha256": "22493daa23c0982939034a2a7d2aaf05b3942a7a5ee31ff01b191898699617de",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Heading 7220 covers flat-rolled stainless-steel products less than 600 mm wide."
+            }
+          ],
+          "legal_reasoning": {
+            "evidence_ids": [
+              "usitc-legal-gir-rule-1",
+              "usitc-legal-ch72-note-1-d-e",
+              "usitc-legal-ch72-note-1-k-part-1",
+              "usitc-legal-ch72-note-1-k-part-2",
+              "usitc-legal-ch72-heading-7219",
+              "usitc-legal-ch72-heading-7220"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor correctly preserves both supplied headings as competing possibilities because their common eligibility prerequisites and their decisive width discriminator are unresolved."
+          },
+          "native_evidence_ids": [
+            "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-c8b9ac4e0d5156fe",
+            "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-c45e96b94eab8049"
+          ],
+          "object_relationship": {
+            "explanation": "The definition and quantitative-reference output share the exact flow UUID. This establishes linkage between the supplied records even though descriptive identity fields are withheld.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-c8b9ac4e0d5156fe",
+              "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-c45e96b94eab8049"
+            ],
+            "status": "same_object"
+          },
+          "rationale": "Headings 7219 and 7220 both require a flat-rolled stainless-steel product and are distinguished by the 600 mm width threshold, subject to the nonrectangular-product rule. The supplied evidence withholds identity and provides neither composition, qualifying form and dimensions, nor width. Both supplied targets consequently remain conditional possibilities, and neither can be preferred.",
+          "recommended_assessed_object": {
+            "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+            "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+            "kind": "represented_product",
+            "object_id": "object-5e14b34f54ec9a39366c31a4606c00530501cf09607f591cbb0f45f01c6929de"
+          },
+          "recommended_hs_resolution": "competing_targets",
+          "recommended_scope_verdict": "matched",
+          "recommended_target": null,
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch72-note-1-d-e",
+                "usitc-legal-ch72-note-1-k-part-1",
+                "usitc-legal-ch72-note-1-k-part-2"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-c8b9ac4e0d5156fe",
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-c45e96b94eab8049"
+              ],
+              "observed_value": null,
+              "rationale": "The legal provisions make stainless-steel composition and flat-rolled form material, but the evidence view withholds the fields that could establish those characteristics.",
+              "rule_id": "steel_identity"
+            },
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch72-heading-7219",
+                "usitc-legal-ch72-heading-7220"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-c8b9ac4e0d5156fe",
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-c45e96b94eab8049"
+              ],
+              "observed_value": null,
+              "rationale": "No source-declared or measured width, and no facts resolving the nonrectangular-width rule, are supplied.",
+              "rule_id": "coil_width"
+            }
+          ],
+          "scope_rationale": "The object identifiers exactly match the supplied represented-product claim_object. Withholding descriptive fields creates factual uncertainty but does not change the identified object."
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-c4312791cd0aee68c4e857a173a66eae880baaaf4e2d96f97a65a58cc5d18cf1",
+        "claim_object": {
+          "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "kind": "represented_product",
+          "object_id": "object-5e14b34f54ec9a39366c31a4606c00530501cf09607f591cbb0f45f01c6929de"
+        },
+        "claim_type": "hs_mapping",
+        "controls": {
+          "assessed_object": {
+            "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+            "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+            "kind": "represented_product",
+            "object_id": "object-5e14b34f54ec9a39366c31a4606c00530501cf09607f591cbb0f45f01c6929de"
+          },
+          "assessor_challenger_disagreement": false,
+          "citation_semantic_support": "automated_judgment_only",
+          "disagreement_axes": {
+            "claim_object_disagreement": false,
+            "hs_resolution_disagreement": false,
+            "legal_reasoning_disagreement": false,
+            "object_disagreement": false,
+            "scope_disagreement": false,
+            "target_disagreement": false
+          },
+          "display_resolution": "competing_targets",
+          "hs_resolution": "competing_targets",
+          "proposed_target": null,
+          "requested_claim_object": {
+            "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+            "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+            "kind": "represented_product",
+            "object_id": "object-5e14b34f54ec9a39366c31a4606c00530501cf09607f591cbb0f45f01c6929de"
+          },
+          "rule_controls_status": "assistant_authored_testing_hypotheses",
+          "scope_verdict": "matched",
+          "source_scoped_automated_support": false
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "c7fe1d27b0cd4d78e803dbab79c124e5ac2e7000d8a01cad412867cbd8c27383",
+        "evidence_bindings": [
+          {
+            "content_sha256": "40899936bca23bb53b1125646bffcc9772f646cee3576dd4f31153d2f1c85062",
+            "id": "evidence-catalogue-identity-40899936bca23bb53b1125646bffcc9772f646cee3576dd4f31153d2f1c85062",
+            "locator": "hs:2022:unsd-h6-e266823e1299:7219",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "f47a7001b927cd79e45c2ce784581edaee5fe718a30206f836b4723105c3c6d7",
+            "id": "evidence-catalogue-identity-f47a7001b927cd79e45c2ce784581edaee5fe718a30206f836b4723105c3c6d7",
+            "locator": "hs:2022:unsd-h6-e266823e1299:7220",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "9b90f9f71bd82b9bd61da3d5f68f764ce2168332c60987f23875698b1e200e3a",
+            "evidence_view": "identity_withheld",
+            "id": "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-c8b9ac4e0d5156fe",
+            "locator": "flows/3f2fed05-f530-32e9-b0f9-0dcb5280aa9d.json",
+            "source_evidence_id": "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "content_sha256": "b8e49ed2cbcf2b67fcaa6d65ade18b9e1220c8be03d4d6693e4e4ee8d3d47ce0",
+            "evidence_view": "identity_withheld",
+            "id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-c45e96b94eab8049",
+            "locator": "processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json#/exchanges/0 and processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json",
+            "minimisation": [
+              "Unrelated exchanges, providers, attachments and prior assessment conclusions omitted."
+            ],
+            "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-heading-7219",
+            "jurisdiction": "United States",
+            "locator": "PDF page 31, International heading 7219; national columns excluded",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "c17307a68f6a02916cfad826c181c32f5383bc22904a3ddb75e067ed51d32719",
+            "provision_class": "international_heading",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-heading-7220",
+            "jurisdiction": "United States",
+            "locator": "PDF page 37, International heading 7220; national columns excluded",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "22493daa23c0982939034a2a7d2aaf05b3942a7a5ee31ff01b191898699617de",
+            "provision_class": "international_heading",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-note-1-d-e",
+            "jurisdiction": "United States",
+            "locator": "PDF page 5, Chapter 72 Note 1(d) steel and 1(e) stainless steel",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "d970f5ccf97b3c2a5b2db84ee3420300bd4beb3bfb37f11e5afca026a1126087",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-note-1-k-part-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, Chapter 72 Note 1(k), definition through included surface forms",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "0b2c5ad0d441de271cda5836b215a170f4a11e20d80d4350f9d4814a93c20a1b",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-note-1-k-part-2",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, Chapter 72 Note 1(k), nonrectangular width rule",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "8f10d4c1417b08b8e2c5b88fdfd530ed0f82878d13ff290c62f429200528b6d0",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1
+              ],
+              "status": "completed",
+              "warnings": [
+                "Rule hierarchy and wrapping were visually checked. Only GIR 1 and 6 on page 1 are selected; unrelated General Notes are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-section-xv-note-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, Section XV Note 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "0df51e7e4bec5dfcc9cdcb46bfbb148fcf73d03d9b59a8f56fe4213c15fe786b",
+            "provision_class": "international_section_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-section-xv-note-3",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, Section XV Note 3",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "c1f6f8723f67332270faf4f14f9490bf3687ead2c3adc5827838c343ff75a4ba",
+            "provision_class": "international_section_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          }
+        ],
+        "evidence_omissions": {
+          "legal": [],
+          "native": [
+            {
+              "source_evidence_id": "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+              "value_sha256": "18ec37f7de0365671af49cc0084843532bea41e273399f1feb8b794c9dfb3163"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+              "value_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+              "value_sha256": "64b599b63b1ac51264787b7ca9fea6dedee3e48cdebc35616fab7e797840537c"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+              "value_sha256": "ad4358aa8e3e1675bda32f5b4ce13a11917daa258c878b6cf2c9a2ce269615e5"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+              "value_sha256": "9afa2fe9ee92025404f715788b5d8366228c38c11aa12524437638379f8271fb"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+              "value_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+              "value_sha256": "64b599b63b1ac51264787b7ca9fea6dedee3e48cdebc35616fab7e797840537c"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+              "value_sha256": "18ec37f7de0365671af49cc0084843532bea41e273399f1feb8b794c9dfb3163"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+              "value_sha256": "a93e80888dd3be62668ae46aaac2b7953860979e2a229e9dcead5d7ab73d0345"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+              "value_sha256": "18ec37f7de0365671af49cc0084843532bea41e273399f1feb8b794c9dfb3163"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+              "value_sha256": "2118ea3dc6d906c161410f6cb2c8172197f3aff362862f857a3264f5c686e28b"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+              "value_sha256": "2c3f9128e83d043e9c13aaf1d2cbb9659abab50eea03a5b78a00b83b01824716"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+              "value_sha256": "8d4e9a8396d025d3ac1e86e16800db8771b518c543eb41704a3c9cc77413d19b"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+              "value_sha256": "78acc3ccb0d9c12f9c34871e2dc4acd7c922be453b04cedf797ece295fddf703"
+            }
+          ]
+        },
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state": "Existing exact-instance decisions unchanged; this view is not accepted",
+        "mechanical_outcome": "ambiguous",
+        "mechanical_scope": "Original complete instance; not recomputed on experimental view",
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "ef7d8dcb26d1d39aa7f52c32b2ab7984fa71ab2274cba7982bea770bdff36331",
+        "provenance": {
+          "execution_route": "codex-cli-0.154.0",
+          "policy_version": "smoke2-contract-1",
+          "prompt_versions": [
+            "smoke2-assessor-1",
+            "smoke2-challenger-1"
+          ],
+          "provider": "OpenAI",
+          "requested_model": "gpt-5.6-sol",
+          "responses": {
+            "assessor": {
+              "exact_payload_sha256": "a6e7082e7fa4a9372055be155b6513b94f3af2b3337a46e980cf10e612f37ba1",
+              "sha256": "321a66bbd21eb18f938118e51908cfa3102acb797fa4755bb5a98df2872a85ed"
+            },
+            "challenger": {
+              "exact_payload_sha256": "59eaae492de458bb552467c1d53cdd9bd1ddb87e6e541fbfef68159d7a9515d1",
+              "sha256": "ad5368eb978dc53c6044a71bc018c5a78ff77899cb0202703c9edae31eb74f2d"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "requested_claim": "hs_heading_of_represented_product",
+        "requested_level": 4,
+        "rule_controls": [
+          {
+            "id": "steel_identity",
+            "kind": "eligibility",
+            "legal_evidence_ids": [
+              "usitc-legal-ch72-note-1-d-e",
+              "usitc-legal-ch72-note-1-k-part-1",
+              "usitc-legal-ch72-note-1-k-part-2"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Stainless steel composition and flat-rolled form",
+            "target_codes": [
+              "7219",
+              "7220"
+            ]
+          },
+          {
+            "id": "coil_width",
+            "kind": "discriminator",
+            "legal_evidence_ids": [
+              "usitc-legal-ch72-heading-7219",
+              "usitc-legal-ch72-heading-7220"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Width in millimetres of this exact product",
+            "target_codes": [
+              "7219",
+              "7220"
+            ]
+          }
+        ],
+        "schema_version": "smoke2-assessment-1",
+        "scope": {
+          "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "process_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd"
+        },
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "schema_scope_target": "passed",
+          "semantic_support": "automated_judgment_not_verified_truth"
+        }
+      }
+    },
+    {
+      "source_artifact": "smoke2.jsonl",
+      "source_line": 8,
+      "source_line_sha256": "5a56cdcd8f4079c6b7d5be9081bdf1ac48b7e63d39196ff298777aa2a6b6c4f4",
+      "record": {
+        "assessment_id": "assessment-36dba9e9be4ef642a6e2ada76d9898da8272dcec9a4845bab0a660bed81e774e-v1",
+        "assessor": {
+          "additional_missing_facts": [],
+          "alternatives": [
+            {
+              "rationale": "Applies if the exact represented product has a width of 600 mm or more, or satisfies the supplied nonrectangular-width rule.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "7219",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:7219",
+                "level": 4
+              }
+            },
+            {
+              "rationale": "Applies if the exact represented product has a width below 600 mm and the nonrectangular-width rule does not direct classification to the 600-mm-or-more category.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "7220",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:7220",
+                "level": 4
+              }
+            }
+          ],
+          "assessed_object": {
+            "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+            "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+            "kind": "represented_product",
+            "object_id": "object-5e14b34f54ec9a39366c31a4606c00530501cf09607f591cbb0f45f01c6929de"
+          },
+          "assumptions": [],
+          "case_id": "S2-05",
+          "hs_resolution": "competing_targets",
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires classification according to heading terms and relevant notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-d-e",
+              "locator": "PDF page 5, Chapter 72 Note 1(d) steel and 1(e) stainless steel",
+              "passage_sha256": "d970f5ccf97b3c2a5b2db84ee3420300bd4beb3bfb37f11e5afca026a1126087",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Defines steel and stainless steel for Chapter 72."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-k-part-1",
+              "locator": "PDF page 7, Chapter 72 Note 1(k), definition through included surface forms",
+              "passage_sha256": "0b2c5ad0d441de271cda5836b215a170f4a11e20d80d4350f9d4814a93c20a1b",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Defines flat-rolled products and expressly includes coils."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-k-part-2",
+              "locator": "PDF page 7, Chapter 72 Note 1(k), nonrectangular width rule",
+              "passage_sha256": "8f10d4c1417b08b8e2c5b88fdfd530ed0f82878d13ff290c62f429200528b6d0",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Provides the special width treatment for nonrectangular flat-rolled products."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7219",
+              "locator": "PDF page 31, International heading 7219; national columns excluded",
+              "passage_sha256": "c17307a68f6a02916cfad826c181c32f5383bc22904a3ddb75e067ed51d32719",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Covers flat-rolled stainless-steel products having a width of 600 mm or more."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7220",
+              "locator": "PDF page 37, International heading 7220; national columns excluded",
+              "passage_sha256": "22493daa23c0982939034a2a7d2aaf05b3942a7a5ee31ff01b191898699617de",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Covers flat-rolled stainless-steel products having a width below 600 mm."
+            }
+          ],
+          "native_evidence_ids": [
+            "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-76ebed2d20dac97b",
+            "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-b177a62722b5b2bb"
+          ],
+          "object_relationship": {
+            "explanation": "The evidence describes the represented stainless-steel product but contains no proxy declaration or other basis for deciding whether a distinct inventory proxy exists.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-76ebed2d20dac97b",
+              "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-b177a62722b5b2bb"
+            ],
+            "status": "unresolved"
+          },
+          "proposed_target": null,
+          "rationale": "The represented product is source-declared as stainless 304 flat-rolled coil, but its width is absent. Heading 7219 applies at 600 mm or more and heading 7220 below 600 mm, so the supplied headings remain competing targets.",
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "source_declared",
+              "fact_status": "established",
+              "legal_evidence_ids": [
+                "usitc-legal-ch72-note-1-d-e",
+                "usitc-legal-ch72-note-1-k-part-1",
+                "usitc-legal-ch72-note-1-k-part-2"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-76ebed2d20dac97b",
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-b177a62722b5b2bb"
+              ],
+              "observed_value": "Steel; stainless 304; flat rolled coil",
+              "rationale": "The product name declares stainless 304 steel in flat-rolled coil form, and the process description confirms production of stainless-steel coils from slabs by rolling.",
+              "rule_id": "steel_identity"
+            },
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch72-heading-7219",
+                "usitc-legal-ch72-heading-7220"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-76ebed2d20dac97b",
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-b177a62722b5b2bb"
+              ],
+              "observed_value": null,
+              "rationale": "Neither native source states the exact product width, which is the dispositive 600 mm heading boundary.",
+              "rule_id": "coil_width"
+            }
+          ],
+          "scope_rationale": "The assessed object exactly matches the requested represented_product object slot.",
+          "scope_verdict": "matched"
+        },
+        "case_id": "S2-05",
+        "challenger": {
+          "additional_missing_facts": [],
+          "alternatives": [
+            {
+              "rationale": "Applies if the exact represented product is at least 600 mm wide, or if it is a qualifying nonrectangular flat-rolled product treated as having that width.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "7219",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:7219",
+                "level": 4
+              }
+            },
+            {
+              "rationale": "Applies if the exact represented product is less than 600 mm wide and the nonrectangular-product rule does not direct it to the 600-mm-or-more category.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "7220",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:7220",
+                "level": 4
+              }
+            }
+          ],
+          "assumptions": [],
+          "case_id": "S2-05",
+          "claim_object": {
+            "evidence_ids": [
+              "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-76ebed2d20dac97b",
+              "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-b177a62722b5b2bb"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor classified the exact represented_product requested by the claim; uncertainty about whether a distinct proxy exists does not create a scope mismatch."
+          },
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Classification is governed by the heading terms and relevant section and chapter notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-d-e",
+              "locator": "PDF page 5, Chapter 72 Note 1(d) steel and 1(e) stainless steel",
+              "passage_sha256": "d970f5ccf97b3c2a5b2db84ee3420300bd4beb3bfb37f11e5afca026a1126087",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "The note defines steel and stainless steel for Chapter 72."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-k-part-1",
+              "locator": "PDF page 7, Chapter 72 Note 1(k), definition through included surface forms",
+              "passage_sha256": "0b2c5ad0d441de271cda5836b215a170f4a11e20d80d4350f9d4814a93c20a1b",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "The note defines flat-rolled products and expressly encompasses coils."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-note-1-k-part-2",
+              "locator": "PDF page 7, Chapter 72 Note 1(k), nonrectangular width rule",
+              "passage_sha256": "8f10d4c1417b08b8e2c5b88fdfd530ed0f82878d13ff290c62f429200528b6d0",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "The note supplies the special width treatment for nonrectangular flat-rolled products."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7219",
+              "locator": "PDF page 31, International heading 7219; national columns excluded",
+              "passage_sha256": "c17307a68f6a02916cfad826c181c32f5383bc22904a3ddb75e067ed51d32719",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Heading 7219 covers flat-rolled stainless-steel products with a width of 600 mm or more."
+            },
+            {
+              "evidence_id": "usitc-legal-ch72-heading-7220",
+              "locator": "PDF page 37, International heading 7220; national columns excluded",
+              "passage_sha256": "22493daa23c0982939034a2a7d2aaf05b3942a7a5ee31ff01b191898699617de",
+              "source_id": "usitc-2022-basic-chapter-72",
+              "support_explanation": "Heading 7220 covers flat-rolled stainless-steel products with a width below 600 mm."
+            }
+          ],
+          "legal_reasoning": {
+            "evidence_ids": [
+              "usitc-legal-gir-rule-1",
+              "usitc-legal-ch72-note-1-d-e",
+              "usitc-legal-ch72-note-1-k-part-1",
+              "usitc-legal-ch72-note-1-k-part-2",
+              "usitc-legal-ch72-heading-7219",
+              "usitc-legal-ch72-heading-7220"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor correctly leaves 7219 and 7220 as competing targets because the supplied provisions make the 600 mm width boundary dispositive and the native evidence does not resolve it."
+          },
+          "native_evidence_ids": [
+            "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-76ebed2d20dac97b",
+            "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-b177a62722b5b2bb"
+          ],
+          "object_relationship": {
+            "explanation": "The native evidence identifies the represented stainless-steel product but makes no proxy declaration and provides no basis for determining whether a distinct inventory proxy exists or whether it is the same object.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-76ebed2d20dac97b",
+              "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-b177a62722b5b2bb"
+            ],
+            "status": "unresolved"
+          },
+          "rationale": "The represented product is source-declared as stainless 304 flat-rolled coil. Its exact width is absent, and width is the dispositive boundary between headings 7219 and 7220. Both supplied headings therefore remain competing targets.",
+          "recommended_assessed_object": {
+            "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+            "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+            "kind": "represented_product",
+            "object_id": "object-5e14b34f54ec9a39366c31a4606c00530501cf09607f591cbb0f45f01c6929de"
+          },
+          "recommended_hs_resolution": "competing_targets",
+          "recommended_scope_verdict": "matched",
+          "recommended_target": null,
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "source_declared",
+              "fact_status": "established",
+              "legal_evidence_ids": [
+                "usitc-legal-ch72-note-1-d-e",
+                "usitc-legal-ch72-note-1-k-part-1",
+                "usitc-legal-ch72-note-1-k-part-2"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-76ebed2d20dac97b",
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-b177a62722b5b2bb"
+              ],
+              "observed_value": "Steel; stainless 304; flat rolled coil",
+              "rationale": "The flow and process names source-declare stainless 304 steel in flat-rolled coil form, and the process description confirms that coils are produced from slabs by rolling.",
+              "rule_id": "steel_identity"
+            },
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-ch72-heading-7219",
+                "usitc-legal-ch72-heading-7220"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-76ebed2d20dac97b",
+                "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-b177a62722b5b2bb"
+              ],
+              "observed_value": null,
+              "rationale": "Neither native source reports the width of this exact represented product or establishes facts that invoke the nonrectangular-product rule.",
+              "rule_id": "coil_width"
+            }
+          ],
+          "scope_rationale": "The classified object exactly matches the requested represented_product slot, including object_id, kind, instance_id, and definition_native_id."
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-017bfd8a6a073dadc2bccf1b5f3c948861e914fea494460a2d235e1cc5ba8ffd",
+        "claim_object": {
+          "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "kind": "represented_product",
+          "object_id": "object-5e14b34f54ec9a39366c31a4606c00530501cf09607f591cbb0f45f01c6929de"
+        },
+        "claim_type": "hs_mapping",
+        "controls": {
+          "assessed_object": {
+            "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+            "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+            "kind": "represented_product",
+            "object_id": "object-5e14b34f54ec9a39366c31a4606c00530501cf09607f591cbb0f45f01c6929de"
+          },
+          "assessor_challenger_disagreement": false,
+          "citation_semantic_support": "automated_judgment_only",
+          "disagreement_axes": {
+            "claim_object_disagreement": false,
+            "hs_resolution_disagreement": false,
+            "legal_reasoning_disagreement": false,
+            "object_disagreement": false,
+            "scope_disagreement": false,
+            "target_disagreement": false
+          },
+          "display_resolution": "competing_targets",
+          "hs_resolution": "competing_targets",
+          "proposed_target": null,
+          "requested_claim_object": {
+            "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+            "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+            "kind": "represented_product",
+            "object_id": "object-5e14b34f54ec9a39366c31a4606c00530501cf09607f591cbb0f45f01c6929de"
+          },
+          "rule_controls_status": "assistant_authored_testing_hypotheses",
+          "scope_verdict": "matched",
+          "source_scoped_automated_support": false
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "57bf9adf711c89b4820376fcf57c8b1bf239133fa767385b7a071cb201db61bb",
+        "evidence_bindings": [
+          {
+            "content_sha256": "40899936bca23bb53b1125646bffcc9772f646cee3576dd4f31153d2f1c85062",
+            "id": "evidence-catalogue-identity-40899936bca23bb53b1125646bffcc9772f646cee3576dd4f31153d2f1c85062",
+            "locator": "hs:2022:unsd-h6-e266823e1299:7219",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "f47a7001b927cd79e45c2ce784581edaee5fe718a30206f836b4723105c3c6d7",
+            "id": "evidence-catalogue-identity-f47a7001b927cd79e45c2ce784581edaee5fe718a30206f836b4723105c3c6d7",
+            "locator": "hs:2022:unsd-h6-e266823e1299:7220",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "056052ebc67530f8d3fa68b3c67fdf83ccb92ce5626a6cbd2f1ab0528b2512ac",
+            "evidence_view": "full",
+            "id": "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d-view-76ebed2d20dac97b",
+            "locator": "flows/3f2fed05-f530-32e9-b0f9-0dcb5280aa9d.json",
+            "source_evidence_id": "evidence-uslci-definition-ee79a507f626dca457f67afd2d3ac2c5e5d92505e8e97db4bfc8b8e6850ffc0d",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "content_sha256": "a44a9cff884c7bba3d43820d02efcd237f0eb2824eb9b8d416045b64184a978a",
+            "evidence_view": "full",
+            "id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857-view-b177a62722b5b2bb",
+            "locator": "processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json#/exchanges/0 and processes/49f5324b-fc33-36e9-b5af-3c80d73492bd.json",
+            "minimisation": [
+              "Unrelated exchanges, providers, attachments and prior assessment conclusions omitted."
+            ],
+            "source_evidence_id": "evidence-uslci-instance-a83913b0ae32045e12f3a67815f764a2c6cacd01ad0790df01a31f5d062d5857",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-heading-7219",
+            "jurisdiction": "United States",
+            "locator": "PDF page 31, International heading 7219; national columns excluded",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "c17307a68f6a02916cfad826c181c32f5383bc22904a3ddb75e067ed51d32719",
+            "provision_class": "international_heading",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-heading-7220",
+            "jurisdiction": "United States",
+            "locator": "PDF page 37, International heading 7220; national columns excluded",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "22493daa23c0982939034a2a7d2aaf05b3942a7a5ee31ff01b191898699617de",
+            "provision_class": "international_heading",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-note-1-d-e",
+            "jurisdiction": "United States",
+            "locator": "PDF page 5, Chapter 72 Note 1(d) steel and 1(e) stainless steel",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "d970f5ccf97b3c2a5b2db84ee3420300bd4beb3bfb37f11e5afca026a1126087",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-note-1-k-part-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, Chapter 72 Note 1(k), definition through included surface forms",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "0b2c5ad0d441de271cda5836b215a170f4a11e20d80d4350f9d4814a93c20a1b",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-ch72-note-1-k-part-2",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, Chapter 72 Note 1(k), nonrectangular width rule",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "8f10d4c1417b08b8e2c5b88fdfd530ed0f82878d13ff290c62f429200528b6d0",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1
+              ],
+              "status": "completed",
+              "warnings": [
+                "Rule hierarchy and wrapping were visually checked. Only GIR 1 and 6 on page 1 are selected; unrelated General Notes are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-section-xv-note-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, Section XV Note 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "0df51e7e4bec5dfcc9cdcb46bfbb148fcf73d03d9b59a8f56fe4213c15fe786b",
+            "provision_class": "international_section_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "083c7fee71e29ce79ef8a89f94a614269994f664ba46b6f708c2075474447a5b",
+            "extraction_receipt_sha256": "2f04ec2ab6ff70402a30eecb8bd60b36dd9f20ed9d9f23b83359fa2843c3f728",
+            "id": "usitc-legal-section-xv-note-3",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, Section XV Note 3",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "ba2385fa5ba9d8956e00f81c53efff04a61b8c665cc4235e49bdcedb0fe5dbdb",
+            "passage_sha256": "c1f6f8723f67332270faf4f14f9490bf3687ead2c3adc5827838c343ff75a4ba",
+            "provision_class": "international_section_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-72",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1,
+                5,
+                7,
+                31,
+                37
+              ],
+              "status": "completed",
+              "warnings": [
+                "Section/chapter note lettering, alloy thresholds, dimensions and the 600 mm heading split were visually checked. Statistical suffixes and duty columns are excluded."
+              ]
+            }
+          }
+        ],
+        "evidence_omissions": {
+          "legal": [],
+          "native": []
+        },
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state": "Existing exact-instance decisions unchanged; this view is not accepted",
+        "mechanical_outcome": "ambiguous",
+        "mechanical_scope": "Original complete instance; not recomputed on experimental view",
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "36dba9e9be4ef642a6e2ada76d9898da8272dcec9a4845bab0a660bed81e774e",
+        "provenance": {
+          "execution_route": "codex-cli-0.154.0",
+          "policy_version": "smoke2-contract-1",
+          "prompt_versions": [
+            "smoke2-assessor-1",
+            "smoke2-challenger-1"
+          ],
+          "provider": "OpenAI",
+          "requested_model": "gpt-5.6-sol",
+          "responses": {
+            "assessor": {
+              "exact_payload_sha256": "874988b563d210fe9204d8efa452e57a4973f95465252a6cf99710e25b03c9b4",
+              "sha256": "c4196dbc0611d1c3f787f01f1b26908e748f1aa612a5690111857a3066f5086d"
+            },
+            "challenger": {
+              "exact_payload_sha256": "7dd01e6ec788ad7685bb51d0ff39969c7e91ae48ce29d73b20c8a79273ae1ac1",
+              "sha256": "f31e11a48914e01d94c84df069259a0efd23a1c51210642925cc5142c146c368"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "requested_claim": "hs_heading_of_represented_product",
+        "requested_level": 4,
+        "rule_controls": [
+          {
+            "id": "steel_identity",
+            "kind": "eligibility",
+            "legal_evidence_ids": [
+              "usitc-legal-ch72-note-1-d-e",
+              "usitc-legal-ch72-note-1-k-part-1",
+              "usitc-legal-ch72-note-1-k-part-2"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Stainless steel composition and flat-rolled form",
+            "target_codes": [
+              "7219",
+              "7220"
+            ]
+          },
+          {
+            "id": "coil_width",
+            "kind": "discriminator",
+            "legal_evidence_ids": [
+              "usitc-legal-ch72-heading-7219",
+              "usitc-legal-ch72-heading-7220"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Width in millimetres of this exact product",
+            "target_codes": [
+              "7219",
+              "7220"
+            ]
+          }
+        ],
+        "schema_version": "smoke2-assessment-1",
+        "scope": {
+          "definition_native_id": "3f2fed05-f530-32e9-b0f9-0dcb5280aa9d",
+          "instance_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd:exchange:2",
+          "process_id": "uslci-1.2026-06.0:processes:49f5324b-fc33-36e9-b5af-3c80d73492bd"
+        },
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "schema_scope_target": "passed",
+          "semantic_support": "automated_judgment_not_verified_truth"
+        }
+      }
+    }
+  ]
+}

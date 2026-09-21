@@ -1,0 +1,435 @@
+{
+  "row_id": "R10",
+  "source_release": "https://doi.org/10.5281/zenodo.22857372",
+  "source_records": [
+    {
+      "source_artifact": "exchanges.jsonl",
+      "source_line": 1115,
+      "source_line_sha256": "c0deaacccd1ab9815165045f80689acc04a281eb9e66ef5019c38b6288c31d0d",
+      "record": {
+        "denominator": "process quantitative-reference exchange(s); no rescaling",
+        "derivation_method": "uslci-jsonld-1",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "eb07ff7f1b33085b856611bc4a9a497ef84d806a647e1dd1c4c30a891628772e",
+        "id": "uslci-1.2026-06.0:processes:076898a5-e1ce-3c50-9df4-6445fc0bb6aa:exchange:85",
+        "interpretation": "unit_inventory_input",
+        "locator": "processes/076898a5-e1ce-3c50-9df4-6445fc0bb6aa.json#/exchanges/55",
+        "native": {
+          "@type": "Exchange",
+          "amount": 0.00297,
+          "description": "Represents average of 2 plants",
+          "flow": {
+            "@id": "d12c4a32-12a8-4673-9b14-5d227d2a128e",
+            "@type": "Flow",
+            "category": "Technosphere flows/31-33: Manufacturing/3251: Basic Chemical Manufacturing",
+            "flowType": "PRODUCT_FLOW",
+            "name": "Sodium hydroxide; at plant",
+            "refUnit": "kg"
+          },
+          "flowProperty": {
+            "omitted": "excluded_source_reference"
+          },
+          "internalId": 85,
+          "isAvoidedProduct": false,
+          "isInput": true,
+          "unit": {
+            "@id": "20aadc24-a391-41cf-b340-3e4529f44bde",
+            "@type": "Unit",
+            "name": "kg"
+          }
+        },
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "2471dfdcca535dbc54f4a752eff3f10320f227247076a5024f7d86bac70ecac2",
+        "process_id": "uslci-1.2026-06.0:processes:076898a5-e1ce-3c50-9df4-6445fc0bb6aa",
+        "quantity_status": "native_amount",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "decision_id": "release-20260919-D1"
+        },
+        "source_id": "uslci-1.2026-06.0",
+        "technical_validity": "unreviewed"
+      }
+    },
+    {
+      "source_artifact": "processes.jsonl",
+      "source_line": 38,
+      "source_line_sha256": "77e1de30fdbb09764e8adcb811e4e8bd858959fdf535d6c5c7c4e4bdf02502d0",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "209fdac82a3b25d4e604599dd46337bafa6b4ec46e5e0dabc920392b74a1c7c0",
+        "id": "uslci-1.2026-06.0:processes:076898a5-e1ce-3c50-9df4-6445fc0bb6aa",
+        "native": {
+          "@id": "076898a5-e1ce-3c50-9df4-6445fc0bb6aa",
+          "@type": "Process",
+          "allocationFactors": [],
+          "category": "31-33: Manufacturing/3315: Foundries",
+          "defaultAllocationMethod": "NO_ALLOCATION",
+          "description": "No co-product allocation for scrap materials that are recycled or reused; all environmental flows for scrap are included in the environmental flows for the product.\nImportant note: although most of the data in the US LCI database has \nundergone some sort of review, the database as a whole has not yet \nundergone a formal validation process.\nPlease email comments to [contact withheld].",
+          "isInfrastructureProcess": false,
+          "lastChange": "2026-06-24T15:53:01Z",
+          "lastInternalId": 122,
+          "location": {
+            "omitted": "excluded_source_reference"
+          },
+          "name": "Iron; sand casted",
+          "parameters": [],
+          "processDocumentation": {
+            "creationDate": "2015-08-20T19:33:12.593Z",
+            "geographyDescription": "USA",
+            "isCopyrightProtected": false,
+            "restrictionsDescription": "All information can be accessed by everybody.",
+            "sources": [
+              {
+                "@id": "12e5fd8f-bd2e-3a87-b2ae-880657a9690f",
+                "@type": "Source",
+                "name": "Franklin Associates (2004) Iron Casting"
+              }
+            ],
+            "technologyDescription": "Unspecified",
+            "validFrom": "2003-12-31",
+            "validUntil": "2003-12-31"
+          },
+          "processType": "UNIT_PROCESS",
+          "version": "00.00.021"
+        },
+        "native_locator": "processes/076898a5-e1ce-3c50-9df4-6445fc0bb6aa.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "92b0ab888150aa60b4da97113d8cdcfaadd7f754e05ccd8ae5dd3b373c4c5351",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "attribution": "USLCI; DOE / NREL / Alliance; native contributor terms retained",
+          "decision_id": "release-20260919-D1",
+          "native_restrictionsDescription": "All information can be accessed by everybody."
+        },
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "mapping-projections.jsonl",
+      "source_line": 355,
+      "source_line_sha256": "5cb6ce8400128384ed2b9616a8823d0d1ee09af8e7bd683d6179cb4670e13750",
+      "record": {
+        "condition_text_status": "Private WCO-derived conditions omitted; mechanical outcome unchanged, not recomputed",
+        "context_sha256": "78f9969f1a06d5d44ef4cb2d9dd3746232faac240cae3ca8a3f65ea0a2d8c94c",
+        "definition": {
+          "native_id": "d12c4a32-12a8-4673-9b14-5d227d2a128e",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "8ba39ffa5ebee57ee1ba030c4b6cf505eb62c0e594b61ccdfe766d15b3fc600f",
+        "exchange_id": "uslci-1.2026-06.0:processes:076898a5-e1ce-3c50-9df4-6445fc0bb6aa:exchange:85",
+        "id": "8bf4fb1906fdae740fc774cc7894336a4f312b5386989db58e6549d2636de9f3",
+        "mapping_id": "pilot-caustic-r2",
+        "mechanical_check_results": [
+          {
+            "operator": "same",
+            "result": "applicable"
+          },
+          {
+            "operator": "equals",
+            "result": "applicable"
+          },
+          {
+            "operator": "present",
+            "result": "applicable"
+          },
+          {
+            "operator": "evidence_assessment",
+            "result": "applicable"
+          }
+        ],
+        "mechanical_outcome": "applicable",
+        "policy": "flow-projection-2",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "c75fc32964104d69e238beddaf397e96f3467de9e0ba78480f06e5bcd8db6a7e",
+        "process_id": "uslci-1.2026-06.0:processes:076898a5-e1ce-3c50-9df4-6445fc0bb6aa",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4"
+        ],
+        "review_status": "proposed",
+        "source_id": "uslci-1.2026-06.0",
+        "status": "applicable",
+        "subject_kind": "definition",
+        "target": {
+          "code": "2815",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:2815",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:2815"
+        }
+      }
+    },
+    {
+      "source_artifact": "mapping-revisions.jsonl",
+      "source_line": 12,
+      "source_line_sha256": "79e7fe6224168b379f5d7b65b5ac98e1cbc795d167ac70d7786a7ec4c9b6910d",
+      "record": {
+        "alternatives": [],
+        "definition": {
+          "native_id": "d12c4a32-12a8-4673-9b14-5d227d2a128e",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "f358be52cb43dc593e5d95eca2496de7e49624838834d811fd253f5da44b5def",
+        "evidence_citations": [
+          {
+            "locator": "flows/d12c4a32-12a8-4673-9b14-5d227d2a128e.json",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/a3e150d0-770e-4e2a-9b19-f7daa8cda38b.json#/description",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/a3e150d0-770e-4e2a-9b19-f7daa8cda38b.json#/exchanges/65",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "/results/1465/text",
+            "source_id": "unsd-h6-e266823e1299"
+          }
+        ],
+        "id": "pilot-caustic-r2",
+        "legal_reasoning_status": "Private WCO-derived rationale/specifications/conditions omitted; no replacement reasoning generated",
+        "method": "assistant-native-and-official-HS2022-condition-audit-2",
+        "outcome": "classified",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "d04ec0a27c69d8bee87ed48b887bde829a53adcd25e62fe21657f2266077f30a",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D3",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "review": {
+          "date": "2026-09-13",
+          "decision": null,
+          "kind": "automated",
+          "mapping_revision_id": "pilot-caustic-r2",
+          "reviewer": "assistant-session-2026-09-13",
+          "reviewer_role": "automated",
+          "status": "proposed"
+        },
+        "revision": 2,
+        "series_id": "pilot-caustic",
+        "subject": {
+          "kind": "definition"
+        },
+        "supersedes": "pilot-caustic-r1",
+        "target": {
+          "code": "2815",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:2815",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:2815"
+        }
+      }
+    },
+    {
+      "source_artifact": "identity-assessments.jsonl",
+      "source_line": 17,
+      "source_line_sha256": "138aaeba1fc7b36cc92c815b1d18f8918b0971ad03b0c7601036499e4a9ac1a7",
+      "record": {
+        "alternatives": [],
+        "assessment_id": "assessment-09071c5b1caf7333c250f4cfd8b1e862fd7661a3ea1b70d11624523f4ebf2e71-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "finding": {
+            "alternatives": [],
+            "assumptions": [],
+            "automated_outcome": "automated_supported",
+            "claim_id": "claim-963f92fbf12dc0b3dd9eadf2aa62f37a0f4e60fc423a3d4e22546162d690aa39",
+            "evidence_binding_ids": [
+              "evidence-definition-fc1179595630e7755a765089bf3a616beb9cd420401aacdbb4df56c141f2a06f",
+              "evidence-instance-194748951f50496df450efdf0aa9f4e1159ad80e4b13dedbfdbdf94f32dc3c67"
+            ],
+            "rationale": "The instance flow reference has the same sodium-hydroxide ID and name as the bound definition."
+          },
+          "response_ref": {
+            "sha256": "301250d6057d47d3ed3f51f862b301d7a3a9e0a7c22dbd17ccbd98e6db8c2b25"
+          }
+        },
+        "assumptions": [],
+        "automated_outcome": "automated_supported",
+        "challenger": {
+          "agreement_is_proof": false,
+          "finding": {
+            "claim_id": "claim-963f92fbf12dc0b3dd9eadf2aa62f37a0f4e60fc423a3d4e22546162d690aa39",
+            "issues": [
+              {
+                "evidence_binding_ids": [
+                  "evidence-definition-fc1179595630e7755a765089bf3a616beb9cd420401aacdbb4df56c141f2a06f",
+                  "evidence-instance-194748951f50496df450efdf0aa9f4e1159ad80e4b13dedbfdbdf94f32dc3c67"
+                ],
+                "explanation": "No challenge issue affects the product-identity finding.",
+                "severity": "none",
+                "type": "no_material_concern"
+              }
+            ],
+            "rationale": "The source-scoped flow ID and name match sodium hydroxide, with no conflicting material description.",
+            "recommended_outcome": "automated_supported"
+          },
+          "independent_expert_validation": false,
+          "response_ref": {
+            "sha256": "68d5d08565778448b33d4f0be0d1efc4968b3d260859604d660b817b74134ba8"
+          }
+        },
+        "claim": {
+          "candidate_targets": [],
+          "statement": "The exact source-scoped instance is consistent with the named product or material definition in the transmitted source evidence."
+        },
+        "claim_id": "claim-963f92fbf12dc0b3dd9eadf2aa62f37a0f4e60fc423a3d4e22546162d690aa39",
+        "claim_type": "product_identity",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "7f1bd03d50b82de1129bf04045248b274c544ad7554227f40d9c89f5b3d54b54",
+        "evidence_bindings": [
+          {
+            "content_sha256": "67e8213a86c805f43480573a0438f49618d611d12780e593c164e9c50a8a0c07",
+            "context_sha256": null,
+            "id": "evidence-definition-fc1179595630e7755a765089bf3a616beb9cd420401aacdbb4df56c141f2a06f",
+            "locators": [
+              "flows/d12c4a32-12a8-4673-9b14-5d227d2a128e.json"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          },
+          {
+            "content_sha256": "0788125c7ba2f66d499a25b9472faea79f850db28593c1976f7dca788f17d096",
+            "context_sha256": "78f9969f1a06d5d44ef4cb2d9dd3746232faac240cae3ca8a3f65ea0a2d8c94c",
+            "id": "evidence-instance-194748951f50496df450efdf0aa9f4e1159ad80e4b13dedbfdbdf94f32dc3c67",
+            "locators": [
+              "processes/076898a5-e1ce-3c50-9df4-6445fc0bb6aa.json",
+              "processes/076898a5-e1ce-3c50-9df4-6445fc0bb6aa.json#/exchanges/55",
+              "processes/076898a5-e1ce-3c50-9df4-6445fc0bb6aa.json#/exchanges/55/defaultProvider"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_review_state": "automated_proposal",
+        "mechanical_outcome": "applicable",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "c267280a2687ff6a41a08b2e2b0c90d331c9c5882cf9c3d374240490b97d99c4",
+        "provenance": {
+          "assessor_payload_sha256": "f2e5fdec0de65246416da518357c6bc797e27892e568cf0eb0d1177b76d49d5e",
+          "assessor_prompt_version": "automated-evidence-assessor-1",
+          "challenger_payload_sha256": "7979efda4e3d0313a9acc8ce810a4e029caf517a491ab916a9382676def9c70d",
+          "challenger_prompt_version": "automated-evidence-challenger-1",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "model_configuration": {
+            "max_concurrency": 1,
+            "max_retries": 1,
+            "reasoning_effort": "medium"
+          },
+          "policy_version": "automated-evidence-assessment-1",
+          "provider": "OpenAI"
+        },
+        "rationale": "The instance flow reference has the same sodium-hydroxide ID and name as the bound definition.",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D4"
+        ],
+        "schema_version": "automated-assessment-1",
+        "scope": {
+          "definition": {
+            "native_id": "d12c4a32-12a8-4673-9b14-5d227d2a128e",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0"
+          },
+          "exchange_ids": [
+            "uslci-1.2026-06.0:processes:076898a5-e1ce-3c50-9df4-6445fc0bb6aa:exchange:85"
+          ],
+          "kind": "instance",
+          "mapping_revision_id": "pilot-caustic-r2",
+          "process_ids": [
+            "uslci-1.2026-06.0:processes:076898a5-e1ce-3c50-9df4-6445fc0bb6aa"
+          ]
+        },
+        "target": null,
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "citation_support_judgment": "model_assessment_only",
+          "claim_scope": "passed",
+          "schema": "passed",
+          "target_and_edition": "not_applicable_claim_type",
+          "uncertainty_preserved": "passed"
+        },
+        "withheld_material": [
+          {
+            "locators": [],
+            "reason": "Owner transmission authorization is recorded, but upstream catalogue source-use decisions remain unresolved; no target identity or catalogue metadata was transmitted.",
+            "source_group": "catalogue_identity_only"
+          },
+          {
+            "locators": [],
+            "reason": "Classification provisions, wording and derived legal paraphrases were not transmitted.",
+            "source_group": "wco_hs2022_legal_provisions"
+          }
+        ]
+      }
+    },
+    {
+      "source_artifact": "supporting-records.jsonl",
+      "source_line": 3653,
+      "source_line_sha256": "5a919fa65c97d0d2f449a32d7114c56136b20b00c26425a40a798c3dc6d77358",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "7ad4102b3b16970d00ee4243034425441b24daf2a9ce1d3c73320b6c52aafdcf",
+        "id": "uslci-1.2026-06.0:flows:d12c4a32-12a8-4673-9b14-5d227d2a128e",
+        "kind": "flows",
+        "native": {
+          "@id": "d12c4a32-12a8-4673-9b14-5d227d2a128e",
+          "@type": "Flow",
+          "category": "Technosphere flows/31-33: Manufacturing/3251: Basic Chemical Manufacturing",
+          "description": "",
+          "flowProperties": [
+            {
+              "@type": "FlowPropertyFactor",
+              "conversionFactor": 1.0,
+              "flowProperty": {
+                "omitted": "excluded_source_reference"
+              },
+              "isRefFlowProperty": true
+            }
+          ],
+          "flowType": "PRODUCT_FLOW",
+          "isInfrastructureFlow": false,
+          "lastChange": "2025-06-16T21:52:18.637Z",
+          "name": "Sodium hydroxide; at plant",
+          "version": "00.00.005"
+        },
+        "native_locator": "flows/d12c4a32-12a8-4673-9b14-5d227d2a128e.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "21f0fa25161de9be8740a0af06ea4da4ccf31fea665351fe02ac68cfe340ca94",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "source_id": "uslci-1.2026-06.0"
+      }
+    }
+  ]
+}

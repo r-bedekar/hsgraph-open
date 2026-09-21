@@ -1,0 +1,1849 @@
+{
+  "row_id": "R02",
+  "source_release": "https://doi.org/10.5281/zenodo.22857372",
+  "source_records": [
+    {
+      "source_artifact": "exchanges.jsonl",
+      "source_line": 30992,
+      "source_line_sha256": "27ab69ba08762b9000e7dfa74b2b03ad95e6abad3d78e7059fd743e252746ede",
+      "record": {
+        "denominator": "process quantitative-reference exchange(s); no rescaling",
+        "derivation_method": "uslci-jsonld-1",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "5b0402d94ee69d210730f9976d8f1d2553463ee59033f7000de908a4e47fd729",
+        "id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+        "interpretation": "unit_inventory_output",
+        "locator": "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json#/exchanges/0",
+        "native": {
+          "@type": "Exchange",
+          "amount": 1.0,
+          "flow": {
+            "@id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "@type": "Flow",
+            "category": "Technosphere flows/31-33: Manufacturing/3273: Cement and Concrete Product Manufacturing",
+            "flowType": "PRODUCT_FLOW",
+            "name": "Portland cement; at plant",
+            "refUnit": "kg"
+          },
+          "flowProperty": {
+            "omitted": "excluded_source_reference"
+          },
+          "internalId": 66,
+          "isAvoidedProduct": false,
+          "isInput": false,
+          "isQuantitativeReference": true,
+          "unit": {
+            "@id": "20aadc24-a391-41cf-b340-3e4529f44bde",
+            "@type": "Unit",
+            "name": "kg"
+          }
+        },
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "4c722a591453b468afa4ced3a55ff166072f07df6cbf72c10de9b735bbe8118d",
+        "process_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d",
+        "quantity_status": "native_amount",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "decision_id": "release-20260919-D1"
+        },
+        "source_id": "uslci-1.2026-06.0",
+        "technical_validity": "unreviewed"
+      }
+    },
+    {
+      "source_artifact": "processes.jsonl",
+      "source_line": 548,
+      "source_line_sha256": "c24b42568c9054c523aab3ab147713d7c7deb4261d483fcf4480b527fb21c980",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "da875ec3dd1156d2e5b5abad003d664816d71f6b14fb82329da61941f2297915",
+        "id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d",
+        "native": {
+          "@id": "62993671-574c-3fc5-b66a-6be3bb21ad3d",
+          "@type": "Process",
+          "allocationFactors": [],
+          "category": "31-33: Manufacturing/3273: Cement and Concrete Product Manufacturing",
+          "defaultAllocationMethod": "NO_ALLOCATION",
+          "description": "Portland cement is a hydraulic cement composed primarily of hydraulic calcium silicates. Hydraulic cements harden by reacting chemically with water. During this reaction, cement combines with water to form a stonelike mass, called paste. When the paste (cement and water) is added to aggregates (sand and gravel, crushed stone, or other granular materials) it binds the aggregates together to form concrete, the most widely used construction material. Although the words “cement” and “concrete” are used interchangeably in everyday usage, cement is one of the constituents of concrete. Cement is a very fine powder and concrete is a stonelike material. Cement constitutes 8 to 15 percent of concrete’s total mass by weight. Using cement LCI data incorrectly as concrete LCI data is a serious error., 2002 for fuels and electricity consumption; 2000 for raw material consumption and transportation modes and distances; and 1993 to 2004 for emissions.\r\nImportant note: although most of the data in the US LCI database has undergone some sort of review, the database as a whole has not yet undergone a formal validation process.\r\nPlease email comments to [contact withheld].",
+          "isInfrastructureProcess": false,
+          "lastChange": "2026-06-24T15:53:01Z",
+          "lastInternalId": 73,
+          "location": {
+            "omitted": "excluded_source_reference"
+          },
+          "name": "Portland cement; at plant",
+          "parameters": [],
+          "processDocumentation": {
+            "creationDate": "2011-07-10T07:26:17Z",
+            "geographyDescription": "United States.",
+            "isCopyrightProtected": false,
+            "restrictionsDescription": "All information can be accessed by everybody.",
+            "samplingDescription": "Varies",
+            "sources": [
+              {
+                "@id": "ef7ef887-353a-3225-aa54-9c6ace617784",
+                "@type": "Source",
+                "name": "Medgar L. Marceau "
+              }
+            ],
+            "technologyDescription": "Approximately 2002 technology.",
+            "validFrom": "1992-12-31",
+            "validUntil": "2003-12-31"
+          },
+          "processType": "UNIT_PROCESS",
+          "version": "00.00.018"
+        },
+        "native_locator": "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "f72adbf24278b09e7486869a69a8f6011c32e844d515ad104202707c4191d1dc",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "attribution": "USLCI; DOE / NREL / Alliance; native contributor terms retained",
+          "decision_id": "release-20260919-D1",
+          "native_restrictionsDescription": "All information can be accessed by everybody."
+        },
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "mapping-projections.jsonl",
+      "source_line": 542,
+      "source_line_sha256": "91b2d1e218b347353b413ec0f7da1de8707ea538ab0ff4f714daebaf8f98e8b7",
+      "record": {
+        "condition_text_status": "Private WCO-derived conditions omitted; mechanical outcome unchanged, not recomputed",
+        "context_sha256": "1f507e96ed02027b2f17477fca09010827ecab00a1a11065e69ae8d340bc5af1",
+        "definition": {
+          "native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "f9ec43a73f5dd6dcb9173a09a43bb37800d0a736e07cf2b5346dcbded84b20c5",
+        "exchange_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+        "id": "d04ebad6b568e661f350b0a2f674937d51b435864a0a9618e55289305406038c",
+        "mapping_id": "pilot-cement-r4",
+        "mechanical_check_results": [
+          {
+            "operator": "same",
+            "result": "applicable"
+          },
+          {
+            "operator": "equals",
+            "result": "applicable"
+          },
+          {
+            "operator": "present",
+            "result": "applicable"
+          },
+          {
+            "operator": "evidence_assessment",
+            "result": "applicable"
+          }
+        ],
+        "mechanical_outcome": "applicable",
+        "policy": "flow-projection-2",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "5d18aadb6e8c390e299999e2856e359f6c0ed2a00b0e30c4115b23de7604fcc7",
+        "process_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4"
+        ],
+        "review_status": "accepted",
+        "source_id": "uslci-1.2026-06.0",
+        "status": "applicable",
+        "subject_kind": "definition",
+        "target": {
+          "code": "2523",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:2523",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:2523"
+        }
+      }
+    },
+    {
+      "source_artifact": "mapping-revisions.jsonl",
+      "source_line": 16,
+      "source_line_sha256": "eda5f3e33553918c6fffe19e41c457b2b8e9b9baa0c5eadf7441e0ee8c779117",
+      "record": {
+        "alternatives": [],
+        "definition": {
+          "native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "755bde24a25b1daa3e9b513bc1e90e2fe8ddf9de51d1b777cd5be799755ebe63",
+        "evidence_citations": [
+          {
+            "locator": "flows/277959d5-1a12-33d4-9d7f-1604f2227c09.json",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json#/description",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json#/exchanges/0",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "/results/1257/text",
+            "source_id": "unsd-h6-e266823e1299"
+          }
+        ],
+        "id": "pilot-cement-r4",
+        "legal_reasoning_status": "Private WCO-derived rationale/specifications/conditions omitted; no replacement reasoning generated",
+        "method": "automated-bounded-owner-review-preparation-1",
+        "outcome": "classified",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "9f36be46bccc96d2af1339f70e0a724af1567e82d9498946ffab80a78ed89194",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D3",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "review": {
+          "binding": {
+            "assumption_ids": [],
+            "exchange_ids": [
+              "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66"
+            ],
+            "package_sha256": "10d623637458bd5e77ee8e9614a2d0630949de209cd2725e14baa4908f8b2b28",
+            "reviewed_mapping_id": "pilot-cement-r3"
+          },
+          "comments": "HS6 remains pending. This decision does not establish specialist validation, production-chain correctness, current suppliers, technical compatibility or redistribution permission. The other four cement instances remain unaccepted.",
+          "date": "2026-09-13",
+          "decision": "accept",
+          "decision_ref": "review-file-sha256:7887f599cebde898a0b07f9ebf83259f142670079f81a48ed8bc269d5e0fc2aa",
+          "kind": "owner",
+          "mapping_revision_id": "pilot-cement-r4",
+          "reviewed_revision": "pilot-cement-r3",
+          "reviewer": "Rizwan Bedekar",
+          "reviewer_role": "owner",
+          "status": "accepted"
+        },
+        "revision": 4,
+        "series_id": "pilot-cement",
+        "subject": {
+          "kind": "definition"
+        },
+        "supersedes": "pilot-cement-r3",
+        "target": {
+          "code": "2523",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:2523",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:2523"
+        }
+      }
+    },
+    {
+      "source_artifact": "identity-assessments.jsonl",
+      "source_line": 495,
+      "source_line_sha256": "8d0ed2b6bb8caecb113096c9aeae486184673ae40bca7cc50130dc69e5616317",
+      "record": {
+        "alternatives": [],
+        "assessment_id": "assessment-b726f8489c9eafda4a34f193947c4fb64be215f0db221f557f8e486a774dc2e1-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "finding": {
+            "alternatives": [],
+            "assumptions": [
+              "The claim concerns the identity of the referenced exchange flow, not HS classification, supplier identity, or independent verification of the underlying process."
+            ],
+            "automated_outcome": "automated_supported",
+            "claim_id": "claim-4db172f228eee22360b1a6700e412597f06f801e7320860e5d9ae13b0281715b",
+            "evidence_binding_ids": [
+              "evidence-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93",
+              "evidence-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c"
+            ],
+            "rationale": "The instance’s flow reference has the same source-scoped identifier and name, “Portland cement; at plant,” as the cited product-flow definition. The exchange is an output of a Portland-cement process, and the process description distinguishes cement from concrete, providing consistent contextual support."
+          },
+          "response_ref": {
+            "sha256": "b5a2f123fdaa5db726c8e8289f01a3a0c70412c67249f803d5dfb5b95edea293"
+          }
+        },
+        "assumptions": [
+          "The claim concerns the identity of the referenced exchange flow, not HS classification, supplier identity, or independent verification of the underlying process."
+        ],
+        "automated_outcome": "automated_supported",
+        "challenger": {
+          "agreement_is_proof": false,
+          "finding": {
+            "claim_id": "claim-4db172f228eee22360b1a6700e412597f06f801e7320860e5d9ae13b0281715b",
+            "issues": [
+              {
+                "evidence_binding_ids": [
+                  "evidence-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93",
+                  "evidence-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c"
+                ],
+                "explanation": "No material challenge to the assessor’s source-scoped identity conclusion was found.",
+                "severity": "none",
+                "type": "no_material_concern"
+              }
+            ],
+            "rationale": "The cited instance exactly matches the definition’s source-scoped identifier and name for Portland cement, and no exchange description conflicts with that identity. The historical process dates and unavailable HS or catalogue material do not undermine this narrowly scoped product-identity claim.",
+            "recommended_outcome": "automated_supported"
+          },
+          "independent_expert_validation": false,
+          "response_ref": {
+            "sha256": "b3921b1c52a1be415b69c8d1e43d68153b76126898f9367f5cbe20a94540f580"
+          }
+        },
+        "claim": {
+          "candidate_targets": [],
+          "statement": "The exact source-scoped instance is consistent with the named product or material definition in the transmitted source evidence."
+        },
+        "claim_id": "claim-4db172f228eee22360b1a6700e412597f06f801e7320860e5d9ae13b0281715b",
+        "claim_type": "product_identity",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "53ce84fd55908a71697ed66b47684c396fb912e7fce1c7522f835d3a62e85e5d",
+        "evidence_bindings": [
+          {
+            "content_sha256": "2b516f54b9d711264e365398a558e71a548834eb4c7b7eb33a01e50dca2aef2c",
+            "context_sha256": null,
+            "id": "evidence-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93",
+            "locators": [
+              "flows/277959d5-1a12-33d4-9d7f-1604f2227c09.json"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          },
+          {
+            "content_sha256": "8323190ff6c6f4957e8fa945158d03e65f662577082679d703a83f2fa3d7ef81",
+            "context_sha256": "1f507e96ed02027b2f17477fca09010827ecab00a1a11065e69ae8d340bc5af1",
+            "id": "evidence-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c",
+            "locators": [
+              "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json",
+              "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json#/exchanges/0"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_review_state": "owner_accepted",
+        "mechanical_outcome": "applicable",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "11830a3e82cb67f7b9eb18ed90058c1e0c1c9d9af2a992c8b7b7c1f38c56b20f",
+        "provenance": {
+          "assessor_payload_sha256": "9bb7be0928ef591d519390b256aa839dbc94c0e2dfb850116ccd40dac38e6e01",
+          "assessor_prompt_version": "automated-evidence-assessor-1",
+          "challenger_payload_sha256": "7aa25dbd36d2937a30665924e044a5017b3c6a6ab40a3a8ca541f488683f0d65",
+          "challenger_prompt_version": "automated-evidence-challenger-1",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "model_configuration": {
+            "max_concurrency": 1,
+            "max_retries": 1,
+            "reasoning_effort": "medium"
+          },
+          "policy_version": "automated-evidence-assessment-1",
+          "provider": "OpenAI"
+        },
+        "rationale": "The instance’s flow reference has the same source-scoped identifier and name, “Portland cement; at plant,” as the cited product-flow definition. The exchange is an output of a Portland-cement process, and the process description distinguishes cement from concrete, providing consistent contextual support.",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D4"
+        ],
+        "schema_version": "automated-assessment-1",
+        "scope": {
+          "definition": {
+            "native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0"
+          },
+          "exchange_ids": [
+            "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66"
+          ],
+          "kind": "instance",
+          "mapping_revision_id": "pilot-cement-r4",
+          "process_ids": [
+            "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d"
+          ]
+        },
+        "target": null,
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "citation_support_judgment": "model_assessment_only",
+          "claim_scope": "passed",
+          "schema": "passed",
+          "target_and_edition": "not_applicable_claim_type",
+          "uncertainty_preserved": "passed"
+        },
+        "withheld_material": [
+          {
+            "locators": [],
+            "reason": "Owner transmission authorization is recorded, but upstream catalogue source-use decisions remain unresolved; no target identity or catalogue metadata was transmitted.",
+            "source_group": "catalogue_identity_only"
+          },
+          {
+            "locators": [],
+            "reason": "Classification provisions, wording and derived legal paraphrases were not transmitted.",
+            "source_group": "wco_hs2022_legal_provisions"
+          }
+        ]
+      }
+    },
+    {
+      "source_artifact": "supporting-records.jsonl",
+      "source_line": 700,
+      "source_line_sha256": "39c5e057d35d17aad0a345da148e29221ccb1df838061e97394ecdf769316b41",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "5ecfbea7388868a6f2ebb1a66585ca8917786dd2cefcf97d3f25f1c3cca0eb21",
+        "id": "uslci-1.2026-06.0:flows:277959d5-1a12-33d4-9d7f-1604f2227c09",
+        "kind": "flows",
+        "native": {
+          "@id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "@type": "Flow",
+          "category": "Technosphere flows/31-33: Manufacturing/3273: Cement and Concrete Product Manufacturing",
+          "flowProperties": [
+            {
+              "@type": "FlowPropertyFactor",
+              "conversionFactor": 1.0,
+              "flowProperty": {
+                "omitted": "excluded_source_reference"
+              },
+              "isRefFlowProperty": true
+            }
+          ],
+          "flowType": "PRODUCT_FLOW",
+          "isInfrastructureFlow": false,
+          "lastChange": "2026-03-10T01:22:55Z",
+          "name": "Portland cement; at plant",
+          "version": "00.00.004"
+        },
+        "native_locator": "flows/277959d5-1a12-33d4-9d7f-1604f2227c09.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "cbe1b1cb0c899c9985fea7a887b28a9989b54df753d78088a43f4a28cbb7c794",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "smoke1.jsonl",
+      "source_line": 1,
+      "source_line_sha256": "6b75d696a76787f2b81698f6c897b74b99cd357c4b7562775ef72d875035a51c",
+      "record": {
+        "assessment_id": "assessment-38603934e738c24216c0bda7fd212f2ae65b4a5a3a49e74ea62651a094e3b4f6-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "alternatives": [],
+          "assumptions": [
+            "The native designation describes the product itself and not merely a process proxy.",
+            "The assessed good is cement, not downstream concrete; the process description expressly makes this distinction."
+          ],
+          "case_id": "cement",
+          "identity_conflict_explanation": "No material identity conflict appears: the definition, exchange, and process consistently identify Portland cement.",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "justified_specificity": "HS4. The supplied provisions and native evidence support heading 2523, but no candidate or verified legal evidence supports expansion to HS6.",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires classification according to heading terms and applicable notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-headings-2522-2523",
+              "locator": "PDF page 7, PDF page 8, International headings 2522 and 2523; national columns excluded",
+              "passage_sha256": "34aeeec7896c59574df642b6b8aad73d776b0754f7a57a019dc24f88fdb5ca3a",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "Heading 2523 expressly names Portland cement and similar hydraulic cements."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-note-1",
+              "locator": "PDF page 3, Chapter 25 Note 1",
+              "passage_sha256": "0ab42a3d2e60699713be54d1750d042949e29d5b662d266ec90e23305b2ab537",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "The chapter's general crude-state limitation applies except where heading context requires otherwise; heading 2523 specifically provides for manufactured hydraulic cement."
+            }
+          ],
+          "missing_facts": [
+            {
+              "effect": "Prevents classification more specifically than HS4; it does not undermine heading 2523.",
+              "fact": "No HS6-level cement subtype or presentation facts are supplied."
+            }
+          ],
+          "native_evidence_ids": [
+            "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93",
+            "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c"
+          ],
+          "outcome": "supported",
+          "proposed_target": {
+            "amendment": "unsd-h6-e266823e1299",
+            "code": "2523",
+            "edition": "2022",
+            "id": "hs:2022:unsd-h6-e266823e1299:2523",
+            "level": 4
+          },
+          "rationale": "The exact quantitative-reference output is identified as Portland cement. Its process description distinguishes cement from concrete and describes it as hydraulic cement. Under GIR 1, heading 2523 expressly covers Portland cement and similar hydraulic cements. Chapter 25 Note 1 does not displace that express heading context."
+        },
+        "assessor_challenger_disagreement": false,
+        "automated_outcome": "supported",
+        "case_id": "cement",
+        "challenger": {
+          "case_id": "cement",
+          "checks": [
+            {
+              "evidence_ids": [
+                "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93",
+                "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c"
+              ],
+              "finding": "The flow, exchange, and process consistently identify Portland cement rather than concrete or a proxy.",
+              "severity": "none",
+              "type": "conflicting_identity_form_or_proxy"
+            },
+            {
+              "evidence_ids": [
+                "usitc-legal-ch25-headings-2522-2523"
+              ],
+              "finding": "No supplied evidence supports heading 2522 or another alternative; heading 2523 expressly names Portland cement.",
+              "severity": "none",
+              "type": "alternative_heading_or_exception"
+            },
+            {
+              "evidence_ids": [
+                "usitc-legal-gir-rule-1",
+                "usitc-legal-ch25-headings-2522-2523"
+              ],
+              "finding": "The assessor correctly does not require HS6 subtype facts to sustain heading 2523.",
+              "severity": "none",
+              "type": "hs6_requirement_applied_to_hs4"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c"
+              ],
+              "finding": "The assessed exchange is the process's quantitative-reference output, consistent with classification of the produced cement.",
+              "severity": "none",
+              "type": "unsupported_role_sequence_or_compatibility"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c",
+                "usitc-legal-ch25-headings-2522-2523"
+              ],
+              "finding": "The process is dated 1992–2003 while the target nomenclature is HS 2022, but no evidence indicates that the product identity relevant to heading 2523 changed.",
+              "severity": "limitation",
+              "type": "historical_mismatch"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c"
+              ],
+              "finding": "No provider identity is used to establish the classification; the own-output exchange supplies the relevant identity.",
+              "severity": "none",
+              "type": "default_provider_not_actual_supplier"
+            },
+            {
+              "evidence_ids": [
+                "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93"
+              ],
+              "finding": "Missing HS6 subtype information is treated as a specificity limit, not as evidence against the express HS4 identity.",
+              "severity": "none",
+              "type": "missing_metadata_as_absence"
+            }
+          ],
+          "disagrees_with_assessor": false,
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Classification is governed by the heading terms and applicable notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-headings-2522-2523",
+              "locator": "PDF page 7, PDF page 8, International headings 2522 and 2523; national columns excluded",
+              "passage_sha256": "34aeeec7896c59574df642b6b8aad73d776b0754f7a57a019dc24f88fdb5ca3a",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "Heading 2523 expressly includes Portland cement and similar hydraulic cements."
+            }
+          ],
+          "rationale": "The exact output is consistently identified as Portland cement, which heading 2523 expressly covers. The lack of subtype facts limits only HS6 specificity, not the proposed HS4 classification. The historical process dates are a provenance limitation but do not reveal a different product identity.",
+          "recommended_outcome": "supported"
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-8e39a8e79167dcb32841511df0120cbf26f15058ed0853558a0fd6338a3b7440",
+        "claim_type": "hs_mapping",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "43ee372f5d189a8f65f524cca76ca116696523fc073d2fa43d712f87d2e4d2af",
+        "evidence_bindings": [
+          {
+            "content_sha256": "7eb09c14dc91bfd659be9a293eed21070fd9b12dde84c5e909033b87d49dd63d",
+            "id": "evidence-catalogue-identity-7eb09c14dc91bfd659be9a293eed21070fd9b12dde84c5e909033b87d49dd63d",
+            "locator": "hs:2022:unsd-h6-e266823e1299:2523",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "418781712f7ff6d6ce68d9b0897db7a023fca58358a2366a2148358beb428ebf",
+            "id": "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93",
+            "locator": "flows/277959d5-1a12-33d4-9d7f-1604f2227c09.json",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "content_sha256": "d4417de5737f63920dc05e313430a5fd84247f997af0223db6b9a414ce10ab62",
+            "id": "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c",
+            "locator": "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json#/exchanges/0 and processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "extracted_text_sha256": "ad9ab2830246217a6c55f5891a7cae6fe13819593c8617cfac3e32ad66fee482",
+            "extraction_receipt_sha256": "2698c8b7a31a43a54fc9cae8e2664bcd0ba60ce6747389a8a33d2ad9637f47ac",
+            "id": "usitc-legal-ch25-headings-2522-2523",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, PDF page 8, International headings 2522 and 2523; national columns excluded",
+            "original_pdf_sha256": "d9ee51756bc14bde1b7e4883815b1a186cdbfee13cdeab7dd46ae091fc01855e",
+            "passage_sha256": "34aeeec7896c59574df642b6b8aad73d776b0754f7a57a019dc24f88fdb5ca3a",
+            "provision_class": "international_headings",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-25",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "ad9ab2830246217a6c55f5891a7cae6fe13819593c8617cfac3e32ad66fee482",
+            "extraction_receipt_sha256": "2698c8b7a31a43a54fc9cae8e2664bcd0ba60ce6747389a8a33d2ad9637f47ac",
+            "id": "usitc-legal-ch25-note-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 3, Chapter 25 Note 1",
+            "original_pdf_sha256": "d9ee51756bc14bde1b7e4883815b1a186cdbfee13cdeab7dd46ae091fc01855e",
+            "passage_sha256": "0ab42a3d2e60699713be54d1750d042949e29d5b662d266ec90e23305b2ab537",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-25",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 1",
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)"
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state_preserved_separately": "owner_accepted_exact_instance",
+        "mechanical_outcome": "applicable",
+        "outcome_disagreement": false,
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "38603934e738c24216c0bda7fd212f2ae65b4a5a3a49e74ea62651a094e3b4f6",
+        "provenance": {
+          "assessor_payload_sha256": "eb245df9e3e58a41ae3430247ddf40d456a166fc32e822121ee76f8cb4fd10ed",
+          "assessor_prompt_version": "hs-mapping-smoke-assessor-2",
+          "challenger_payload_sha256": "75d66575530757baf3e6ebec33d60dc76b850ba8f000b2632b3ec95b924f94bc",
+          "challenger_prompt_version": "hs-mapping-smoke-challenger-2",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "policy_version": "hs-mapping-smoke-policy-1",
+          "provider": "OpenAI",
+          "response_refs": {
+            "assessor": {
+              "sha256": "f847c0d60445cd530242dac4b5c957b3f4230bab6815b6453cca7593edf4b290"
+            },
+            "challenger": {
+              "sha256": "fc43c0173870c1ea739da47d639d36f3381354d3bb3f4d24174ae3924d43009a"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "schema_version": "hs-mapping-smoke-assessment-1",
+        "scope": {
+          "case_id": "cement",
+          "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "process_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d",
+          "scope_note": "Assess only the product represented by this exact process/exchange instance."
+        },
+        "validation": {
+          "citation_exists_and_matches_supplied_text": "passed",
+          "citation_semantically_supports_reasoning": "automated_judgment_only",
+          "schema_scope_target": "passed"
+        }
+      }
+    },
+    {
+      "source_artifact": "smoke2.jsonl",
+      "source_line": 1,
+      "source_line_sha256": "320915017e6f4830dc69cc70cb9b73522284802737db95b41bd53f975e4a6284",
+      "record": {
+        "assessment_id": "assessment-875dad34145b3399c87fb72fc5b50d9437b6c11175790dfac293e2481f70cab1-v1",
+        "assessor": {
+          "additional_missing_facts": [],
+          "alternatives": [],
+          "assessed_object": {
+            "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+            "kind": "represented_product",
+            "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+          },
+          "assumptions": [],
+          "case_id": "S2-01",
+          "hs_resolution": "supported",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires classification under heading terms and relevant notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-note-1",
+              "locator": "PDF page 3, Chapter 25 Note 1",
+              "passage_sha256": "0ab42a3d2e60699713be54d1750d042949e29d5b662d266ec90e23305b2ab537",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "States Chapter 25 preparation limits subject to heading context."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-headings-2522-2523",
+              "locator": "PDF page 7, PDF page 8, International headings 2522 and 2523; national columns excluded",
+              "passage_sha256": "34aeeec7896c59574df642b6b8aad73d776b0754f7a57a019dc24f88fdb5ca3a",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "Heading 2523 expressly covers Portland cement and similar hydraulic cements."
+            }
+          ],
+          "native_evidence_ids": [
+            "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+            "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+          ],
+          "object_relationship": {
+            "explanation": "The definition and quantitative-reference output use the same flow UUID and source-declared Portland-cement identity, linking the represented product to the unit-inventory output.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+              "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+            ],
+            "status": "same_object"
+          },
+          "proposed_target": {
+            "amendment": "unsd-h6-e266823e1299",
+            "code": "2523",
+            "edition": "2022",
+            "id": "hs:2022:unsd-h6-e266823e1299:2523",
+            "level": 4
+          },
+          "rationale": "The source identifies the exact output as Portland cement and describes it as hydraulic cement; heading 2523 expressly covers Portland and similar hydraulic cements. No material eligibility fact remains unknown.",
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "source_declared",
+              "fact_status": "established",
+              "legal_evidence_ids": [
+                "usitc-legal-gir-rule-1",
+                "usitc-legal-ch25-headings-2522-2523",
+                "usitc-legal-ch25-note-1"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+                "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+              ],
+              "observed_value": "Portland cement; at plant; described as a hydraulic cement composed primarily of hydraulic calcium silicates",
+              "rationale": "The source-declared product identity directly satisfies heading 2523's Portland/hydraulic-cement terms.",
+              "rule_id": "cement_identity"
+            }
+          ],
+          "scope_rationale": "The assessed object exactly matches the requested represented-product object.",
+          "scope_verdict": "matched"
+        },
+        "case_id": "S2-01",
+        "challenger": {
+          "additional_missing_facts": [],
+          "alternatives": [],
+          "assumptions": [],
+          "case_id": "S2-01",
+          "claim_object": {
+            "evidence_ids": [
+              "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+              "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor classified the exact represented-product object requested by the claim."
+          },
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Classification is determined by heading terms and relevant section or chapter notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-note-1",
+              "locator": "PDF page 3, Chapter 25 Note 1",
+              "passage_sha256": "0ab42a3d2e60699713be54d1750d042949e29d5b662d266ec90e23305b2ab537",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "States Chapter 25's general preparation limits while preserving contrary heading context."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-headings-2522-2523",
+              "locator": "PDF page 7, PDF page 8, International headings 2522 and 2523; national columns excluded",
+              "passage_sha256": "34aeeec7896c59574df642b6b8aad73d776b0754f7a57a019dc24f88fdb5ca3a",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "Heading 2523 expressly covers Portland cement and similar hydraulic cements."
+            }
+          ],
+          "legal_reasoning": {
+            "evidence_ids": [
+              "usitc-legal-gir-rule-1",
+              "usitc-legal-ch25-note-1",
+              "usitc-legal-ch25-headings-2522-2523"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor correctly applies GIR 1 and the express heading text to support heading 2523 without assumptions or unresolved material blockers."
+          },
+          "native_evidence_ids": [
+            "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+            "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+          ],
+          "object_relationship": {
+            "explanation": "The flow definition and quantitative-reference output carry the same flow UUID and the same source-declared Portland-cement identity.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+              "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+            ],
+            "status": "same_object"
+          },
+          "rationale": "The requested represented product is expressly identified as Portland cement and described as hydraulic cement. Under GIR 1, heading 2523 directly covers Portland cement and similar hydraulic cements. Chapter 25 Note 1 does not displace that express heading context. No material eligibility fact remains unknown.",
+          "recommended_assessed_object": {
+            "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+            "kind": "represented_product",
+            "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+          },
+          "recommended_hs_resolution": "supported",
+          "recommended_scope_verdict": "matched",
+          "recommended_target": {
+            "amendment": "unsd-h6-e266823e1299",
+            "code": "2523",
+            "edition": "2022",
+            "id": "hs:2022:unsd-h6-e266823e1299:2523",
+            "level": 4
+          },
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "source_declared",
+              "fact_status": "established",
+              "legal_evidence_ids": [
+                "usitc-legal-gir-rule-1",
+                "usitc-legal-ch25-headings-2522-2523",
+                "usitc-legal-ch25-note-1"
+              ],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+                "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+              ],
+              "observed_value": "Portland cement; at plant; described as a hydraulic cement composed primarily of hydraulic calcium silicates",
+              "rationale": "The source-declared identity directly satisfies the express terms of heading 2523.",
+              "rule_id": "cement_identity"
+            }
+          ],
+          "scope_rationale": "The classified object exactly matches the supplied claim_object, including object_id, kind, instance_id, and definition_native_id."
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-9e30c37ba2e84588d40c5292e60e2fade12a1535507460d13899c6e35540e5b1",
+        "claim_object": {
+          "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "kind": "represented_product",
+          "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+        },
+        "claim_type": "hs_mapping",
+        "controls": {
+          "assessed_object": {
+            "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+            "kind": "represented_product",
+            "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+          },
+          "assessor_challenger_disagreement": false,
+          "citation_semantic_support": "automated_judgment_only",
+          "disagreement_axes": {
+            "claim_object_disagreement": false,
+            "hs_resolution_disagreement": false,
+            "legal_reasoning_disagreement": false,
+            "object_disagreement": false,
+            "scope_disagreement": false,
+            "target_disagreement": false
+          },
+          "display_resolution": "supported",
+          "hs_resolution": "supported",
+          "proposed_target": {
+            "amendment": "unsd-h6-e266823e1299",
+            "code": "2523",
+            "edition": "2022",
+            "id": "hs:2022:unsd-h6-e266823e1299:2523",
+            "level": 4
+          },
+          "requested_claim_object": {
+            "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+            "kind": "represented_product",
+            "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+          },
+          "rule_controls_status": "assistant_authored_testing_hypotheses",
+          "scope_verdict": "matched",
+          "source_scoped_automated_support": true
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "8f2a6fd826d079a4a5526ae5ca4e3f05693bc866948521fb7e3281d87a6c8a85",
+        "evidence_bindings": [
+          {
+            "content_sha256": "7eb09c14dc91bfd659be9a293eed21070fd9b12dde84c5e909033b87d49dd63d",
+            "id": "evidence-catalogue-identity-7eb09c14dc91bfd659be9a293eed21070fd9b12dde84c5e909033b87d49dd63d",
+            "locator": "hs:2022:unsd-h6-e266823e1299:2523",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "418781712f7ff6d6ce68d9b0897db7a023fca58358a2366a2148358beb428ebf",
+            "evidence_view": "full",
+            "id": "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+            "locator": "flows/277959d5-1a12-33d4-9d7f-1604f2227c09.json",
+            "source_evidence_id": "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "content_sha256": "d4417de5737f63920dc05e313430a5fd84247f997af0223db6b9a414ce10ab62",
+            "evidence_view": "full",
+            "id": "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143",
+            "locator": "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json#/exchanges/0 and processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json",
+            "minimisation": [
+              "Unrelated exchanges, providers, attachments and prior assessment conclusions omitted.",
+              "Trailing database-validation/contact paragraph omitted from process description."
+            ],
+            "source_evidence_id": "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "extracted_text_sha256": "ad9ab2830246217a6c55f5891a7cae6fe13819593c8617cfac3e32ad66fee482",
+            "extraction_receipt_sha256": "2698c8b7a31a43a54fc9cae8e2664bcd0ba60ce6747389a8a33d2ad9637f47ac",
+            "id": "usitc-legal-ch25-headings-2522-2523",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, PDF page 8, International headings 2522 and 2523; national columns excluded",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "d9ee51756bc14bde1b7e4883815b1a186cdbfee13cdeab7dd46ae091fc01855e",
+            "passage_sha256": "34aeeec7896c59574df642b6b8aad73d776b0754f7a57a019dc24f88fdb5ca3a",
+            "provision_class": "international_headings",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-25",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                3,
+                7,
+                8
+              ],
+              "status": "completed",
+              "warnings": [
+                "Heading tables were visually checked. Exact international heading code/description fragments are selected; statistical suffix, unit and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "ad9ab2830246217a6c55f5891a7cae6fe13819593c8617cfac3e32ad66fee482",
+            "extraction_receipt_sha256": "2698c8b7a31a43a54fc9cae8e2664bcd0ba60ce6747389a8a33d2ad9637f47ac",
+            "id": "usitc-legal-ch25-note-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 3, Chapter 25 Note 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "d9ee51756bc14bde1b7e4883815b1a186cdbfee13cdeab7dd46ae091fc01855e",
+            "passage_sha256": "0ab42a3d2e60699713be54d1750d042949e29d5b662d266ec90e23305b2ab537",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-25",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                3,
+                7,
+                8
+              ],
+              "status": "completed",
+              "warnings": [
+                "Heading tables were visually checked. Exact international heading code/description fragments are selected; statistical suffix, unit and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1
+              ],
+              "status": "completed",
+              "warnings": [
+                "Rule hierarchy and wrapping were visually checked. Only GIR 1 and 6 on page 1 are selected; unrelated General Notes are excluded."
+              ]
+            }
+          }
+        ],
+        "evidence_omissions": {
+          "legal": [],
+          "native": []
+        },
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state": "Existing exact-instance decisions unchanged; this view is not accepted",
+        "mechanical_outcome": "applicable",
+        "mechanical_scope": "Original complete instance; not recomputed on experimental view",
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "875dad34145b3399c87fb72fc5b50d9437b6c11175790dfac293e2481f70cab1",
+        "provenance": {
+          "execution_route": "codex-cli-0.154.0",
+          "policy_version": "smoke2-contract-1",
+          "prompt_versions": [
+            "smoke2-assessor-1",
+            "smoke2-challenger-1"
+          ],
+          "provider": "OpenAI",
+          "requested_model": "gpt-5.6-sol",
+          "responses": {
+            "assessor": {
+              "exact_payload_sha256": "a6e7082e7fa4a9372055be155b6513b94f3af2b3337a46e980cf10e612f37ba1",
+              "sha256": "321a66bbd21eb18f938118e51908cfa3102acb797fa4755bb5a98df2872a85ed"
+            },
+            "challenger": {
+              "exact_payload_sha256": "59eaae492de458bb552467c1d53cdd9bd1ddb87e6e541fbfef68159d7a9515d1",
+              "sha256": "ad5368eb978dc53c6044a71bc018c5a78ff77899cb0202703c9edae31eb74f2d"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "requested_claim": "hs_heading_of_represented_product",
+        "requested_level": 4,
+        "rule_controls": [
+          {
+            "id": "cement_identity",
+            "kind": "eligibility",
+            "legal_evidence_ids": [
+              "usitc-legal-gir-rule-1",
+              "usitc-legal-ch25-headings-2522-2523",
+              "usitc-legal-ch25-note-1"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Identity and preparation of the requested product",
+            "target_codes": [
+              "2523"
+            ]
+          }
+        ],
+        "schema_version": "smoke2-assessment-1",
+        "scope": {
+          "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "process_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d"
+        },
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "schema_scope_target": "passed",
+          "semantic_support": "automated_judgment_not_verified_truth"
+        }
+      }
+    },
+    {
+      "source_artifact": "smoke2.jsonl",
+      "source_line": 11,
+      "source_line_sha256": "b0e23c4d3f03374cc7db48b4f4a1c555a384a3ce98d41f2cdae20152eb9db6fd",
+      "record": {
+        "assessment_id": "assessment-1f7d2587daa94033299998c278ad52285cc3c46e1f6ae596dde6bc6ffd974734-v1",
+        "assessor": {
+          "additional_missing_facts": [],
+          "alternatives": [],
+          "assessed_object": null,
+          "assumptions": [],
+          "case_id": "S2-12",
+          "hs_resolution": "insufficient_information",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires classification according to heading terms and relevant notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-note-1",
+              "locator": "PDF page 3, Chapter 25 Note 1",
+              "passage_sha256": "0ab42a3d2e60699713be54d1750d042949e29d5b662d266ec90e23305b2ab537",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "Provides Chapter 25 processing limitations relevant to determining product eligibility."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-headings-2522-2523",
+              "locator": "PDF page 7, PDF page 8, International headings 2522 and 2523; national columns excluded",
+              "passage_sha256": "34aeeec7896c59574df642b6b8aad73d776b0754f7a57a019dc24f88fdb5ca3a",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "Defines heading 2523 as covering specified and similar hydraulic cements, including clinker forms."
+            }
+          ],
+          "native_evidence_ids": [],
+          "object_relationship": {
+            "explanation": "No native evidence is available to establish whether a source product or inventory proxy exists or whether they represent the same object.",
+            "native_evidence_ids": [],
+            "status": "unresolved"
+          },
+          "proposed_target": null,
+          "rationale": "Although the legal evidence defines heading 2523, no native product evidence establishes that the requested represented product is Portland, aluminous, slag, supersulfate, or a similar hydraulic cement, or otherwise establishes its preparation.",
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-gir-rule-1",
+                "usitc-legal-ch25-headings-2522-2523",
+                "usitc-legal-ch25-note-1"
+              ],
+              "native_evidence_ids": [],
+              "observed_value": null,
+              "rationale": "Identity and preparation are material to heading 2523, but the complete native definition and instance are omitted and no product fact is available.",
+              "rule_id": "cement_identity"
+            }
+          ],
+          "scope_rationale": "No native evidence is supplied, so the requested represented product cannot be identified as the object actually classified.",
+          "scope_verdict": "unresolved"
+        },
+        "case_id": "S2-12",
+        "challenger": {
+          "additional_missing_facts": [],
+          "alternatives": [],
+          "assumptions": [],
+          "case_id": "S2-12",
+          "claim_object": {
+            "evidence_ids": [],
+            "judgment": "agrees",
+            "rationale": "The assessor correctly leaves the assessed object [contact withheld] and scope unresolved because no native evidence identifies the product actually represented by the requested slot."
+          },
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "legal_citations": [
+            {
+              "evidence_id": "usitc-legal-gir-rule-1",
+              "locator": "PDF page 1, General Rule of Interpretation 1",
+              "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+              "source_id": "usitc-2022-basic-general-notes",
+              "support_explanation": "Requires classification according to heading terms and applicable notes."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-note-1",
+              "locator": "PDF page 3, Chapter 25 Note 1",
+              "passage_sha256": "0ab42a3d2e60699713be54d1750d042949e29d5b662d266ec90e23305b2ab537",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "Provides Chapter 25 processing limitations relevant to product eligibility."
+            },
+            {
+              "evidence_id": "usitc-legal-ch25-headings-2522-2523",
+              "locator": "PDF page 7, PDF page 8, International headings 2522 and 2523; national columns excluded",
+              "passage_sha256": "34aeeec7896c59574df642b6b8aad73d776b0754f7a57a019dc24f88fdb5ca3a",
+              "source_id": "usitc-2022-basic-chapter-25",
+              "support_explanation": "Defines heading 2523 as covering specified and similar hydraulic cements, whether or not colored or in clinker form."
+            }
+          ],
+          "legal_reasoning": {
+            "evidence_ids": [
+              "usitc-legal-gir-rule-1",
+              "usitc-legal-ch25-note-1",
+              "usitc-legal-ch25-headings-2522-2523"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor correctly declines to select heading 2523 because legal heading text alone cannot establish that the unidentified product is a qualifying hydraulic cement."
+          },
+          "native_evidence_ids": [],
+          "object_relationship": {
+            "explanation": "Without native evidence, neither the existence of a source product or proxy nor any same-object or different-object relationship can be established.",
+            "native_evidence_ids": [],
+            "status": "unresolved"
+          },
+          "rationale": "The legal evidence defines heading 2523, but no native product evidence establishes the identity, preparation, or other characteristics of the requested represented product. The candidate heading therefore cannot be selected.",
+          "recommended_assessed_object": null,
+          "recommended_hs_resolution": "insufficient_information",
+          "recommended_scope_verdict": "unresolved",
+          "recommended_target": null,
+          "rule_findings": [
+            {
+              "applicability": "applicable",
+              "evidence_basis": "unknown",
+              "fact_status": "unknown",
+              "legal_evidence_ids": [
+                "usitc-legal-gir-rule-1",
+                "usitc-legal-ch25-headings-2522-2523",
+                "usitc-legal-ch25-note-1"
+              ],
+              "native_evidence_ids": [],
+              "observed_value": null,
+              "rationale": "Identity and preparation are material to heading 2523, but the native definition and instance are wholly omitted and supply no product fact.",
+              "rule_id": "cement_identity"
+            }
+          ],
+          "scope_rationale": "No native evidence is supplied from which to identify the product actually represented by the requested slot. The assessed object therefore remains [contact withheld] and scope remains unresolved."
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-9a0972ee387293e9740972ca4356ca9cb0891f2bbe05ef94903a570c365140c2",
+        "claim_object": {
+          "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "kind": "represented_product",
+          "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+        },
+        "claim_type": "hs_mapping",
+        "controls": {
+          "assessed_object": null,
+          "assessor_challenger_disagreement": false,
+          "citation_semantic_support": "automated_judgment_only",
+          "disagreement_axes": {
+            "claim_object_disagreement": false,
+            "hs_resolution_disagreement": false,
+            "legal_reasoning_disagreement": false,
+            "object_disagreement": false,
+            "scope_disagreement": false,
+            "target_disagreement": false
+          },
+          "display_resolution": "scope_conflict",
+          "hs_resolution": "insufficient_information",
+          "proposed_target": null,
+          "requested_claim_object": {
+            "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+            "kind": "represented_product",
+            "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+          },
+          "rule_controls_status": "assistant_authored_testing_hypotheses",
+          "scope_verdict": "unresolved",
+          "source_scoped_automated_support": false
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "79fc7df0244de5cda16862f38caed0c5e3acff7d811bb8e42d25a6a9f44f55ca",
+        "evidence_bindings": [
+          {
+            "content_sha256": "7eb09c14dc91bfd659be9a293eed21070fd9b12dde84c5e909033b87d49dd63d",
+            "id": "evidence-catalogue-identity-7eb09c14dc91bfd659be9a293eed21070fd9b12dde84c5e909033b87d49dd63d",
+            "locator": "hs:2022:unsd-h6-e266823e1299:2523",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "extracted_text_sha256": "ad9ab2830246217a6c55f5891a7cae6fe13819593c8617cfac3e32ad66fee482",
+            "extraction_receipt_sha256": "2698c8b7a31a43a54fc9cae8e2664bcd0ba60ce6747389a8a33d2ad9637f47ac",
+            "id": "usitc-legal-ch25-headings-2522-2523",
+            "jurisdiction": "United States",
+            "locator": "PDF page 7, PDF page 8, International headings 2522 and 2523; national columns excluded",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "d9ee51756bc14bde1b7e4883815b1a186cdbfee13cdeab7dd46ae091fc01855e",
+            "passage_sha256": "34aeeec7896c59574df642b6b8aad73d776b0754f7a57a019dc24f88fdb5ca3a",
+            "provision_class": "international_headings",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-25",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                3,
+                7,
+                8
+              ],
+              "status": "completed",
+              "warnings": [
+                "Heading tables were visually checked. Exact international heading code/description fragments are selected; statistical suffix, unit and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "ad9ab2830246217a6c55f5891a7cae6fe13819593c8617cfac3e32ad66fee482",
+            "extraction_receipt_sha256": "2698c8b7a31a43a54fc9cae8e2664bcd0ba60ce6747389a8a33d2ad9637f47ac",
+            "id": "usitc-legal-ch25-note-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 3, Chapter 25 Note 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "d9ee51756bc14bde1b7e4883815b1a186cdbfee13cdeab7dd46ae091fc01855e",
+            "passage_sha256": "0ab42a3d2e60699713be54d1750d042949e29d5b662d266ec90e23305b2ab537",
+            "provision_class": "international_chapter_note",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-chapter-25",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                3,
+                7,
+                8
+              ],
+              "status": "completed",
+              "warnings": [
+                "Heading tables were visually checked. Exact international heading code/description fragments are selected; statistical suffix, unit and duty columns are excluded."
+              ]
+            }
+          },
+          {
+            "extracted_text_sha256": "6c0d454a03e1b3cb6898a4ff9fab37d6b5d087440e0aad6fa91a71f8eca58acc",
+            "extraction_receipt_sha256": "882ec01a341c137e7a81de5f279c9b2af01da83e9bbf8ff4e119b21a6650e773",
+            "id": "usitc-legal-gir-rule-1",
+            "jurisdiction": "United States",
+            "locator": "PDF page 1, General Rule of Interpretation 1",
+            "original_bytes_authoritative": true,
+            "original_pdf_sha256": "80dc032231cf0f4582c667f7feea0338d5f1fb356a4f4314b7568a8f68137a19",
+            "passage_sha256": "8ceda80edecf7c4df913b684e5d6fd9b91d1bac6c0309d65c4885a0848efc927",
+            "provision_class": "international_general_rule_as_htsus_rule",
+            "source_group": "usitc_hts2022_basic_legal_provisions",
+            "source_id": "usitc-2022-basic-general-notes",
+            "source_version": "2022 HTSA Basic Edition (January 26, 2022)",
+            "visual_inspection": {
+              "pages": [
+                1
+              ],
+              "status": "completed",
+              "warnings": [
+                "Rule hierarchy and wrapping were visually checked. Only GIR 1 and 6 on page 1 are selected; unrelated General Notes are excluded."
+              ]
+            }
+          }
+        ],
+        "evidence_omissions": {
+          "legal": [],
+          "native": [
+            {
+              "source_evidence_id": "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93",
+              "value_sha256": "418781712f7ff6d6ce68d9b0897db7a023fca58358a2366a2148358beb428ebf"
+            },
+            {
+              "source_evidence_id": "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c",
+              "value_sha256": "d4417de5737f63920dc05e313430a5fd84247f997af0223db6b9a414ce10ab62"
+            }
+          ]
+        },
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state": "Existing exact-instance decisions unchanged; this view is not accepted",
+        "mechanical_outcome": "applicable",
+        "mechanical_scope": "Original complete instance; not recomputed on experimental view",
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "1f7d2587daa94033299998c278ad52285cc3c46e1f6ae596dde6bc6ffd974734",
+        "provenance": {
+          "execution_route": "codex-cli-0.154.0",
+          "policy_version": "smoke2-contract-1",
+          "prompt_versions": [
+            "smoke2-assessor-1",
+            "smoke2-challenger-1"
+          ],
+          "provider": "OpenAI",
+          "requested_model": "gpt-5.6-sol",
+          "responses": {
+            "assessor": {
+              "exact_payload_sha256": "eef56ce0dd7f08a5a3e13266ebb9ebb1794ad8cecb3d6e28528bf73d9528ce8b",
+              "sha256": "9eb6c16d4e8ada1c2e50d9a9d92ecb7a8f2145ee1f153f2c99c36ecdf4874126"
+            },
+            "challenger": {
+              "exact_payload_sha256": "678578286663521dbe52d472456075cd9d9d6a83f2dd84837651a7168cff8674",
+              "sha256": "7da1664ebd27e02f32c3c340901b3f6fd8b194762fd696b748c03086e7ab4f7d"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "requested_claim": "hs_heading_of_represented_product",
+        "requested_level": 4,
+        "rule_controls": [
+          {
+            "id": "cement_identity",
+            "kind": "eligibility",
+            "legal_evidence_ids": [
+              "usitc-legal-gir-rule-1",
+              "usitc-legal-ch25-headings-2522-2523",
+              "usitc-legal-ch25-note-1"
+            ],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": false,
+            "property": "Identity and preparation of the requested product",
+            "target_codes": [
+              "2523"
+            ]
+          }
+        ],
+        "schema_version": "smoke2-assessment-1",
+        "scope": {
+          "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "process_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d"
+        },
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "schema_scope_target": "passed",
+          "semantic_support": "automated_judgment_not_verified_truth"
+        }
+      }
+    },
+    {
+      "source_artifact": "smoke2.jsonl",
+      "source_line": 12,
+      "source_line_sha256": "6952b73c716a9bc2e31d8082791400944b3be30aaaadcbf4712e30c8cfcd11e2",
+      "record": {
+        "assessment_id": "assessment-e98972c1e0e5a81edc6906a6387b42f76b552f05b447cf581d315b1b11068d4f-v1",
+        "assessor": {
+          "additional_missing_facts": [],
+          "alternatives": [
+            {
+              "rationale": "This is the sole supplied candidate and is consistent with the source-declared name, but it remains unverified because no legal heading text or governing rule was supplied.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "2523",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:2523",
+                "level": 4
+              }
+            }
+          ],
+          "assessed_object": {
+            "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+            "kind": "represented_product",
+            "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+          },
+          "assumptions": [],
+          "case_id": "S2-11",
+          "hs_resolution": "insufficient_information",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "legal_citations": [],
+          "native_evidence_ids": [
+            "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+            "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+          ],
+          "object_relationship": {
+            "explanation": "The native evidence identifies a Portland-cement quantitative-reference output and labels its inventory interpretation as unit_inventory_output, but it does not establish whether the represented product and any inventory proxy are the same object or different objects.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+              "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+            ],
+            "status": "unresolved"
+          },
+          "proposed_target": null,
+          "rationale": "Native evidence source-declares the represented product as Portland cement, but no legal evidence supplies GIR 1, Chapter 25 Note 1, or the wording distinguishing headings 2522 and 2523. The catalogue record proves only the identity of candidate 2523, not its legal coverage. The requested HS4 mapping therefore cannot be supported from the supplied evidence.",
+          "rule_findings": [
+            {
+              "applicability": "unresolved",
+              "evidence_basis": "source_declared",
+              "fact_status": "established",
+              "legal_evidence_ids": [],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+                "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+              ],
+              "observed_value": "Portland cement; at plant; the process describes Portland cement as hydraulic cement composed primarily of hydraulic calcium silicates.",
+              "rationale": "The product identity is source-declared, but the control's applicability to heading 2523 is unresolved because its rule evidence is expressly missing and no supplied legal provision establishes the heading requirement.",
+              "rule_id": "cement_identity"
+            }
+          ],
+          "scope_rationale": "The assessment [contact withheld]es the exact supplied represented-product object requested by the claim.",
+          "scope_verdict": "matched"
+        },
+        "case_id": "S2-11",
+        "challenger": {
+          "additional_missing_facts": [],
+          "alternatives": [
+            {
+              "rationale": "This is the sole supplied candidate and is consistent with the source-declared product name, but it cannot be verified without the governing legal heading text and rules.",
+              "target": {
+                "amendment": "unsd-h6-e266823e1299",
+                "code": "2523",
+                "edition": "2022",
+                "id": "hs:2022:unsd-h6-e266823e1299:2523",
+                "level": 4
+              }
+            }
+          ],
+          "assumptions": [],
+          "case_id": "S2-11",
+          "claim_object": {
+            "evidence_ids": [
+              "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+              "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+            ],
+            "judgment": "agrees",
+            "rationale": "The assessor evaluated the exact represented-product object specified by the claim rather than substituting the inventory-proxy or flow-identity object."
+          },
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "legal_citations": [],
+          "legal_reasoning": {
+            "evidence_ids": [],
+            "judgment": "agrees",
+            "rationale": "The assessor correctly withheld a target because the supplied materials contain no legal evidence establishing the coverage of heading 2523 or resolving its relationship to heading 2522. Catalogue identity and native product naming do not independently establish legal classification."
+          },
+          "native_evidence_ids": [
+            "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+            "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+          ],
+          "object_relationship": {
+            "explanation": "The native evidence identifies a Portland-cement quantitative-reference output and describes it as a unit inventory output, but it does not establish whether the represented product and any inventory proxy are the same object or different objects. The supplied object slots alone do not prove that a proxy exists or define its relationship to the product.",
+            "native_evidence_ids": [
+              "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+              "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+            ],
+            "status": "unresolved"
+          },
+          "rationale": "The native evidence source-declares the represented product as Portland cement. However, no supplied legal evidence provides GIR 1, Chapter 25 Note 1, or the wording governing headings 2522 and 2523. The catalogue evidence establishes only the identity of candidate code 2523, not its legal coverage. The requested HS4 mapping therefore remains unsupported from the supplied evidence.",
+          "recommended_assessed_object": {
+            "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+            "kind": "represented_product",
+            "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+          },
+          "recommended_hs_resolution": "insufficient_information",
+          "recommended_scope_verdict": "matched",
+          "recommended_target": null,
+          "rule_findings": [
+            {
+              "applicability": "unresolved",
+              "evidence_basis": "source_declared",
+              "fact_status": "established",
+              "legal_evidence_ids": [],
+              "native_evidence_ids": [
+                "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+                "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143"
+              ],
+              "observed_value": "Portland cement; at plant; the process describes Portland cement as hydraulic cement composed primarily of hydraulic calcium silicates.",
+              "rationale": "The native evidence establishes the source-declared product identity. Because the control has missing_rule_evidence=true and no legal provision was supplied to establish the requirements of heading 2523, its legal applicability remains unresolved.",
+              "rule_id": "cement_identity"
+            }
+          ],
+          "scope_rationale": "The requested claim concerns the supplied represented-product object, and the challenger assessed that exact object."
+        },
+        "citation_check_meaning": "Citation matches supplied text; not proof of semantic correctness",
+        "claim_id": "claim-6a3c7cf6d4b9d5442a2d4e78de3dabe8c293753d58e4481b02d8fef59397b9fa",
+        "claim_object": {
+          "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "kind": "represented_product",
+          "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+        },
+        "claim_type": "hs_mapping",
+        "controls": {
+          "assessed_object": {
+            "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+            "kind": "represented_product",
+            "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+          },
+          "assessor_challenger_disagreement": false,
+          "citation_semantic_support": "automated_judgment_only",
+          "disagreement_axes": {
+            "claim_object_disagreement": false,
+            "hs_resolution_disagreement": false,
+            "legal_reasoning_disagreement": false,
+            "object_disagreement": false,
+            "scope_disagreement": false,
+            "target_disagreement": false
+          },
+          "display_resolution": "insufficient_information",
+          "hs_resolution": "insufficient_information",
+          "proposed_target": null,
+          "requested_claim_object": {
+            "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+            "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+            "kind": "represented_product",
+            "object_id": "object-4f6ae93140fce0e4726d72586c33b81f85da84a9d477138e7e5851a5d1dd22d1"
+          },
+          "rule_controls_status": "assistant_authored_testing_hypotheses",
+          "scope_verdict": "matched",
+          "source_scoped_automated_support": false
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "1961466d0ea35be1f6189318f7a7aa14057161286b3fe45048132cfbc6dad7ff",
+        "evidence_bindings": [
+          {
+            "content_sha256": "7eb09c14dc91bfd659be9a293eed21070fd9b12dde84c5e909033b87d49dd63d",
+            "id": "evidence-catalogue-identity-7eb09c14dc91bfd659be9a293eed21070fd9b12dde84c5e909033b87d49dd63d",
+            "locator": "hs:2022:unsd-h6-e266823e1299:2523",
+            "source_group": "catalogue_identity_only",
+            "source_id": "hs2022-local-pinned-catalogue",
+            "source_sha256": "2623ff8f08c7111ad9fbe43b22e91c3a5eaadc880cabdd0c1d364027ac7292a6",
+            "source_version": "HS2022"
+          },
+          {
+            "content_sha256": "418781712f7ff6d6ce68d9b0897db7a023fca58358a2366a2148358beb428ebf",
+            "evidence_view": "full",
+            "id": "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93-view-cc7f4b0ab4e18077",
+            "locator": "flows/277959d5-1a12-33d4-9d7f-1604f2227c09.json",
+            "source_evidence_id": "evidence-uslci-definition-ac7be9ff64d928e257b32895d1435a9876bd4580866e72243f3fca17a72a2a93",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          },
+          {
+            "content_sha256": "d4417de5737f63920dc05e313430a5fd84247f997af0223db6b9a414ce10ab62",
+            "evidence_view": "full",
+            "id": "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c-view-707aaded18164143",
+            "locator": "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json#/exchanges/0 and processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json",
+            "minimisation": [
+              "Unrelated exchanges, providers, attachments and prior assessment conclusions omitted.",
+              "Trailing database-validation/contact paragraph omitted from process description."
+            ],
+            "source_evidence_id": "evidence-uslci-instance-36c3287da3eca8902db3b7fa25eeaaf75b9b220e01ebb1207cf36fd30c63fd0c",
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6"
+          }
+        ],
+        "evidence_omissions": {
+          "legal": [
+            "usitc-legal-gir-rule-1",
+            "usitc-legal-ch25-note-1",
+            "usitc-legal-ch25-headings-2522-2523"
+          ],
+          "native": []
+        },
+        "external_response_replay_available": false,
+        "human_acceptance_required_for_use": false,
+        "human_review_state": "Existing exact-instance decisions unchanged; this view is not accepted",
+        "mechanical_outcome": "applicable",
+        "mechanical_scope": "Original complete instance; not recomputed on experimental view",
+        "post_run_concerns": [],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "e98972c1e0e5a81edc6906a6387b42f76b552f05b447cf581d315b1b11068d4f",
+        "provenance": {
+          "execution_route": "codex-cli-0.154.0",
+          "policy_version": "smoke2-contract-1",
+          "prompt_versions": [
+            "smoke2-assessor-1",
+            "smoke2-challenger-1"
+          ],
+          "provider": "OpenAI",
+          "requested_model": "gpt-5.6-sol",
+          "responses": {
+            "assessor": {
+              "exact_payload_sha256": "7c965f2a107b947e3af53de4838826824ea1a29f8b0d7b586dd3680609431887",
+              "sha256": "43ad5f56a69fcba918d0a17cebb5fde29b186a0145e0f335a1c5b708e249a9c7"
+            },
+            "challenger": {
+              "exact_payload_sha256": "4a930be3e9102adced427875578c2e8d6e6cdc81798eaebde9fdb8e526d4c02c",
+              "sha256": "db450e172259c41ce8a87f269310797d569bb05c157720e14f0fd88868d88ae5"
+            }
+          }
+        },
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "requested_claim": "hs_heading_of_represented_product",
+        "requested_level": 4,
+        "rule_controls": [
+          {
+            "id": "cement_identity",
+            "kind": "eligibility",
+            "legal_evidence_ids": [],
+            "level": 4,
+            "missing_fact_effect": "prevents_heading_selection",
+            "missing_rule_evidence": true,
+            "property": "Identity and preparation of the requested product",
+            "target_codes": [
+              "2523"
+            ]
+          }
+        ],
+        "schema_version": "smoke2-assessment-1",
+        "scope": {
+          "definition_native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "instance_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66",
+          "process_id": "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d"
+        },
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "schema_scope_target": "passed",
+          "semantic_support": "automated_judgment_not_verified_truth"
+        }
+      }
+    },
+    {
+      "source_artifact": "owner-decisions.jsonl",
+      "source_line": 1,
+      "source_line_sha256": "a8f6e92f9a77dfc1047d921c814baef930dea691ec5ebdbb17a1124b3b9b9a07",
+      "record": {
+        "binding": {
+          "assumption_ids": [],
+          "exchange_ids": [
+            "uslci-1.2026-06.0:processes:62993671-574c-3fc5-b66a-6be3bb21ad3d:exchange:66"
+          ],
+          "package_sha256": "10d623637458bd5e77ee8e9614a2d0630949de209cd2725e14baa4908f8b2b28",
+          "reviewed_mapping_id": "pilot-cement-r3"
+        },
+        "binding_scope": "Original private decision only; no acceptance of a rebased identity or production chain",
+        "bundle_sha256": "fa15c6e66624dc45658e5b3fc32e5609bfd9490e13a86b0cbfb610e29c68f934",
+        "comments": "HS6 remains pending. This decision does not establish specialist validation, production-chain correctness, current suppliers, technical compatibility or redistribution permission. The other four cement instances remain unaccepted.",
+        "date": "2026-09-13",
+        "decision": "accept",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "a70fced00e1702bb5ac3a4f32c3a9d33fe06f40ee8358344f056314c21a2c7d0",
+        "mapping_id": "pilot-cement-r3",
+        "omission_reason": "Pre-Smoke WCO-derived legal wording omitted; exact binding and decision unchanged",
+        "omitted_fields": [
+          "evidence",
+          "evidence_status",
+          "review_scope"
+        ],
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "7887f599cebde898a0b07f9ebf83259f142670079f81a48ed8bc269d5e0fc2aa",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D4"
+        ],
+        "reviewer_identity": "Rizwan Bedekar",
+        "reviewer_role": "owner",
+        "target_code": "2523",
+        "target_edition": "2022",
+        "target_level": 4
+      }
+    },
+    {
+      "source_artifact": "mapping-revisions.jsonl",
+      "source_line": 15,
+      "source_line_sha256": "387aa6871b5decd34e0f1ea78cdf68c7685d0a7112ccf4fcb50f34e932589cf9",
+      "record": {
+        "alternatives": [],
+        "definition": {
+          "native_id": "277959d5-1a12-33d4-9d7f-1604f2227c09",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "b129632159f9a5eadd5744194a04b71b312eaf49fe447a68b9de936984bafd09",
+        "evidence_citations": [
+          {
+            "locator": "flows/277959d5-1a12-33d4-9d7f-1604f2227c09.json",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json#/description",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/62993671-574c-3fc5-b66a-6be3bb21ad3d.json#/exchanges/0",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "/results/1257/text",
+            "source_id": "unsd-h6-e266823e1299"
+          }
+        ],
+        "id": "pilot-cement-r3",
+        "legal_reasoning_status": "Private WCO-derived rationale/specifications/conditions omitted; no replacement reasoning generated",
+        "method": "automated-bounded-owner-review-preparation-1",
+        "outcome": "classified",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "37c1ee6429af833d320a4310191e910c1b82a8a5cf44bf871c9bad676941d2d4",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D3",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "review": {
+          "date": "2026-09-13",
+          "decision": null,
+          "kind": "automated",
+          "mapping_revision_id": "pilot-cement-r3",
+          "reviewer": "assistant-session-2026-09-13",
+          "reviewer_role": "automated",
+          "status": "proposed"
+        },
+        "revision": 3,
+        "series_id": "pilot-cement",
+        "subject": {
+          "kind": "definition"
+        },
+        "supersedes": "pilot-cement-r2",
+        "target": {
+          "code": "2523",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:2523",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:2523"
+        }
+      }
+    }
+  ]
+}

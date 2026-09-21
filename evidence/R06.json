@@ -1,0 +1,436 @@
+{
+  "row_id": "R06",
+  "source_release": "https://doi.org/10.5281/zenodo.22857372",
+  "source_records": [
+    {
+      "source_artifact": "exchanges.jsonl",
+      "source_line": 3484,
+      "source_line_sha256": "6fc9a51f5d514b220447ae670bb09acd09c1a0f4fd395e9fc6051e0c7590a526",
+      "record": {
+        "denominator": "process quantitative-reference exchange(s); no rescaling",
+        "derivation_method": "uslci-jsonld-1",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "df421bd2a6480f9ef7fd5619a24020dc13c5713143129de99287bf15d24e7595",
+        "id": "uslci-1.2026-06.0:processes:0f02f4bf-055b-35ff-ac40-1a21be06165f:exchange:4",
+        "interpretation": "unit_inventory_input",
+        "locator": "processes/0f02f4bf-055b-35ff-ac40-1a21be06165f.json#/exchanges/1",
+        "native": {
+          "@type": "Exchange",
+          "amount": 5.8256312303985,
+          "flow": {
+            "@id": "aec9945f-f19c-3834-8e26-5f4f92cfcb2b",
+            "@type": "Flow",
+            "category": "Technosphere flows/31-33: Manufacturing/3313: Alumina and Aluminum Production and Processing",
+            "flowType": "PRODUCT_FLOW",
+            "name": "Aluminum ingot; production mix; at plant",
+            "refUnit": "kg"
+          },
+          "flowProperty": {
+            "omitted": "excluded_source_reference"
+          },
+          "internalId": 4,
+          "isAvoidedProduct": false,
+          "isInput": true,
+          "unit": {
+            "@id": "20aadc24-a391-41cf-b340-3e4529f44bde",
+            "@type": "Unit",
+            "name": "kg"
+          }
+        },
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "91a69b838a806183744cab4e4cd2bd12cbd58cda682d52e3dbad9eea2baa096d",
+        "process_id": "uslci-1.2026-06.0:processes:0f02f4bf-055b-35ff-ac40-1a21be06165f",
+        "quantity_status": "native_amount",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "decision_id": "release-20260919-D1"
+        },
+        "source_id": "uslci-1.2026-06.0",
+        "technical_validity": "unreviewed"
+      }
+    },
+    {
+      "source_artifact": "processes.jsonl",
+      "source_line": 98,
+      "source_line_sha256": "48e24184c471aae91c1e1e2b52bd14db30a6b3f334433723337a1524d0a09352",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "11fffb6a5b678fd85d35575062b05ebe5e26494f611e2eabb6648647977b1425",
+        "id": "uslci-1.2026-06.0:processes:0f02f4bf-055b-35ff-ac40-1a21be06165f",
+        "native": {
+          "@id": "0f02f4bf-055b-35ff-ac40-1a21be06165f",
+          "@type": "Process",
+          "allocationFactors": [],
+          "category": "31-33: Manufacturing/3313: Alumina and Aluminum Production and Processing",
+          "defaultAllocationMethod": "NO_ALLOCATION",
+          "description": "The coil coating process includes all known cradle-to-gate processes necessary for the treatment of metallic sheets. This process includes aluminum sheet as the metal feedstock.  Raw materials include all known pre-treatments, cleaners, paints, and packaging materials to protect the finished sheets--as well as inbound transport.  Manufacturing processes require electricity, heat from natural gas, and process water.  Air and water emissions are captured in the output of the process.",
+          "isInfrastructureProcess": false,
+          "lastChange": "2026-03-10T01:26:40Z",
+          "lastInternalId": 6,
+          "location": {
+            "@id": "b320e7db-c758-3ba6-8839-81eb83c9d7d7",
+            "@type": "Location",
+            "category": "Global/Custom",
+            "name": "Northern America"
+          },
+          "name": "Aluminum; sheet coated; at plant",
+          "parameters": [],
+          "processDocumentation": {
+            "creationDate": "2014-05-16T20:53:04Z",
+            "geographyDescription": "North America",
+            "isCopyrightProtected": false,
+            "restrictionsDescription": "All information can be accessed by everybody.",
+            "sources": [
+              {
+                "@id": "5bbd4651-4877-3e98-ac3a-a3a3fd933ca5",
+                "@type": "Source",
+                "name": "PE INTERNATIONAL "
+              }
+            ],
+            "technologyDescription": "Coil coating of aluminum sheet. Technology based on companies identified by Metal Construction Association to be representative of industry.",
+            "validFrom": "2013-07-31",
+            "validUntil": "2015-02-27"
+          },
+          "processType": "UNIT_PROCESS",
+          "version": "00.00.011"
+        },
+        "native_locator": "processes/0f02f4bf-055b-35ff-ac40-1a21be06165f.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "58aa07c611d66c4e31447d4df3d9323c33e212efedfda0342843f9c4ed532163",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "attribution": "USLCI; DOE / NREL / Alliance; native contributor terms retained",
+          "decision_id": "release-20260919-D1",
+          "native_restrictionsDescription": "All information can be accessed by everybody."
+        },
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "mapping-projections.jsonl",
+      "source_line": 457,
+      "source_line_sha256": "e726f36855b954a49344f7aeab1d3f87236fac04acef958981ed8283e4fc09fe",
+      "record": {
+        "condition_text_status": "Private WCO-derived conditions omitted; mechanical outcome unchanged, not recomputed",
+        "context_sha256": "6e7f329a3abf9a9b6cf971ebd72386ab296ff0a1ec1b27d1c09ed5392cec1950",
+        "definition": {
+          "native_id": "aec9945f-f19c-3834-8e26-5f4f92cfcb2b",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "1b8bc4ce607b9efd0a4d0098a7557399eb979a95871788ed9432b3ad8843c8b9",
+        "exchange_id": "uslci-1.2026-06.0:processes:0f02f4bf-055b-35ff-ac40-1a21be06165f:exchange:4",
+        "id": "aff21dc85ecafed2066c537229725f1549c47eb1a4580a430a5ee2fdb86b268b",
+        "mapping_id": "pilot-aluminium-r3",
+        "mechanical_check_results": [
+          {
+            "operator": "same",
+            "result": "applicable"
+          },
+          {
+            "operator": "equals",
+            "result": "applicable"
+          },
+          {
+            "operator": "present",
+            "result": "applicable"
+          },
+          {
+            "operator": "evidence_assessment",
+            "result": "conflicting"
+          }
+        ],
+        "mechanical_outcome": "conflicting",
+        "policy": "flow-projection-2",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "ed69b3ef3b5231c05e3f09182894e42705d3b3ac7f5663ca6fbaeccbda07b271",
+        "process_id": "uslci-1.2026-06.0:processes:0f02f4bf-055b-35ff-ac40-1a21be06165f",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4"
+        ],
+        "review_status": "proposed",
+        "source_id": "uslci-1.2026-06.0",
+        "status": "conflicting",
+        "subject_kind": "definition",
+        "target": {
+          "code": "7601",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:7601",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:7601"
+        }
+      }
+    },
+    {
+      "source_artifact": "mapping-revisions.jsonl",
+      "source_line": 8,
+      "source_line_sha256": "4d215cdfd5cc905415604bfbefa34d26ac4c0f70307bedbc2c6c0dbfc3585d17",
+      "record": {
+        "alternatives": [],
+        "definition": {
+          "native_id": "aec9945f-f19c-3834-8e26-5f4f92cfcb2b",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "d243e583089d6e2f45fab7418f7e817c8c1ea7608ee3b5e599c755a037c4e8cf",
+        "evidence_citations": [
+          {
+            "locator": "flows/aec9945f-f19c-3834-8e26-5f4f92cfcb2b.json",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/a8eb9a6a-e8e6-3da6-a3ab-20dcf68e883a.json#/description",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/a8eb9a6a-e8e6-3da6-a3ab-20dcf68e883a.json#/exchanges/0",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "/results/4972/text",
+            "source_id": "unsd-h6-e266823e1299"
+          }
+        ],
+        "id": "pilot-aluminium-r3",
+        "legal_reasoning_status": "Private WCO-derived rationale/specifications/conditions omitted; no replacement reasoning generated",
+        "method": "automated-bounded-owner-review-preparation-1",
+        "outcome": "classified",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "9a9995a962462915372ad6d9e6ceb6e710ed8401f5d597e7240a995e3e1dced4",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D3",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "review": {
+          "date": "2026-09-13",
+          "decision": null,
+          "kind": "automated",
+          "mapping_revision_id": "pilot-aluminium-r3",
+          "reviewer": "assistant-session-2026-09-13",
+          "reviewer_role": "automated",
+          "status": "proposed"
+        },
+        "revision": 3,
+        "series_id": "pilot-aluminium",
+        "subject": {
+          "kind": "definition"
+        },
+        "supersedes": "pilot-aluminium-r2",
+        "target": {
+          "code": "7601",
+          "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+          "edition": "2022",
+          "level": 4,
+          "original_amendment": "unsd-h6-e266823e1299",
+          "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:7601",
+          "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:7601"
+        }
+      }
+    },
+    {
+      "source_artifact": "identity-assessments.jsonl",
+      "source_line": 371,
+      "source_line_sha256": "e366c2a55399f6f529830525f0689ee9d1d059830261b09f10b3223741bf044a",
+      "record": {
+        "alternatives": [],
+        "assessment_id": "assessment-8c892aac58cf74f1785d7439fbf9f1e538b0c47b1552cb865ac4965677b2e779-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "finding": {
+            "alternatives": [],
+            "assumptions": [],
+            "automated_outcome": "automated_supported",
+            "claim_id": "claim-e3a8ab6742144f2465651787e74f4585992dd956a8c8619c346fa19d4f65267c",
+            "evidence_binding_ids": [
+              "evidence-definition-5488306978a541ad933cb2372577d8a63d3aee883f1ff657493eaa06d8d61b5f",
+              "evidence-instance-b97e9c4da173ce7fb296ef4b945d16c035700fc72ebccc9b61d20f8ebf376a78"
+            ],
+            "rationale": "The instance flow reference exactly matches the definition’s source-scoped ID, name, and PRODUCT_FLOW type; the separate mechanical HS conflict does not alter product identity."
+          },
+          "response_ref": {
+            "sha256": "e0a6caa483fbbe10cbc978d3efeb999f3bb31b7763d011fb1f537846be3ef2b2"
+          }
+        },
+        "assumptions": [],
+        "automated_outcome": "automated_supported",
+        "challenger": {
+          "agreement_is_proof": false,
+          "finding": {
+            "claim_id": "claim-e3a8ab6742144f2465651787e74f4585992dd956a8c8619c346fa19d4f65267c",
+            "issues": [
+              {
+                "evidence_binding_ids": [
+                  "evidence-definition-5488306978a541ad933cb2372577d8a63d3aee883f1ff657493eaa06d8d61b5f",
+                  "evidence-instance-b97e9c4da173ce7fb296ef4b945d16c035700fc72ebccc9b61d20f8ebf376a78"
+                ],
+                "explanation": "The separate HS conflict does not alter product identity.",
+                "severity": "none",
+                "type": "no_material_concern"
+              }
+            ],
+            "rationale": "The aluminum-ingot flow ID, name, and type match the definition.",
+            "recommended_outcome": "automated_supported"
+          },
+          "independent_expert_validation": false,
+          "response_ref": {
+            "sha256": "438eb251fa4d78ca57f6f4fc44be2ff3411f80e2b949d0a7aa863c5af801df4a"
+          }
+        },
+        "claim": {
+          "candidate_targets": [],
+          "statement": "The exact source-scoped instance is consistent with the named product or material definition in the transmitted source evidence."
+        },
+        "claim_id": "claim-e3a8ab6742144f2465651787e74f4585992dd956a8c8619c346fa19d4f65267c",
+        "claim_type": "product_identity",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "f29b5a453aa3a9c9dfd0809e9c1c060374337b647b4e75e8209083c2f9dddaf5",
+        "evidence_bindings": [
+          {
+            "content_sha256": "874d02f952250efa25195fd758bea01d891416fdb4f7afb7ddf4a2d93429baf6",
+            "context_sha256": null,
+            "id": "evidence-definition-5488306978a541ad933cb2372577d8a63d3aee883f1ff657493eaa06d8d61b5f",
+            "locators": [
+              "flows/aec9945f-f19c-3834-8e26-5f4f92cfcb2b.json"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          },
+          {
+            "content_sha256": "a6e63b1e5887151f956966c10b09059786a728c5578b29811138742be2bbb450",
+            "context_sha256": "6e7f329a3abf9a9b6cf971ebd72386ab296ff0a1ec1b27d1c09ed5392cec1950",
+            "id": "evidence-instance-b97e9c4da173ce7fb296ef4b945d16c035700fc72ebccc9b61d20f8ebf376a78",
+            "locators": [
+              "processes/0f02f4bf-055b-35ff-ac40-1a21be06165f.json",
+              "processes/0f02f4bf-055b-35ff-ac40-1a21be06165f.json#/exchanges/1",
+              "processes/0f02f4bf-055b-35ff-ac40-1a21be06165f.json#/exchanges/1/defaultProvider"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_review_state": "automated_proposal",
+        "mechanical_outcome": "conflicting",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "241acfd69dac62347086e9cff760fd4468fe31b932a84974474141123452c329",
+        "provenance": {
+          "assessor_payload_sha256": "93ce9ce3667c522cad7bcdad66c391a243f0be945150f3f2d3b39742b6204c8c",
+          "assessor_prompt_version": "automated-evidence-assessor-1",
+          "challenger_payload_sha256": "f857018010a408898284207e3d8da4f0a5db98881601699c65054c1d43f162c6",
+          "challenger_prompt_version": "automated-evidence-challenger-1",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "model_configuration": {
+            "max_concurrency": 1,
+            "max_retries": 1,
+            "reasoning_effort": "medium"
+          },
+          "policy_version": "automated-evidence-assessment-1",
+          "provider": "OpenAI"
+        },
+        "rationale": "The instance flow reference exactly matches the definition’s source-scoped ID, name, and PRODUCT_FLOW type; the separate mechanical HS conflict does not alter product identity.",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D4"
+        ],
+        "schema_version": "automated-assessment-1",
+        "scope": {
+          "definition": {
+            "native_id": "aec9945f-f19c-3834-8e26-5f4f92cfcb2b",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0"
+          },
+          "exchange_ids": [
+            "uslci-1.2026-06.0:processes:0f02f4bf-055b-35ff-ac40-1a21be06165f:exchange:4"
+          ],
+          "kind": "instance",
+          "mapping_revision_id": "pilot-aluminium-r3",
+          "process_ids": [
+            "uslci-1.2026-06.0:processes:0f02f4bf-055b-35ff-ac40-1a21be06165f"
+          ]
+        },
+        "target": null,
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "citation_support_judgment": "model_assessment_only",
+          "claim_scope": "passed",
+          "schema": "passed",
+          "target_and_edition": "not_applicable_claim_type",
+          "uncertainty_preserved": "passed"
+        },
+        "withheld_material": [
+          {
+            "locators": [],
+            "reason": "Owner transmission authorization is recorded, but upstream catalogue source-use decisions remain unresolved; no target identity or catalogue metadata was transmitted.",
+            "source_group": "catalogue_identity_only"
+          },
+          {
+            "locators": [],
+            "reason": "Classification provisions, wording and derived legal paraphrases were not transmitted.",
+            "source_group": "wco_hs2022_legal_provisions"
+          }
+        ]
+      }
+    },
+    {
+      "source_artifact": "supporting-records.jsonl",
+      "source_line": 3038,
+      "source_line_sha256": "c9d166f9728b82ae4390781e474719caf2005cbb7b1787e7fe266733c8cce99f",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "6a5239be4bd0d4218fce624a9393ac6fc3f78e41da40be5ee07409b19408b44e",
+        "id": "uslci-1.2026-06.0:flows:aec9945f-f19c-3834-8e26-5f4f92cfcb2b",
+        "kind": "flows",
+        "native": {
+          "@id": "aec9945f-f19c-3834-8e26-5f4f92cfcb2b",
+          "@type": "Flow",
+          "category": "Technosphere flows/31-33: Manufacturing/3313: Alumina and Aluminum Production and Processing",
+          "flowProperties": [
+            {
+              "@type": "FlowPropertyFactor",
+              "conversionFactor": 1.0,
+              "flowProperty": {
+                "omitted": "excluded_source_reference"
+              },
+              "isRefFlowProperty": true
+            }
+          ],
+          "flowType": "PRODUCT_FLOW",
+          "isInfrastructureFlow": false,
+          "lastChange": "2026-03-10T01:22:55Z",
+          "name": "Aluminum ingot; production mix; at plant",
+          "version": "00.00.005"
+        },
+        "native_locator": "flows/aec9945f-f19c-3834-8e26-5f4f92cfcb2b.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "b144ef2be81778945eb1b5c22a3485aaf3e0f3f702c777e0fc50e3f981d1bfb0",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "source_id": "uslci-1.2026-06.0"
+      }
+    }
+  ]
+}

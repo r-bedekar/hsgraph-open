@@ -1,0 +1,449 @@
+{
+  "row_id": "R08",
+  "source_release": "https://doi.org/10.5281/zenodo.22857372",
+  "source_records": [
+    {
+      "source_artifact": "exchanges.jsonl",
+      "source_line": 1444,
+      "source_line_sha256": "a3cd6af991631bad482892127c098a987d7fd62931ad6ad331b9a95e40e98c49",
+      "record": {
+        "denominator": "process quantitative-reference exchange(s); no rescaling",
+        "derivation_method": "uslci-jsonld-1",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "57b4afaa754d70c2e79c8575c53c59ff6c1ec446ee9a2c89eab5d182577af399",
+        "id": "uslci-1.2026-06.0:processes:0879167f-989b-3e3b-b9c5-3c07ea0a3f8e:exchange:20",
+        "interpretation": "unit_inventory_input",
+        "locator": "processes/0879167f-989b-3e3b-b9c5-3c07ea0a3f8e.json#/exchanges/25",
+        "native": {
+          "@type": "Exchange",
+          "amount": 163.0,
+          "description": "Proxy:  Diammonium phosphate, as N, at regional storehouse/RER with US electricity U",
+          "flow": {
+            "@id": "91feb044-e771-35a3-a81f-ac076c5f9b83",
+            "@type": "Flow",
+            "category": "Technosphere flows/31-33: Manufacturing/3253: Pesticide, Fertilizer, and Other Agricultural Chemical Manufacturing",
+            "flowType": "PRODUCT_FLOW",
+            "name": "Phosphorous fertilizer; production mix; at plant",
+            "refUnit": "kg"
+          },
+          "flowProperty": {
+            "omitted": "excluded_source_reference"
+          },
+          "internalId": 20,
+          "isAvoidedProduct": false,
+          "isInput": true,
+          "unit": {
+            "@id": "20aadc24-a391-41cf-b340-3e4529f44bde",
+            "@type": "Unit",
+            "name": "kg"
+          }
+        },
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "6b22729695f360cb4dc99a0428c275c4392c70927a2c836ae68cc83530f91828",
+        "process_id": "uslci-1.2026-06.0:processes:0879167f-989b-3e3b-b9c5-3c07ea0a3f8e",
+        "quantity_status": "native_amount",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "decision_id": "release-20260919-D1"
+        },
+        "source_id": "uslci-1.2026-06.0",
+        "technical_validity": "unreviewed"
+      }
+    },
+    {
+      "source_artifact": "processes.jsonl",
+      "source_line": 51,
+      "source_line_sha256": "b4027c92bbd5eeb5d2b42e1b9d740b9dd0eb55dd26a6b51f20ed0faf97e3a056",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "218c80e4321a7c37b34e52e025dab28691775e82e464317e34f65a3969f6ddc8",
+        "id": "uslci-1.2026-06.0:processes:0879167f-989b-3e3b-b9c5-3c07ea0a3f8e",
+        "native": {
+          "@id": "0879167f-989b-3e3b-b9c5-3c07ea0a3f8e",
+          "@type": "Process",
+          "allocationFactors": [],
+          "category": "31-33: Manufacturing/3251: Basic Chemical Manufacturing",
+          "defaultAllocationMethod": "NO_ALLOCATION",
+          "isInfrastructureProcess": false,
+          "lastChange": "2026-06-24T15:53:01Z",
+          "lastInternalId": 38,
+          "location": {
+            "@id": "b320e7db-c758-3ba6-8839-81eb83c9d7d7",
+            "@type": "Location",
+            "category": "Global/Custom",
+            "name": "Northern America"
+          },
+          "name": "Ethanol; denatured, corn stover, biochemical",
+          "parameters": [],
+          "processDocumentation": {
+            "creationDate": "2015-08-20T19:32:30.452Z",
+            "geographyDescription": "North America",
+            "isCopyrightProtected": false,
+            "restrictionsDescription": "All information can be accessed by everybody.",
+            "sources": [
+              {
+                "@id": "a1d1d73e-7d93-3a6b-a3bc-3b2f4f025b86",
+                "@type": "Source",
+                "name": "Hsu, D. "
+              },
+              {
+                "@id": "5e8e63da-4488-3b1d-98fb-446078a7cfac",
+                "@type": "Source",
+                "name": "Hess, J. "
+              }
+            ],
+            "technologyDescription": "current",
+            "timeDescription": "2009",
+            "validFrom": "2008-12-31",
+            "validUntil": "2008-12-31"
+          },
+          "processType": "UNIT_PROCESS",
+          "version": "00.00.019"
+        },
+        "native_locator": "processes/0879167f-989b-3e3b-b9c5-3c07ea0a3f8e.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "8796a759f6313aa59736b690c61f2f92e337377c2bb8bdd59b5f221715e5c4e6",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "rights": {
+          "attribution": "USLCI; DOE / NREL / Alliance; native contributor terms retained",
+          "decision_id": "release-20260919-D1",
+          "native_restrictionsDescription": "All information can be accessed by everybody."
+        },
+        "source_id": "uslci-1.2026-06.0"
+      }
+    },
+    {
+      "source_artifact": "mapping-projections.jsonl",
+      "source_line": 521,
+      "source_line_sha256": "ec0c775498b19c0e281f6cdaa6113019949b999e94c3e035a6aeae2020a84d86",
+      "record": {
+        "condition_text_status": "Private WCO-derived conditions omitted; mechanical outcome unchanged, not recomputed",
+        "context_sha256": "9b801f6b7f762707203476b7e1e590662fbc191866d1fbd2fd0f8e3cd5588c99",
+        "definition": {
+          "native_id": "91feb044-e771-35a3-a81f-ac076c5f9b83",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "e3d28fc60f5d44323a9b0df490847d29a29373637c4a36d8e1dc2e3fabc405cf",
+        "exchange_id": "uslci-1.2026-06.0:processes:0879167f-989b-3e3b-b9c5-3c07ea0a3f8e:exchange:20",
+        "id": "c7e0daa0bff706f29a0d41920fcb8c6b7f72bedb1c2ad9f7535ec0fc01a6fccc",
+        "mapping_id": "pilot-fertilizer_mix-r2",
+        "mechanical_check_results": [
+          {
+            "operator": "same",
+            "result": "applicable"
+          },
+          {
+            "operator": "equals",
+            "result": "applicable"
+          },
+          {
+            "operator": "present",
+            "result": "applicable"
+          },
+          {
+            "operator": "evidence_assessment",
+            "result": "insufficient_information"
+          }
+        ],
+        "mechanical_outcome": "ambiguous",
+        "policy": "flow-projection-2",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "79150aea7f57beed64df9e7e2f01a16ce73e5ee5a3955f7168e0b02cd5f857e5",
+        "process_id": "uslci-1.2026-06.0:processes:0879167f-989b-3e3b-b9c5-3c07ea0a3f8e",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D4"
+        ],
+        "review_status": "proposed",
+        "source_id": "uslci-1.2026-06.0",
+        "status": "ambiguous",
+        "subject_kind": "definition",
+        "target": null
+      }
+    },
+    {
+      "source_artifact": "mapping-revisions.jsonl",
+      "source_line": 32,
+      "source_line_sha256": "0f70e1b95b1893ec5fa502ff6af38f8b41bb8be415c44aefef2624662d7249cd",
+      "record": {
+        "alternatives": [
+          {
+            "code": "3103",
+            "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+            "edition": "2022",
+            "level": 4,
+            "original_amendment": "unsd-h6-e266823e1299",
+            "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:3103",
+            "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:3103"
+          },
+          {
+            "code": "3105",
+            "cross_reference_meaning": "Same edition/code only; original claim and acceptance bindings unchanged",
+            "edition": "2022",
+            "level": 4,
+            "original_amendment": "unsd-h6-e266823e1299",
+            "original_private_identity_id": "hs:2022:unsd-h6-e266823e1299:3105",
+            "public_identity_cross_reference": "hs:2022:usitc-2022-basic-1ae135f8375a-identity-v1:3105"
+          }
+        ],
+        "definition": {
+          "native_id": "91feb044-e771-35a3-a81f-ac076c5f9b83",
+          "source_id": "uslci-1.2026-06.0",
+          "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+          "source_version": "1.2026-06.0"
+        },
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "e49e50c05bff2a9d73d385b13c730276fcb6586bed6c75ba94bb066f2b824daa",
+        "evidence_citations": [
+          {
+            "locator": "flows/91feb044-e771-35a3-a81f-ac076c5f9b83.json",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/1654c887-0b9c-3434-b9c1-371e3adb3dde.json#/description",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "processes/1654c887-0b9c-3434-b9c1-371e3adb3dde.json#/exchanges/0",
+            "source_id": "uslci-1.2026-06.0"
+          },
+          {
+            "locator": "/results/2152/text",
+            "source_id": "unsd-h6-e266823e1299"
+          },
+          {
+            "locator": "/results/2160/text",
+            "source_id": "unsd-h6-e266823e1299"
+          }
+        ],
+        "id": "pilot-fertilizer_mix-r2",
+        "legal_reasoning_status": "Private WCO-derived rationale/specifications/conditions omitted; no replacement reasoning generated",
+        "method": "assistant-native-and-official-HS2022-condition-audit-2",
+        "outcome": "ambiguous",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "d66b9f781d5afe2b1d5cf8de4882a5fcd492105d576e0ffa7629d796ea6a02c8",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D2",
+          "release-20260919-D3",
+          "release-20260919-D4",
+          "release-20260919-D5"
+        ],
+        "review": {
+          "date": "2026-09-13",
+          "decision": null,
+          "kind": "automated",
+          "mapping_revision_id": "pilot-fertilizer_mix-r2",
+          "reviewer": "assistant-session-2026-09-13",
+          "reviewer_role": "automated",
+          "status": "proposed"
+        },
+        "revision": 2,
+        "series_id": "pilot-fertilizer_mix",
+        "subject": {
+          "kind": "definition"
+        },
+        "supersedes": "pilot-fertilizer_mix-r1",
+        "target": null
+      }
+    },
+    {
+      "source_artifact": "identity-assessments.jsonl",
+      "source_line": 119,
+      "source_line_sha256": "ec92502742f0e09da627a450ee2ee5cfc7fc8dc5dcc2df730b2a147e21696599",
+      "record": {
+        "alternatives": [],
+        "assessment_id": "assessment-2de2437c09f33368e284b6f3faf5a116f36f65e72b9ca9d14d7a9768ed2792a0-v1",
+        "assessment_version": 1,
+        "assessor": {
+          "finding": {
+            "alternatives": [],
+            "assumptions": [],
+            "automated_outcome": "automated_supported",
+            "claim_id": "claim-a1b193dbad40130e4233fb3cfc94e3ceb531d0182c7cb311ecda8c6090881d14",
+            "evidence_binding_ids": [
+              "evidence-definition-607ddd494709da213ac9c7f5e345bf45ca454259bf3f99fa2f62437536501d9d",
+              "evidence-instance-bd3517536e11036669cfb3f8ccaac21a001b068de6f8e85be6a4ff3e64d03748"
+            ],
+            "rationale": "The instance flow reference exactly matches the cited definition's ID, name, and PRODUCT_FLOW type within the same source scope."
+          },
+          "response_ref": {
+            "sha256": "df551d7027d01f2dcacffe133b083a7e57bd65e3273b5aa447c4f369739385cc"
+          }
+        },
+        "assumptions": [],
+        "automated_outcome": "automated_conditional",
+        "challenger": {
+          "agreement_is_proof": false,
+          "finding": {
+            "claim_id": "claim-a1b193dbad40130e4233fb3cfc94e3ceb531d0182c7cb311ecda8c6090881d14",
+            "issues": [
+              {
+                "evidence_binding_ids": [
+                  "evidence-definition-607ddd494709da213ac9c7f5e345bf45ca454259bf3f99fa2f62437536501d9d",
+                  "evidence-instance-bd3517536e11036669cfb3f8ccaac21a001b068de6f8e85be6a4ff3e64d03748"
+                ],
+                "explanation": "The exchange is labeled as a diammonium-phosphate proxy rather than an unqualified instance of the generic phosphorous-fertilizer production mix.",
+                "severity": "limitation",
+                "type": "conflicting_identity_form_or_proxy"
+              }
+            ],
+            "rationale": "The flow-reference ID, name, and type match the definition, but the exchange description expressly identifies a diammonium-phosphate proxy, qualifying the identity assertion.",
+            "recommended_outcome": "automated_conditional"
+          },
+          "independent_expert_validation": false,
+          "response_ref": {
+            "sha256": "1f1cb22de1d7c4d37805bde27f735b38421e0f723562a4e0ce5091bcfcc3a6ba"
+          }
+        },
+        "claim": {
+          "candidate_targets": [],
+          "statement": "The exact source-scoped instance is consistent with the named product or material definition in the transmitted source evidence."
+        },
+        "claim_id": "claim-a1b193dbad40130e4233fb3cfc94e3ceb531d0182c7cb311ecda8c6090881d14",
+        "claim_type": "product_identity",
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "db1ff3c6ac7dee5c4878701711e77306b7ef58c027e46922fdf3f95318f0bcd8",
+        "evidence_bindings": [
+          {
+            "content_sha256": "a91bda7d8559df9119ac5741983b3208d838885d37cc9c7f3e91957bad28dceb",
+            "context_sha256": null,
+            "id": "evidence-definition-607ddd494709da213ac9c7f5e345bf45ca454259bf3f99fa2f62437536501d9d",
+            "locators": [
+              "flows/91feb044-e771-35a3-a81f-ac076c5f9b83.json"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          },
+          {
+            "content_sha256": "d88496d0bd0901b2fbdaccb2d24e33adc1e210dbd7fee7fc1a835d22f108bf16",
+            "context_sha256": "9b801f6b7f762707203476b7e1e590662fbc191866d1fbd2fd0f8e3cd5588c99",
+            "id": "evidence-instance-bd3517536e11036669cfb3f8ccaac21a001b068de6f8e85be6a4ff3e64d03748",
+            "locators": [
+              "processes/0879167f-989b-3e3b-b9c5-3c07ea0a3f8e.json",
+              "processes/0879167f-989b-3e3b-b9c5-3c07ea0a3f8e.json#/exchanges/25",
+              "processes/0879167f-989b-3e3b-b9c5-3c07ea0a3f8e.json#/exchanges/25/defaultProvider"
+            ],
+            "source_group": "uslci_primary_included",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0",
+            "transmitted": true
+          }
+        ],
+        "external_response_replay_available": false,
+        "human_review_state": "automated_proposal",
+        "mechanical_outcome": "ambiguous",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "044a5fa427e093ea05d53bf8b4ffe4ed99d052a007a17f0cbd16bdf242942ff2",
+        "provenance": {
+          "assessor_payload_sha256": "5818068a04a355142f346d247c9a0a45ee1f947bb8188b9b2d092d67cccab5d2",
+          "assessor_prompt_version": "automated-evidence-assessor-1",
+          "challenger_payload_sha256": "6eae1a6b0ed664a3a0160361a7fb29ed1333eadd3119d94875f2f8e5377670ff",
+          "challenger_prompt_version": "automated-evidence-challenger-1",
+          "execution_route": "codex-cli-0.154.0",
+          "model": "gpt-5.6-sol",
+          "model_configuration": {
+            "max_concurrency": 1,
+            "max_retries": 1,
+            "reasoning_effort": "medium"
+          },
+          "policy_version": "automated-evidence-assessment-1",
+          "provider": "OpenAI"
+        },
+        "rationale": "The instance flow reference exactly matches the cited definition's ID, name, and PRODUCT_FLOW type within the same source scope.",
+        "release_decision_ids": [
+          "release-20260919-D1",
+          "release-20260919-D4"
+        ],
+        "schema_version": "automated-assessment-1",
+        "scope": {
+          "definition": {
+            "native_id": "91feb044-e771-35a3-a81f-ac076c5f9b83",
+            "source_id": "uslci-1.2026-06.0",
+            "source_sha256": "0c7ab40ac6da2e1da38dcab0d2de824c99b965307e99fafc2ecd6c4f5d35b5e6",
+            "source_version": "1.2026-06.0"
+          },
+          "exchange_ids": [
+            "uslci-1.2026-06.0:processes:0879167f-989b-3e3b-b9c5-3c07ea0a3f8e:exchange:20"
+          ],
+          "kind": "instance",
+          "mapping_revision_id": "pilot-fertilizer_mix-r2",
+          "process_ids": [
+            "uslci-1.2026-06.0:processes:0879167f-989b-3e3b-b9c5-3c07ea0a3f8e"
+          ]
+        },
+        "target": null,
+        "validation": {
+          "citation_exists_and_matches": "passed",
+          "citation_support_judgment": "model_assessment_only",
+          "claim_scope": "passed",
+          "schema": "passed",
+          "target_and_edition": "not_applicable_claim_type",
+          "uncertainty_preserved": "passed"
+        },
+        "withheld_material": [
+          {
+            "locators": [],
+            "reason": "Owner transmission authorization is recorded, but upstream catalogue source-use decisions remain unresolved; no target identity or catalogue metadata was transmitted.",
+            "source_group": "catalogue_identity_only"
+          },
+          {
+            "locators": [],
+            "reason": "Classification provisions, wording and derived legal paraphrases were not transmitted.",
+            "source_group": "wco_hs2022_legal_provisions"
+          }
+        ]
+      }
+    },
+    {
+      "source_artifact": "supporting-records.jsonl",
+      "source_line": 2579,
+      "source_line_sha256": "80fe3eaabd6e1f8427a4ae19b9d231c4727afa7c4c507473acef830a78ae7f0a",
+      "record": {
+        "derivative_hash_version": "json-sortkeys-utf8-compact-no-nan-v1",
+        "derivative_sha256": "c207009f0884c5fabf53351f4627e01cb888a1eb5d36430ade9a5a62f2e45451",
+        "id": "uslci-1.2026-06.0:flows:91feb044-e771-35a3-a81f-ac076c5f9b83",
+        "kind": "flows",
+        "native": {
+          "@id": "91feb044-e771-35a3-a81f-ac076c5f9b83",
+          "@type": "Flow",
+          "category": "Technosphere flows/31-33: Manufacturing/3253: Pesticide, Fertilizer, and Other Agricultural Chemical Manufacturing",
+          "flowProperties": [
+            {
+              "@type": "FlowPropertyFactor",
+              "conversionFactor": 1.0,
+              "flowProperty": {
+                "omitted": "excluded_source_reference"
+              },
+              "isRefFlowProperty": true
+            }
+          ],
+          "flowType": "PRODUCT_FLOW",
+          "isInfrastructureFlow": false,
+          "lastChange": "2026-03-10T01:22:54Z",
+          "name": "Phosphorous fertilizer; production mix; at plant",
+          "version": "00.00.005"
+        },
+        "native_locator": "flows/91feb044-e771-35a3-a81f-ac076c5f9b83.json",
+        "private_hash_meaning": "Hash of private content, not this filtered derivative",
+        "private_original_sha256": "9bfd69172394c1c1c6d8f16d43876dc48736918bbf74ccd8953b73ef0f2ec701",
+        "release_decision_ids": [
+          "release-20260919-D1"
+        ],
+        "source_id": "uslci-1.2026-06.0"
+      }
+    }
+  ]
+}
