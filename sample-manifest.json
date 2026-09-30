@@ -1,5 +1,5 @@
 {
-  "sample_version": "discussion-sample-2-guided",
+  "sample_version": "discussion-sample-3-plain-language",
   "source_release_doi": "https://doi.org/10.5281/zenodo.22857372",
   "source_zip_sha256": "f73a7d457ef69be4848e0d169bafc157d0faa3b15b3b56eac43d6fdc17a38803",
   "frozen_inner_sha256": "78b9a1f0afbad1ae0b7ef81e63af5d03c49cc79eb99a09ac853840e23bdca710",
@@ -47,12 +47,12 @@
       "bytes": 1534
     },
     "README.md": {
-      "sha256": "034fc4345a369509c5e0cedba7ca3a2f962535f128dd0e8457e05f14c173e559",
-      "bytes": 6440
+      "sha256": "307ceb610959c0a15d51acb0ba3c0e508c05b389f241394f3ae01e2c2986226a",
+      "bytes": 6449
     },
     "START_HERE.html": {
-      "sha256": "d1829201b116c44d0ee97d9aa0031807e5e82207e0966c6a8cb6e309e771aea7",
-      "bytes": 39680
+      "sha256": "c0df0ea56ca5f14bf8062218796dca1e20d487378608af347836e43163be87c9",
+      "bytes": 52697
     },
     "candidate/DATA-LICENSE.txt": {
       "sha256": "0711a53463d02f59dbdb656f85676f96d2a7fd81f482fe56650a05c09a2b8da7",
@@ -143,8 +143,8 @@
       "bytes": 19594
     },
     "index.html": {
-      "sha256": "d1829201b116c44d0ee97d9aa0031807e5e82207e0966c6a8cb6e309e771aea7",
-      "bytes": 39680
+      "sha256": "c0df0ea56ca5f14bf8062218796dca1e20d487378608af347836e43163be87c9",
+      "bytes": 52697
     },
     "samples.csv": {
       "sha256": "c407e05fefd700f52b11afd6e9b8cc327b5a3b401a82454cebff6224bb5b2ee4",
@@ -163,8 +163,8 @@
       "bytes": 8385
     },
     "tools/build_review_sample.py": {
-      "sha256": "d5ac936ba9598e077206d0d3f1616d917fb8d7313374e1e5b5ca5372dbaf6cd8",
-      "bytes": 31219
+      "sha256": "50945d60b0afc29ebdd5245eebb4f3eaa48ef7989ba6b9c63a7242d7162b96ff",
+      "bytes": 46052
     },
     "tools/verify_review_sample.py": {
       "sha256": "1b3e99231238ab8b5e3d4b55e9b1ea499e7844e62b3dd670c9c9b62dfc41b016",

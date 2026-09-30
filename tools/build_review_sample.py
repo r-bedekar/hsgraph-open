@@ -25,10 +25,10 @@ COPIED = ('LICENSE', 'LICENSE-DATA', 'candidate/NOTICE-USLCI', 'candidate/NOTICE
 
 README = '''# HSGraph: ten-instance evidence-inspection sample
 
-Discussion sample 2 (guided presentation), derived from published v0.1.0.
+Discussion sample 3 (plain-language presentation), derived from published v0.1.0.
 Not v0.2.0 and not a new classification dataset. Prepared for Rizwan Bedekar /
-HSGraph on 2026-09-21. The ten rows and embedded evidence are unchanged from
-discussion sample 1; only presentation, guide and packaging tools changed.
+HSGraph on 2026-09-30. The ten rows and embedded evidence are unchanged from
+discussion samples 1 and 2; only presentation, guide and packaging tools changed.
 Source release: https://doi.org/10.5281/zenodo.22857372
 Code: https://github.com/r-bedekar/hsgraph-open/tree/v0.1.0
 Contact: rbedekar@zeroinsec.com
@@ -40,7 +40,7 @@ installation, AI account or network connection is needed. The table has exactly
 10 distinct exchange instances from 10 flow definitions; they are not 10 verified
 HS classifications. samples.csv is for spreadsheet inspection; samples.json is
 the structured summary. Each row links to its underlying evidence JSON.
-Follow the five-minute guide, inspect one case, and use the feedback template.
+Follow the short guide, inspect one case, and use the feedback template.
 You are being asked about usefulness and clarity, not to certify an HS code.
 The steel evidence diagram shows recorded proposal relationships, not material
 flows or verified supply-chain connections. No form collects or sends data.
@@ -213,85 +213,288 @@ def csv_cell(value):
     return "'" + value if value.lstrip().startswith(('=', '+', '-', '@')) else value
 
 
+_STYLE = '''/* Layout: one reading column (prose max 72ch); the example figure, the layer grid and the table may widen to 1080px.
+   Sections are separated by space and small uppercase eyebrows; only status chips, the two figures and the ask box are styled as objects. */
+:root{color-scheme:light;
+--bg:#f3f5f8;--surface:#ffffff;--surface-2:#e9edf3;--ink:#1a2230;--ink-2:#4d5768;--line:#d2d8e2;
+--accent:#1d4f91;--accent-ink:#ffffff;
+--pass:#1b6f47;--pass-bg:#e0f2e8;--multi:#54489e;--multi-bg:#eae7f7;--gap:#8a5600;--gap-bg:#fbefd3;--conflict:#ab2118;--conflict-bg:#fbe6e3;
+--font-display:"Iowan Old Style","Palatino Linotype",Palatino,Charter,Georgia,"Times New Roman",serif;
+--font-body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--font-mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#12161d;--surface:#1a2029;--surface-2:#242c38;--ink:#e6e9ee;--ink-2:#a4adbc;--line:#333c4a;--accent:#8fb7f1;--accent-ink:#0e1a2c;--pass:#6fc796;--pass-bg:#173525;--multi:#b3a4f2;--multi-bg:#2a2649;--gap:#e8b94f;--gap-bg:#3a2e12;--conflict:#f08c82;--conflict-bg:#43201d}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#12161d;--surface:#1a2029;--surface-2:#242c38;--ink:#e6e9ee;--ink-2:#a4adbc;--line:#333c4a;--accent:#8fb7f1;--accent-ink:#0e1a2c;--pass:#6fc796;--pass-bg:#173525;--multi:#b3a4f2;--multi-bg:#2a2649;--gap:#e8b94f;--gap-bg:#3a2e12;--conflict:#f08c82;--conflict-bg:#43201d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--font-body)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(16px,4vw,40px) 56px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.15;text-wrap:balance;margin:0 0 .5em}
+h1{font-size:clamp(2.1rem,4.6vw,3.2rem);max-width:20ch}
+h2{font-size:clamp(1.55rem,2.8vw,2.05rem)}
+h3{font-size:1.3rem}
+p,li,dd,dt{max-width:72ch}
+a{color:var(--accent)}
+a:focus-visible,summary:focus-visible,textarea:focus-visible,.scroll:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.eyebrow{font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);font-weight:600;margin:0 0 .6em}
+header{padding-block:40px 8px}
+.lede{font-size:1.15rem;max-width:64ch}
+.ask{border-left:4px solid var(--accent);background:var(--surface);padding:14px 20px;margin:24px 0;max-width:72ch}
+.ask p{margin:0}
+nav.top{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin:26px 0 10px}
+.button{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:600}
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px 40px;margin:18px 0 0}
+.terms p{margin:0;font-size:.98rem;color:var(--ink-2)}
+.terms b{color:var(--ink)}
+section{border-top:1px solid var(--line);padding-block:40px;scroll-margin-top:16px}
+section.case{border-top:1px dashed var(--line);padding-block:28px}
+section.case:target{background:var(--surface);box-shadow:0 0 0 12px var(--surface)}
+ol.steps{padding-left:1.3em}ol.steps li{margin-bottom:.5em}
+.muted{color:var(--ink-2)}
+small{font-size:.86rem}
+.chip{display:inline-block;padding:2px 11px;border-radius:999px;font-size:.86rem;font-weight:650;line-height:1.5;white-space:nowrap;border:1px solid transparent}
+.chip.pass{color:var(--pass);background:var(--pass-bg)}
+.chip.multi{color:var(--multi);background:var(--multi-bg)}
+.chip.gap{color:var(--gap);background:var(--gap-bg)}
+.chip.conflict{color:var(--conflict);background:var(--conflict-bg)}
+.chip.plain{color:var(--ink-2);background:var(--surface-2)}
+.chip.other{color:var(--ink);background:var(--surface-2);border-color:var(--line)}
+figure{margin:24px 0}
+figcaption{margin-top:14px;color:var(--ink-2);font-size:.95rem;max-width:72ch}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:10px;align-items:stretch}
+.node{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.node .k{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:650}
+.node .v{font-weight:650;line-height:1.35}
+.node .d{font-size:.92rem;color:var(--ink-2);line-height:1.45}
+.node.result{border-color:var(--accent);border-width:2px}
+.node a{overflow-wrap:anywhere;font-size:.92rem}
+.arrow{align-self:center;color:var(--ink-2);font-size:1.6rem;line-height:1;padding:0 2px}
+.codes{display:grid;gap:6px;margin:2px 0}
+.codes span{display:flex;gap:10px;align-items:baseline;font-size:.95rem}
+.codes b{font-family:var(--font-mono);font-size:1.05rem;font-variant-numeric:tabular-nums}
+.layers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:22px 0}
+.layer{border-top:3px solid var(--accent);padding-top:12px;min-width:0}
+.layer h3{font-size:1.1rem;margin:0 0 .4em;font-family:var(--font-body);font-weight:700}
+.layer p{font-size:.95rem;margin:0 0 .6em;color:var(--ink-2)}
+.layer .ex{font-size:.9rem;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.layer .ex .k{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:650;margin-bottom:2px}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px 24px;margin:16px 0 0;padding:0;list-style:none}
+.legend li{display:flex;flex-direction:column;align-items:flex-start;gap:6px;max-width:none;font-size:.95rem}
+.legend .n{color:var(--ink-2);font-size:.86rem}
+.scroll{overflow-x:auto;margin:16px 0}
+table{border-collapse:collapse;width:100%;font-size:.95rem;min-width:760px}
+caption{text-align:left;caption-side:bottom;padding-top:10px;color:var(--ink-2);font-size:.9rem}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+thead th{font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);font-weight:650;border-bottom:2px solid var(--line)}
+tbody th{font-weight:650;white-space:nowrap}
+td.code{font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.short{color:var(--ink-2)}
+.case-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:0 0 10px}
+.case-head h3{margin:0;font-size:1.35rem}
+details{margin:12px 0;border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:0 16px}
+details[open]{padding-bottom:10px}
+summary{font-weight:650;cursor:pointer;padding:10px 0}
+ul.facts{padding-left:1.2em;margin:6px 0}ul.facts li{margin-bottom:10px;max-width:80ch}
+.who{display:inline-block;font-family:var(--font-mono);font-size:.78rem;color:var(--ink-2);background:var(--surface-2);border-radius:4px;padding:0 6px;margin-right:6px;vertical-align:middle}
+.effect{color:var(--ink-2)}
+dl.tech{margin:0 0 6px}dl.tech dt{font-weight:650;margin-top:10px;font-size:.9rem}dl.tech dd{margin:2px 0 0;font-family:var(--font-mono);font-size:.84rem;overflow-wrap:anywhere;white-space:pre-wrap;max-width:none}
+.links{font-size:.95rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:20px 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;max-width:none}
+.stats b{display:block;font-family:var(--font-display);font-size:1.9rem;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.1}
+.stats span{font-size:.9rem;color:var(--ink-2)}
+ul.limits{padding-left:1.2em}ul.limits li{margin-bottom:.4em}
+textarea{box-sizing:border-box;width:100%;max-width:72ch;min-height:200px;padding:14px;font:15px/1.6 var(--font-mono);color:var(--ink);border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+footer{padding:22px 0;font-size:.86rem;color:var(--ink-2);border-top:1px solid var(--line)}
+@media (max-width:820px){.layers{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center;padding:0}.layers{grid-template-columns:1fr}section{padding-block:30px}h1{max-width:none}}
+'''
+
+
 def render_html(rows):
     esc = lambda x: html.escape(str(x), quote=True)
     status = {
-        'ambiguous': ('More than one candidate', 'The saved rules leave competing candidates; no single code is established.'),
-        'applicable': ('Recorded conditions pass', 'The saved mechanical checks pass for this proposal. This is not specialist validation.'),
-        'insufficient_information': ('Information missing', 'The saved checks lack information needed to settle the proposal.'),
-        'conflicting': ('Recorded conflict', 'The saved checks flag a conflict. Do not treat the proposed code as settled.'),
+        'ambiguous': ('More than one candidate', 'multi', 'The saved rules leave two or more codes possible; no single code is established.'),
+        'applicable': ('Recorded conditions pass', 'pass', 'The saved rule checks pass for the proposed code. This is not specialist validation.'),
+        'insufficient_information': ('Information missing', 'gap', 'The record lacks facts the saved checks need to settle the proposal.'),
+        'conflicting': ('Recorded conflict', 'conflict', 'The saved checks flag a conflict. Do not treat the proposed code as settled.'),
     }
-    prompts = {
-        'R01': ('Start here: what is missing?', 'The saved steel case retains 7219 and 7220 as alternatives. Its assessor lists missing coil width and measured carbon/chromium information. We have not filled those gaps.', 'Can you tell what information the reviewer would need next?'),
-        'R02': ('Compare: what did the owner accept?', 'One owner decision applies to the original cement revision r3 and exact instance. It does not approve the later r4 projection shown here, and it is not specialist validation.', 'Is that limited acceptance clearly distinguished from a validated classification?'),
-        'R05': ('Compare: why keep a failure?', 'The saved glycol case includes a proxy/product mismatch concern. Model agreement is retained alongside that concern, not presented as proof of correctness.', 'Does preserving this concern help you avoid trusting an inappropriate proposal?'),
+    # Plain-language notes are keyed by the saved mapping revision, not the row number, so they stay attached to the record they describe.
+    # Every statement below restates a saved finding in the row's evidence file; none adds a classification.
+    notes = {
+        'pilot-steel_coil-r2': (
+            'Width not recorded; 7219 or 7220 both possible',
+            'The source names the product exactly: stainless 304, flat-rolled coil. Two headings remain possible, 7219 and 7220, and the saved assessment says the fact that would decide between them, coil width, is not in the record. Both codes are kept and nothing is invented.',
+            'Can you tell what information to ask for next?', 'Start here'),
+        'pilot-cement-r4': (
+            'Checks pass; owner accepted an earlier revision only',
+            'The rule checks pass for heading 2523 and both saved model passes agree. The project owner accepted 2523 for this exact record on 13 September 2026, but under an earlier revision of the mapping (r3). That acceptance does not carry over to the revision shown here (r4), and it is not specialist validation. The record gives no cement subtype, so nothing finer than the four-digit heading is supported.',
+            'Is that limited acceptance clearly distinguished from a validated classification?', 'Compare: the one owner decision'),
+        'pilot-lldpe-r3': (
+            'Checks pass; physical form and density not recorded',
+            'The rule checks pass for heading 3901 and both saved model passes agree. The record does not state the physical form (granules, powder or liquid) or the density and comonomer details, so a six-digit code is not supported.',
+            None, None),
+        'pilot-lime-r3': (
+            'Composition not recorded; 2522 or 2825 unsettled',
+            'Heading 2522 is proposed, but the saved checks could not settle it. The record gives no composition or purity, so the saved assessment cannot rule out 2825 (chemically defined calcium oxide) or confirm that the product is unslaked lime rather than calcium hydroxide. The two model passes also disagree: the assessor says conditional, the challenger says supported.',
+            None, None),
+        'pilot-glycol-r2': (
+            'Names one chemical, stands in for another; conflict kept',
+            'This record is a small ethylene glycol input to a chlorine-making process, and the source note says it stands in for propylene glycol. So the record names one chemical and represents another. The saved passes agreed on 290531 for ethylene glycol, but the record keeps a concern that they classified the stand-in rather than the product it represents; the rule check records a conflict and the product identity is marked disputed. Two passes agreeing is not correctness, and this row shows why.',
+            'Does keeping this concern visible help you avoid trusting an unsuitable proposal?', 'Compare: agreement is not correctness'),
     }
+    thresholds = {'7219': '600 mm wide or more', '7220': 'narrower than 600 mm'}
+
+    def chip(outcome, extra=''):
+        label, cls, _ = status.get(outcome, (outcome, 'other', ''))
+        return f'<span class="chip {cls}">{esc(label)}{extra}</span>'
+
+    def codes(r):
+        target = r.get('saved_projection_target', 'none')
+        alts = r.get('saved_revision_alternatives', 'none listed')
+        if target != 'none':
+            return target
+        return ' / '.join(alts.split('; ')) if alts != 'none listed' else 'none'
+
+    def withheld(r):
+        return 'withheld' in r.get('recorded_missing_facts', '')
+
+    def summarise(r):
+        note = notes.get(r.get('mapping_revision_id'))
+        if note:
+            return note
+        outcome, code = r['mechanical_outcome'], codes(r)
+        alts = ' or '.join(r.get('saved_revision_alternatives', 'none listed').split('; '))
+        short, plain = {
+            'applicable': (f'Rule checks pass for {code}',
+                           f'The saved rule checks pass for code {code}. This is a saved proposal, not specialist validation.'),
+            'ambiguous': (f'No single code: {alts}',
+                          f'The saved rules leave more than one code possible ({alts}); no single code is established.'),
+            'insufficient_information': (f'{code} proposed; facts missing to settle it',
+                                         f'Code {code} is proposed, but the record lacks facts the saved checks need to settle it.'),
+            'conflicting': (f'{code} proposed; the checks flag a conflict',
+                            f'Code {code} is proposed, but the saved checks flag a conflict, so the code is not settled.'),
+        }.get(outcome, (f'{code}: {outcome}', f'Code {code}; saved outcome {outcome}. See the saved evidence.'))
+        if withheld(r):
+            short += '; reasons not public'
+            plain += ' No saved model assessment exists for this exact record, and the rule text behind the check is not part of the public release, so the outcome is shown without its reasons.'
+        return short, plain, None, None
+
+    def fact_item(text):
+        if 'withheld' in text and 'reconstructed' in text:
+            return '<li>The reasoning text behind this check is not part of the public release, and nothing has been reconstructed from private files.</li>'
+        who, sep, rest = text.partition(': ')
+        if sep and '/' in who and len(who) < 60:
+            fact, sep2, effect = rest.partition(' Effect: ')
+            item = f'<li><span class="who">{esc(who)}</span>{esc(fact)}'
+            if sep2:
+                item += f' <span class="effect">Effect: {esc(effect)}</span>'
+            return item + '</li>'
+        return f'<li>{esc(text)}</li>'
+
+    steel = next((r for r in rows if r['row_id'] == 'R01'
+                  and {'7219', '7220'} <= set(r.get('saved_revision_alternatives', '').split('; '))), None)
+    with_model = sum(1 for r in rows if not withheld(r))
+    counts = Counter(r['mechanical_outcome'] for r in rows)
+
     parts = ['<!doctype html><html lang="en"><head><meta charset="utf-8">',
              '<meta name="viewport" content="width=device-width, initial-scale=1">',
-             '<title>HSGraph — a five-minute evidence walkthrough</title>',
-             '''<style>
-body{font:17px/1.6 system-ui,sans-serif;color:#182638;max-width:1120px;margin:32px auto;padding:0 22px;background:#f6f8fa}h1,h2,h3{line-height:1.2}h1{font-size:clamp(2rem,4vw,3rem);max-width:850px}a{color:#125a89}a:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid #b15b00;outline-offset:4px}nav{display:flex;flex-wrap:wrap;gap:18px;margin:22px 0}.button{display:inline-block;background:#135d65;color:white;padding:10px 18px;border-radius:6px;text-decoration:none}.notice{border-left:5px solid #b15b00;background:#fff3de;padding:14px 18px}.panel,section.case{margin:24px 0;padding:24px;border:1px solid #cbd5df;border-radius:8px;background:white;overflow-wrap:anywhere}section.case:target{border:2px solid #135d65}section{scroll-margin-top:18px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.cards>div{padding:16px;background:#edf3f5;border-radius:6px}.cards h3{margin-top:0}table{border-collapse:collapse;width:100%;font-size:15px}caption{text-align:left;margin-bottom:12px}th,td{border:1px solid #cbd5df;padding:12px;text-align:left;vertical-align:top}th{background:#e7eef4}.scroll{overflow-x:auto}details{margin:16px 0;border-top:1px solid #d6dfe6;padding-top:12px}summary{font-weight:650;cursor:pointer}dt{font-weight:650;margin-top:12px}dd{margin-left:0;white-space:pre-wrap}small,.muted{color:#455568}.badge{display:inline-block;background:#edf3f5;border:1px solid #cbd5df;padding:3px 9px;border-radius:5px}.trail{display:grid;grid-template-columns:2fr 1fr 2fr 1fr 2fr;gap:8px;align-items:center}.node{border:2px solid #658391;border-radius:6px;padding:15px;background:#f1f6f7}.proposal{border-style:dashed;background:#fff9ef}.edge{text-align:center;font-size:14px}.edge span{display:block;font-size:26px}textarea{box-sizing:border-box;width:100%;min-height:215px;padding:14px;font:15px/1.6 system-ui;border:1px solid #879baa;border-radius:6px;background:#f8fafb}.facts li{margin-bottom:12px}footer{padding:22px 0;font-size:14px}@media(max-width:720px){.cards{grid-template-columns:1fr}.trail{grid-template-columns:1fr}.edge span{transform:rotate(90deg)}.panel,section.case{padding:18px}body{padding:0 14px}table{min-width:680px}}
-</style></head><body><header><p class="muted">HSGraph · Guided sample 2 · Based on the published v0.1.0 dataset</p>
-<h1>Can you see the evidence behind a proposed HS code?</h1>
-<p>This sample lets you inspect ten product records, the codes proposed for them, and the information still missing.</p>
-<p><strong>What we need from you:</strong> spend five minutes on one example and tell us whether this would help with a real task. You are not being asked to certify a classification or review all ten rows.</p>
-<nav aria-label="Page navigation"><a class="button" href="#guide">Start the guide</a><a href="#examples">Browse ten examples</a><a href="#graph">See the evidence diagram</a><a href="#feedback">Give feedback</a></nav>
-<p class="notice"><strong>Zero specialist validations.</strong> This is a discussion sample, not a customs ruling, verified supply chain or complete life-cycle assessment. It is not representative of all products. One original owner decision is retained with its limited scope.</p></header><main>
-<section class="panel" id="guide"><h2>A five-minute guide</h2>
-<div class="cards"><div><h3>1. Open the steel case</h3><p>Start with <a href="#R01">R01: steel coil</a>. Notice that two HS headings remain possible.</p></div><div><h3>2. Look for the gap</h3><p>Read “What is missing?” The saved assessor says coil width is missing. We do not invent it or choose a heading.</p></div><div><h3>3. Tell us if this helps</h3><p>Could you identify the next information to request? Use the <a href="#feedback">short reply template</a>; no specialist credentials are needed to comment on clarity.</p></div></div>
-<p>Have another five minutes? Compare <a href="#R02">R02: a limited owner decision</a> and <a href="#R05">R05: why model agreement can still be wrong</a>. Full evidence and technical fields are optional expandable sections.</p></section>
-<section class="panel" id="key"><h2>How to read this page</h2>
-<p><strong>HS</strong> is the Harmonized System of product classification. <strong>USLCI</strong> is the U.S. Life Cycle Inventory source used here. A row is one recorded product exchange in a documented process—not every product with that name.</p>
-<p>A <strong>candidate code</strong> is a saved proposal, not a recommendation. A <strong>mechanical check</strong> applies recorded rules; a <strong>model assessment</strong> is a saved AI finding; an <strong>owner decision</strong> records this project owner’s limited acceptance. None substitutes for specialist review.</p><dl>''']
-    for label, explanation in status.values():
-        parts.append(f'<dt>{esc(label)}</dt><dd>{esc(explanation)}</dd>')
-    parts.append('</dl></section>')
-    steel = next((r for r in rows if r['row_id'] == 'R01'), None)
+             '<meta name="color-scheme" content="light dark">',
+             '<title>HSGraph evidence sample</title>',
+             '<style>' + _STYLE + '</style></head><body><div class="wrap"><header>',
+             '<p class="eyebrow">HSGraph · public sample · ten records from the v0.1.0 dataset</p>',
+             '<h1>The evidence behind a proposed customs code</h1>',
+             '<p class="lede">HSGraph links products in a public production database to Harmonized System (HS) customs codes, and keeps the evidence, the checks and the gaps next to every proposed code. This page shows ten real records from the published dataset.</p>',
+             '<div class="ask"><p><strong>What we are asking.</strong> Spend five minutes on one record and tell us whether this would help you in a real task. You are not being asked to certify a classification or to review all ten.</p></div>',
+             '<nav class="top" aria-label="Page navigation"><a class="button" href="#example">Start with one example</a><a href="#how">How it works</a><a href="#examples">The ten records</a><a href="#feedback">Feedback</a><a href="#downloads">Data and terms</a></nav>',
+             '<div class="terms"><p><b>HS code.</b> The Harmonized System is the international numbering used on customs declarations to say what a product is. Four digits name a heading, six a subheading.</p>',
+             '<p><b>USLCI record.</b> The U.S. Life Cycle Inventory Database describes industrial processes and the products flowing into and out of them. A record here is one such flow in one documented process, not every product with that name.</p></div>',
+             '</header><main>',
+             '<section id="guide"><h2>Five minutes, one record</h2><ol class="steps">',
+             '<li>Read the steel example below. Two codes are possible, and one missing fact would decide it.</li>',
+             '<li>Open <a href="#R01">record R01</a> and check that the saved findings say what is missing. We did not fill the gap or choose a code.</li>',
+             '<li>Tell us whether that would help you, using the <a href="#feedback">reply template</a>. No specialist credentials are needed to comment on clarity.</li></ol>',
+             '<p>Have five more minutes? <a href="#R02">R02</a> shows the one owner decision in the dataset and its limits. <a href="#R05">R05</a> shows two model passes agreeing while the record still carries a conflict.</p></section>']
     if steel:
-        parts.append(f'''<section class="panel" id="graph"><h2>A small graph demo: follow the evidence</h2>
-<p>This is an <strong>evidence relationship diagram</strong> for R01, not a material-flow or supplier network. Read the connection labels; a proposed relationship is not established identity.</p>
-<div class="trail" role="group" aria-label="R01 record linked to a saved proposal and its unresolved alternatives">
-<a class="node" href="{esc(steel['evidence_file'])}"><strong>Source record</strong><br>{esc(steel['source_declared_product'])}<br><small>Open the retained evidence</small></a>
-<div class="edge">is the subject of<span aria-hidden="true">→</span></div>
-<a class="node" href="#R01"><strong>Saved proposal</strong><br>{esc(steel.get('mapping_revision_id', 'See evidence'))}<br>{esc(status.get(steel['mechanical_outcome'], (steel['mechanical_outcome'], ''))[0])}</a>
-<div class="edge">lists alternatives<span aria-hidden="true">⇢</span></div>
-<div class="node proposal"><strong>HS candidates, not an accepted code</strong><br>{esc(steel['saved_revision_alternatives'])}</div></div>
-<p><strong>Why no final connection?</strong> The saved assessor lists missing width and measured composition information. See <a href="#R01">the exact saved findings</a>. Dashed styling marks the unresolved proposal, not a physical dependency.</p>
-<p class="muted">The ten sampled records do not form a complete connected production graph. A broader explorer would require a separate, source-backed selection of actual process/exchange relationships.</p></section>''')
-    parts.append('<section class="panel" id="examples"><h2>Choose an example</h2><p>Start with one row. Codes below are saved candidates only; “conditions pass” does not mean validated.</p><div class="scroll" tabindex="0" role="region" aria-label="Ten examples; scroll horizontally on small screens"><table><caption>Ten distinct records — no specialist-validated classifications</caption><thead><tr><th scope="col">Example</th><th scope="col">Candidate code(s)</th><th scope="col">What the saved check says</th><th scope="col">Owner decision</th></tr></thead><tbody>')
+        code_lines = ''.join(f'<span><b>{esc(c)}</b>{esc(thresholds.get(c, ""))}</span>'
+                             for c in steel['saved_revision_alternatives'].split('; '))
+        parts.append(f'''<section id="example"><h2>One example: a stainless-steel coil</h2>
+<p>Every row on this page works the same way: a source record, the codes that could apply, the fact that would decide, and what was recorded when that fact was missing.</p>
+<figure><div class="flow" role="group" aria-label="Steel coil: source record, two candidate codes, the deciding fact, and what HSGraph records">
+<div class="node"><span class="k">1 · Source record</span><span class="v">{esc(steel['source_declared_product'])}</span><span class="d">Product output of a USLCI process. Copied unchanged from the published release.</span><a href="{esc(steel['evidence_file'])}">Open the saved evidence (JSON)</a></div>
+<div class="arrow" aria-hidden="true">→</div>
+<div class="node"><span class="k">2 · Two candidate codes</span><div class="codes">{code_lines}</div><span class="d">Width thresholds as stated in the saved assessment.</span></div>
+<div class="arrow" aria-hidden="true">→</div>
+<div class="node"><span class="k">3 · The deciding fact</span><span class="v">Coil width</span><span><span class="chip gap">Not in the source record</span></span><span class="d">Nor are measured carbon and chromium percentages, which would let the stainless definition be checked independently.</span></div>
+<div class="arrow" aria-hidden="true">→</div>
+<div class="node result"><span class="k">4 · What HSGraph records</span><span>{chip(steel['mechanical_outcome'])}</span><span class="d">Both codes kept. The missing facts are saved with the record. No width is guessed and no code is chosen.</span></div>
+</div><figcaption>This is an evidence diagram, not a material-flow or supplier network. It shows what is recorded for one product record; it adds no classification and no supplier link.</figcaption></figure></section>''')
+    model_line = 'No saved model assessment'
+    if steel and steel.get('saved_HS_case_outcomes_NOT_validation', '').split(' | ')[0].count(': '):
+        model_line = steel['saved_HS_case_outcomes_NOT_validation'].split(' | ')[0].partition(': ')[2].replace('_', ' ').replace('=', ': ')
+    owner_line = 'None' if not steel or steel.get('owner_review', 'no_owner_acceptance') == 'no_owner_acceptance' else 'Owner decision recorded'
+    example = (lambda text: f'<div class="ex"><span class="k">Steel example</span>{text}</div>') if steel else (lambda text: '')
+    parts.append(f'''<section id="how"><h2>How HSGraph keeps evidence, checks and opinions apart</h2>
+<p>Each record carries up to four layers. They are stored separately. A later layer never rewrites an earlier one, and agreement between layers is not proof.</p>
+<div class="layers">
+<div class="layer"><h3>1. Source record</h3><p>What the USLCI process says about the product: its name, direction (input or output) and amount.</p>{example(esc(steel['source_declared_product']) if steel else '')}</div>
+<div class="layer"><h3>2. Rule check</h3><p>Recorded classification rules applied to the record. Ends in one of the four outcomes below.</p>{example(chip(steel['mechanical_outcome']) if steel else '')}</div>
+<div class="layer"><h3>3. Model assessment</h3><p>Two saved AI passes, an assessor and a challenger, each with an outcome, the facts it found missing and any concerns. Saved once; never re-run for this page.</p>{example(esc(model_line))}</div>
+<div class="layer"><h3>4. Human review</h3><p>An owner decision by the project owner, or a specialist validation by a classification expert. Across the whole dataset: one owner decision, zero specialist validations.</p>{example(esc(owner_line))}</div>
+</div><h3>The four rule-check outcomes</h3><ul class="legend">''')
+    for outcome, (label, cls, explanation) in status.items():
+        parts.append(f'<li>{chip(outcome)}<span>{esc(explanation)}</span><span class="n">{counts.get(outcome, 0)} of these {len(rows)} records</span></li>')
+    parts.append('</ul></section>')
+    parts.append(f'<section id="examples"><h2>The ten records</h2><p>Chosen by hand to show different outcomes, not drawn at random. Codes are saved candidates; “conditions pass” does not mean validated. {with_model} of the {len(rows)} records have saved model assessments; the others have only the rule-check outcome.</p>'
+                 '<div class="scroll" tabindex="0" role="region" aria-label="Ten records; scroll sideways on small screens"><table><caption>Rule-check outcome per record. No specialist-validated classifications.</caption>'
+                 '<thead><tr><th scope="col">Record</th><th scope="col">Product, as named in the source</th><th scope="col">Candidate code(s)</th><th scope="col">Rule check</th><th scope="col">In short</th></tr></thead><tbody>')
     for r in rows:
-        code = 'No single target' if r['saved_projection_target'] == 'none' else 'Proposed: ' + r['saved_projection_target']
-        if r['saved_revision_alternatives'] != 'none listed':
-            code += '; alternatives: ' + r['saved_revision_alternatives']
-        owner = 'Original revision only; not the displayed later projection' if r['owner_review'].startswith('owner_accepted') else 'None for this instance'
-        parts.append(f'<tr><td><a href="#{r["row_id"]}">{r["row_id"]} · {esc(r["source_declared_product"])}</a></td><td>{esc(code)}</td><td>{esc(status.get(r["mechanical_outcome"], (r["mechanical_outcome"], ""))[0])}</td><td>{esc(owner)}</td></tr>')
-    parts.append('</tbody></table></div></section>')
+        short = summarise(r)[0]
+        parts.append(f'<tr><th scope="row"><a href="#{r["row_id"]}">{r["row_id"]}</a></th><td>{esc(r["source_declared_product"])}</td><td class="code">{esc(codes(r))}</td><td>{chip(r["mechanical_outcome"])}</td><td class="short">{esc(short)}</td></tr>')
+    parts.append('</tbody></table></div>')
     for r in rows:
-        label, explanation = status.get(r['mechanical_outcome'], (r['mechanical_outcome'], 'See the saved evidence.'))
-        title, takeaway, question = prompts.get(r['row_id'], ('Inspect another source record', explanation, 'Would this evidence help your task, and what additional information would you need?'))
-        parts.append(f'<section class="case" id="{r["row_id"]}"><p class="muted">{esc(title)}</p><h2>{r["row_id"]} · {esc(r["source_declared_product"])}</h2><p><span class="badge">{esc(label)}</span> · No specialist validation</p><p>{esc(takeaway)}</p><p><strong>Your question:</strong> {esc(question)}</p>')
-        parts.append('<details><summary>What is missing? Read the saved findings</summary><p>These are attributed saved model findings, not newly verified facts. No listed gap does not prove the information is complete.</p><ul class="facts">')
-        for fact in r.get('recorded_missing_facts', 'See retained evidence').split(' | '):
-            parts.append(f'<li>{esc(fact)}</li>')
+        short, plain, question, kicker = summarise(r)
+        question = question or 'Would this help your task, and what would you need next?'
+        owner_chip = '<span class="chip plain">Owner decision: earlier revision only</span>' if r.get('owner_review', '').startswith('owner_accepted') else ''
+        parts.append(f'<section class="case" id="{r["row_id"]}"><p class="eyebrow">Record {r["row_id"]}{" · " + esc(kicker) if kicker else ""}</p>'
+                     f'<div class="case-head"><h3>{esc(r["source_declared_product"])}</h3>{chip(r["mechanical_outcome"])}<span class="chip plain">No specialist validation</span>{owner_chip}</div>'
+                     f'<p>{esc(plain)}</p><p><strong>Your question:</strong> {esc(question)}</p>')
+        parts.append('<details><summary>Missing facts recorded with this row</summary><p class="muted">Quoted from the saved model findings, with the pass that made each one. A short list does not mean the record is complete.</p><ul class="facts">')
+        parts.extend(fact_item(fact) for fact in r.get('recorded_missing_facts', 'See retained evidence').split(' | '))
         parts.append('</ul></details>')
-        parts.append(f'<details><summary>Warnings and disagreements retained in the record</summary><p>{esc(r.get("post_run_concerns", "See retained evidence")).replace(" | ", "<br><br>")}</p></details>')
-        parts.append('<details><summary>Technical details: codes, review states, IDs and locators</summary><dl>')
+        concerns = r.get('post_run_concerns', 'See retained evidence')
+        if concerns.startswith('None recorded'):
+            body = '<p>None recorded. This is not proof of correctness.</p>'
+        else:
+            body = '<ul class="facts">' + ''.join(fact_item(c) for c in concerns.split(' | ')) + '</ul>'
+        parts.append(f'<details><summary>Warnings and disagreements kept in the record</summary>{body}</details>')
+        parts.append('<details><summary>Technical details: IDs, locators and review states</summary><dl class="tech">')
         for key, value in r.items():
             if key not in ('row_id', 'source_declared_product', 'evidence_file'):
-                parts.append(f'<dt>{esc(key.replace("_", " "))}</dt><dd>{esc(value).replace(" | ", "<br><br>")}</dd>')
-        parts.append(f'</dl></details><p><a href="{esc(r["evidence_file"])}">Full original evidence (JSON)</a> · <a href="#feedback">Give feedback on {r["row_id"]}</a> · <a href="#examples">Back to examples</a></p></section>')
-    parts.append('''<section class="panel" id="feedback"><h2>What we need back from you</h2><p>One short reply is enough. “I cannot see a use for this” is useful feedback too. You do not need to classify the product, validate all ten rows, or endorse the project.</p>
+                parts.append(f'<dt>{esc(key.replace("_", " "))}</dt><dd>{esc(value).replace(" | ", chr(10))}</dd>')
+        parts.append(f'</dl></details><p class="links"><a href="{esc(r["evidence_file"])}">Full saved evidence (JSON)</a> · <a href="#feedback">Give feedback on {r["row_id"]}</a> · <a href="#examples">Back to the list</a></p></section>')
+    parts.append('''</section>
+<section id="dataset"><h2>What the full dataset contains</h2>
+<p>The ten records above come from HSGraph v0.1.0, published on Zenodo with a DOI. Counts are taken from its data card.</p>
+<ul class="stats"><li><b>6,936</b><span>HS codes (HS 2022)</span></li><li><b>1,422</b><span>USLCI processes</span></li><li><b>76,211</b><span>recorded inputs and outputs</span></li><li><b>670</b><span>product records assessed</span></li><li><b>1</b><span>owner-accepted mapping</span></li><li><b>0</b><span>specialist validations</span></li></ul>
+<p>Every assessment in the dataset is an automated proposal with its evidence attached. The one owner acceptance is the cement record shown in R02.</p></section>
+<section id="limits"><h2>What this is not</h2><ul class="limits">
+<li>Not a customs ruling or classification advice. Codes here are saved candidates.</li>
+<li>Not a verified supply chain or bill of materials. No supplier link is claimed.</li>
+<li>Not a complete life-cycle inventory. The full dataset keeps most rows but leaves conversions and formulas unresolved.</li>
+<li>Ten hand-picked records, not representative of the dataset.</li>
+<li>Zero specialist validations so far. Saved AI findings are recorded outputs, not verification, and one owner acceptance is not expert review.</li></ul></section>
+<section id="feedback"><h2>What we need back from you</h2><p>One short reply is enough. “I cannot see a use for this” is useful feedback too. You do not need to classify the product, validate all ten rows, or endorse the project.</p>
 <label for="reply"><strong>Copy this into your reply and fill in whichever lines you can:</strong></label>
-<textarea id="reply" readonly>Example I looked at: R__
+<textarea id="reply" readonly>Record I looked at: R__
 My role / task:
 This would help me to… / would not help because…
 I would otherwise look up…
 The missing or confusing part is…
 The next piece of evidence I would need is…</textarea>
-<p>Reply to the person who sent you this sample, or email <a href="mailto:rbedekar@zeroinsec.com?subject=HSGraph%20sample%20feedback">rbedekar@zeroinsec.com</a>. The email link opens your own mail app; this page does not submit or store a response. Please do not send confidential product data.</p>
-<p>We will use feedback to decide whether evidence inspection is useful and what to improve. We will not treat it as specialist acceptance of a code.</p></section>
-<section class="panel" id="downloads"><h2>Data, source and terms</h2><p><a href="samples.csv">Spreadsheet CSV</a> · <a href="samples.json">Summary JSON</a> · <a href="README.md">Selection and verification guide</a> · <a href="LICENSE-DATA">Component-specific terms</a> · <a href="https://doi.org/10.5281/zenodo.22857372">Published full dataset</a></p><p>The same ten rows and saved findings are retained; only this guide and presentation changed. Share the complete package with its source notices. No new models were run.</p></section></main>
-<footer>Credit: Rizwan Bedekar / HSGraph; DOE / NREL / Alliance for Sustainable Energy; USLCI contributors and other credited sources. No endorsement. See the included notices for component-specific terms.</footer></body></html>''')
+<p>Reply to the person who sent you this page, or email <a href="mailto:rbedekar@zeroinsec.com?subject=HSGraph%20sample%20feedback">rbedekar@zeroinsec.com</a>. The link opens your own mail app; this page does not submit or store anything. Please do not send confidential product data.</p>
+<p>We will use replies to decide whether evidence inspection is useful and what to improve. We will not treat a reply as specialist acceptance of a code.</p></section>
+<section id="downloads"><h2>Data, source and terms</h2><p><a href="samples.csv">Spreadsheet (CSV)</a> · <a href="samples.json">Summary (JSON)</a> · <a href="README.md">Selection and verification guide</a> · <a href="LICENSE-DATA">Component-specific terms</a> · <a href="https://doi.org/10.5281/zenodo.22857372">Full dataset on Zenodo</a> · <a href="https://github.com/r-bedekar/hsgraph-open">Code on GitHub</a></p>
+<p>The ten rows and their saved findings are unchanged from earlier versions of this sample; only the explanation and layout changed. Share the whole package with its notices. No new model runs were made for this page.</p></section></main>
+<footer>Credit: Rizwan Bedekar / HSGraph; DOE / NREL / Alliance for Sustainable Energy; USLCI contributors and other credited sources. No endorsement. See the included notices for component-specific terms.</footer></div></body></html>''')
     return '\n'.join(parts).encode()
 
 
@@ -350,7 +553,7 @@ def build(source_zip, output):
     files['README.md'] = README.encode()
     for tool in ('build_review_sample.py', 'verify_review_sample.py'):
         files['tools/' + tool] = Path(__file__).with_name(tool).read_bytes()
-    manifest = {'sample_version': 'discussion-sample-2-guided', 'source_release_doi': DOI,
+    manifest = {'sample_version': 'discussion-sample-3-plain-language', 'source_release_doi': DOI,
                 'source_zip_sha256': SOURCE_SHA, 'frozen_inner_sha256': INNER_SHA,
                 'row_count': 10, 'distinct_instances': 10,
                 'distinct_definitions': len({projections[e]['record']['definition']['native_id'] for e in selected}),

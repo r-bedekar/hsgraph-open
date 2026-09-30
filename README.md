@@ -1,9 +1,9 @@
 # HSGraph: ten-instance evidence-inspection sample
 
-Discussion sample 2 (guided presentation), derived from published v0.1.0.
+Discussion sample 3 (plain-language presentation), derived from published v0.1.0.
 Not v0.2.0 and not a new classification dataset. Prepared for Rizwan Bedekar /
-HSGraph on 2026-09-21. The ten rows and embedded evidence are unchanged from
-discussion sample 1; only presentation, guide and packaging tools changed.
+HSGraph on 2026-09-30. The ten rows and embedded evidence are unchanged from
+discussion samples 1 and 2; only presentation, guide and packaging tools changed.
 Source release: https://doi.org/10.5281/zenodo.22857372
 Code: https://github.com/r-bedekar/hsgraph-open/tree/v0.1.0
 Contact: rbedekar@zeroinsec.com
@@ -15,7 +15,7 @@ installation, AI account or network connection is needed. The table has exactly
 10 distinct exchange instances from 10 flow definitions; they are not 10 verified
 HS classifications. samples.csv is for spreadsheet inspection; samples.json is
 the structured summary. Each row links to its underlying evidence JSON.
-Follow the five-minute guide, inspect one case, and use the feedback template.
+Follow the short guide, inspect one case, and use the feedback template.
 You are being asked about usefulness and clarity, not to certify an HS code.
 The steel evidence diagram shows recorded proposal relationships, not material
 flows or verified supply-chain connections. No form collects or sends data.
