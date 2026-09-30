@@ -250,7 +250,8 @@ section.case:target{background:var(--surface);box-shadow:0 0 0 12px var(--surfac
 ol.steps{padding-left:1.3em}ol.steps li{margin-bottom:.5em}
 .muted{color:var(--ink-2)}
 small{font-size:.86rem}
-.chip{display:inline-block;padding:2px 11px;border-radius:999px;font-size:.86rem;font-weight:650;line-height:1.5;white-space:nowrap;border:1px solid transparent}
+.chip{display:inline-block;padding:2px 11px;border-radius:999px;font-size:.86rem;font-weight:650;line-height:1.5;border:1px solid transparent}
+td .chip{white-space:nowrap}
 .chip.pass{color:var(--pass);background:var(--pass-bg)}
 .chip.multi{color:var(--multi);background:var(--multi-bg)}
 .chip.gap{color:var(--gap);background:var(--gap-bg)}
@@ -271,7 +272,8 @@ figcaption{margin-top:14px;color:var(--ink-2);font-size:.95rem;max-width:72ch}
 .codes span{display:flex;gap:10px;align-items:baseline;font-size:.95rem}
 .codes b{font-family:var(--font-mono);font-size:1.05rem;font-variant-numeric:tabular-nums}
 .layers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:22px 0}
-.layer{border-top:3px solid var(--accent);padding-top:12px;min-width:0}
+.layer{border-top:3px solid var(--accent);padding-top:12px;min-width:0;display:flex;flex-direction:column}
+.layer .ex{margin-top:auto}
 .layer h3{font-size:1.1rem;margin:0 0 .4em;font-family:var(--font-body);font-weight:700}
 .layer p{font-size:.95rem;margin:0 0 .6em;color:var(--ink-2)}
 .layer .ex{font-size:.9rem;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
@@ -305,7 +307,8 @@ ul.limits{padding-left:1.2em}ul.limits li{margin-bottom:.4em}
 textarea{box-sizing:border-box;width:100%;max-width:72ch;min-height:200px;padding:14px;font:15px/1.6 var(--font-mono);color:var(--ink);border:1px solid var(--line);border-radius:6px;background:var(--surface)}
 footer{padding:22px 0;font-size:.86rem;color:var(--ink-2);border-top:1px solid var(--line)}
 @media (max-width:820px){.layers{grid-template-columns:1fr 1fr}}
-@media (max-width:720px){.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center;padding:0}.layers{grid-template-columns:1fr}section{padding-block:30px}h1{max-width:none}}
+@media (max-width:900px){.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center;padding:0}}
+@media (max-width:720px){.layers{grid-template-columns:1fr}section{padding-block:30px}h1{max-width:none}.scroll{overflow:visible}table{min-width:0;display:block}thead{display:none}tbody,tr,th,td{display:block}tr{border:1px solid var(--line);border-radius:8px;background:var(--surface);padding:10px 14px;margin-bottom:12px}th,td{border:0;padding:3px 0}tbody th{font-size:1.05rem;padding-bottom:0}td.code{white-space:normal}td .chip{white-space:normal}td::before{content:attr(data-label);display:block;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);font-weight:650;margin-top:8px}caption{display:block;width:auto;padding:0 0 10px}}
 '''
 
 
@@ -421,11 +424,11 @@ def render_html(rows):
 <figure><div class="flow" role="group" aria-label="Steel coil: source record, two candidate codes, the deciding fact, and what HSGraph records">
 <div class="node"><span class="k">1 · Source record</span><span class="v">{esc(steel['source_declared_product'])}</span><span class="d">Product output of a USLCI process. Copied unchanged from the published release.</span><a href="{esc(steel['evidence_file'])}">Open the saved evidence (JSON)</a></div>
 <div class="arrow" aria-hidden="true">→</div>
-<div class="node"><span class="k">2 · Two candidate codes</span><div class="codes">{code_lines}</div><span class="d">Width thresholds as stated in the saved assessment.</span></div>
+<div class="node"><span class="k">2 · Candidate codes</span><div class="codes">{code_lines}</div><span class="d">Width thresholds as stated in the saved assessment.</span></div>
 <div class="arrow" aria-hidden="true">→</div>
-<div class="node"><span class="k">3 · The deciding fact</span><span class="v">Coil width</span><span><span class="chip gap">Not in the source record</span></span><span class="d">Nor are measured carbon and chromium percentages, which would let the stainless definition be checked independently.</span></div>
+<div class="node"><span class="k">3 · Deciding fact</span><span class="v">Coil width</span><span><span class="chip gap">Not in the source record</span></span><span class="d">Nor are measured carbon and chromium percentages, which would let the stainless definition be checked independently.</span></div>
 <div class="arrow" aria-hidden="true">→</div>
-<div class="node result"><span class="k">4 · What HSGraph records</span><span>{chip(steel['mechanical_outcome'])}</span><span class="d">Both codes kept. The missing facts are saved with the record. No width is guessed and no code is chosen.</span></div>
+<div class="node result"><span class="k">4 · Recorded result</span><span>{chip(steel['mechanical_outcome'])}</span><span class="d">Both codes kept. The missing facts are saved with the record. No width is guessed and no code is chosen.</span></div>
 </div><figcaption>This is an evidence diagram, not a material-flow or supplier network. It shows what is recorded for one product record; it adds no classification and no supplier link.</figcaption></figure></section>''')
     model_line = 'No saved model assessment'
     if steel and steel.get('saved_HS_case_outcomes_NOT_validation', '').split(' | ')[0].count(': '):
@@ -448,7 +451,7 @@ def render_html(rows):
                  '<thead><tr><th scope="col">Record</th><th scope="col">Product, as named in the source</th><th scope="col">Candidate code(s)</th><th scope="col">Rule check</th><th scope="col">In short</th></tr></thead><tbody>')
     for r in rows:
         short = summarise(r)[0]
-        parts.append(f'<tr><th scope="row"><a href="#{r["row_id"]}">{r["row_id"]}</a></th><td>{esc(r["source_declared_product"])}</td><td class="code">{esc(codes(r))}</td><td>{chip(r["mechanical_outcome"])}</td><td class="short">{esc(short)}</td></tr>')
+        parts.append(f'<tr><th scope="row"><a href="#{r["row_id"]}">{r["row_id"]}</a></th><td data-label="Product, as named in the source">{esc(r["source_declared_product"])}</td><td class="code" data-label="Candidate code(s)">{esc(codes(r))}</td><td data-label="Rule check">{chip(r["mechanical_outcome"])}</td><td class="short" data-label="In short">{esc(short)}</td></tr>')
     parts.append('</tbody></table></div>')
     for r in rows:
         short, plain, question, kicker = summarise(r)

@@ -51,8 +51,8 @@
       "bytes": 6449
     },
     "START_HERE.html": {
-      "sha256": "c0df0ea56ca5f14bf8062218796dca1e20d487378608af347836e43163be87c9",
-      "bytes": 52697
+      "sha256": "fb38a8fa890b659ecfefc5c7dd4b6e22e3ced9d3c773f1f5f72f26243582039a",
+      "bytes": 54563
     },
     "candidate/DATA-LICENSE.txt": {
       "sha256": "0711a53463d02f59dbdb656f85676f96d2a7fd81f482fe56650a05c09a2b8da7",
@@ -143,8 +143,8 @@
       "bytes": 19594
     },
     "index.html": {
-      "sha256": "c0df0ea56ca5f14bf8062218796dca1e20d487378608af347836e43163be87c9",
-      "bytes": 52697
+      "sha256": "fb38a8fa890b659ecfefc5c7dd4b6e22e3ced9d3c773f1f5f72f26243582039a",
+      "bytes": 54563
     },
     "samples.csv": {
       "sha256": "c407e05fefd700f52b11afd6e9b8cc327b5a3b401a82454cebff6224bb5b2ee4",
@@ -163,8 +163,8 @@
       "bytes": 8385
     },
     "tools/build_review_sample.py": {
-      "sha256": "50945d60b0afc29ebdd5245eebb4f3eaa48ef7989ba6b9c63a7242d7162b96ff",
-      "bytes": 46052
+      "sha256": "9f963945e6ccac229b3b5b362144c29177f50622c35cff3bf8dffab9ff799ef6",
+      "bytes": 46820
     },
     "tools/verify_review_sample.py": {
       "sha256": "1b3e99231238ab8b5e3d4b55e9b1ea499e7844e62b3dd670c9c9b62dfc41b016",
