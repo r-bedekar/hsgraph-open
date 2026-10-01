@@ -425,13 +425,13 @@ def render_html(rows, graph=None):
                             f'Code {code} is proposed, but the saved checks flag a conflict, so the code is not settled.'),
         }.get(outcome, (f'{code}: {outcome}', f'Code {code}; saved outcome {outcome}. See the saved evidence.'))
         if withheld(r):
-            short += '; reasons not public'
-            plain += ' No saved model assessment exists for this exact record, and the rule text behind the check is not part of the public release, so the outcome is shown without its reasons.'
+            short += '; rule text not in v0.1.0'
+            plain += ' No saved model assessment exists for this exact record, and the rule text behind this check is not in v0.1.0, so the outcome is shown without its reasons.'
         return short, plain, None, None
 
     def fact_item(text):
         if 'withheld' in text and 'reconstructed' in text:
-            return '<li>The reasoning text behind this check is not part of the public release, and nothing has been reconstructed from private files.</li>'
+            return '<li>The rule text behind this check is not in v0.1.0.</li>'
         who, sep, rest = text.partition(': ')
         if sep and '/' in who and len(who) < 60:
             fact, sep2, effect = rest.partition(' Effect: ')
@@ -454,7 +454,7 @@ def render_html(rows, graph=None):
              '<div class="brand"><a href="#">HSGraph</a><span>A shared map of production</span></div>',
              '<h1>See how products connect.</h1>',
              '<p class="lede">What goes into a product? Which process makes it? Where is it used next? HSGraph connects materials, production processes and products, with HS codes and evidence attached.</p>',
-             '<p class="hero-note">The graph is the project. This page is one way to explore it.</p>',
+             '<p class="hero-note">The graph is the product. This page is one way to explore it.</p>',
              '<p class="concept-path" aria-label="Concept: materials feed a process, which makes a product that can enter another process">Materials <span aria-hidden="true">→</span> Process <span aria-hidden="true">→</span> Product <span aria-hidden="true">→</span> Next process</p>',
              '<nav class="top" aria-label="Page navigation"><a class="button" href="#graph">Explore the production graph</a><a href="#uses">Who can use it</a><a href="#examples">Check the code matches</a><a href="#downloads">Get the data</a></nav>',
              '<div class="terms"><p><b>HS code.</b> The Harmonized System is the international numbering used on customs declarations to say what a product is. Four digits name a heading, six a subheading.</p>',
