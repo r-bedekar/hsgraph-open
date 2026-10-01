@@ -1,9 +1,11 @@
-# HSGraph: ten-instance evidence-inspection sample
+# HSGraph: a map of how products connect
 
-Discussion sample 3 (plain-language presentation), derived from published v0.1.0.
-Not v0.2.0 and not a new classification dataset. Prepared for Rizwan Bedekar /
-HSGraph on 2026-09-30. The ten rows and embedded evidence are unchanged from
-discussion samples 1 and 2; only presentation, guide and packaging tools changed.
+Discussion sample 4 (production graph), derived from published v0.1.0.
+Prepared for Rizwan Bedekar / HSGraph on 2026-10-01. Materials and products
+connect through documented processes. HS classifications form a separate layer.
+The website and Excel are reading views of that graph. The ten original
+classification rows and their evidence are unchanged. This is not a new release
+of the underlying classification dataset.
 Source release: https://doi.org/10.5281/zenodo.22857372
 Code: https://github.com/r-bedekar/hsgraph-open/tree/v0.1.0
 Contact: rbedekar@zeroinsec.com
@@ -15,6 +17,29 @@ installation, AI account or network connection is needed. The table has exactly
 10 distinct exchange instances from 10 flow definitions; they are not 10 verified
 HS classifications. samples.csv is for spreadsheet inspection; samples.json is
 the structured summary. Each row links to its underlying evidence JSON.
+Start with the interactive production diagram, or open production-graph.xlsx.
+Select stretch film, Portland cement or aluminium casting. Select a product to
+inspect its proposed codes; select a linked process to explore its inputs. The
+detail panel also lists included downstream uses of an exact output. JavaScript
+enables graph interaction; a text branch and the complete JSON remain available
+without it. The font and all scripts are local. No network requests are needed.
+
+The graph selects these three roots plus their direct explicit providers and
+direct consumers. All direct product, service and waste exchanges for those
+processes are retained. Environmental exchanges are counted separately. This is
+a bounded sample, not the whole production graph. A missing link stays unknown.
+HS-code matches never create links. Default providers describe inventory models,
+not actual suppliers, and the models can cover different historical periods.
+Quantities and formulas are preserved in the evidence, not multiplied along paths.
+The film model's description and waste record disagree on the disposal route;
+their original wording is retained rather than silently reconciled.
+
+production-graph.json is the structured view. production-evidence.json contains
+unchanged source records and line hashes used to build it. The workbook includes
+the diagram, links, processes, products, original ten cases, references and notices.
+No HS catalogue wording is added to this public package. The separately generated
+local review workbook can include wording from a pinned local catalogue.
+
 Follow the short guide, inspect one case, and use the feedback template.
 You are being asked about usefulness and clarity, not to certify an HS code.
 The steel evidence diagram shows recorded proposal relationships, not material
@@ -79,7 +104,7 @@ metadata does not describe current publication or recovery status.
 
 ## Modifications and licensing
 
-New work consists of selection, record wrappers, field projection and HTML/CSV
+New work consists of selection, record wrappers, graph projection and HTML/Excel/CSV
 presentation. No source facts, mechanical predicates, assessment outcomes,
 decisions or original release bytes were changed; no models were run. All
 missing-fact text displayed from a model is attributed to that saved model pass.
@@ -92,6 +117,7 @@ content retains its component terms. Original software: Apache-2.0. Credit
 Rizwan Bedekar / HSGraph and DOE / NREL / Alliance for Sustainable Energy,
 USLCI contributors, USITC, EPA/FEDEFL, NIST and BIPM as applicable. No endorsement
 or new source-rights clearance is implied. See candidate/source-use-decisions.json.
+Manrope font: SIL Open Font License 1.1, retained in assets/OFL-Manrope.txt.
 
 ## Verification / reproduction (optional, Python 3.10+)
 

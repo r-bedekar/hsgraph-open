@@ -12,9 +12,13 @@ import zipfile
 sys.dont_write_bytecode = True
 
 try:
-    from .build_review_sample import row_summary, render_html
+    from .build_review_sample import row_summary, render_html, COPIED
+    from .production_graph import project_graph
+    from .production_workbook import workbook_bytes
 except ImportError:
-    from build_review_sample import row_summary, render_html
+    from build_review_sample import row_summary, render_html, COPIED
+    from production_graph import project_graph
+    from production_workbook import workbook_bytes
 
 SOURCE_SHA = 'f73a7d457ef69be4848e0d169bafc157d0faa3b15b3b56eac43d6fdc17a38803'
 
@@ -60,18 +64,23 @@ def verify(root, source_zip=None):
         assert evidence['row_id'] == original['row_id']
         assert row_summary(int(original['row_id'][1:]), evidence['source_records']) == original
     assert sum(r['owner_review'].startswith('owner_accepted') for r in rows) == manifest['owner_accepted_exact_instances'] == 1
-    assert (root / 'START_HERE.html').read_bytes() == render_html(rows), 'HTML differs from summary'
-    assert (root / 'index.html').read_bytes() == render_html(rows), 'Site entry differs from summary'
+    graph_records = json.loads((root / 'production-evidence.json').read_text())['source_records']
+    graph = project_graph(graph_records)
+    assert json.loads((root / 'production-graph.json').read_text()) == graph, 'Graph differs from source records'
+    assert manifest['production_graph'] == graph['counts']
+    assert (root / 'START_HERE.html').read_bytes() == render_html(rows, graph), 'HTML differs from summary'
+    assert (root / 'index.html').read_bytes() == render_html(rows, graph), 'Site entry differs from summary'
+    notices = {n: (root / n).read_bytes() for n in COPIED if n != 'candidate/usitc-legal-excerpts.jsonl'}
+    assert (root / 'production-graph.xlsx').read_bytes() == workbook_bytes(graph, rows, notices), 'Workbook differs from graph and examples'
     checked = 0
     if source_zip:
         source_zip = Path(source_zip)
         assert hashlib.sha256(source_zip.read_bytes()).hexdigest() == SOURCE_SHA, 'Source ZIP hash mismatch'
         with zipfile.ZipFile(source_zip) as source:
             cache = {}
-            for row in rows:
-                evidence = json.loads((root / row['evidence_file']).read_text(encoding='utf-8'))
-                assert evidence['row_id'] == row['row_id']
-                for item in evidence['source_records']:
+            collections = [graph_records] + [json.loads((root / row['evidence_file']).read_text(encoding='utf-8'))['source_records'] for row in rows]
+            for records in collections:
+                for item in records:
                     name = 'candidate/' + item['source_artifact']
                     if name not in cache:
                         cache[name] = source.read(name).splitlines(keepends=True)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a ten-instance discussion sample from the exact published ZIP only."""
+"""Build production graph and classification reading views from the published ZIP."""
 import argparse
 from collections import Counter
 import csv
@@ -8,7 +8,17 @@ import html
 import io
 import json
 from pathlib import Path
+import sys
 import zipfile
+
+sys.dont_write_bytecode = True
+
+try:
+    from .production_graph import select_records, project_graph, graph_section
+    from .production_workbook import workbook_bytes
+except ImportError:
+    from production_graph import select_records, project_graph, graph_section
+    from production_workbook import workbook_bytes
 
 SOURCE_SHA = 'f73a7d457ef69be4848e0d169bafc157d0faa3b15b3b56eac43d6fdc17a38803'
 INNER_SHA = '78b9a1f0afbad1ae0b7ef81e63af5d03c49cc79eb99a09ac853840e23bdca710'
@@ -23,12 +33,14 @@ COPIED = ('LICENSE', 'LICENSE-DATA', 'candidate/NOTICE-USLCI', 'candidate/NOTICE
           'candidate/EXCLUSIONS.md', 'candidate/MODIFICATIONS.md',
           'candidate/manifest.json', 'candidate/usitc-legal-excerpts.jsonl')
 
-README = '''# HSGraph: ten-instance evidence-inspection sample
+README = '''# HSGraph: a map of how products connect
 
-Discussion sample 3 (plain-language presentation), derived from published v0.1.0.
-Not v0.2.0 and not a new classification dataset. Prepared for Rizwan Bedekar /
-HSGraph on 2026-09-30. The ten rows and embedded evidence are unchanged from
-discussion samples 1 and 2; only presentation, guide and packaging tools changed.
+Discussion sample 4 (production graph), derived from published v0.1.0.
+Prepared for Rizwan Bedekar / HSGraph on 2026-10-01. Materials and products
+connect through documented processes. HS classifications form a separate layer.
+The website and Excel are reading views of that graph. The ten original
+classification rows and their evidence are unchanged. This is not a new release
+of the underlying classification dataset.
 Source release: https://doi.org/10.5281/zenodo.22857372
 Code: https://github.com/r-bedekar/hsgraph-open/tree/v0.1.0
 Contact: rbedekar@zeroinsec.com
@@ -40,6 +52,29 @@ installation, AI account or network connection is needed. The table has exactly
 10 distinct exchange instances from 10 flow definitions; they are not 10 verified
 HS classifications. samples.csv is for spreadsheet inspection; samples.json is
 the structured summary. Each row links to its underlying evidence JSON.
+Start with the interactive production diagram, or open production-graph.xlsx.
+Select stretch film, Portland cement or aluminium casting. Select a product to
+inspect its proposed codes; select a linked process to explore its inputs. The
+detail panel also lists included downstream uses of an exact output. JavaScript
+enables graph interaction; a text branch and the complete JSON remain available
+without it. The font and all scripts are local. No network requests are needed.
+
+The graph selects these three roots plus their direct explicit providers and
+direct consumers. All direct product, service and waste exchanges for those
+processes are retained. Environmental exchanges are counted separately. This is
+a bounded sample, not the whole production graph. A missing link stays unknown.
+HS-code matches never create links. Default providers describe inventory models,
+not actual suppliers, and the models can cover different historical periods.
+Quantities and formulas are preserved in the evidence, not multiplied along paths.
+The film model's description and waste record disagree on the disposal route;
+their original wording is retained rather than silently reconciled.
+
+production-graph.json is the structured view. production-evidence.json contains
+unchanged source records and line hashes used to build it. The workbook includes
+the diagram, links, processes, products, original ten cases, references and notices.
+No HS catalogue wording is added to this public package. The separately generated
+local review workbook can include wording from a pinned local catalogue.
+
 Follow the short guide, inspect one case, and use the feedback template.
 You are being asked about usefulness and clarity, not to certify an HS code.
 The steel evidence diagram shows recorded proposal relationships, not material
@@ -104,7 +139,7 @@ metadata does not describe current publication or recovery status.
 
 ## Modifications and licensing
 
-New work consists of selection, record wrappers, field projection and HTML/CSV
+New work consists of selection, record wrappers, graph projection and HTML/Excel/CSV
 presentation. No source facts, mechanical predicates, assessment outcomes,
 decisions or original release bytes were changed; no models were run. All
 missing-fact text displayed from a model is attributed to that saved model pass.
@@ -117,6 +152,7 @@ content retains its component terms. Original software: Apache-2.0. Credit
 Rizwan Bedekar / HSGraph and DOE / NREL / Alliance for Sustainable Energy,
 USLCI contributors, USITC, EPA/FEDEFL, NIST and BIPM as applicable. No endorsement
 or new source-rights clearance is implied. See candidate/source-use-decisions.json.
+Manrope font: SIL Open Font License 1.1, retained in assets/OFL-Manrope.txt.
 
 ## Verification / reproduction (optional, Python 3.10+)
 
@@ -312,7 +348,7 @@ footer{padding:22px 0;font-size:.86rem;color:var(--ink-2);border-top:1px solid v
 '''
 
 
-def render_html(rows):
+def render_html(rows, graph=None):
     esc = lambda x: html.escape(str(x), quote=True)
     status = {
         'ambiguous': ('More than one candidate', 'multi', 'The saved rules leave two or more codes possible; no single code is established.'),
@@ -401,18 +437,22 @@ def render_html(rows):
     parts = ['<!doctype html><html lang="en"><head><meta charset="utf-8">',
              '<meta name="viewport" content="width=device-width, initial-scale=1">',
              '<meta name="color-scheme" content="light dark">',
-             '<title>HSGraph evidence sample</title>',
-             '<style>' + _STYLE + '</style></head><body><div class="wrap"><header>',
-             '<p class="eyebrow">HSGraph · public sample · ten records from the v0.1.0 dataset</p>',
-             '<h1>The evidence behind a proposed customs code</h1>',
-             '<p class="lede">HSGraph links products in a public production database to Harmonized System (HS) customs codes, and keeps the evidence, the checks and the gaps next to every proposed code. This page shows ten real records from the published dataset.</p>',
-             '<div class="ask"><p><strong>What we are asking.</strong> Spend five minutes on one record and tell us whether this would help you in a real task. You are not being asked to certify a classification or to review all ten.</p></div>',
-             '<nav class="top" aria-label="Page navigation"><a class="button" href="#example">Start with one example</a><a href="#how">How it works</a><a href="#examples">The ten records</a><a href="#feedback">Feedback</a><a href="#downloads">Data and terms</a></nav>',
+             '<title>HSGraph — a map of how products connect</title>',
+             '<style>' + _STYLE + '</style>' + ('<link rel="stylesheet" href="assets/production-graph.css">' if graph else '') + '</head><body><div class="wrap"><header>',
+             '<div class="brand"><a href="#">HSGraph</a><span>A shared map of production</span></div>',
+             '<h1>See how products connect.</h1>',
+             '<p class="lede">What goes into a product? Which process makes it? Where is it used next? HSGraph connects materials, production processes and products, with HS codes and evidence attached.</p>',
+             '<p class="hero-note">The graph is the project. This page is one way to explore it.</p>',
+             '<p class="concept-path" aria-label="Concept: materials feed a process, which makes a product that can enter another process">Materials <span aria-hidden="true">→</span> Process <span aria-hidden="true">→</span> Product <span aria-hidden="true">→</span> Next process</p>',
+             '<nav class="top" aria-label="Page navigation"><a class="button" href="#graph">Explore the production graph</a><a href="#uses">Who can use it</a><a href="#examples">Check the code matches</a><a href="#downloads">Get the data</a></nav>',
              '<div class="terms"><p><b>HS code.</b> The Harmonized System is the international numbering used on customs declarations to say what a product is. Four digits name a heading, six a subheading.</p>',
              '<p><b>USLCI record.</b> The U.S. Life Cycle Inventory Database describes industrial processes and the products flowing into and out of them. A record here is one such flow in one documented process, not every product with that name.</p></div>',
              '</header><main>',
+             graph_section(graph) if graph else '',
+             '<section id="code-tree"><h2>Where do the HS codes fit?</h2><p>There are two kinds of links. The production graph shows how things are made. The HS tree groups products into categories: chapter → heading → subheading. A product record links to its proposed category, with the evidence and open questions kept beside it.</p><p>For example, the film record above has three possible headings in chapter 39. Those are alternative classifications for that record; they do not create three production routes.</p></section>' if graph else '',
+             '<section id="uses"><h2>One graph. Different ways to use it.</h2><p>The data can be a starting point for company software. These are uses we are building towards; the examples below show the evidence we have today.</p><div class="use-columns"><div><h3>ERP and procurement</h3><p>Connect product records to their documented inputs and classifications.</p></div><div><h3>RFPs and supplier discussions</h3><p>See what needs to be specified, and ask for the missing information.</p></div><div><h3>Manufacturing planning</h3><p>Explore recorded processes, their inputs and outputs, and the gaps that need checking.</p></div></div><p>A shared HS code does not make two products interchangeable. Each connection belongs to the exact records behind it.</p></section>',
              '<section id="guide"><h2>Five minutes, one record</h2><ol class="steps">',
-             '<li>Read the steel example below. Two codes are possible, and one missing fact would decide it.</li>',
+             '<li>Explore a production branch above. Then look at how one product connects to its possible HS codes below.</li>',
              '<li>Open <a href="#R01">record R01</a> and check that the saved findings say what is missing. We did not fill the gap or choose a code.</li>',
              '<li>Tell us whether that would help you, using the <a href="#feedback">reply template</a>. No specialist credentials are needed to comment on clarity.</li></ol>',
              '<p>Have five more minutes? <a href="#R02">R02</a> shows the one owner decision in the dataset and its limits. <a href="#R05">R05</a> shows two model passes agreeing while the record still carries a conflict.</p></section>']
@@ -420,7 +460,7 @@ def render_html(rows):
         code_lines = ''.join(f'<span><b>{esc(c)}</b>{esc(thresholds.get(c, ""))}</span>'
                              for c in steel['saved_revision_alternatives'].split('; '))
         parts.append(f'''<section id="example"><h2>One example: a stainless-steel coil</h2>
-<p>Every row on this page works the same way: a source record, the codes that could apply, the fact that would decide, and what was recorded when that fact was missing.</p>
+<p>The production graph needs product-to-code links too. This coil shows why one of those links can remain open: the record has no width, so two headings are still possible.</p>
 <figure><div class="flow" role="group" aria-label="Steel coil: source record, two candidate codes, the deciding fact, and what HSGraph records">
 <div class="node"><span class="k">1 · Source record</span><span class="v">{esc(steel['source_declared_product'])}</span><span class="d">Product output of a USLCI process. Copied unchanged from the published release.</span><a href="{esc(steel['evidence_file'])}">Open the saved evidence (JSON)</a></div>
 <div class="arrow" aria-hidden="true">→</div>
@@ -495,8 +535,8 @@ The missing or confusing part is…
 The next piece of evidence I would need is…</textarea>
 <p>Reply to the person who sent you this page, or email <a href="mailto:rbedekar@zeroinsec.com?subject=HSGraph%20sample%20feedback">rbedekar@zeroinsec.com</a>. The link opens your own mail app; this page does not submit or store anything. Please do not send confidential product data.</p>
 <p>We will use replies to decide whether evidence inspection is useful and what to improve. We will not treat a reply as specialist acceptance of a code.</p></section>
-<section id="downloads"><h2>Data, source and terms</h2><p><a href="samples.csv">Spreadsheet (CSV)</a> · <a href="samples.json">Summary (JSON)</a> · <a href="README.md">Selection and verification guide</a> · <a href="LICENSE-DATA">Component-specific terms</a> · <a href="https://doi.org/10.5281/zenodo.22857372">Full dataset on Zenodo</a> · <a href="https://github.com/r-bedekar/hsgraph-open">Code on GitHub</a></p>
-<p>The ten rows and their saved findings are unchanged from earlier versions of this sample; only the explanation and layout changed. Share the whole package with its notices. No new model runs were made for this page.</p></section></main>
+<section id="downloads"><h2>Data, source and terms</h2><p><a href="production-graph.xlsx">Production graph in Excel</a> · <a href="production-graph.json">Production graph (JSON)</a> · <a href="samples.csv">Classification examples (CSV)</a> · <a href="samples.json">Classification examples (JSON)</a> · <a href="README.md">Selection and verification guide</a> · <a href="LICENSE-DATA">Component-specific terms</a> · <a href="https://doi.org/10.5281/zenodo.22857372">Full dataset on Zenodo</a> · <a href="https://github.com/r-bedekar/hsgraph-open">Code on GitHub</a></p>
+<p>The graph adds a view of existing production records. The ten classification rows and their saved findings are unchanged. Share the whole package with its notices. No new model runs were made for this page.</p></section></main>
 <footer>Credit: Rizwan Bedekar / HSGraph; DOE / NREL / Alliance for Sustainable Energy; USLCI contributors and other credited sources. No endorsement. See the included notices for component-specific terms.</footer></div></body></html>''')
     return '\n'.join(parts).encode()
 
@@ -511,7 +551,7 @@ def build(source_zip, output):
         raise FileExistsError('Use fresh output paths; existing files will not be replaced')
     with zipfile.ZipFile(io.BytesIO(source)) as z:
         names = ('exchanges', 'processes', 'supporting-records', 'mapping-projections',
-                 'mapping-revisions', 'identity-assessments', 'smoke1', 'smoke2', 'owner-decisions')
+                 'mapping-revisions', 'identity-assessments', 'smoke1', 'smoke2', 'owner-decisions', 'provider-links')
         tables = {name: load_records(z, name + '.jsonl') for name in names}
         by_id = {name: {x['record']['id']: x for x in tables[name]}
                  for name in ('exchanges', 'processes', 'mapping-revisions')}
@@ -550,13 +590,25 @@ def build(source_zip, output):
     writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator='\n')
     writer.writeheader(); writer.writerows({k: csv_cell(v) for k, v in r.items()} for r in rows)
     files['samples.csv'] = stream.getvalue().encode('utf-8-sig')
-    files['START_HERE.html'] = render_html(rows)
+    graph_records = select_records(tables)
+    graph = project_graph(graph_records)
+    files['production-evidence.json'] = json_bytes({'source_release': DOI, 'source_records': graph_records})
+    files['production-graph.json'] = json_bytes(graph)
+    notices = {n: files[n] for n in COPIED if n != 'candidate/usitc-legal-excerpts.jsonl'}
+    files['production-graph.xlsx'] = workbook_bytes(graph, rows, notices)
+    files['START_HERE.html'] = render_html(rows, graph)
     files['index.html'] = files['START_HERE.html']
     files['.nojekyll'] = b''
     files['README.md'] = README.encode()
-    for tool in ('build_review_sample.py', 'verify_review_sample.py'):
+    asset_dir = Path(__file__).with_name('production_assets')
+    if not asset_dir.exists():
+        asset_dir = Path(__file__).parent.parent / 'assets'
+    for asset in ('production-graph.js', 'production-graph.css', 'Manrope.ttf', 'OFL-Manrope.txt'):
+        files['assets/' + asset] = (asset_dir / asset).read_bytes()
+    for tool in ('build_review_sample.py', 'verify_review_sample.py', 'production_graph.py', 'production_workbook.py'):
         files['tools/' + tool] = Path(__file__).with_name(tool).read_bytes()
-    manifest = {'sample_version': 'discussion-sample-3-plain-language', 'source_release_doi': DOI,
+    manifest = {'sample_version': 'discussion-sample-4-production-graph', 'source_release_doi': DOI,
+                'production_graph': graph['counts'],
                 'source_zip_sha256': SOURCE_SHA, 'frozen_inner_sha256': INNER_SHA,
                 'row_count': 10, 'distinct_instances': 10,
                 'distinct_definitions': len({projections[e]['record']['definition']['native_id'] for e in selected}),
