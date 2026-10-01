@@ -1,117 +1,142 @@
-/* Local, dependency-free reader of the published graph projection. */
+/* Responsive process neighbourhood. Only explicit source links are navigable. */
 (() => {
   'use strict';
-  const payload = document.getElementById('production-data');
-  if (!payload) return;
-  const graph = JSON.parse(payload.textContent);
-  const canvas = document.getElementById('graph-canvas');
-  const panel = document.getElementById('graph-detail');
-  const all = document.getElementById('graph-all');
-  const back = document.getElementById('graph-back');
-  const history = [graph.roots[0].id];
-  const processNames = Object.fromEntries(graph.roots.map(r => [r.id, r.label === 'Stretch film' ? 'Make stretch film' : r.label === 'Portland cement' ? 'Make Portland cement' : 'Precision sand casting']));
-  const status = {ambiguous:'More than one code', applicable:'Proposal passes saved checks', insufficient_information:'Information missing', conflicting:'Conflict needs review'};
-  function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
-  function shortName(name) { return name.replace(/; at (plant|mine|mill|refinery|extraction)$/, '').replace(/; production mix(ture)?/, ''); }
-  function processName(id) { return processNames[id] || shortName(graph.processes[id].name); }
-  function codes(flow) {
-    return [...new Set(flow.mappings.flatMap(m => m.target ? [m.target.code] : m.alternatives.map(t => t.code)))];
+  const payload=document.getElementById('production-data');if(!payload)return;
+  const graph=JSON.parse(payload.textContent);
+  const canvas=document.getElementById('graph-canvas'),panel=document.getElementById('graph-detail');
+  const back=document.getElementById('graph-back'),history=[graph.roots[0].id];
+  const narrow=matchMedia('(max-width: 800px)');
+  let allInputs=false,allOutputs=false,scene=null,frame;
+  const names=Object.fromEntries(graph.roots.map(r=>[r.id,r.label==='Stretch film'?'Make stretch film':r.label==='Portland cement'?'Make Portland cement':'Precision sand casting']));
+  const states={ambiguous:'More than one code remains possible',applicable:'The saved checks pass for this proposal',insufficient_information:'Information is missing',conflicting:'A conflict needs review'};
+  function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
+  function short(name){return name.replace(/; at (plant|mine|mill|refinery|extraction|manufacturer)$/,'').replace(/; production mix(ture)?/,'');}
+  function processName(id){return names[id]||short(graph.processes[id].name);}
+  function codes(f){return [...new Set(f.mappings.flatMap(m=>m.target?[m.target.code]:m.alternatives.map(t=>t.code)))];}
+  function sourceDetail(parent,source,content=[]){
+    const d=el('details','source-detail');d.append(el('summary','','Source details'));
+    content.forEach(text=>{if(text)d.append(el('p','',text));});
+    d.append(el('p','graph-source',`${source.source_artifact}, record ${source.source_line}.`));
+    const a=el('a','','Open the saved source records');a.href='production-evidence.json';d.append(a);parent.append(d);
   }
-  function sourceLine(parent, source) {
-    const p=el('p','graph-source',`Source: ${source.source_artifact}, record ${source.source_line}. `);
-    const a=el('a','', 'Open the saved records'); a.href='production-evidence.json'; p.append(a); parent.append(p);
+  function action(label,id,cls='graph-action'){
+    const button=el('button',cls,label);button.type='button';button.dataset.processId=id;
+    button.onclick=()=>openProcess(id);return button;
   }
-  function openProcess(id, reset=false) {
-    if (!graph.processes[id]) return;
-    if (reset) history.splice(0,history.length,id); else if (history[history.length-1] !== id) history.push(id);
-    all.checked=false; draw(); showProcess(id);
-  }
-  function showProcess(id, scroll=false) {
-    const p=graph.processes[id]; panel.replaceChildren(el('p','graph-kind','Production process'),el('h3','',processName(id)));
-    panel.append(el('p','',p.description || 'The source does not supply a description.'));
-    const dates=p.valid_from || p.valid_until ? `${p.valid_from || 'unknown start'} to ${p.valid_until || 'unknown end'}` : 'Not supplied';
-    panel.append(el('p','muted',`Source dates: ${dates}. This is a recorded process model; its links do not identify actual suppliers.`));
-    if(p.completeness) { const d=el('details'); d.append(el('summary','','What the source says about coverage'),el('p','',p.completeness));panel.append(d); }
-    sourceLine(panel,p.source);
+  function showProcess(id,scroll=false){
+    const p=graph.processes[id];panel.replaceChildren(el('p','graph-kind','Selected process'),el('h3','',processName(id)));
+    const facts=el('div','detail-facts');
+    for(const [value,label] of [[p.inputs.length,'recorded inputs'],[p.outputs.length,'recorded outputs']]){
+      const item=el('span');item.append(el('strong','',String(value)),document.createTextNode(' '+label));facts.append(item);
+    }
+    panel.append(facts,el('p','muted','Open an input to see its source process, or an output to see where it is used next.'));
+    sourceDetail(panel,p.source,[p.description||'No description supplied.',
+      `Source dates: ${p.valid_from||'unknown start'} to ${p.valid_until||'unknown end'}.`,p.completeness,
+      `${p.environmental_exchanges} natural-resource and emission records are counted separately. Linked models do not identify actual suppliers.`]);
     if(scroll)panel.scrollIntoView({block:'nearest'});
   }
-  function action(text, id) { const b=el('button','graph-action',text); b.type='button'; b.onclick=()=>openProcess(id); return b; }
-  function showFlow(id) {
-    const f=graph.flows[id]; panel.replaceChildren(el('p','graph-kind',f.is_input?'Recorded input':'Recorded output'),el('h3','',f.name));
-    panel.append(el('p','',f.is_input ? `This record is an input to ${processName(f.process_id)}.` : `This record is an output of ${processName(f.process_id)}.`));
-    if (!f.mappings.length) panel.append(el('p','','No HS code has been proposed for this exact record.'));
-    for (const m of f.mappings) {
-      const cs=m.target ? m.target.code : m.alternatives.map(t=>t.code).join(' or ');
-      panel.append(el('p','',`HS ${cs || 'not selected'} — ${status[m.outcome] || m.outcome}. No specialist validation is recorded.`));
-      for(const t of (m.target ? [m.target] : m.alternatives)) {
-        const path=`Chapter ${t.code.slice(0,2)} → heading ${t.code.slice(0,4)}`+(t.code.length===6?` → subheading ${t.code}`:'');
-        panel.append(el('p','graph-code',`${path} (HS ${t.edition || '2022'}).`));
-      }
+  function showFlow(id){
+    const f=graph.flows[id];panel.replaceChildren(el('p','graph-kind',f.is_input?'Selected input':'Selected output'),el('h3','',f.name));
+    const columns=el('div','detail-columns'),classification=el('div'),connections=el('div');
+    classification.append(el('h4','','HS link'));
+    if(!f.mappings.length)classification.append(el('p','','No HS proposal is recorded for this exact product record.'));
+    for(const m of f.mappings){
+      const targets=m.target?[m.target]:m.alternatives;
+      classification.append(el('strong','detail-code',targets.length?'HS '+targets.map(t=>t.code).join(' / '):'No code selected'),el('p','',states[m.outcome]||m.outcome));
+      for(const t of targets)classification.append(el('p','category-caption',`Chapter ${t.code.slice(0,2)} → heading ${t.code.slice(0,4)}`+(t.code.length===6?` → subheading ${t.code}`:'')+` (HS ${t.edition||'2022'}).`));
     }
-    for(const d of f.owner_decisions) panel.append(el('p','',`An owner decision exists for original revision ${d.mapping_id} only. It does not accept later versions or the production chain.`));
-    const p=f.provider;
-    if(p && p.can_follow) {
-      panel.append(el('p','','The source names a process model for this input and identifies its matching output.'));
-      panel.append(action(`Explore ${processName(p.process_id)}`,p.process_id));
-    } else if(f.is_input) {
-      const message=!p?'No provider link is recorded for this input.':p.traversable?'Its linked process is outside this sample.':`The link stops here: ${[p.status,...p.stops].join('; ').replaceAll('_',' ')}.`;
-      panel.append(el('p','graph-stop-note',message));
+    classification.append(el('p','muted','No specialist validation is recorded.'));
+    for(const d of f.owner_decisions)classification.append(el('p','muted',`An owner decision applies to original revision ${d.mapping_id} only, not later versions or the chain.`));
+    connections.append(el('h4','',f.is_input?'Where this input comes from':'Where this output is used'));
+    if(f.is_input){
+      const p=f.provider;
+      if(p?.can_follow)connections.append(el('p','','The source explicitly links this input to a process model and its matching output.'),action('Explore '+processName(p.process_id),p.process_id));
+      else connections.append(el('p','graph-stop-note',!p?'No provider link is recorded.':p.traversable?'The linked process is outside this sample.':'The link stops here: '+[p.status,...p.stops].join('; ').replaceAll('_',' ')+'.'));
+    }else{
+      const consumers=[...new Set(f.consumers.map(c=>c.process_id))];
+      if(consumers.length)consumers.forEach(pid=>connections.append(action(processName(pid),pid)));
+      else connections.append(el('p','','No further use is included in this sample. Other uses may exist.'));
     }
-    const consumers=[...new Set(f.consumers.map(c=>c.process_id))];
-    if(consumers.length){ panel.append(el('h4','','Where this output is used in the sample')); for(const id of consumers)panel.append(action(processName(id),id)); }
-    else if(!f.is_input)panel.append(el('p','muted','No further use is included in this view. That does not mean no use exists.'));
-    if(f.amount!==null && f.amount!==undefined)panel.append(el('p','muted',`Source amount: ${f.amount} ${f.unit || '(unit unavailable)'}. This belongs to the source process’s own reference amount; quantities have not been combined along the graph.${f.formula ? ' The source has an unevaluated formula: '+f.formula+'.' : ''}`));
-    sourceLine(panel,f.source);
+    columns.append(classification,connections);panel.append(columns);
+    const quantity=f.amount===null||f.amount===undefined?'':`Source amount: ${f.amount} ${f.unit||'(unit unavailable)'}. This uses the source process’s own reference amount. Quantities have not been combined along the chain.`;
+    sourceDetail(panel,f.source,[`${f.is_input?'Input to':'Output of'} ${graph.processes[f.process_id].name}.`,quantity,f.formula?'Unevaluated source formula: '+f.formula:'']);
     panel.scrollIntoView({block:'nearest'});
   }
-  function processCard(id, provider=false) {
-    const b=el('button','graph-node graph-process'+(provider?' graph-provider':''));b.type='button';
-    b.append(el('span','graph-kind',provider?'Linked process':'Production process'),el('strong','',processName(id)),el('span','graph-node-hint',provider?'Explore its inputs':'View the source description'));
-    b.onclick=()=>provider?openProcess(id):showProcess(id,true);return b;
+  function processCard(id){
+    const button=el('button','graph-node graph-process');button.type='button';button.setAttribute('aria-controls','graph-detail');
+    button.append(el('span','graph-kind','Production process'),el('strong','',processName(id)),el('span','graph-node-hint','View process details'));
+    button.onclick=()=>showProcess(id,true);return button;
   }
-  function flowCard(id) {
-    const f=graph.flows[id], b=el('button','graph-node graph-product'+(f.flow_type==='WASTE_FLOW'?' graph-waste':''));b.type='button';b.dataset.flowId=id;
-    b.append(el('span','graph-kind',f.flow_type==='WASTE_FLOW'?'Waste output':f.is_input?'Input: material or service':'Product output'),el('strong','',shortName(f.name)));
-    const cs=codes(f);b.append(el('span','graph-code',cs.length?'HS '+cs.join(' / ')+' · proposed':'HS link not recorded'));
-    if(f.consumers.length)b.append(el('span','graph-node-hint',`Used in ${new Set(f.consumers.map(c=>c.process_id)).size} linked process(es) · view next steps`));
-    b.onclick=()=>{canvas.querySelectorAll('.graph-node').forEach(n=>n.classList.remove('selected'));b.classList.add('selected');showFlow(id);};return b;
+  function flowCard(id){
+    const f=graph.flows[id],bundle=el('div','flow-bundle');
+    const button=el('button','graph-node graph-product'+(f.flow_type==='WASTE_FLOW'?' graph-waste':''));
+    button.type='button';button.dataset.flowId=id;button.setAttribute('aria-controls','graph-detail');button.setAttribute('aria-pressed','false');
+    button.append(el('span','graph-kind',f.flow_type==='WASTE_FLOW'?'Waste':f.is_input?'Material or service':'Product'),el('strong','',short(f.name)));
+    const cs=codes(f);button.append(el('span','graph-code',cs.length?'HS '+cs.join(' / ')+' · proposed':'HS link not recorded'));
+    button.onclick=()=>{canvas.querySelectorAll('[data-flow-id]').forEach(n=>n.setAttribute('aria-pressed',String(n===button)));showFlow(id);};
+    bundle.append(button);
+    if(f.is_input){
+      if(f.provider?.can_follow){
+        const link=action('From: '+processName(f.provider.process_id),f.provider.process_id,'graph-provider');
+        link.setAttribute('aria-label','Explore source process: '+processName(f.provider.process_id));bundle.append(link);
+      }else bundle.append(el('p','graph-boundary',!f.provider?'No provider link recorded':f.provider.traversable?'Linked process outside this sample':'Source link stops here · select for details'));
+    }else{
+      const consumers=[...new Set(f.consumers.map(c=>c.process_id))];
+      if(consumers.length){bundle.append(action('Next use: '+processName(consumers[0]),consumers[0],'graph-provider graph-consumer'));if(consumers.length>1)bundle.append(el('span','graph-node-hint',`Select the product to see all ${consumers.length} linked uses.`));}
+    }
+    return bundle;
+  }
+  function expandButton(kind,total){
+    const expanded=kind==='inputs'?allInputs:allOutputs;
+    const button=el('button','graph-expand',expanded?'Show fewer '+kind:`Show all ${total} ${kind}`);button.type='button';button.dataset.expand=kind;button.setAttribute('aria-expanded',String(expanded));
+    button.onclick=()=>{if(kind==='inputs')allInputs=!allInputs;else allOutputs=!allOutputs;draw();canvas.querySelector(`[data-expand="${kind}"]`)?.focus();};return button;
   }
   function draw(){
     const id=history[history.length-1],p=graph.processes[id];back.disabled=history.length===1;
     document.querySelectorAll('[data-root]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.root===id)));
-    document.getElementById('graph-context').replaceChildren(el('h3','',processName(id)),el('p','muted',`${p.inputs.length} recorded inputs · ${p.outputs.length} outputs · ${p.environmental_exchanges} environmental exchanges counted separately`));
-    let inputs=[...p.inputs].sort((a,b)=>Number(graph.flows[b].mappings.length>0)-Number(graph.flows[a].mappings.length>0)||Number(!!graph.flows[b].provider?.can_follow)-Number(!!graph.flows[a].provider?.can_follow)||graph.flows[a].name.localeCompare(graph.flows[b].name));
-    const visible=all.checked?inputs:inputs.slice(0,6);
-    document.getElementById('graph-count').textContent=visible.length<inputs.length?`Showing ${visible.length} of ${inputs.length} inputs`:'All recorded inputs shown';
-    canvas.replaceChildren();
+    const heading=el('h3','',processName(id));heading.tabIndex=-1;
+    document.getElementById('graph-context').replaceChildren(heading,el('p','graph-context-note',history.length>1?'Following: '+history.slice(-3).map(processName).join(' → '):(narrow.matches?'Read top to bottom.':'Read left to right.')+' “From” and “Next use” follow explicit links in the source.'));
+    const inputs=[...p.inputs].sort((a,b)=>Number(graph.flows[b].mappings.length>0)-Number(graph.flows[a].mappings.length>0)||Number(!!graph.flows[b].provider?.can_follow)-Number(!!graph.flows[a].provider?.can_follow)||graph.flows[a].name.localeCompare(graph.flows[b].name));
     const outputs=[...p.outputs].sort((a,b)=>Number(graph.flows[b].reference_output)-Number(graph.flows[a].reference_output)||Number(graph.flows[a].flow_type==='WASTE_FLOW')-Number(graph.flows[b].flow_type==='WASTE_FLOW'));
-    if(matchMedia('(max-width: 760px)').matches){
-      canvas.classList.add('graph-mobile');
-      canvas.append(el('h4','','Inputs to this process'));
-      for(const eid of visible){const f=graph.flows[eid],group=el('div','mobile-input');if(f.provider?.can_follow){group.append(processCard(f.provider.process_id,true),el('span','mobile-connector','↓ supplies this input'));}group.append(flowCard(eid));canvas.append(group);}
-      canvas.append(el('div','mobile-connector','↓ inputs feed the process'),processCard(id),el('div','mobile-connector','↓ recorded outputs'));
-      for(const eid of outputs)canvas.append(flowCard(eid));return;
+    const inputLimit=narrow.matches?1:3,outputLimit=narrow.matches?1:2;
+    const visibleInputs=allInputs?inputs:inputs.slice(0,inputLimit),visibleOutputs=allOutputs?outputs:outputs.slice(0,outputLimit);
+    document.getElementById('graph-count').textContent=`Showing ${visibleInputs.length} of ${inputs.length} inputs · ${visibleOutputs.length} of ${outputs.length} outputs`;
+    canvas.replaceChildren();scene=el('div','graph-scene');
+    const inputLane=el('div','graph-lane graph-inputs'),middle=el('div','graph-middle'),outputLane=el('div','graph-lane graph-outputs');
+    inputLane.append(el('h4','graph-column-label','What goes in'));visibleInputs.forEach(eid=>inputLane.append(flowCard(eid)));
+    if(!inputs.length)inputLane.append(el('p','graph-boundary','No product or service inputs recorded.'));
+    if(inputs.length>inputLimit)inputLane.append(expandButton('inputs',inputs.length));
+    middle.append(el('span','mobile-connector','↓ used in this process'),processCard(id),el('span','mobile-connector','↓ produces these outputs'));
+    outputLane.append(el('h4','graph-column-label','What comes out'));visibleOutputs.forEach(eid=>outputLane.append(flowCard(eid)));
+    if(!outputs.length)outputLane.append(el('p','graph-boundary','No product or waste outputs recorded.'));
+    if(outputs.length>outputLimit)outputLane.append(expandButton('outputs',outputs.length));
+    const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.classList.add('graph-lines');svg.setAttribute('aria-hidden','true');
+    scene.append(svg,inputLane,middle,outputLane);canvas.append(scene);scheduleLines();
+  }
+  function scheduleLines(){cancelAnimationFrame(frame);frame=requestAnimationFrame(drawLines);}
+  function drawLines(){
+    if(!scene||!scene.clientWidth)return;
+    const svg=scene.querySelector('svg'),rect=scene.getBoundingClientRect(),central=scene.querySelector('.graph-process').getBoundingClientRect();
+    svg.setAttribute('viewBox',`0 0 ${rect.width} ${rect.height}`);svg.replaceChildren();
+    const NS='http://www.w3.org/2000/svg';const defs=document.createElementNS(NS,'defs'),marker=document.createElementNS(NS,'marker'),tip=document.createElementNS(NS,'path');
+    marker.setAttribute('id','graph-arrow');marker.setAttribute('viewBox','0 0 10 10');marker.setAttribute('refX','9');marker.setAttribute('refY','5');marker.setAttribute('markerWidth','5');marker.setAttribute('markerHeight','5');marker.setAttribute('orient','auto');tip.setAttribute('d','M 0 0 L 10 5 L 0 10 z');tip.setAttribute('fill','currentColor');marker.append(tip);defs.append(marker);svg.append(defs);
+    function line(from,to){
+      const x1=from.right-rect.left,y1=from.top+from.height/2-rect.top,x2=to.left-rect.left,y2=to.top+to.height/2-rect.top;
+      const bend=Math.max(12,(x2-x1)/2),path=document.createElementNS(NS,'path');path.setAttribute('d',`M ${x1} ${y1} C ${x1+bend} ${y1}, ${x2-bend} ${y2}, ${x2} ${y2}`);path.setAttribute('class','flow-line');path.setAttribute('marker-end','url(#graph-arrow)');svg.append(path);
     }
-    canvas.classList.remove('graph-mobile');
-    const scene=el('div','graph-scene');
-    const SVG='http://www.w3.org/2000/svg'; const svg=document.createElementNS(SVG,'svg');svg.setAttribute('aria-hidden','true');svg.setAttribute('class','graph-lines');
-    svg.innerHTML='<defs><marker id="graph-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/></marker></defs>';
-    scene.append(svg);canvas.append(scene);
-    function place(node,x,y,w=250){node.style.left=x+'px';node.style.top=y+'px';node.style.width=w+'px';scene.append(node);return {node,x,y,w};}
-    function line(a,b,provider=false){const path=document.createElementNS(SVG,'path'),ay=a.y+a.node.offsetHeight/2,by=b.y+b.node.offsetHeight/2;path.setAttribute('d',`M ${a.x+a.w} ${ay} C ${a.x+a.w+35} ${ay}, ${b.x-35} ${by}, ${b.x} ${by}`);path.setAttribute('class',provider?'provider-line':'flow-line');path.setAttribute('marker-end','url(#graph-arrow)');svg.append(path);}
-    [['Linked processes',12],['Inputs',295],['Production process',590],['Outputs',895]].forEach(([name,x])=>{const l=el('div','graph-column-label',name);l.style.left=x+'px';scene.append(l);});
-    const center=place(processCard(id),590,Math.min(210,58+Math.max(visible.length,outputs.length)*40),240);
-    let inputY=58,outputY=58;
-    visible.forEach(eid=>{const f=graph.flows[eid],card=place(flowCard(eid),295,inputY,260);line(card,center);let rowHeight=card.node.offsetHeight;
-      if(f.provider?.can_follow){const provider=place(processCard(f.provider.process_id,true),12,inputY,240);line(provider,card,true);rowHeight=Math.max(rowHeight,provider.node.offsetHeight);}
-      else{const text=!f.provider?'No provider link recorded':f.provider.traversable?'Linked process is outside this view':'Provider link stops here';place(el('div','graph-boundary',text),12,inputY+30,230);}
-      inputY+=rowHeight+25;
-    });
-    outputs.forEach(eid=>{const card=place(flowCard(eid),895,outputY,270);line(center,card);outputY+=card.node.offsetHeight+25;});
-    const height=Math.max(400,inputY,outputY)+20;scene.style.height=height+'px';svg.setAttribute('viewBox',`0 0 1180 ${height}`);
+    scene.querySelectorAll('.graph-inputs .graph-product').forEach(n=>line(n.getBoundingClientRect(),central));
+    scene.querySelectorAll('.graph-outputs .graph-product').forEach(n=>line(central,n.getBoundingClientRect()));
+  }
+  function openProcess(id,reset=false){
+    if(!graph.processes[id])return;
+    if(reset)history.splice(0,history.length,id);else if(history.at(-1)!==id)history.push(id);
+    allInputs=false;allOutputs=false;draw();showProcess(id);
+    if(!reset){const heading=document.querySelector('#graph-context h3');heading.focus({preventScroll:true});heading.scrollIntoView({block:'nearest'});}
   }
   document.querySelectorAll('[data-root]').forEach(b=>b.onclick=()=>openProcess(b.dataset.root,true));
-  all.onchange=draw;back.onclick=()=>{history.pop();all.checked=false;draw();showProcess(history[history.length-1]);};
-  let resize;addEventListener('resize',()=>{clearTimeout(resize);resize=setTimeout(draw,100);});
-  draw();document.fonts?.ready.then(draw);
+  back.onclick=()=>{history.pop();allInputs=false;allOutputs=false;draw();showProcess(history.at(-1));};
+  new ResizeObserver(scheduleLines).observe(canvas);
+  narrow.addEventListener('change',draw);
+  document.addEventListener('hsgraph:step',scheduleLines);addEventListener('resize',scheduleLines);
+  draw();document.fonts?.ready.then(scheduleLines);
 })();

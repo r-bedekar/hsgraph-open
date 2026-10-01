@@ -16,9 +16,11 @@ sys.dont_write_bytecode = True
 try:
     from .production_graph import select_records, project_graph, graph_section
     from .production_workbook import workbook_bytes
+    from .journey_view import render_journey
 except ImportError:
     from production_graph import select_records, project_graph, graph_section
     from production_workbook import workbook_bytes
+    from journey_view import render_journey
 
 SOURCE_SHA = 'f73a7d457ef69be4848e0d169bafc157d0faa3b15b3b56eac43d6fdc17a38803'
 INNER_SHA = '78b9a1f0afbad1ae0b7ef81e63af5d03c49cc79eb99a09ac853840e23bdca710'
@@ -35,7 +37,7 @@ COPIED = ('LICENSE', 'LICENSE-DATA', 'candidate/NOTICE-USLCI', 'candidate/NOTICE
 
 README = '''# HSGraph: a map of how products connect
 
-Discussion sample 4 (production graph), derived from published v0.1.0.
+Discussion sample 5 (guided production journey), derived from published v0.1.0.
 Prepared for Rizwan Bedekar / HSGraph on 2026-10-01. Materials and products
 connect through documented processes. HS classifications form a separate layer.
 The website and Excel are reading views of that graph. The ten original
@@ -52,6 +54,16 @@ installation, AI account or network connection is needed. The table has exactly
 10 distinct exchange instances from 10 flow definitions; they are not 10 verified
 HS classifications. samples.csv is for spreadsheet inspection; samples.json is
 the structured summary. Each row links to its underlying evidence JSON.
+Follow four short steps: understand the map, follow a chain, inspect the HS
+link, then use the data. Each step has a next/previous link; the top navigation
+lets readers jump to a step. Deep links to the original ten records still work.
+The graph fits the screen without an inner scroll box. It starts with up to
+three inputs and two outputs on desktop, one of each on narrow screens. Clear
+counts and expansion buttons expose every retained input/output on request.
+The ten original example records can be selected one at a time; full evidence
+remains available in expandable details. Without JavaScript all four steps and
+all ten records remain readable as a normal document.
+
 Start with the interactive production diagram, or open production-graph.xlsx.
 Select stretch film, Portland cement or aluminium casting. Select a product to
 inspect its proposed codes; select a linked process to explore its inputs. The
@@ -438,7 +450,7 @@ def render_html(rows, graph=None):
              '<meta name="viewport" content="width=device-width, initial-scale=1">',
              '<meta name="color-scheme" content="light dark">',
              '<title>HSGraph — a map of how products connect</title>',
-             '<style>' + _STYLE + '</style>' + ('<link rel="stylesheet" href="assets/production-graph.css">' if graph else '') + '</head><body><div class="wrap"><header>',
+             '<style>' + _STYLE + '</style>' + ('<link rel="stylesheet" href="assets/production-graph.css?v=5">' if graph else '') + '</head><body><div class="wrap"><header>',
              '<div class="brand"><a href="#">HSGraph</a><span>A shared map of production</span></div>',
              '<h1>See how products connect.</h1>',
              '<p class="lede">What goes into a product? Which process makes it? Where is it used next? HSGraph connects materials, production processes and products, with HS codes and evidence attached.</p>',
@@ -538,7 +550,8 @@ The next piece of evidence I would need is…</textarea>
 <section id="downloads"><h2>Data, source and terms</h2><p><a href="production-graph.xlsx">Production graph in Excel</a> · <a href="production-graph.json">Production graph (JSON)</a> · <a href="samples.csv">Classification examples (CSV)</a> · <a href="samples.json">Classification examples (JSON)</a> · <a href="README.md">Selection and verification guide</a> · <a href="LICENSE-DATA">Component-specific terms</a> · <a href="https://doi.org/10.5281/zenodo.22857372">Full dataset on Zenodo</a> · <a href="https://github.com/r-bedekar/hsgraph-open">Code on GitHub</a></p>
 <p>The graph adds a view of existing production records. The ten classification rows and their saved findings are unchanged. Share the whole package with its notices. No new model runs were made for this page.</p></section></main>
 <footer>Credit: Rizwan Bedekar / HSGraph; DOE / NREL / Alliance for Sustainable Energy; USLCI contributors and other credited sources. No endorsement. See the included notices for component-specific terms.</footer></div></body></html>''')
-    return '\n'.join(parts).encode()
+    document = '\n'.join(parts)
+    return render_journey(document, rows, graph_section(graph)) if graph else document.encode()
 
 
 def build(source_zip, output):
@@ -603,11 +616,11 @@ def build(source_zip, output):
     asset_dir = Path(__file__).with_name('production_assets')
     if not asset_dir.exists():
         asset_dir = Path(__file__).parent.parent / 'assets'
-    for asset in ('production-graph.js', 'production-graph.css', 'Manrope.ttf', 'OFL-Manrope.txt'):
+    for asset in ('production-graph.js', 'production-graph.css', 'journey.js', 'Manrope.ttf', 'OFL-Manrope.txt'):
         files['assets/' + asset] = (asset_dir / asset).read_bytes()
-    for tool in ('build_review_sample.py', 'verify_review_sample.py', 'production_graph.py', 'production_workbook.py'):
+    for tool in ('build_review_sample.py', 'verify_review_sample.py', 'production_graph.py', 'production_workbook.py', 'journey_view.py'):
         files['tools/' + tool] = Path(__file__).with_name(tool).read_bytes()
-    manifest = {'sample_version': 'discussion-sample-4-production-graph', 'source_release_doi': DOI,
+    manifest = {'sample_version': 'discussion-sample-5-guided-journey', 'source_release_doi': DOI,
                 'production_graph': graph['counts'],
                 'source_zip_sha256': SOURCE_SHA, 'frozen_inner_sha256': INNER_SHA,
                 'row_count': 10, 'distinct_instances': 10,

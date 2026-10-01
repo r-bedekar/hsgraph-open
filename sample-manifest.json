@@ -1,5 +1,5 @@
 {
-  "sample_version": "discussion-sample-4-production-graph",
+  "sample_version": "discussion-sample-5-guided-journey",
   "source_release_doi": "https://doi.org/10.5281/zenodo.22857372",
   "production_graph": {
     "processes": 21,
@@ -54,11 +54,11 @@
       "bytes": 1534
     },
     "README.md": {
-      "sha256": "0ce298c29a525bcad9bc7038d533fdbe207d9345275adf4a155f940847a13520",
-      "bytes": 8203
+      "sha256": "1f076b0ede32e43ee393ba14f16249659450f8cb4e42b3e49fe0ef8360ea7a33",
+      "bytes": 8890
     },
     "START_HERE.html": {
-      "sha256": "7caa433eeace0bbf7668184b78795ce43f964ce976db7f24ac89350c6ffc833a",
+      "sha256": "1e59d41e164783a4a2f1218539f012bc5706eba8ccef4b918bbe88ed6b9b0266",
       "bytes": 519193
     },
     "assets/Manrope.ttf": {
@@ -69,13 +69,17 @@
       "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
       "bytes": 4387
     },
+    "assets/journey.js": {
+      "sha256": "adf8a08c11c9dbd84de8bbfc6df0c4601545926a20c78d65356945479bba1ce7",
+      "bytes": 2337
+    },
     "assets/production-graph.css": {
-      "sha256": "86666be5311dfd22da69feec52fc5401d68ce3fdaefb522c98a82d90d673999b",
-      "bytes": 6692
+      "sha256": "9a697ee08b738bb2c465b8ea79f5b1282195679a3bc2b324845f99b0ceac216c",
+      "bytes": 18177
     },
     "assets/production-graph.js": {
-      "sha256": "ee62c3bddfebe5ad71bafe460d24b2bd52a9ae15053786e2fa190002b08b3cdc",
-      "bytes": 11067
+      "sha256": "fa227f65419e067cdfd8ea89c71ec6ddbaaf96462fef37fc15f6f1f2c02b8028",
+      "bytes": 13303
     },
     "candidate/DATA-LICENSE.txt": {
       "sha256": "0711a53463d02f59dbdb656f85676f96d2a7fd81f482fe56650a05c09a2b8da7",
@@ -166,7 +170,7 @@
       "bytes": 19594
     },
     "index.html": {
-      "sha256": "7caa433eeace0bbf7668184b78795ce43f964ce976db7f24ac89350c6ffc833a",
+      "sha256": "1e59d41e164783a4a2f1218539f012bc5706eba8ccef4b918bbe88ed6b9b0266",
       "bytes": 519193
     },
     "production-evidence.json": {
@@ -198,12 +202,16 @@
       "bytes": 8385
     },
     "tools/build_review_sample.py": {
-      "sha256": "8fda563a272d4d2c27bce18613bfeced039aa45fda4b5e2ef8c3ad3a0d0674aa",
-      "bytes": 51484
+      "sha256": "457d1c0ea13167693187b7b902373bb9e558fcf81345b92859ffd2bd3e95e9bd",
+      "bytes": 52386
+    },
+    "tools/journey_view.py": {
+      "sha256": "fa4068eb65e1dfc64834654d7b13a8b96a14b068592144c335fdcfbef4c8be5b",
+      "bytes": 10151
     },
     "tools/production_graph.py": {
-      "sha256": "bce9b44da27f2854faff0c39e23fd080539d1dfe82b843a13d42b473d2314f8c",
-      "bytes": 11835
+      "sha256": "d79b682114ebd7acce9aea7d7b7775afe009e7d759e1e9676ed6173574236724",
+      "bytes": 11859
     },
     "tools/production_workbook.py": {
       "sha256": "61f09413af30a42d9fe7f7c04139c9a16d48c53ba9223b6bf8f4adf32135766b",

@@ -151,16 +151,15 @@ def graph_section(graph):
         return ', '.join(graph['flows'][eid]['name'] for eid in ids)
     buttons = ''.join(f'<button type="button" data-root="{esc(r["id"], quote=True)}">{esc(r["label"])}</button>' for r in graph['roots'])
     data = json.dumps(graph, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('&', '\\u0026')
-    return f'''<section id="graph" class="production-section"><p class="eyebrow">Explore a real production branch</p>
-<h2>Follow the inputs. See the process. Find the output.</h2>
-<p>Start with stretch film. Its source model links resin production and an extrusion service to film production. Select a product to see its proposed HS codes; select a connected process to keep exploring.</p>
+    return f'''<section id="graph" class="production-section journey-step" data-step="graph" aria-labelledby="graph-title">
+<div class="step-heading"><div><p class="step-caption">Step 2 of 4 · Explore the connections</p><h2 id="graph-title" tabindex="-1">Follow a real production chain.</h2></div><p>Choose a product to inspect its HS link. Use a “From” or “Next use” button to move along the chain.</p></div>
 <div class="graph-roots" aria-label="Production examples">{buttons}</div>
-<div class="graph-toolbar"><button id="graph-back" type="button" disabled>← Previous process</button><label><input type="checkbox" id="graph-all"> Show every input in this process</label><span id="graph-count" aria-live="polite"></span></div>
+<div class="graph-toolbar"><button id="graph-back" type="button" disabled>← Previous process</button><span id="graph-count" aria-live="polite"></span></div>
 <div id="graph-context"></div>
-<div id="graph-canvas" class="graph-canvas" role="region" aria-label="Interactive production graph" tabindex="0"></div>
-<p class="graph-key"><span class="key-process">■ Process</span> <span class="key-product">■ Product / service</span> <span class="key-waste">■ Waste</span> <span>→ Recorded input or output</span> <span>⇢ Explicit modeled provider</span></p>
-<div id="graph-detail" class="graph-detail" aria-live="polite"><h3>Select a product or process</h3><p>Its source record, classification state and available next steps appear here.</p></div>
-<details class="graph-fallback"><summary>Read the first branch as text</summary><p><strong>Inputs:</strong> {esc(labels(root['inputs']))}</p><p><strong>Process:</strong> {esc(root['name'])}</p><p><strong>Outputs:</strong> {esc(labels(root['outputs']))}</p><p>This text stays available without JavaScript. The full view is also available in <a href="production-graph.json">graph JSON</a>.</p></details>
-<p class="muted">This sample includes {graph['counts']['processes']} processes and {graph['counts']['provider_links']} links explicitly named in the source. A linked process is a model, not an actual supplier. Source dates can differ between models. Missing and blocked links stay visible. Natural resources and emissions are counted separately and retained in the source records.</p>
-<p><a href="production-graph.json">Download the graph (JSON)</a> · <a href="production-evidence.json">Inspect the source records</a> · <a href="#example">See why a product’s HS match can stay open</a></p>
-<script id="production-data" type="application/json">{data}</script><script src="assets/production-graph.js" defer></script></section>'''
+<div id="graph-canvas" class="graph-canvas" role="region" aria-label="Interactive production graph"></div>
+<p class="graph-key"><span class="key-process">■ Process</span><span class="key-product">■ Product / service</span><span class="key-waste">■ Waste</span><span>→ Recorded input or output</span></p>
+<div id="graph-detail" class="graph-detail" aria-live="polite"><p><strong>What would you like to inspect?</strong> Select a product or process above to see its evidence and next steps.</p></div>
+<details class="read-more graph-fallback"><summary>Read the first branch as text</summary><p><strong>Inputs:</strong> {esc(labels(root['inputs']))}</p><p><strong>Process:</strong> {esc(root['name'])}</p><p><strong>Outputs:</strong> {esc(labels(root['outputs']))}</p><p>This text stays available without JavaScript. The full view is also available in <a href="production-graph.json">graph JSON</a>.</p></details>
+<details class="read-more"><summary>What these connections mean</summary><p>This sample includes {graph['counts']['processes']} processes and {graph['counts']['provider_links']} links explicitly named in the source. A linked process is a model, not an actual supplier. Source dates can differ between models. Missing and blocked links stay visible. Natural resources and emissions are counted separately and retained in the source records.</p><a href="production-evidence.json">Inspect the source records</a></details>
+<div class="journey-actions"><a class="quiet-link" href="#overview">Previous step</a><a class="button" href="#classification">Next: check the HS link <span aria-hidden="true">→</span></a></div>
+<script id="production-data" type="application/json">{data}</script><script src="assets/production-graph.js?v=5" defer></script></section>'''
